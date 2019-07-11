@@ -152,6 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-栈计算器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/11/栈计算器/">栈计算器</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/11/栈计算器/" class="archive-article-date">
+  	<time datetime="2019-07-11T15:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="构建栈计算器"><a href="#构建栈计算器" class="headerlink" title="构建栈计算器"></a>构建栈计算器</h1><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>一个个扫描每个字节看尸数字还是符号，分别加入不同的栈构建两个栈，一个数字栈，一个符号栈，符号栈威空直接压入或者要压的元素比栈顶的元素优先级高，就压入，否则就弹出两个数字和一个符号，计算结果，然后压入数字栈，再用那个符号与栈顶的符号比较，直到结束。</p>
+<h2 id="2-bug如果是多位数，会变成多个个位数不是百位数等"><a href="#2-bug如果是多位数，会变成多个个位数不是百位数等" class="headerlink" title="2.bug如果是多位数，会变成多个个位数不是百位数等"></a>2.bug如果是多位数，会变成多个个位数不是百位数等</h2><p>解决方法，扫描是数字接着扫直到不是数字才停止</p>
+<h2 id="3-代码"><a href="#3-代码" class="headerlink" title="3.代码"></a>3.代码</h2><h3 id="3-1分辨是符号还是数字"><a href="#3-1分辨是符号还是数字" class="headerlink" title="3.1分辨是符号还是数字"></a>3.1分辨是符号还是数字</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isoper</span><span class="params">(<span class="keyword">char</span> ch)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ch==<span class="string">'-'</span>||ch==<span class="string">'+'</span>||ch==<span class="string">'/'</span>||ch==<span class="string">'*'</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2符号优先级"><a href="#3-2符号优先级" class="headerlink" title="3.2符号优先级"></a>3.2符号优先级</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">priority</span><span class="params">(<span class="keyword">int</span> val)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (val==<span class="string">'+'</span>||val==<span class="string">'-'</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (val==<span class="string">'/'</span>||val==<span class="string">'*'</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3计算两个弹出的结果"><a href="#3-3计算两个弹出的结果" class="headerlink" title="3.3计算两个弹出的结果"></a>3.3计算两个弹出的结果</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">result</span><span class="params">(<span class="keyword">int</span> num1,<span class="keyword">int</span> num2,<span class="keyword">int</span> oper)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">switch</span> (oper)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'+'</span>:</span><br><span class="line">                res= num1+num2;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'-'</span>:</span><br><span class="line">                res= num2-num1;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'*'</span>:</span><br><span class="line">                res=num1*num2;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'/'</span>:</span><br><span class="line">                res=num2/num1;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4主要代码"><a href="#3-4主要代码" class="headerlink" title="3.4主要代码"></a>3.4主要代码</h3><blockquote>
+<h2 id="1-思路-1"><a href="#1-思路-1" class="headerlink" title="1.思路"></a>1.思路</h2><p>一个个扫描每个字节看尸数字还是符号，分别加入不同的栈构建两个栈，一个数字栈，一个符号栈，符号栈威空直接压入或者要压的元素比栈顶的元素优先级高，就压入，否则就弹出两个数字和一个符号，计算结果，然后压入数字栈，再用那个符号与栈顶的符号比较，直到结束。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      Stack&lt;Integer&gt; num=<span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">      Stack&lt;Character&gt; oper=<span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        String express=<span class="string">"322+3*6-2"</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; express.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> ch=express.charAt(i);</span><br><span class="line">            <span class="keyword">if</span> (isoper(ch))&#123;</span><br><span class="line">                <span class="keyword">if</span> (!oper.isEmpty())&#123;</span><br><span class="line">                    <span class="keyword">char</span> ch1=oper.peek();</span><br><span class="line">                    <span class="keyword">if</span> (priority(ch)&lt;=priority(ch1))&#123;</span><br><span class="line">                        <span class="keyword">int</span> num1=num.pop();</span><br><span class="line">                        <span class="keyword">int</span> num2=num.pop();</span><br><span class="line">                        <span class="keyword">char</span> ch3=oper.pop();</span><br><span class="line">                        <span class="keyword">int</span> result=result(num1,num2,ch3);</span><br><span class="line">                        num.push(result);</span><br><span class="line">                        oper.push(ch);</span><br><span class="line">                    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                        oper.push(ch);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    oper.push(ch);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//num.push(ch-48);</span></span><br><span class="line">                <span class="comment">//如果出现多位数，不是分开加入</span></span><br><span class="line">                String addn=<span class="string">""</span>;</span><br><span class="line">                addn+=ch;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt;express.length() ; j++) &#123;</span><br><span class="line">                    <span class="keyword">char</span> ch2=express.charAt(j);</span><br><span class="line">                    <span class="keyword">if</span> (isoper(ch2))&#123;</span><br><span class="line">                        i=j-<span class="number">1</span>;</span><br><span class="line">                        <span class="comment">//跳出去就是i+1，这个j会被跳过</span></span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                        addn+=ch2;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                num.push(Integer.parseInt(addn));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!oper.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">int</span> num1=num.pop();</span><br><span class="line">            <span class="keyword">int</span> num2=num.pop();</span><br><span class="line">            <span class="keyword">char</span> ch=oper.pop();</span><br><span class="line">            <span class="keyword">int</span> result=result(num1,num2,ch);</span><br><span class="line">            num.push(result);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(num.peek());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">栈的应用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/11/栈计算器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-反转链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -193,7 +283,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构，链表</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">链表</a>
         		</li>
       		
 		</ul>
@@ -571,6 +665,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
@@ -579,15 +681,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构，链表</a>
+                <a href="javascript:void(0)" class="js-tag color5">栈的应用</a>
               </li>
             
             <div class="clearfix"></div>
