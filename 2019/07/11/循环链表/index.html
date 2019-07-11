@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/5 | Hexo</title>
+  <title>循环链表 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/05/index.html">
+  <meta name="description" content="解决约瑟夫环 约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知n个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。通常解决这类问题时我们把编号从0~n-1，最后 [1]  结果+1即为原问题的解。  首先定义一个环形链表，先初始化n个人，用for语句，形成">
+<meta name="keywords" content="数据结构,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="循环链表">
+<meta property="og:url" content="http://yoursite.com/2019/07/11/循环链表/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="解决约瑟夫环 约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知n个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。通常解决这类问题时我们把编号从0~n-1，最后 [1]  结果+1即为原问题的解。  首先定义一个环形链表，先初始化n个人，用for语句，形成">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-11T14:43:21.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="循环链表">
+<meta name="twitter:description" content="解决约瑟夫环 约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知n个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。通常解决这类问题时我们把编号从0~n-1，最后 [1]  结果+1即为原问题的解。  首先定义一个环形链表，先初始化n个人，用for语句，形成">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,91 +155,194 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-循环链表" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/29/First-Blog/" class="archive-article-date">
-  	<time datetime="2019-05-29T15:04:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/29/First-Blog/">First Blog</a>
+    <h1 class="article-title" itemprop="name">
+      循环链表
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/07/11/循环链表/" class="archive-article-date">
+  	<time datetime="2019-07-11T13:50:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="解决约瑟夫环"><a href="#解决约瑟夫环" class="headerlink" title="解决约瑟夫环"></a>解决约瑟夫环</h1><blockquote>
+<p>约瑟夫环（<a href="https://baike.baidu.com/item/约瑟夫问题/3857719" target="_blank" rel="noopener">约瑟夫问题</a>）是一个数学的应用问题：已知n个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依<a href="https://baike.baidu.com/item/此" target="_blank" rel="noopener">此</a>规律重复下去，直到圆桌周围的人全部出列。通常解决这类问题时我们把编号从0~n-1，最后 [1]  结果+1即为原问题的解。</p>
+</blockquote>
+<p>首先定义一个环形链表，先初始化n个人，用for语句，形成环形链表，定义一个head，cur，boy（待插入的），从1开始，游戏就是1开始。如果j=1，就新建boy把boy当head，然后cur.next=cur自身形成环形。不是，就把cur.next=boy,boy.next=head,cur=boy,形成环。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">ListNode first=<span class="keyword">null</span>;</span><br><span class="line">     ListNode help=<span class="keyword">null</span>;<span class="comment">//解决约瑟夫问题的节点</span></span><br><span class="line">     ListNode cur=<span class="keyword">null</span>;</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;=n; i++) &#123;</span><br><span class="line">         <span class="keyword">if</span> (i==<span class="number">1</span>)&#123;</span><br><span class="line">             ListNode boy=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">             first=boy;</span><br><span class="line">             cur=boy;</span><br><span class="line">             cur.next=first;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             ListNode boy=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">             cur.next=boy;</span><br><span class="line">             boy.next=first;</span><br><span class="line">             cur=boy;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决思路，通过便利，使help在head的前一个，就是help.next=head,如果要改变开始顺序，就把head，help移动k-1次，从k开始</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">help=first;</span><br><span class="line">      <span class="keyword">while</span> (help.next!=first)&#123;</span><br><span class="line">          help=help.next;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">//初始化，在最初规定的位置</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; start- <span class="number">1</span>; i++) &#123;</span><br><span class="line">          first=first.next;</span><br><span class="line">          help=help.next;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决方法，当head！=help（不都为空)才成立，和初始化差不多，移动m-1，head=head.next，help。next=head，最终跳出循环，方法结束。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (first!=help) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                first=first.next;</span><br><span class="line">                help=help.next;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(first.val);</span><br><span class="line">            first=first.next;</span><br><span class="line">            help.next=first;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(first.val+<span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终完整代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">josephu</span><span class="params">(<span class="keyword">int</span> start,<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        ListNode first=<span class="keyword">null</span>;</span><br><span class="line">        ListNode help=<span class="keyword">null</span>;</span><br><span class="line">        ListNode cur=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;=n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i==<span class="number">1</span>)&#123;</span><br><span class="line">                ListNode boy=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">                first=boy;</span><br><span class="line">                cur=boy;</span><br><span class="line">                cur.next=first;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                ListNode boy=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">                cur.next=boy;</span><br><span class="line">                boy.next=first;</span><br><span class="line">                cur=boy;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        help=first;</span><br><span class="line">        <span class="keyword">while</span> (help.next!=first)&#123;</span><br><span class="line">            help=help.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//初始化，在最初规定的位置</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; start- <span class="number">1</span>; i++) &#123;</span><br><span class="line">            first=first.next;</span><br><span class="line">            help=help.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (first!=help) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                first=first.next;</span><br><span class="line">                help=help.next;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(first.val);</span><br><span class="line">            first=first.next;</span><br><span class="line">            help.next=first;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(first.val+<span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闲谈</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/11/循环链表/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/28/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-28T12:21:29.079Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/07/11/反转链表/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          反转链表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/29/First-Blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">First Blog</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/28/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -257,8 +365,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
