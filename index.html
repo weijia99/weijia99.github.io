@@ -152,19 +152,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-sss" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-快排" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/23/sss/">sss</a>
+      <a class="article-title" href="/2019/07/23/快排/">sss</a>
     </h1>
   
 
         
-        <a href="/2019/07/23/sss/" class="archive-article-date">
+        <a href="/2019/07/23/快排/" class="archive-article-date">
   	<time datetime="2019-07-23T06:45:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
 </a>
         
@@ -172,7 +172,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h1><h2 id="1-0定义"><a href="#1-0定义" class="headerlink" title="1.0定义"></a>1.0定义</h2><blockquote>
+<p><strong>快**</strong>速排序（<strong><strong>Quicksort</strong></strong>）是对冒泡排序的一种改进<strong><strong>。</strong></strong>基<strong><strong>本思想</strong></strong>是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列**</p>
+</blockquote>
+<h2 id="2-个人理解"><a href="#2-个人理解" class="headerlink" title="2.个人理解"></a>2.个人理解</h2><p>快排运用了分而治之的思想，先把数组分成两个区域，一个是小于value的区域，一个是大于value的区域，在对这两个区域里的进行分解，直到只有一个元素才停止，先用sort算法分成两个区域，并把value的下标取出，然后再分成左区域和右区域，再这里面进行找下标再区分，直到l&gt;=r</p>
+<h2 id="3-图片讲解"><a href="#3-图片讲解" class="headerlink" title="3.图片讲解"></a>3.图片讲解</h2><p><a href="https://imgchr.com/i/eEcqte" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/24/eEcqte.md.png" alt="eEcqte.md.png"></a></p>
+<h2 id="4-0代码讲解"><a href="#4-0代码讲解" class="headerlink" title="4.0代码讲解"></a>4.0代码讲解</h2><p>首先要两个代码，一个是不断进行分左区域和区域，另一个就是分大于value和小于value，最后的出下标返回来进行左右划分</p>
+<h3 id="4-1不断划分左右区域"><a href="#4-1不断划分左右区域" class="headerlink" title="4.1不断划分左右区域"></a>4.1不断划分左右区域</h3><p>条件终止是l》=r</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort2</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left&gt;=right)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> v=qucik(arr,left,right);</span><br><span class="line">        quickSort2(arr,left,v-<span class="number">1</span>);</span><br><span class="line">        quickSort2(arr,v+<span class="number">1</span>,right);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2获取下标，并同时对数组进行分区域"><a href="#4-2获取下标，并同时对数组进行分区域" class="headerlink" title="4.2获取下标，并同时对数组进行分区域"></a>4.2获取下标，并同时对数组进行分区域</h3><p>首先设置l=left+1，r=right，l往右移动，r往左移动，value先设置为arr【left】，当arr【l】&gt;value时停止否则l++，r就是arr【r】&lt;value时，停止，否则就是r–，当l与r都停止时候就把arr【l】yuarr【r】进行交换，如何l++，r–停止条件也是l&gt;r。跳出循环时，把arr【r】与arr【left】进行交换，最后把r返回就行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">qucik</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l=left+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> r=right;</span><br><span class="line">        <span class="keyword">int</span> val=arr[left];</span><br><span class="line">        <span class="keyword">while</span> (l&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">while</span> (l&lt;=right&amp;&amp;arr[l]&lt;val)&#123;</span><br><span class="line">                l++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (r&gt;=left+<span class="number">1</span>&amp;&amp;arr[r]&gt;val)&#123;</span><br><span class="line">                r--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (l&gt;r)&#123;</span><br><span class="line">                <span class="comment">//说明已经排好了</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> tem=arr[l];</span><br><span class="line">            arr[l]=arr[r];</span><br><span class="line">            arr[r]=tem;</span><br><span class="line">            l++;</span><br><span class="line">            r--;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//跳出循环把，r与left交换，因为是以left威大小来分的</span></span><br><span class="line">        <span class="keyword">int</span> tem=arr[left];</span><br><span class="line">        arr[left]=arr[r];</span><br><span class="line">        arr[r]=tem;</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -180,11 +192,26 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/23/sss/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/23/快排/">展开全文 >></a>
         </p>
       
 
@@ -237,7 +264,7 @@
         <h1 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h1><h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1.思路"></a>1.思路</h2><p>把整个数组先找出中间数mid=（length/2),用mid的个数分成5组，用插入排序，排每一组，再把mid=mid/2,再分成mid组，知道mid==0才停止。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = arr.length/<span class="number">2</span>; i &gt;<span class="number">0</span>; i/=<span class="number">2</span>) &#123;<span class="comment">//分组</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//1.png" alt></p>
+<p><a href="https://imgchr.com/i/eE6XLV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/24/eE6XLV.md.png" alt="eE6XLV.md.png"></a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;arr.length ; j++) &#123;<span class="comment">//选择排序，从mid开始数，找j-i来比较，</span></span><br><span class="line">                <span class="keyword">int</span> k=j-i;</span><br><span class="line">                <span class="keyword">int</span> tem=arr[j];<span class="comment">//要插入的元素</span></span><br><span class="line">                <span class="keyword">while</span> (k&gt;=<span class="number">0</span>&amp;&amp;tem&lt;arr[k])&#123;</span><br><span class="line">                    arr[k+i]=arr[k];</span><br><span class="line">                    k-=i;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[k+i]=tem;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="2完整代码"><a href="#2完整代码" class="headerlink" title="2完整代码"></a>2完整代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 希尔排序 </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr=&#123;<span class="number">8</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="comment">//        for (int i = arr.length/2; i &gt;0 ; i/=2) &#123;//要分的组数</span></span><br><span class="line"><span class="comment">//            for (int j = i; j &lt;arr.length ; j++) &#123;//从哪里形成组数</span></span><br><span class="line"><span class="comment">//                for (int k = j-i; k&gt;=0 ; k-=i) &#123;//形成组，夸区域</span></span><br><span class="line"><span class="comment">//                    if (arr[k+i]&lt;arr[k])&#123;</span></span><br><span class="line"><span class="comment">//                        int tem=arr[k+i];</span></span><br><span class="line"><span class="comment">//                        arr[k+i]=arr[k];</span></span><br><span class="line"><span class="comment">//                        arr[k]=tem;</span></span><br><span class="line"><span class="comment">//                    &#125;</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//优化希尔排序，用移位法</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = arr.length/<span class="number">2</span>; i &gt;<span class="number">0</span>; i/=<span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;arr.length ; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> k=j-i;</span><br><span class="line">                <span class="keyword">int</span> tem=arr[j];<span class="comment">//要插入的元素</span></span><br><span class="line">                <span class="keyword">while</span> (k&gt;=<span class="number">0</span>&amp;&amp;tem&lt;arr[k])&#123;</span><br><span class="line">                    arr[k+i]=arr[k];</span><br><span class="line">                    k-=i;</span><br><span class="line">                &#125;</span><br><span class="line">                arr[k+i]=tem;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i]+<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
