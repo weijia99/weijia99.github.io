@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>深度优先 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
+  <meta name="description" content="深度优先1.定义深度优先遍历算法步骤 1)访问初始结点v，并标记结点v为已访问。 2)查找结点v的第一个邻接结点w。 3)若w存在，则继续执行4，如果w不存在，则回到第1步，将从v的下一个结点继续。 4)若w未被访问，对w进行深度优先遍历递归（即把w当做另一个v，然后进行步骤123）。 5)查找结点v的w邻接结点的下一个邻接结点，转到步骤3。 2.个人理解先设置第一个点为已经访问过的再看这个点与其">
+<meta name="keywords" content="算法,图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度优先">
+<meta property="og:url" content="http://yoursite.com/2019/07/25/深度优先/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="深度优先1.定义深度优先遍历算法步骤 1)访问初始结点v，并标记结点v为已访问。 2)查找结点v的第一个邻接结点w。 3)若w存在，则继续执行4，如果w不存在，则回到第1步，将从v的下一个结点继续。 4)若w未被访问，对w进行深度优先遍历递归（即把w当做另一个v，然后进行步骤123）。 5)查找结点v的w邻接结点的下一个邻接结点，转到步骤3。 2.个人理解先设置第一个点为已经访问过的再看这个点与其">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-26T06:09:09.180Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="深度优先">
+<meta name="twitter:description" content="深度优先1.定义深度优先遍历算法步骤 1)访问初始结点v，并标记结点v为已访问。 2)查找结点v的第一个邻接结点w。 3)若w存在，则继续执行4，如果w不存在，则回到第1步，将从v的下一个结点继续。 4)若w未被访问，对w进行深度优先遍历递归（即把w当做另一个v，然后进行步骤123）。 5)查找结点v的w邻接结点的下一个邻接结点，转到步骤3。 2.个人理解先设置第一个点为已经访问过的再看这个点与其">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,162 +155,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-深度优先" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      深度优先
+    </h1>
+  
+
+        
+        <a href="/2019/07/25/深度优先/" class="archive-article-date">
+  	<time datetime="2019-07-24T19:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="深度优先"><a href="#深度优先" class="headerlink" title="深度优先"></a>深度优先</h1><h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><p><strong>深度优先遍历算法步骤</strong></p>
+<p>1)访问初始结点v，并标记结点v为已访问。</p>
+<p>2)查找结点v的第一个邻接结点w。</p>
+<p>3)若w存在，则继续执行4，如果w不存在，则回到第1步，将从v的下一个结点继续。</p>
+<p>4)若w未被访问，对w进行深度优先遍历递归（即把w当做另一个v，然后进行步骤123）。</p>
+<p>5)查找结点v的w邻接结点的下一个邻接结点，转到步骤3。</p>
+<h2 id="2-个人理解"><a href="#2-个人理解" class="headerlink" title="2.个人理解"></a>2.个人理解</h2><p>先设置第一个点为已经访问过的再看这个点与其他拿几个点连接过，并且那些点没有访问过，那么久把这个点递归dfs（递归基停止是都访问过就直接跳回上一个</p>
+<h2 id="3-代码讲解"><a href="#3-代码讲解" class="headerlink" title="3.代码讲解"></a>3.代码讲解</h2><p>首先设置为已经访问过的，在用for循环看邻接矩阵是否这两个相连并没有访问过，那么久把这个点用dfs在递归</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span>[][] arr,<span class="keyword">boolean</span>[] visited)</span></span>&#123;</span><br><span class="line">       visited[i]=<span class="keyword">true</span>;</span><br><span class="line">       System.out.print(i+<span class="string">"-&gt;"</span>);</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (arr[i][j]==<span class="number">1</span>&amp;&amp;!visited[j])&#123;</span><br><span class="line">               dfs(j,arr,visited);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面只是访问的所有相连的节点，万一还有断点，所以需要for循环所有节点</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (!visited[i])&#123;</span><br><span class="line">               <span class="comment">//depthfs(i,arr,visited);</span></span><br><span class="line">               dfs(i,arr,visited);</span><br><span class="line">               <span class="comment">//brofs(i,arr,visited);</span></span><br><span class="line">               <span class="comment">//bfs(i,arr,visited);</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/12/逆波兰/" class="archive-article-date">
-  	<time datetime="2019-07-12T14:52:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/12/逆波兰/">逆波兰</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">栈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/栈计算器/" class="archive-article-date">
-  	<time datetime="2019-07-11T15:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/栈计算器/">栈计算器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">栈的应用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/反转链表/" class="archive-article-date">
-  	<time datetime="2019-07-11T14:10:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/反转链表/">反转链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">链表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/循环链表/" class="archive-article-date">
-  	<time datetime="2019-07-11T13:50:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/循环链表/">循环链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -315,97 +226,120 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">图</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/25/深度优先/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/29/First-Blog/" class="archive-article-date">
-  	<time datetime="2019-05-29T15:04:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/07/26/广度优先/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          广度优先
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/24/基数排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基数排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/29/First-Blog/">First Blog</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闲谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/28/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-28T12:21:29.079Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/28/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -429,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>汉诺塔 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
+  <meta name="description" content="汉诺塔1.分治定义分治法在每一层递归上都有三个步骤： 1)分解：将原问题分解为若干个规模较小，相互独立，与原问题形式相同的子问题 2)解决：若子问题规模较小而容易被解决则直接解，否则递归地解各个子问题 3)合并：将各个子问题的解合并为原问题的解。  if |P|≤n0    then return(ADHOC(P)) //将P分解为较小的子问题 P1 ,P2 ,…,Pk for i←1 to k">
+<meta name="keywords" content="算法,分治">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汉诺塔">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/汉诺塔/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="汉诺塔1.分治定义分治法在每一层递归上都有三个步骤： 1)分解：将原问题分解为若干个规模较小，相互独立，与原问题形式相同的子问题 2)解决：若子问题规模较小而容易被解决则直接解，否则递归地解各个子问题 3)合并：将各个子问题的解合并为原问题的解。  if |P|≤n0    then return(ADHOC(P)) //将P分解为较小的子问题 P1 ,P2 ,…,Pk for i←1 to k">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-26T06:40:38.569Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="汉诺塔">
+<meta name="twitter:description" content="汉诺塔1.分治定义分治法在每一层递归上都有三个步骤： 1)分解：将原问题分解为若干个规模较小，相互独立，与原问题形式相同的子问题 2)解决：若子问题规模较小而容易被解决则直接解，否则递归地解各个子问题 3)合并：将各个子问题的解合并为原问题的解。  if |P|≤n0    then return(ADHOC(P)) //将P分解为较小的子问题 P1 ,P2 ,…,Pk for i←1 to k">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,162 +155,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-汉诺塔" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      汉诺塔
+    </h1>
+  
+
+        
+        <a href="/2019/07/26/汉诺塔/" class="archive-article-date">
+  	<time datetime="2019-07-26T06:30:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="汉诺塔"><a href="#汉诺塔" class="headerlink" title="汉诺塔"></a>汉诺塔</h1><h2 id="1-分治定义"><a href="#1-分治定义" class="headerlink" title="1.分治定义"></a>1.分治定义</h2><p>分治法在每一层递归上都有三个步骤：</p>
+<p>1)分解：将原问题分解为若干个规模较小，相互独立，与原问题形式相同的子问题</p>
+<p>2)解决：若子问题规模较小而容易被解决则直接解，否则递归地解各个子问题</p>
+<p>3)合并：将各个子问题的解合并为原问题的解。</p>
+<blockquote>
+<p>if |P|≤n0</p>
+<p>   then return(ADHOC(P))</p>
+<p>//将P分解为较小的子问题 P1 ,P2 ,…,Pk</p>
+<p>for i←1 to k</p>
+<p>do yi ← Divide-and-Conquer(Pi)   递归解决Pi</p>
+<p>T ← MERGE(y1,y2,…,yk)   合并子问题</p>
+<p>return(T)</p>
+</blockquote>
+<blockquote>
+<p>其中|P|表示问题P的规模；n0为一阈值，表示当问题P的规模不超过n0时，问题已容易直接解出，不必再继续分解。ADHOC(P)是该分治法中的基本子算法，用于直接解小规模的问题P。因此，当P的规模不超过n0时直接用算法ADHOC(P)求解。算法MERGE(y1,y2,…,yk)是该分治法中的合并子算法，用于将P的子问题P1<br>,P2 ,…,Pk的相应的解y1,y2,…,yk合并为P的解。</p>
+</blockquote>
+<h2 id="2-汉诺塔定义"><a href="#2-汉诺塔定义" class="headerlink" title="2.汉诺塔定义"></a>2.汉诺塔定义</h2><blockquote>
+<p>Ø汉诺塔的传说</p>
+<p>汉诺塔：汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根<a href="https://baike.baidu.com/item/金刚石/80698" target="_blank" rel="noopener">金刚石</a>柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</p>
+<p>假如每秒钟一次，共需多长时间呢？移完这些金片需要5845.54亿年以上，太阳系的预期寿命据说也就是数百亿年。真的过了5845.54亿年，地球上的一切生命，连同梵塔、庙宇等，都早已经灰飞烟灭。</p>
+</blockquote>
+<h2 id="3-解决思路"><a href="#3-解决思路" class="headerlink" title="3.解决思路"></a>3.解决思路</h2><p>Ø汉诺塔游戏的<strong>演示</strong>和<strong>思路分析</strong>:    </p>
+<p>1)如果是有一个盘， A-&gt;C</p>
+<p>如果我们有 n &gt;= 2 情况，我们总是可以看做是两个盘 1.最下边的盘 2. 上面的盘</p>
+<p>1)先把 最上面的盘 A-&gt;B</p>
+<p>2)把最下边的盘 A-&gt;C</p>
+<p>3)把B塔的所有盘 从 B-&gt;C   </p>
+<h2 id="4-个人理解"><a href="#4-个人理解" class="headerlink" title="4.个人理解"></a>4.个人理解</h2><p>把牌分为两部分，最下面一个，和上面的所有，先把最上面所有的（n-1）移动到b盘（借助c盘的帮助），再把最下面的一个移动到c盘，最后再把b盘上的所有移动到c盘（借助a盘的帮助），把规模为n的问题分为n-1,1，n-1的三个问题，递归基就是只有一个元素，那就把元素从a到c</p>
+<h2 id="5-代码讲解"><a href="#5-代码讲解" class="headerlink" title="5.代码讲解"></a>5.代码讲解</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        solve(<span class="number">4</span>,<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//n个塔借组b使他从a到c</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span> a,<span class="keyword">char</span> b,<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n==<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"第1个盘从"</span>+a+<span class="string">"到"</span>+c);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            solve(n-<span class="number">1</span>,a,c,b);<span class="comment">//吧最上面的pan全部移到b上</span></span><br><span class="line">            System.out.println(<span class="string">"第"</span>+n+<span class="string">"个盘从"</span>+a+<span class="string">"到"</span>+c);<span class="comment">//这个ac是指起点到终点，不是a点和c点</span></span><br><span class="line">            solve(n-<span class="number">1</span>,b,a,c);<span class="comment">//再把b上的pan全部移到c上</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/12/逆波兰/" class="archive-article-date">
-  	<time datetime="2019-07-12T14:52:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/12/逆波兰/">逆波兰</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">栈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/栈计算器/" class="archive-article-date">
-  	<time datetime="2019-07-11T15:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/栈计算器/">栈计算器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">栈的应用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/反转链表/" class="archive-article-date">
-  	<time datetime="2019-07-11T14:10:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/反转链表/">反转链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">链表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/循环链表/" class="archive-article-date">
-  	<time datetime="2019-07-11T13:50:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/循环链表/">循环链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -315,97 +243,120 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分治</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/26/汉诺塔/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/29/First-Blog/" class="archive-article-date">
-  	<time datetime="2019-05-29T15:04:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/07/26/动态规划/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          动态规划
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/26/广度优先/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">广度优先</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/29/First-Blog/">First Blog</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闲谈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/28/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-28T12:21:29.079Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/28/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -429,8 +380,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
