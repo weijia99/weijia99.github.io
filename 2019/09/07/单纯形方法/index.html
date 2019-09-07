@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 动态规划 | Hexo</title>
+  <title>单纯形方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/动态规划/index.html">
+  <meta name="description" content="单纯形方法使用1.第一步：化标准形 标准型的规定1.目标函数要求max2.约束条件均为等式3.决策变量为非负约束最终结果 2.第二步：构建单纯形表1.找出基向量，就是他们系数组成的矩阵是单位向量2.把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0 3.第三步：求解1.找出θi里最大的所对应那一列​        如图，应该是3最大，对应的就是x2">
+<meta name="keywords" content="线性代数,运筹学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单纯形方法">
+<meta property="og:url" content="http://yoursite.com/2019/09/07/单纯形方法/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="单纯形方法使用1.第一步：化标准形 标准型的规定1.目标函数要求max2.约束条件均为等式3.决策变量为非负约束最终结果 2.第二步：构建单纯形表1.找出基向量，就是他们系数组成的矩阵是单位向量2.把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0 3.第三步：求解1.找出θi里最大的所对应那一列​        如图，应该是3最大，对应的就是x2">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213728799-361504213.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213813096-1714683258.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213844346-2035122277.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107214818862-1198445671.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107215054862-1636502575.png">
+<meta property="og:updated_time" content="2019-09-07T07:42:38.073Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="单纯形方法">
+<meta name="twitter:description" content="单纯形方法使用1.第一步：化标准形 标准型的规定1.目标函数要求max2.约束条件均为等式3.决策变量为非负约束最终结果 2.第二步：构建单纯形表1.找出基向量，就是他们系数组成的矩阵是单位向量2.把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0 3.第三步：求解1.找出θi里最大的所对应那一列​        如图，应该是3最大，对应的就是x2">
+<meta name="twitter:image" content="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213728799-361504213.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,64 +161,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-单纯形方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/动态规划/" class="archive-article-date">
-  	<time datetime="2019-07-26T06:41:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/动态规划/">动态规划</a>
+    <h1 class="article-title" itemprop="name">
+      单纯形方法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/09/07/单纯形方法/" class="archive-article-date">
+  	<time datetime="2019-09-07T07:00:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="单纯形方法"><a href="#单纯形方法" class="headerlink" title="单纯形方法"></a>单纯形方法</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="1-第一步：化标准形"><a href="#1-第一步：化标准形" class="headerlink" title="1.第一步：化标准形"></a>1.第一步：化标准形</h3><p><img src="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213728799-361504213.png" alt="示例图片"></p>
+<h4 id="标准型的规定"><a href="#标准型的规定" class="headerlink" title="标准型的规定"></a>标准型的规定</h4><h5 id="1-目标函数要求max"><a href="#1-目标函数要求max" class="headerlink" title="1.目标函数要求max"></a>1.目标函数要求max</h5><h5 id="2-约束条件均为等式"><a href="#2-约束条件均为等式" class="headerlink" title="2.约束条件均为等式"></a>2.约束条件均为等式</h5><h5 id="3-决策变量为非负约束"><a href="#3-决策变量为非负约束" class="headerlink" title="3.决策变量为非负约束"></a>3.决策变量为非负约束</h5><h4 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h4><p><img src="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213813096-1714683258.png" alt="图片"></p>
+<h3 id="2-第二步：构建单纯形表"><a href="#2-第二步：构建单纯形表" class="headerlink" title="2.第二步：构建单纯形表"></a>2.第二步：构建单纯形表</h3><h4 id="1-找出基向量，就是他们系数组成的矩阵是单位向量"><a href="#1-找出基向量，就是他们系数组成的矩阵是单位向量" class="headerlink" title="1.找出基向量，就是他们系数组成的矩阵是单位向量"></a>1.找出基向量，就是他们系数组成的矩阵是单位向量</h4><h4 id="2-把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0"><a href="#2-把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0" class="headerlink" title="2.把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0"></a><strong><em>2.把z函数的系数也加入这个矩阵，除了自己的系数是1，其余都为0，用行变换变成只有1个1，其余列上都为0</em></strong></h4><p><img src="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107213844346-2035122277.png" alt="图片"></p>
+<h3 id="3-第三步：求解"><a href="#3-第三步：求解" class="headerlink" title="3.第三步：求解"></a>3.第三步：求解</h3><h4 id="1-找出θi里最大的所对应那一列"><a href="#1-找出θi里最大的所对应那一列" class="headerlink" title="1.找出θi里最大的所对应那一列"></a>1.找出θi里最大的所对应那一列</h4><p>​        如图，应该是3最大，对应的就是x2那一列，x2就是换入变量，再求b/aij,就是b那一列除x2对应的那一列，那个最小就是，那个元素的行向量对应的向量换出变量（b&gt;0才可以除，若都小于等于0，则无解）12/3=4,9/1=9,4小，x3就是换出变量</p>
+<h4 id="2-把x2那一列化成010，保证只有x2与x3相交的为1，其他的都为0，在x2列"><a href="#2-把x2那一列化成010，保证只有x2与x3相交的为1，其他的都为0，在x2列" class="headerlink" title="2.把x2那一列化成010，保证只有x2与x3相交的为1，其他的都为0，在x2列"></a>2.把x2那一列化成010，保证只有x2与x3相交的为1，其他的都为0，在x2列<!--应该是001，这里的是θi在第一行，我们的是在最后一行--></h4><p><img src="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107214818862-1198445671.png" alt="图片"></p>
+<h4 id="3-重复1-2两步，直到z的系数都小于等于0"><a href="#3-重复1-2两步，直到z的系数都小于等于0" class="headerlink" title="3.重复1,2两步，直到z的系数都小于等于0"></a>3.重复1,2两步，直到z的系数都小于等于0</h4><p>此时x1是换入，x4是换出，变成001</p>
+<p><img src="https://images2017.cnblogs.com/blog/1092891/201801/1092891-20180107215054862-1636502575.png" alt></p>
+<h3 id="4-结束"><a href="#4-结束" class="headerlink" title="4.结束"></a>4.结束</h3><p>当θi都小于等于0是结束，x*=（3,3,0,0）T，z=15</p>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h3><h4 id="解的分类"><a href="#解的分类" class="headerlink" title="解的分类"></a>解的分类</h4><h6 id="1-唯一最优解"><a href="#1-唯一最优解" class="headerlink" title="1.唯一最优解"></a>1.唯一最优解</h6><p>当所有非基变量的检验数都小于零，则原问题有唯一最优解</p>
+<h6 id="2-无穷多个最优解"><a href="#2-无穷多个最优解" class="headerlink" title="2.无穷多个最优解"></a>2.无穷多个最优解</h6><p>当所有非基变量的检验数<strong>都小于等于零，注意有等于零的检验数</strong>，则有无穷多个最优解，有0</p>
+<p>非基向量就可以随便加也无影响，所以是无穷个</p>
+<h6 id="3-无界解"><a href="#3-无界解" class="headerlink" title="3.无界解"></a>3.<a href="https://www.baidu.com/s?wd=无界&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">无界</a>解</h6><p>当任意一个大于零的非基变量的检验数，其对应的ajk（求最小比值的分母）都小于等于零时，则原问题有<a href="https://www.baidu.com/s?wd=无界&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">无界</a>解</p>
+<p>就是b/aij&lt;=0,无法找到换出的变量</p>
+<h6 id="4-无可行解"><a href="#4-无可行解" class="headerlink" title="4.无可行解"></a>4.无可行解</h6><p>添加人工变量后的问题，当所有非基变量的检验数都小于等于零，而基变量中有人工变量时，则原问题无可行解</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">线性代数</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">运筹学</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/07/单纯形方法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/09/04/Boot/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Boot</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +361,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
