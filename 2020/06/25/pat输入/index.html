@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>反转链表 | Hexo</title>
+  <title>pat输入 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="反转链表解决 反转一个单链表。 示例: 123&amp;gt; 输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&amp;gt; 输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&amp;gt;  解决思路：先构建一个虚拟头节点dummyhead，通过遍历获取每一个节点cur，插入在虚拟头节点那个树上了，具体是cur.next=dummyhead.next,dumm">
-<meta name="keywords" content="数据结构,链表">
+  <meta name="description" content="输入方法1.eof123while(scanf(&quot;%d&quot;,&amp;amp;n)!=EOF)&amp;#123;    &amp;#125;  2.条件读入12while(scanf(&quot;%d&quot;,&amp;amp;n)!=-1)&amp;#123;&amp;#125;  3.for">
+<meta name="keywords" content="pat,输入">
 <meta property="og:type" content="article">
-<meta property="og:title" content="反转链表">
-<meta property="og:url" content="http://yoursite.com/2019/07/11/反转链表/index.html">
+<meta property="og:title" content="pat输入">
+<meta property="og:url" content="http://yoursite.com/2020/06/25/pat输入/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="反转链表解决 反转一个单链表。 示例: 123&amp;gt; 输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&amp;gt; 输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&amp;gt;  解决思路：先构建一个虚拟头节点dummyhead，通过遍历获取每一个节点cur，插入在虚拟头节点那个树上了，具体是cur.next=dummyhead.next,dumm">
+<meta property="og:description" content="输入方法1.eof123while(scanf(&quot;%d&quot;,&amp;amp;n)!=EOF)&amp;#123;    &amp;#125;  2.条件读入12while(scanf(&quot;%d&quot;,&amp;amp;n)!=-1)&amp;#123;&amp;#125;  3.for">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-11T15:21:39.219Z">
+<meta property="og:updated_time" content="2020-06-25T13:09:45.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="反转链表">
-<meta name="twitter:description" content="反转链表解决 反转一个单链表。 示例: 123&amp;gt; 输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&amp;gt; 输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL&amp;gt;  解决思路：先构建一个虚拟头节点dummyhead，通过遍历获取每一个节点cur，插入在虚拟头节点那个树上了，具体是cur.next=dummyhead.next,dumm">
+<meta name="twitter:title" content="pat输入">
+<meta name="twitter:description" content="输入方法1.eof123while(scanf(&quot;%d&quot;,&amp;amp;n)!=EOF)&amp;#123;    &amp;#125;  2.条件读入12while(scanf(&quot;%d&quot;,&amp;amp;n)!=-1)&amp;#123;&amp;#125;  3.for">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -155,35 +155,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-反转链表" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-pat输入" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      反转链表
+      pat输入
     </h1>
   
 
         
-        <a href="/2019/07/11/反转链表/" class="archive-article-date">
-  	<time datetime="2019-07-11T14:10:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+        <a href="/2020/06/25/pat输入/" class="archive-article-date">
+  	<time datetime="2020-06-25T09:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="反转链表解决"><a href="#反转链表解决" class="headerlink" title="反转链表解决"></a>反转链表解决</h1><blockquote>
-<p>反转一个单链表。</p>
-<p><strong>示例:</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 输入: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">5</span>-&gt;NULL</span><br><span class="line">&gt; 输出: <span class="number">5</span>-&gt;<span class="number">4</span>-&gt;<span class="number">3</span>-&gt;<span class="number">2</span>-&gt;<span class="number">1</span>-&gt;NULL</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>解决思路：先构建一个虚拟头节点dummyhead，通过遍历获取每一个节点cur，插入在虚拟头节点那个树上了，具体是cur.next=dummyhead.next,dummyhead.next=cur，这句话是把cur指向dummyhead的下一个节点（前一个节点），然后dummyhead再指向cur，cur再遍历最后返回dummyhead。next就行</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">re</span><span class="params">(ListNode head)</span></span>&#123;</span><br><span class="line">        ListNode reverse=<span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">        ListNode cur=head.next;</span><br><span class="line">        ListNode next;</span><br><span class="line">        <span class="keyword">while</span> (cur!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            next=cur.next;</span><br><span class="line">            cur.next=reverse.next;<span class="comment">//把获取的这个节点指向rever节点的下一个</span></span><br><span class="line">            <span class="comment">//1  2  3原来的</span></span><br><span class="line">            <span class="comment">//0reverse</span></span><br><span class="line">            <span class="comment">//先是1.next=null，再0指向1   0  1  null</span></span><br><span class="line">            reverse.next=cur;<span class="comment">//重新链接，使revers节点下一个变成获取的</span></span><br><span class="line">            cur=next;</span><br><span class="line">        &#125;</span><br><span class="line">        head.next=reverse.next;<span class="comment">//reverse已经被取代了</span></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="输入方法"><a href="#输入方法" class="headerlink" title="输入方法"></a>输入方法</h1><h2 id="1-eof"><a href="#1-eof" class="headerlink" title="1.eof"></a>1.eof</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="2-条件读入"><a href="#2-条件读入" class="headerlink" title="2.条件读入"></a>2.条件读入</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=<span class="number">-1</span>)&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="3-for"><a href="#3-for" class="headerlink" title="3.for"></a>3.for</h2>
       
 
       
@@ -217,11 +213,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pat</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">链表</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">输入</a>
         		</li>
       		
 		</ul>
@@ -277,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/11/反转链表/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/25/pat输入/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/11/栈计算器/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          栈计算器
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/11/循环链表/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">循环链表</div>
+    <a href="/2019/09/07/单纯形方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单纯形方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
