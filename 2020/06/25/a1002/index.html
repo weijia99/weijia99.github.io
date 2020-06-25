@@ -8,14 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>a1002 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="a1002题目大意。两个多项式相加。 解决方法。构建一个双精度的数组。同时在构建一个索引表。这个索引表来看一共有哪几个是要加入的指数，如果系数为零，那么就把它给加入到索引表里面。然后进行加法运算，如果最后的系数还是为零，那么就减少一个要输出的数值。最后再使用short来进行排序，按倒叙的方法来输入所有的值。 代码1234567891011121314151617181920212223242526">
+<meta name="keywords" content="pat,水题">
+<meta property="og:type" content="article">
 <meta property="og:title" content="a1002">
 <meta property="og:url" content="http://yoursite.com/2020/06/25/a1002/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="a1002题目大意。两个多项式相加。 解决方法。构建一个双精度的数组。同时在构建一个索引表。这个索引表来看一共有哪几个是要加入的指数，如果系数为零，那么就把它给加入到索引表里面。然后进行加法运算，如果最后的系数还是为零，那么就减少一个要输出的数值。最后再使用short来进行排序，按倒叙的方法来输入所有的值。 代码1234567891011121314151617181920212223242526">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-25T13:18:07.688Z">
+<meta property="og:updated_time" content="2020-06-25T13:24:58.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="a1002">
+<meta name="twitter:description" content="a1002题目大意。两个多项式相加。 解决方法。构建一个双精度的数组。同时在构建一个索引表。这个索引表来看一共有哪几个是要加入的指数，如果系数为零，那么就把它给加入到索引表里面。然后进行加法运算，如果最后的系数还是为零，那么就减少一个要输出的数值。最后再使用short来进行排序，按倒叙的方法来输入所有的值。 代码1234567891011121314151617181920212223242526">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -171,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="a1002"><a href="#a1002" class="headerlink" title="a1002"></a><a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805526272000000" target="_blank" rel="noopener">a1002</a></h1><h2 id="题目大意。"><a href="#题目大意。" class="headerlink" title="题目大意。"></a>题目大意。</h2><p>两个多项式相加。</p>
+<h2 id="解决方法。"><a href="#解决方法。" class="headerlink" title="解决方法。"></a>解决方法。</h2><p>构建一个双精度的数组。同时在构建一个索引表。这个索引表来看一共有哪几个是要加入的指数，如果系数为零，那么就把它给加入到索引表里面。然后进行加法运算，如果最后的系数还是为零，那么就减少一个要输出的数值。最后再使用short来进行排序，按倒叙的方法来输入所有的值。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//cin用多了超市</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">10010</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,zhishu;</span><br><span class="line">    <span class="keyword">double</span> xishu;</span><br><span class="line">    <span class="keyword">double</span> ans[<span class="number">1000</span>];</span><br><span class="line">    fill(ans,ans+<span class="number">1000</span>,<span class="number">0.0</span>);</span><br><span class="line">    <span class="keyword">int</span> temp[<span class="number">1000</span>];</span><br><span class="line">    <span class="keyword">int</span> time=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;  n; ++j) &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;zhishu&gt;&gt;xishu;</span><br><span class="line">            <span class="keyword">if</span> (ans[zhishu]==<span class="number">0.0</span>)&#123;</span><br><span class="line">                temp[time]=zhishu;</span><br><span class="line">                time++;</span><br><span class="line">                count++;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            ans[zhishu]+=xishu;</span><br><span class="line"><span class="comment">//            如多相加为0</span></span><br><span class="line">            <span class="keyword">if</span> (ans[zhishu]==<span class="number">0.0</span>)&#123;</span><br><span class="line"></span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;count;</span><br><span class="line">    </span><br><span class="line">    sort(temp,temp+time);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = time<span class="number">-1</span>; k &gt;=<span class="number">0</span> ; --k) &#123;</span><br><span class="line">        <span class="keyword">if</span> (ans[temp[k]]!=<span class="number">0.0</span>)&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;temp[k]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%.1lf"</span>,ans[temp[k]]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -200,6 +206,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pat</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">水题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -417,6 +438,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">最短路径</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">输入</a>
               </li>
              
@@ -433,10 +470,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">线性代数</a>
               </li>
              
@@ -445,15 +478,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">链表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">图</a>
               </li>
              
               <li class="article-tag-list-item">

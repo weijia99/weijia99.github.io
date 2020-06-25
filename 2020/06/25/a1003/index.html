@@ -8,14 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>a1003 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="a1003题目大意根据距离人数构成最短路径，如果距离相等，选择人数多的，最后输出有几条最短路径和最多几个人 解决方法最短路径的代码正常写法 0.首先初始化G的所有值设置为maxn，距离d也设置maxn，visited设置false 1.首先是选出距离的点123456789int less=-1;        int min=maxn;//        首先找到最小编        for (i">
+<meta name="keywords" content="pat,图,最短路径">
+<meta property="og:type" content="article">
 <meta property="og:title" content="a1003">
 <meta property="og:url" content="http://yoursite.com/2020/06/25/a1003/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="a1003题目大意根据距离人数构成最短路径，如果距离相等，选择人数多的，最后输出有几条最短路径和最多几个人 解决方法最短路径的代码正常写法 0.首先初始化G的所有值设置为maxn，距离d也设置maxn，visited设置false 1.首先是选出距离的点123456789int less=-1;        int min=maxn;//        首先找到最小编        for (i">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-25T13:18:27.256Z">
+<meta property="og:updated_time" content="2020-06-25T13:26:17.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="a1003">
+<meta name="twitter:description" content="a1003题目大意根据距离人数构成最短路径，如果距离相等，选择人数多的，最后输出有几条最短路径和最多几个人 解决方法最短路径的代码正常写法 0.首先初始化G的所有值设置为maxn，距离d也设置maxn，visited设置false 1.首先是选出距离的点123456789int less=-1;        int min=maxn;//        首先找到最小编        for (i">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -171,7 +175,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="a1003"><a href="#a1003" class="headerlink" title="a1003"></a><a href="https://pintia.cn/problem-sets/994805342720868352/problems/994805523835109376" target="_blank" rel="noopener">a1003</a></h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>根据距离人数构成最短路径，如果距离相等，选择人数多的，最后输出有几条最短路径和最多几个人</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>最短路径的代码正常写法</p>
+<h3 id="0-首先初始化"><a href="#0-首先初始化" class="headerlink" title="0.首先初始化"></a>0.首先初始化</h3><p>G的所有值设置为maxn，距离d也设置maxn，visited设置false</p>
+<h3 id="1-首先是选出距离的点"><a href="#1-首先是选出距离的点" class="headerlink" title="1.首先是选出距离的点"></a>1.首先是选出距离的点</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> less=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">int</span> min=maxn;</span><br><span class="line"><span class="comment">//        首先找到最小编</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (d[i]&lt;min&amp;&amp;!visited[i])&#123;</span><br><span class="line">                less=i;</span><br><span class="line">                min=d[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-异常检查"><a href="#2-异常检查" class="headerlink" title="2.异常检查"></a>2.异常检查</h2><p>就是如果没找到最短的边那就结束</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (less==<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-设置为访问过，并且通过这个点的周围所有点更新d"><a href="#3-设置为访问过，并且通过这个点的周围所有点更新d" class="headerlink" title="3.设置为访问过，并且通过这个点的周围所有点更新d"></a>3.设置为访问过，并且通过这个点的周围所有点更新d</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">visited[less]= <span class="literal">true</span>;</span><br><span class="line"><span class="comment">//        通过这个最短点找与他相连的其他点，通过这个桥梁更新距离</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!visited[j]&amp;&amp;G[less][j]!=maxn)&#123;</span><br><span class="line">                <span class="keyword">if</span> (d[less]+G[less][j]&lt;d[j])&#123;</span><br><span class="line">                    d[j]=d[less]+G[less][j];</span><br><span class="line">                    ren[j]=cost[j]+ren[less];</span><br><span class="line">                    times[j]=times[less];</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span> (d[less]+G[less][j]==d[j])&#123;</span><br><span class="line">                    <span class="keyword">if</span> (cost[j]+ren[less]&gt;ren[j])&#123;</span><br><span class="line">                        ren[j]=cost[j]+ren[less];</span><br><span class="line">                    &#125;</span><br><span class="line">                    times[j]+=times[less];</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-完整的代码"><a href="#4-完整的代码" class="headerlink" title="4.完整的代码"></a>4.完整的代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//cin用多了超市</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,c1,c2;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;c1&gt;&gt;c2;</span><br><span class="line">    <span class="keyword">int</span> cost[n];</span><br><span class="line">    <span class="keyword">int</span> d[n];</span><br><span class="line">    fill(d,d+n,maxn);</span><br><span class="line">    <span class="keyword">bool</span> visited[n];</span><br><span class="line">    fill(visited,visited+n, <span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">int</span> G[n][n];</span><br><span class="line">    fill(G[<span class="number">0</span>],G[<span class="number">0</span>]+n*n,maxn);</span><br><span class="line">    <span class="keyword">int</span> ren[n];</span><br><span class="line">    fill(ren,ren+n,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;cost[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">        <span class="keyword">int</span> p,q,t;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;p&gt;&gt;q&gt;&gt;t;</span><br><span class="line">        G[p][q]=G[q][p]=t;</span><br><span class="line">    &#125;</span><br><span class="line">    d[c1]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> times[n];</span><br><span class="line">    fill(times,times+n,<span class="number">0</span>);</span><br><span class="line">    times[c1]=<span class="number">1</span>;</span><br><span class="line">    ren[c1]=cost[c1];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; n; ++k) &#123;</span><br><span class="line"><span class="comment">//        寻找最短的点</span></span><br><span class="line">        <span class="keyword">int</span> less=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">int</span> min=maxn;</span><br><span class="line"><span class="comment">//        首先找到最小编</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (d[i]&lt;min&amp;&amp;!visited[i])&#123;</span><br><span class="line">                less=i;</span><br><span class="line">                min=d[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//        没找到直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (less==<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[less]= <span class="literal">true</span>;</span><br><span class="line"><span class="comment">//        通过这个最短点找与他相连的其他点，通过这个桥梁更新距离</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!visited[j]&amp;&amp;G[less][j]!=maxn)&#123;</span><br><span class="line">                <span class="keyword">if</span> (d[less]+G[less][j]&lt;d[j])&#123;</span><br><span class="line">                    d[j]=d[less]+G[less][j];</span><br><span class="line">                    ren[j]=cost[j]+ren[less];</span><br><span class="line">                    times[j]=times[less];</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span> (d[less]+G[less][j]==d[j])&#123;</span><br><span class="line">                    <span class="keyword">if</span> (cost[j]+ren[less]&gt;ren[j])&#123;</span><br><span class="line">                        ren[j]=cost[j]+ren[less];</span><br><span class="line">                    &#125;</span><br><span class="line">                    times[j]+=times[less];</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;times[c2]&lt;&lt;<span class="string">" "</span>&lt;&lt;ren[c2];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -200,6 +214,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pat</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">图</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">最短路径</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -417,6 +450,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">最短路径</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">输入</a>
               </li>
              
@@ -433,10 +482,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">线性代数</a>
               </li>
              
@@ -445,15 +490,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">链表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">图</a>
               </li>
              
               <li class="article-tag-list-item">
