@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>pat输入 | Hexo</title>
+  <title>5.3.11删除以x为根的子树 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="输入方法1.eof123while(scanf(&quot;%d&quot;,&amp;amp;n)!=EOF)&amp;#123;    &amp;#125;  2.条件读入12while(scanf(&quot;%d&quot;,&amp;amp;n)!=-1)&amp;#123;&amp;#125;  3.for">
-<meta name="keywords" content="pat,输入">
+  <meta name="description" content="题目大意删除以x为根节点的所有子树，注意可能有多个为x值 思路 先递归删除所有节点 可能有多个值是x，所以用层序找出他们的父节点，然后删除x，同时设置父节点的子节点为空  代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* * 删除每个以x为值的子树（">
+<meta name="keywords" content="树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pat输入">
-<meta property="og:url" content="http://yoursite.com/2020/06/25/pat输入/index.html">
+<meta property="og:title" content="5.3.11删除以x为根的子树">
+<meta property="og:url" content="http://yoursite.com/2020/07/09/5-3-11删除以x为根的子树/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="输入方法1.eof123while(scanf(&quot;%d&quot;,&amp;amp;n)!=EOF)&amp;#123;    &amp;#125;  2.条件读入12while(scanf(&quot;%d&quot;,&amp;amp;n)!=-1)&amp;#123;&amp;#125;  3.for">
+<meta property="og:description" content="题目大意删除以x为根节点的所有子树，注意可能有多个为x值 思路 先递归删除所有节点 可能有多个值是x，所以用层序找出他们的父节点，然后删除x，同时设置父节点的子节点为空  代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* * 删除每个以x为值的子树（">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-25T13:09:45.700Z">
+<meta property="og:updated_time" content="2020-07-09T07:31:08.810Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pat输入">
-<meta name="twitter:description" content="输入方法1.eof123while(scanf(&quot;%d&quot;,&amp;amp;n)!=EOF)&amp;#123;    &amp;#125;  2.条件读入12while(scanf(&quot;%d&quot;,&amp;amp;n)!=-1)&amp;#123;&amp;#125;  3.for">
+<meta name="twitter:title" content="5.3.11删除以x为根的子树">
+<meta name="twitter:description" content="题目大意删除以x为根节点的所有子树，注意可能有多个为x值 思路 先递归删除所有节点 可能有多个值是x，所以用层序找出他们的父节点，然后删除x，同时设置父节点的子节点为空  代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* * 删除每个以x为值的子树（">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -155,31 +155,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-pat输入" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-5-3-11删除以x为根的子树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      pat输入
+      5.3.11删除以x为根的子树
     </h1>
   
 
         
-        <a href="/2020/06/25/pat输入/" class="archive-article-date">
-  	<time datetime="2020-06-25T09:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-25</time>
+        <a href="/2020/07/09/5-3-11删除以x为根的子树/" class="archive-article-date">
+  	<time datetime="2020-07-09T07:30:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="输入方法"><a href="#输入方法" class="headerlink" title="输入方法"></a>输入方法</h1><h2 id="1-eof"><a href="#1-eof" class="headerlink" title="1.eof"></a>1.eof</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=EOF)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-条件读入"><a href="#2-条件读入" class="headerlink" title="2.条件读入"></a>2.条件读入</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)!=<span class="number">-1</span>)&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-for"><a href="#3-for" class="headerlink" title="3.for"></a>3.for</h2>
+        <h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>删除以x为根节点的所有子树，注意可能有多个为x值</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+<li>先递归删除所有节点</li>
+<li>可能有多个值是x，所以用层序找出他们的父节点，然后删除x，同时设置父节点的子节点为空</li>
+</ol>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 删除每个以x为值的子树（可能有多个，父节点智能用层序找到）</span></span><br><span class="line"><span class="comment"> * 1.递归删除节点</span></span><br><span class="line"><span class="comment"> * 2.层序找到后调用1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">del</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root== <span class="literal">nullptr</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    del(root-&gt;left);</span><br><span class="line">    del(root-&gt;right);</span><br><span class="line">    <span class="built_in">free</span>(root);</span><br><span class="line">    <span class="comment">//释放节点</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">searchDel</span><span class="params">(TreeNode *root,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root== <span class="literal">nullptr</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (root-&gt;val==x)&#123;</span><br><span class="line"><span class="comment">//        根节点就是，全删</span></span><br><span class="line">        del(root);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//    层序遍历找父亲</span></span><br><span class="line">    <span class="built_in">queue</span>&lt;TreeNode*&gt; queue1;</span><br><span class="line">    queue1.push(root);</span><br><span class="line">    <span class="keyword">while</span> (!queue1.empty())&#123;</span><br><span class="line">        TreeNode* cur=queue1.front();</span><br><span class="line"><span class="comment">//        如果是就删除</span></span><br><span class="line">        queue1.pop();</span><br><span class="line">        <span class="keyword">if</span> (cur-&gt;left)&#123;</span><br><span class="line">            <span class="keyword">if</span> (cur-&gt;left-&gt;val==x)&#123;</span><br><span class="line">                del(cur-&gt;left);</span><br><span class="line">                cur-&gt;left= <span class="literal">nullptr</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span>&#123;</span><br><span class="line"><span class="comment">//                加入</span></span><br><span class="line">                queue1.push(cur-&gt;left);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (cur-&gt;right)&#123;</span><br><span class="line">            <span class="keyword">if</span> (cur-&gt;right-&gt;val==x)&#123;</span><br><span class="line">                del(cur-&gt;right);</span><br><span class="line">                cur-&gt;right= <span class="literal">nullptr</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span>&#123;</span><br><span class="line"><span class="comment">//                加入</span></span><br><span class="line">                queue1.push(cur-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -213,11 +214,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pat</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">输入</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
         		</li>
       		
 		</ul>
@@ -273,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/25/pat输入/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/09/5-3-11删除以x为根的子树/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -287,18 +284,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/06/25/a1001/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          a1001
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/07/单纯形方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">单纯形方法</div>
+    <a href="/2020/07/09/王道5-3-7完全二叉树的判定/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">王道5.3.7完全二叉树的判定</div>
       <i class="icon-circle-right"></i>
     </a>
   
