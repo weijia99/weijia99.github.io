@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>八皇后</title>
+    <dateModified></dateModified>
+    <ownerName></ownerName>
+  </head>
+  <body>
+<outline text="八皇后问题">
+  <outline text="1来源" _note="&gt; 八皇后问题，是一个古老而著名的问题，是**回溯算法的典型案例**。该问题是国际西洋棋棋手马克斯·贝瑟尔于1848年提出：在8×8格的国际象棋上摆放八个皇后，使其不能互相攻击，即：**任\***\*意两个皇后都不能处于同一行、同一列或同一斜线上，问有多少种摆法\*\*。">
+  </outline>
+  <outline text="2思路">
+    <outline text="2.1构建思路" _note="构建一个int【8】的数组，i是x，arr【i】是y，这样就形成了坐标">
+    </outline>
+    <outline text="2.2检测冲突" _note="直线就是arr【i】与arr【i-1】.。。arr【0】这些值是否相等，斜线就是x的变化值与y的变化值是否相等即i-j==arr【i】-arr【j】&#10;&#10;    public static boolean check(int[] arr,int n){&#10;            //检测是否冲突&#10;            for (int i = 0; i &lt; n; i++) {&#10;                if (arr[n]==arr[i]||Math.abs(n-i)==Math.abs(arr[n]-arr[i])){&#10;                    return false;&#10;                }&#10;            }&#10;            return true;&#10;        }">
+    </outline>
+    <outline text="2.3放旗子思路" _note="从第0个位置开始放就是arr【i】==0开始，用for写到8，如果不冲突就放下一个，也是for从0到8，当i==8就是放完了就返回到上一个，看把arr【i】往后移动会不会也成功&#10;&#10;    public static void put(int max,int n,int[] arr){&#10;            if (n==max){&#10;                print(arr);&#10;&#10;                //System.out.println(count);&#10;                System.out.println();&#10;                return;&#10;            }&#10;            for (int i = 0; i &lt; max; i++) {&#10;                arr[n]=i;//先放在第一位在后裔&#10;                if (check(arr,n)){&#10;                    put(max,n+1,arr);&#10;                }&#10;            }&#10;        }">
+    </outline>
+  </outline>
+  <outline text="3完整代码" _note="    public class 八皇后 {&#10;        public static void main(String[] args) {&#10;            int max=8;&#10;            int[] arr=new int[max];&#10;            put(max,0,arr);&#10;        }&#10;&#10;        public static boolean check(int[] arr,int n){&#10;            //检测是否冲突&#10;            for (int i = 0; i &lt; n; i++) {&#10;                if (arr[n]==arr[i]||Math.abs(n-i)==Math.abs(arr[n]-arr[i])){&#10;                    return false;&#10;                }&#10;            }&#10;            return true;&#10;        }&#10;        public static void put(int max,int n,int[] arr){&#10;            if (n==max){&#10;                print(arr);&#10;&#10;                //System.out.println(count);&#10;                System.out.println();&#10;                return;&#10;            }&#10;            for (int i = 0; i &lt; max; i++) {&#10;                arr[n]=i;//先放在第一位在后裔&#10;                if (check(arr,n)){&#10;                    put(max,n+1,arr);&#10;                }&#10;            }&#10;        }&#10;        public static void print(int[] arr){&#10;            for (int i = 0; i &lt;arr.length ; i++) {&#10;                System.out.print(arr[i]+&quot; &quot;);&#10;            }&#10;        }&#10;    }">
+  </outline>
+</outline>
+  </body>
+</opml>
