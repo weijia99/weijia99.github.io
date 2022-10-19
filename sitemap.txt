@@ -1,3 +1,5 @@
+http://yoursite.com/2022/10/19/shell%E6%95%99%E7%A8%8B/
+http://yoursite.com/2022/10/18/dfg%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/
 http://yoursite.com/2022/10/18/%E6%8D%A2%E7%94%B5%E8%84%91%E6%9B%B4%E6%96%B0hexo/
 http://yoursite.com/2022/10/18/test/
 http://yoursite.com/2019/07/12/%E9%80%86%E6%B3%A2%E5%85%B0/
@@ -62,3 +64,6 @@ http://yoursite.com/tags/%E6%A0%88/
 http://yoursite.com/tags/hexo/
 http://yoursite.com/tags/git/
 http://yoursite.com/tags/npm/
+http://yoursite.com/tags/linux/
+http://yoursite.com/tags/shell/
+http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/
