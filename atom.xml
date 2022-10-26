@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-10-25T07:57:17.867Z</updated>
+  <updated>2022-10-26T11:34:05.246Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>github的action</title>
+    <link href="http://yoursite.com/2022/10/26/github%E7%9A%84action/"/>
+    <id>http://yoursite.com/2022/10/26/github%E7%9A%84action/</id>
+    <published>2022-10-26T09:58:55.000Z</published>
+    <updated>2022-10-26T11:34:05.246Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="action-操作"><a href="#action-操作" class="headerlink" title="action 操作"></a>action 操作</h1><h2 id="1-workflow是什么"><a href="#1-workflow是什么" class="headerlink" title="1.workflow是什么"></a>1.workflow是什么</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667785330551666778532504.png"></p><p>假设你开发的java软件又bug,用户提交问题到issue,代码人员进行修复,修复完成,之后进行pull request,然后就进行合并,合并之后旧的进行测试才能发布,这就是一个流程</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667787870631666778786133.png"></p><h2 id="2-名称解释"><a href="#2-名称解释" class="headerlink" title="2.名称解释"></a>2.名称解释</h2><p><strong>event</strong></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667789010571666778900736.png"></p><p>就是我触发的条件(pull request)</p><p>workflow就是一系列自动化流程</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667789610561666778960997.png"></p><p>常用的cicd</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667791370571666779136700.png"></p><h2 id="3-为什么使用action"><a href="#3-为什么使用action" class="headerlink" title="3.为什么使用action"></a>3.为什么使用action</h2><p>因为你 不想配置环境变量   </p><h2 id="3-demo"><a href="#3-demo" class="headerlink" title="3.demo"></a>3.demo</h2><h3 id="3-1yaml教程"><a href="#3-1yaml教程" class="headerlink" title="3.1yaml教程"></a>3.1yaml教程</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667809480571666780947313.png"></p><p>使用tab就是一个对象,使用kv来记录纸</p><p>使用过 list记录多个,那就需要-</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667810550641666781054310.png"></p><h3 id="3-2demo简介"><a href="#3-2demo简介" class="headerlink" title="3.2demo简介"></a>3.2demo简介</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667812140551666781213509.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667812860561666781285494.png"></p><ol><li>name是可选</li><li>on就是event,单位需要出发的事件</li></ol><p>jobs,就是执行的事件</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667813680551666781367823.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667815090571666781508152.png"></p><p>到这一步就是进行代码检查,使用github编译好的checkout</p><p>每一个-,代表一个list,就代表一次操作</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667816150561666781614964.png"></p><blockquote><p>uses,时使用别人的action,run是自己执行linux命令</p></blockquote><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667816900551666781689860.png"></p><h2 id="4-cicd在哪里执行"><a href="#4-cicd在哪里执行" class="headerlink" title="4.cicd在哪里执行"></a>4.cicd在哪里执行</h2><p>在github的服务器上 </p><p>jobs是并行的,如果publish需要build,那就要使用关键字,need</p><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><p>首先 on 是触发条件(push,pull)</p><p>接下来就是正常的jobs</p><p>首先第一步就是checkout,第二部就是设置值环境时候用java,然后就是读取使用run,之后就clone文件,并且进入,之后就是build,一般使用gradle,并且权限777</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667840363551666784036329.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;action-操作&quot;&gt;&lt;a href=&quot;#action-操作&quot; class=&quot;headerlink&quot; title=&quot;action 操作&quot;&gt;&lt;/a&gt;action 操作&lt;/h1&gt;&lt;h2 id=&quot;1-workflow是什么&quot;&gt;&lt;a href=&quot;#1-workflow是什</summary>
+      
+    
+    
+    
+    
+    <category term="action" scheme="http://yoursite.com/tags/action/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>元编程</title>
+    <link href="http://yoursite.com/2022/10/25/%E5%85%83%E7%BC%96%E7%A8%8B/"/>
+    <id>http://yoursite.com/2022/10/25/%E5%85%83%E7%BC%96%E7%A8%8B/</id>
+    <published>2022-10-25T11:23:57.000Z</published>
+    <updated>2022-10-26T00:49:18.127Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="元编程"><a href="#元编程" class="headerlink" title="元编程"></a>元编程</h1><h2 id="1-概念解释"><a href="#1-概念解释" class="headerlink" title="1.概念解释"></a>1.概念解释</h2><p>就相当云java构建spring项目,进行build.使用规则来定义如何使用这些文件来的到,jar包</p><p>cmake 比make跟smart,cmake查找本地的哭,make只会自己寻找文件</p><p>使用make来进行build固件,make寻找makefile来进行make </p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666973194161666697319373.png"></p><p>上面是需按照那两个文件,然后接下来才是进行编译代码</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666974668991666697465989.png"></p><h2 id="2-ci持续集成"><a href="#2-ci持续集成" class="headerlink" title="2.ci持续集成"></a>2.ci持续集成</h2><p>自动进行构建,每一个event出发一个action,自动调用</p><p>例如本文的网站,当我写好一个markdwon文件,然后使用push操作,github就会进行ci,并且生成网页</p><h2 id="3-测速"><a href="#3-测速" class="headerlink" title="3.测速"></a>3.测速</h2><p>单元测试,值测试某一个功能</p><p>集成测试,测试代码交互之间是不是又问题</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;元编程&quot;&gt;&lt;a href=&quot;#元编程&quot; class=&quot;headerlink&quot; title=&quot;元编程&quot;&gt;&lt;/a&gt;元编程&lt;/h1&gt;&lt;h2 id=&quot;1-概念解释&quot;&gt;&lt;a href=&quot;#1-概念解释&quot; class=&quot;headerlink&quot; title=&quot;1.概念解释&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>git控制</title>
@@ -413,44 +455,6 @@
     <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
     
     <category term="王道数据结构" scheme="http://yoursite.com/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王道2_2_6</title>
-    <link href="http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-6/"/>
-    <id>http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-6/</id>
-    <published>2020-07-01T08:22:49.000Z</published>
-    <updated>2022-10-18T08:54:26.089Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定一个头结点链表，按照从小到大排序</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>根据插入排序的思路和逆置链表的思路，首先先把头结点和他的next摘出p，让p为读取元链表的节点，pre为摘出来新链表的头结点，然后pre遍历，小于p.val的就继续，不然就是正常的插入。</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">      <span class="type">int</span> val;</span><br><span class="line">      ListNode *next;</span><br><span class="line">      <span class="built_in">ListNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">next</span>(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//本题思路插入排序，头插法类似，吧l取出，做个新链表</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">deleteNode</span><span class="params">(ListNode* node)</span> </span>&#123;</span><br><span class="line">       ListNode *p=node.next,*q=p.next;</span><br><span class="line">       <span class="comment">//pre是断链后端头插法节点</span></span><br><span class="line"></span><br><span class="line">       ListNode *pre;</span><br><span class="line">       <span class="comment">//进行断链</span></span><br><span class="line">       p.next=<span class="literal">NULL</span>;</span><br><span class="line">       <span class="comment">//进行替换</span></span><br><span class="line">       p=r;</span><br><span class="line">       <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        r=p.next;</span><br><span class="line">        pre=node;</span><br><span class="line">        <span class="keyword">while</span>(pre.next!=null&amp;&amp;pre.next.val&lt;p.val)&#123;</span><br><span class="line">            pre=pre.next;</span><br><span class="line">        &#125;</span><br><span class="line">        p.next=pre.next;</span><br><span class="line">        pre.next=p;</span><br><span class="line">        p=r;</span><br><span class="line">        <span class="comment">//进行下一轮</span></span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;题目大意&lt;/h2&gt;&lt;p&gt;给定一个头结点链表，按照从小到大排序&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;header</summary>
-      
-    
-    
-    
-    
-    <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-    <category term="王道数据结构" scheme="http://yoursite.com/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>a1010</title>
-    <link href="http://yoursite.com/2020/06/25/a1010/"/>
-    <id>http://yoursite.com/2020/06/25/a1010/</id>
-    <published>2020-06-25T13:18:56.000Z</published>
-    <updated>2022-10-18T08:54:26.073Z</updated>
-    
-    
-    
-    
     
   </entry>
   
