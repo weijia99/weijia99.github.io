@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-10-26T11:34:05.246Z</updated>
+  <updated>2022-11-11T03:16:41.473Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>word技巧</title>
+    <link href="http://yoursite.com/2022/11/11/word%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2022/11/11/word%E6%8A%80%E5%B7%A7/</id>
+    <published>2022-11-11T02:18:29.000Z</published>
+    <updated>2022-11-11T03:16:41.473Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="word操作技巧"><a href="#word操作技巧" class="headerlink" title="word操作技巧"></a>word操作技巧</h1><h2 id="3-1项目"><a href="#3-1项目" class="headerlink" title="3.1项目"></a>3.1项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681334072201668133406077.png"></p><ol><li>带圈字符在拼音那里</li><li>然后段落可以设置行间距</li><li>选择之后可以设置字体，字体又是可以分为大小，还有样式</li><li>项目符号就是指那个三角形，编号是123，直接右击都是可以使用</li><li>最后的是使用对齐方式，使用居中对齐</li><li>还有一件事，可以使用格式刷，对已经设置好样式的文本进行复制粘贴。不需要自己手动设置格式</li></ol><h2 id="3-2项目"><a href="#3-2项目" class="headerlink" title="3.2项目"></a>3.2项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681337809981668133780647.png"></p><p>这个主要是学习表格的使用</p><ol><li>前面的格式样式设置就不提了</li><li>然后是插入表格</li><li>插入之后</li><li>选择之后表单有对齐的功能，使用对齐</li><li>还有合并单元格</li><li>.进行设置行高还有列宽</li><li>之后就是wps的功能，使用公式进行求和还有求级，product（left），还有sum</li><li>之后设置格式，设置的格式有，人民币大写，还有一些其他</li><li>设置表格变宽，使用全选进行设置，设置表格样式，选择线性颜色，还有粗细度</li></ol><h2 id="3-3项目"><a href="#3-3项目" class="headerlink" title="3.3项目"></a>3.3项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681348640571668134864015.png"></p><p>目前，难度比较大的一个。</p><p>学习这个就是药了解到文本框的作用。使用普通的文本没有办法</p><ol><li>文本框进行插入，插入之后可以对他进行字体设置吗，还有字体效果，同事去除文本边框</li><li>接下来就是进行图片插入，插入之后药把文字进行浮动与上方，不然不好移动图片</li><li>之后就是手指下沉</li><li>还有设置文字的行间距这些，就可以skip</li><li>最后一个就是进行插入分栏，插入分栏，需要选择药进行芬兰的段落，还要进行选择分割线。注意不要选择到回车键</li><li>然后就是艺术字进行设置，艺术字插入之后就是对齐，还有一些其他效果。</li></ol><h2 id="3-4项目"><a href="#3-4项目" class="headerlink" title="3.4项目"></a>3.4项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681357919941668135791288.png"></p><p>本次项目还是实际作用比较大，这个对于文档排版还是很有帮助的</p><ol><li>首先就是设置标题，在进行设置标题之前，我们可以对标题格式进行自定义设置</li><li>然后就是对正文样式，还有标题2的样式进行设置</li><li>之后就是对每一本部分进行选择设置</li><li><strong>重点使用分节符，在第一页的最开头</strong>（这样可以分成，正文还有目录2节）‘</li><li>之后就是进行目录的插入，也要进行设置，在应用你进行插入目录</li><li>最后就是也没页脚之间的设置，使用页眉，可以定义最上面</li><li>使用页脚可以定义页码，在不同节的页码，我们就不连接上一节了。然后重新设置页码</li><li>最后就是插入封面，这个也是有点的</li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这些项目的操作，重点还是文本框的使用，行间距还有字体。对于我们使用的是最后一个项目，如何进行word排版，发出文章。还有那个字体和插入图片的意思。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;word操作技巧&quot;&gt;&lt;a href=&quot;#word操作技巧&quot; class=&quot;headerlink&quot; title=&quot;word操作技巧&quot;&gt;&lt;/a&gt;word操作技巧&lt;/h1&gt;&lt;h2 id=&quot;3-1项目&quot;&gt;&lt;a href=&quot;#3-1项目&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    
+    <category term="word" scheme="http://yoursite.com/tags/word/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>框架代码</title>
+    <link href="http://yoursite.com/2022/11/08/%E6%A1%86%E6%9E%B6%E4%BB%A3%E7%A0%81/"/>
+    <id>http://yoursite.com/2022/11/08/%E6%A1%86%E6%9E%B6%E4%BB%A3%E7%A0%81/</id>
+    <published>2022-11-08T02:30:13.000Z</published>
+    <updated>2022-11-08T02:30:13.076Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>github的action</title>
@@ -397,56 +432,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/linked-list-cycle-ii/&quot;&gt;题目大意&lt;/a&gt;&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-    <category term="王道数据结构" scheme="http://yoursite.com/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王道2_2_25</title>
-    <link href="http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-25/"/>
-    <id>http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-25/</id>
-    <published>2020-07-01T08:23:13.000Z</published>
-    <updated>2022-10-18T08:54:26.089Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><blockquote><p>给定一个单链表 L：L0→L1→…→Ln-1→Ln ， 将其重新排列后变为： L0→Ln→L1→Ln-1→L2→Ln-2→…</p></blockquote><blockquote><p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol><li>先找到中间节点，q用两次next，p用一次next，等q为空，那么p就是中间节点</li><li>对p后面的节点进行头插法，形成逆序，如123456，变成123465，*<strong>注意是465*</strong></li><li>然后进行断链，形成1234和65两条链</li><li>最后进行和链162534</li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">reorderList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* p=head,*q=head,*r,*s=head;</span><br><span class="line">        <span class="keyword">if</span>(!head)            <span class="comment">//head为空，则直接退出</span></span><br><span class="line">            <span class="keyword">return</span> ;         </span><br><span class="line">        <span class="keyword">while</span>(q-&gt;next)&#123;      <span class="comment">//寻找中间结点</span></span><br><span class="line">            q=q-&gt;next;       <span class="comment">//p走一步</span></span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(q-&gt;next)</span><br><span class="line">              q=q-&gt;next;     <span class="comment">//q走两步</span></span><br><span class="line">        &#125;</span><br><span class="line">        q=p-&gt;next;           <span class="comment">//p所指结点为中间结点，q为后半段链表的首结点</span></span><br><span class="line">        p-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">while</span>(q)&#123;            <span class="comment">//将链表后半段逆置</span></span><br><span class="line">            r=q-&gt;next;</span><br><span class="line">            q-&gt;next=p-&gt;next;</span><br><span class="line">            p-&gt;next=q;</span><br><span class="line">            q=r;</span><br><span class="line">        &#125;</span><br><span class="line">        q=p-&gt;next;            <span class="comment">//q指向后半段的第一个数据结点</span></span><br><span class="line">        p-&gt;next=<span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">while</span>(q)&#123;             <span class="comment">//将链表后半段的结点插入到指定位置</span></span><br><span class="line">            r=q-&gt;next;        <span class="comment">//r指向后半段的下一个结点</span></span><br><span class="line">            q-&gt;next=s-&gt;next;  <span class="comment">//将q所指结点插入到s所指结点（head结点）之后</span></span><br><span class="line">            s-&gt;next=q;        </span><br><span class="line">            s=q-&gt;next;        <span class="comment">//s指向前半段的下一个插入点</span></span><br><span class="line">            q=r;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;题目大意&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;给定一个单链表 L：L0→L1→…→Ln-1→Ln ， 将其重新排列后变为： L0→Ln→L1→L</summary>
-      
-    
-    
-    
-    
-    <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-    <category term="王道数据结构" scheme="http://yoursite.com/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王道2_2_21</title>
-    <link href="http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-21/"/>
-    <id>http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-21/</id>
-    <published>2020-07-01T08:23:08.000Z</published>
-    <updated>2022-10-18T08:54:26.088Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>实现一种算法，找出单向链表中倒数第 k 个节点。返回该节点的值。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>双指针，第一个p先走k部，然后q从head开始，pq同时走，直到p为空，q就是索要的节点</p><p>设p与结尾查x次，总长k+x次，p走了x次，也就是倒数k</p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">kthToLast</span><span class="params">(ListNode* head, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    ListNode* c=head;</span><br><span class="line">        <span class="keyword">while</span>(k)&#123;</span><br><span class="line">            head=head.next;</span><br><span class="line">            k--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(head)&#123;</span><br><span class="line">            c=c.next;</span><br><span class="line">            head=head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> c.val;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;题目大意&lt;/h2&gt;&lt;p&gt;实现一种算法，找出单向链表中倒数第 k 个节点。返回该节点的值。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot;</summary>
       
     
     
