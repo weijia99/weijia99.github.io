@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-11-11T03:16:41.473Z</updated>
+  <updated>2022-11-18T12:51:26.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习技巧</title>
+    <link href="http://yoursite.com/2022/11/18/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2022/11/18/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/</id>
+    <published>2022-11-18T09:48:27.000Z</published>
+    <updated>2022-11-18T12:51:26.508Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-学习技巧"><a href="#1-学习技巧" class="headerlink" title="1.学习技巧"></a>1.学习技巧</h1><p>来源于youtube 的crashcourse 里面分为10节进行讲述，如何学习。一个半小时左右可以看完，还是很不错的。具体连接如下</p><p><a href="https://youtu.be/IhuwS5ZLwKY">https://youtu.be/IhuwS5ZLwKY</a></p><p>看完了这个视频，解决了我研一所与到的多个问题，是使用笔记本还是手写做笔记。做笔记的方法有哪些怎么进行读书</p><h2 id="1-1学会做笔记"><a href="#1-1学会做笔记" class="headerlink" title="1.1学会做笔记"></a>1.1学会做笔记</h2><p>分为下面几个重点</p><p>1.<strong>工具</strong></p><ol><li>电脑</li><li>传统的笔记本</li></ol><blockquote><p><strong>研究表明，使用电脑的打字速度会更快，但是，打字只会让自己变成一个记忆机器，没有自己的思考。人的大佬不能并行处理时间（打字还有进行思考），所以得需要使用纸币来进行记录，这样不会进行打断思路</strong></p></blockquote><p>2.<strong>记录内容</strong></p><ol><li>idea</li><li>专业术语</li><li>例子</li></ol><p>3.<strong>笔记记录方式</strong></p><ol><li>思维导图，xmind</li><li>cmu笔记，使用左边hint，右边笔记，下面是总结</li><li>总结（目录法），就是word</li></ol><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687713222201668771322176.png" alt="word大纲"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687713750721668771374689.png"></p><h2 id="1-2读书"><a href="#1-2读书" class="headerlink" title="1.2读书"></a>1.2读书</h2><p>只能处理4-7bit的信息</p><p>看论文的方法</p><p>如何学习可课本教科书</p><ol><li>简介</li><li>标题</li><li>课后习题</li></ol><p><strong>如何快速的阅读</strong></p><ol><li>设置时间ddl</li><li>使用highlight</li><li>使用跳读,(跳过 and,or)</li><li>消除默读现象</li></ol><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687716960771668771695525.png"></p><p>广泛的阅读还有其他多看书</p><ol><li>观点花点</li><li>论证的用破折号</li></ol><h2 id="1-3回忆与记忆"><a href="#1-3回忆与记忆" class="headerlink" title="1.3回忆与记忆"></a>1.3回忆与记忆</h2><p>recall&amp;memory</p><p>工作记忆只能处理4-7位的信息</p><p>长期记忆需要进行连接</p><p>记忆喜欢记得是图像,有形的(使用注记法),就是被关键词,使用联想法</p><p>然后就是记忆衰退的方法,多次检索,就会容易回忆(就是多次开始记录)</p><p>盒子记录：就是anki，会的就进入下一个盒子，不会的就重新回到第一个盒子</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687725300721668772529814.png"></p><p>，每天学习，没三天学习</p><h2 id="1-4如何做组织管理"><a href="#1-4如何做组织管理" class="headerlink" title="1.4如何做组织管理"></a>1.4如何做组织管理</h2><p>这一节，解决了我之前想的，到底如何进行处理数据。使用日历+todo+笔记系统（calendar+todo+typora）</p><p>学习必须要在学习环境，在图书馆，或者咖啡店</p><p><strong>及时捕获自己的想法</strong></p><ol><li>任务</li><li>事件</li><li>还有知识</li><li>想法（论文的idea）</li></ol><p><strong>输出自己的想法</strong></p><ol><li>写作</li><li>代码</li></ol><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687728890711668772888770.png"></p><p><strong>记录自己的戒指信息还有任务详情</strong></p><p>谷歌日历来进行记录</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687730720801668773071545.png"></p><p>云端笔记如何记录：</p><blockquote><p>使用电脑结构，跟目录，时间，课程</p></blockquote><p>quick catch：</p><ol><li>当时有的信息，就储存下来</li><li>使用todo，记录今天发生的事件</li></ol><p>每周计划还有每日计划</p><ol><li>每个星期天来做（分成几个小块）</li><li><strong>杂事（全部在一起处理）</strong></li><li>还要复盘，每周（什么做了。什么没做）</li></ol><p>为什么无法坚持，因为熵增定律</p><h2 id="1-5如何专注"><a href="#1-5如何专注" class="headerlink" title="1.5如何专注"></a>1.5如何专注</h2><blockquote><p>这个解决了，我为什么感觉什么都没有学到专注不了自己喜欢的东西</p></blockquote><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687735320721668773531358.png"></p><p>基于任务的（做数学题），自顶向下的，但是会匹配</p><p>如何加强自己</p><ol><li>环境</li><li>兴趣爱好</li><li>还有大脑的状态</li></ol><p><strong>加强自己专注</strong></p><ol><li>去图书馆（健身房就会自己想去健身）</li><li>停止多线程，经常切换，会让自己的大脑没有思路</li><li>关闭手机（断网，有时候多就是少，关闭手机还有电脑）（请勿打扰）</li><li>把我任务进行结块（摘要，结论，研究方法，实验）</li><li>使用forset或者番茄土豆（不要切换任务）</li><li>还要学会放松</li></ol><h2 id="1-6拖延症"><a href="#1-6拖延症" class="headerlink" title="1.6拖延症"></a>1.6拖延症</h2><blockquote><p>又是一个好的course，给解决拖延症提供了思路</p></blockquote><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687744690781668774468167.png"></p><p>预期可以考到那个学校（求其上这得中）</p><p>价值越高（就是工作给的钱，就不会不拖延）</p><p>冲动做其他的事，拖延的时间越长，就容易拖延（</p><p><strong>减少冲动</strong></p><ol><li>分解任务</li></ol><p><strong>寻求帮助</strong></p><ol><li><p>成立学习小组</p></li><li><p>提高奖励（看完论文和朋友看电影</p></li><li><p>提高体验（打游戏，很久时间）</p></li><li><p>去图书馆</p></li><li><p>使用block进行阻挡网络</p></li><li><p>使用番茄土豆</p></li></ol><p><strong>进行娱乐</strong></p><h2 id="1-10体育学习"><a href="#1-10体育学习" class="headerlink" title="1.10体育学习"></a>1.10体育学习</h2><p>健身版提供助学习，还是要运动。 </p><p>用进废退</p><p>定期训练</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-学习技巧&quot;&gt;&lt;a href=&quot;#1-学习技巧&quot; class=&quot;headerlink&quot; title=&quot;1.学习技巧&quot;&gt;&lt;/a&gt;1.学习技巧&lt;/h1&gt;&lt;p&gt;来源于youtube 的crashcourse 里面分为10节进行讲述，如何学习。一个半小时左右可以看完，还</summary>
+      
+    
+    
+    
+    
+    <category term="crash course" scheme="http://yoursite.com/tags/crash-course/"/>
+    
+    <category term="学习方法" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟机网络</title>
+    <link href="http://yoursite.com/2022/11/18/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <id>http://yoursite.com/2022/11/18/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
+    <published>2022-11-18T09:32:01.000Z</published>
+    <updated>2022-11-18T09:46:59.403Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vmware桥接没有网络"><a href="#vmware桥接没有网络" class="headerlink" title="vmware桥接没有网络"></a>vmware桥接没有网络</h1><p>好久没有登录虚拟机，虚拟机的桥接出现问题。我以为是这个虚拟机iso的问题。于是我对manjaro这个linux进行折腾了半天。从下午折腾到晚上。</p><p>主要包括，自己手动进行网络配置，然后重新建立网卡，还使用其他网络工具。最后我对网络进行啥用nat可以联网，但是使用nat联网，我的jetbrains gateway的配置识别不了，换了nat的ip也进不去。于是我准备使用新的iso，同时在manjaro里面下载github，把我写的代码进行上传。manjaro仓库有github第三方，可以直接下载。然后我是用deepin进行安装，安装完成后，我也是使用桥接的方式来进行连接，结果发现网络还是连接不了。那我就意识到是vmware的问题，于是我去stfw，网上进行搜索，发现这个问题是因为vmwarre进行桥接的时候识别不了，本机现在联网的网卡，需要自己手动设置。我 手动设置之后，结果两个linux都连上网了，又是折腾了一下午。</p><p>主要还是对manjaro这个系统不熟悉，我看到他的问题，显示已经连上网络，但是不能上网，我就以为是可能香谷歌那种，只是上不了谷歌才显示的，于是就以为是linux的问题。但是deepin安装完成后，直接就是显示网络平已经断开，所以，我才觉得是虚拟机的问题。</p><hr><p>总结</p><ol><li>主要是对manjaro这个linux发行版不熟悉</li><li>然后就是vmaware这个软件的bug</li></ol><p>具体解决方法</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687647390781668764738161.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;vmware桥接没有网络&quot;&gt;&lt;a href=&quot;#vmware桥接没有网络&quot; class=&quot;headerlink&quot; title=&quot;vmware桥接没有网络&quot;&gt;&lt;/a&gt;vmware桥接没有网络&lt;/h1&gt;&lt;p&gt;好久没有登录虚拟机，虚拟机的桥接出现问题。我以为是这个虚拟机</summary>
+      
+    
+    
+    
+    
+    <category term="运维" scheme="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多源bfs</title>
+    <link href="http://yoursite.com/2022/11/12/%E5%A4%9A%E6%BA%90bfs/"/>
+    <id>http://yoursite.com/2022/11/12/%E5%A4%9A%E6%BA%90bfs/</id>
+    <published>2022-11-12T13:26:33.000Z</published>
+    <updated>2022-11-12T14:04:01.637Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="多源bfs-amp-最小树"><a href="#多源bfs-amp-最小树" class="headerlink" title="多源bfs&amp;最小树"></a>多源bfs&amp;最小树</h1><h2 id="0-证明"><a href="#0-证明" class="headerlink" title="0.证明"></a>0.证明</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682604660491668260465791.png"></p><p>归纳法,开始为0,不用证明</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682605600491668260559129.png"></p><p>去除对头的第一个元素x,可以加入3个x+1的元素,最多有两端</p><p>两个特性,一般是队列,前面是x,后面是x+1</p><p>默认开始的元素是最小值,喝dij的使用优先队列的最小值一样.</p><p>入队就是最小值的</p><h2 id="1-bfs"><a href="#1-bfs" class="headerlink" title="1.bfs"></a>1.bfs</h2><h3 id="1-1矩阵距离"><a href="#1-1矩阵距离" class="headerlink" title="1.1矩阵距离"></a>1.1矩阵距离</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682596642021668259663290.png"></p><blockquote><p>大致意识就是求每个位置到1的最短距离</p></blockquote><p>这个就是求最短路,求每个点到一堆起点的距离,建立一个虚拟起点,让1 作为起点开始寻找,然后使用虚拟起点,连接所有的 1</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682598242021668259823715.png"></p><p>思路:先把所有是1的位置加入到queue里面,距离是0</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682603282041668260328053.png"></p><p>重点是找到放入所有的值,还有一个就是进行更新,tt&#x3D;-1</p><hr><p>总体思路如下</p><ol><li>使用1作为开始的点,把所有的1进行插入到队列</li><li>之后就是常规bfs,进行pop</li><li>然后第二阶段就是搜索周围的元素,找到符合的元素,二姐没有被使用(没有被使用就是距离为-1),使用的直接continue</li><li>然后进行更新,更新之后在把他插入到队列里面,</li></ol><h2 id="2-魔棒"><a href="#2-魔棒" class="headerlink" title="2.魔棒"></a>2.魔棒</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682614080511668261407501.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682616770571668261677035.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682616960541668261695181.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682617290551668261728112.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;多源bfs-amp-最小树&quot;&gt;&lt;a href=&quot;#多源bfs-amp-最小树&quot; class=&quot;headerlink&quot; title=&quot;多源bfs&amp;amp;最小树&quot;&gt;&lt;/a&gt;多源bfs&amp;amp;最小树&lt;/h1&gt;&lt;h2 id=&quot;0-证明&quot;&gt;&lt;a href=&quot;#0-证明&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pa1</title>
+    <link href="http://yoursite.com/2022/11/11/pa1/"/>
+    <id>http://yoursite.com/2022/11/11/pa1/</id>
+    <published>2022-11-11T03:40:00.000Z</published>
+    <updated>2022-11-11T03:49:13.814Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h2><h3 id="单步执行"><a href="#单步执行" class="headerlink" title="单步执行"></a>单步执行</h3><blockquote><p>单步执行的功能十分简单, 而且框架代码中已经给出了模拟CPU执行方式的函数, 你只要使用相应的参数去调用它就可以了. 如果你仍然不知道要怎么做, RTFSC</p></blockquote><p>我们从源代码可以看到这个，通过查看c（继续执行发现）他条用了一个exec函数，我们的目的，就是通过求职，得到那个数字是多少，然后调用exec这个函数，如何得到数字，使用strtok进行得到，之后得到的是char，转换需要使用atoi来进行使用</p><p>代码如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h3 id="打印寄存器"><a href="#打印寄存器" class="headerlink" title="打印寄存器"></a>打印寄存器</h3><blockquote><p>打印寄存器就更简单了. 不过既然寄存器的结构是ISA相关的, 我们希望能为简易调试器屏蔽ISA的差异. 框架代码已经为大家准备了如下的API:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// nemu/src/isa/$ISA/reg.c</span><br><span class="line">void isa_reg_display(void);</span><br></pre></td></tr></table></figure><p>执行<code>info r</code>之后, 就调用<code>isa_reg_display()</code>, 在里面直接通过<code>printf()</code>输出所有寄存器的值即可. 如果你从来没有使用过<code>printf()</code>, 请RTFM或者STFW. 如果你不知道要输出什么, 你可以参考GDB中的输出</p></blockquote><p>通过这个可以知道，我们需要使用打印寄存器，只需要调用isa——display，因为我们选择的是riscv，所以我们需要在，make menuconfig里面选择isa，同事也要去对应的架构下面完善这个打印函数，这个打印函数还要输出数字，这个数值，是使用gdr这个api得到的，这个在头文件里有定义</p><p>代码如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h3 id="扫描内存"><a href="#扫描内存" class="headerlink" title="扫描内存"></a>扫描内存</h3><blockquote><p>扫描内存的实现也不难, 对命令进行解析之后, 先求出表达式的值. 但你还没有实现表达式求值的功能, 现在可以先实现一个简单的版本: 规定表达式<code>EXPR</code>中只能是一个十六进制数, 例如</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x 10 0x80000000</span><br></pre></td></tr></table></figure><p>这样的简化可以让你暂时不必纠缠于表达式求值的细节. 解析出待扫描内存的起始地址之后, 就可以使用循环将指定长度的内存数据通过十六进制打印出来. 如果你不知道要怎么输出, 同样的, 你可以参考GDB中的输出. 问题是, 我们要如何访问客户计算机的内存数据呢? (答案早就说了喂)</p><p>实现了扫描内存的功能之后, 你可以打印<code>0x80000000</code>或者<code>0x100000</code>附近的内存, 你应该会看到程序的代码, 和内置客户程序的内容进行对比, 检查你的实现是否正确.</p></blockquote><p>刚开始没有看懂题目意思，主要是使用，后面这个地址，来得到后10位地址的指，一个地址有4B，因此800下一个就是804，夹具体调用的函数是vaddr——read（addr，len），这个len是字节长度，写4就是4B，暂时是固定所有制来进行执行的</p><p>代码如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1&quot;&gt;&lt;/a&gt;1.1&lt;/h2&gt;&lt;h3 id=&quot;单步执行&quot;&gt;&lt;a href=&quot;#单步执行&quot; class=&quot;headerlink&quot; title=&quot;单步执行&quot;&gt;&lt;/a&gt;单步执</summary>
+      
+    
+    
+    
+    
+    <category term="pa，一生一芯" scheme="http://yoursite.com/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>word技巧</title>
@@ -346,100 +436,6 @@
     
     
     <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王道5.3.5</title>
-    <link href="http://yoursite.com/2020/07/08/%E7%8E%8B%E9%81%935-3-5/"/>
-    <id>http://yoursite.com/2020/07/08/%E7%8E%8B%E9%81%935-3-5/</id>
-    <published>2020-07-08T04:33:26.000Z</published>
-    <updated>2022-10-18T08:54:26.089Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定一个二叉树，找出其最大深度。</p><p>二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。</p><p>说明: 叶子节点是指没有子节点的节点。</p><p>示例： 给定二叉树 [3,9,20,null,null,15,7]，</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure><p>&#x2F; \ 9 20 &#x2F; \ 15 7 返回它的最大深度 3 。</p><p>来源：力扣（LeetCode） 链接：<a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree">https://leetcode-cn.com/problems/maximum-depth-of-binary-tree</a> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol><li>通过层序遍历来获取</li><li>queue记录当前层的所有元素，用for遍历这一层的元素加入他的左右节点，for结束就是一层结束</li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line">    queue&lt;TreeNode*&gt; queue1;</span><br><span class="line">    queue1.<span class="built_in">push</span>(root);</span><br><span class="line">    <span class="keyword">while</span> (!queue1.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        <span class="type">int</span> n=queue1.<span class="built_in">size</span>();</span><br><span class="line"><span class="comment">//        对这一层所有的元素进行加子节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            TreeNode *cur=queue1.<span class="built_in">front</span>();</span><br><span class="line">            <span class="keyword">if</span> (cur-&gt;left)&#123;</span><br><span class="line">                queue1.<span class="built_in">push</span>(cur-&gt;left);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (cur-&gt;right)&#123;</span><br><span class="line">                queue1.<span class="built_in">push</span>(cur-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">            queue1.<span class="built_in">pop</span>();</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">//        for结束后这一层就结束了</span></span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;题目大意&lt;/h2&gt;&lt;p&gt;给定一个二叉树，找出其最大深度。&lt;/p&gt;
-&lt;p&gt;二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。&lt;/p&gt;
-&lt;p&gt;说明</summary>
-      
-    
-    
-    
-    
-    <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王道5.3_2_3非递归后续遍历</title>
-    <link href="http://yoursite.com/2020/07/08/%E7%8E%8B%E9%81%935-3-2-3%E9%9D%9E%E9%80%92%E5%BD%92%E5%90%8E%E7%BB%AD%E9%81%8D%E5%8E%86/"/>
-    <id>http://yoursite.com/2020/07/08/%E7%8E%8B%E9%81%935-3-2-3%E9%9D%9E%E9%80%92%E5%BD%92%E5%90%8E%E7%BB%AD%E9%81%8D%E5%8E%86/</id>
-    <published>2020-07-08T03:39:50.000Z</published>
-    <updated>2022-10-18T08:54:26.089Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给定一个二叉树，返回它的 后序 遍历。</p><p>示例:</p><p>输入: [1,null,2,3] 1 \ 2 &#x2F; 3</p><p>输出: [3,2,1] 进阶: 递归算法很简单，你可以通过迭代算法完成吗？</p><p>来源：力扣（LeetCode） 链接：<a href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal">https://leetcode-cn.com/problems/binary-tree-postorder-traversal</a> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h2><p>构建模板</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>( 栈非空 || p 非空)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>( p 非空)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>填写步骤</p><ol><li>p非空一直左压</li><li>然后，如果是空的，获取栈的顶端，如果右节点也是空的或者访问了的就是p.right&#x3D;pre，那么就直接访问当前的，并把p给pop出来，同时设置pre&#x3D;p，标志访问，*<strong>同时设置p&#x3D;null（否则下一次p会进入if判断，然后一直压）*</strong></li><li>如果不是空的，并且没有访问，那么把p&#x3D;p.right，他就会进入之前的if，一直左压</li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">    stack&lt;TreeNode*&gt; stack1;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; vector;</span><br><span class="line"><span class="comment">//    两个一个判断，一个向前走</span></span><br><span class="line">    TreeNode *p=root;</span><br><span class="line">    TreeNode *pre= <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">while</span> (p||!stack1.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        <span class="keyword">if</span> (p)&#123;</span><br><span class="line"><span class="comment">//            如果p存在就一直左压</span></span><br><span class="line">            stack1.<span class="built_in">push</span>(p);</span><br><span class="line">            p=p-&gt;left;</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line"><span class="comment">//            不存在先取top</span></span><br><span class="line">            p=stack1.<span class="built_in">top</span>();</span><br><span class="line">            <span class="keyword">if</span> (!p-&gt;right||p-&gt;right==pre)&#123;</span><br><span class="line"><span class="comment">//                不存在，或者是之前访问的了</span></span><br><span class="line">                vector.<span class="built_in">push_back</span>(p-&gt;val);</span><br><span class="line"><span class="comment">//                并设置这个也是访问的</span></span><br><span class="line">                pre=p;</span><br><span class="line"><span class="comment">//                弹出当前的</span></span><br><span class="line">                stack1.<span class="built_in">pop</span>();</span><br><span class="line">                p= <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">else</span>&#123;</span><br><span class="line"><span class="comment">//                设置为右边的，然后他访问右边的所有左树</span></span><br><span class="line">                p=p-&gt;right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> vector;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;题目大意&lt;/h2&gt;&lt;p&gt;给定一个二叉树，返回它的 后序 遍历。&lt;/p&gt;
-&lt;p&gt;示例:&lt;/p&gt;
-&lt;p&gt;输入: [1,null,2,3] 1 \ 2 &amp;</summary>
-      
-    
-    
-    
-    
-    <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kmp数组求法</title>
-    <link href="http://yoursite.com/2020/07/05/kmp%E6%95%B0%E7%BB%84%E6%B1%82%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/07/05/kmp%E6%95%B0%E7%BB%84%E6%B1%82%E6%B3%95/</id>
-    <published>2020-07-05T08:15:01.000Z</published>
-    <updated>2022-10-18T08:54:26.074Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-next求法"><a href="#1-next求法" class="headerlink" title="1.next求法"></a>1.next求法</h2><p>例如s&#x3D;‘abcac’，首先从第一位a开始，设置a为0（如果是-1，后面的都不需要+1），第二个是b，b的前面子串是a，没有匹配的设置成0+1，接下来是c，前面子串是ab，同理设置为0+1，下一个a也是0+1，最后是c，前面子串是abca，他的前缀子串a和后缀a相等，设置成1+1，所以next&#x3D;{0,1,1,1,2}</p><h2 id="2-nextval求法"><a href="#2-nextval求法" class="headerlink" title="2.nextval求法"></a>2.nextval求法</h2><p>例如，s&#x3D;‘aaaab’，next&#x3D;{0，1,2,3,4,}，第一个是a，i&#x3D;0，设置naxtval&#x3D;0，i++.第二个是a与第一位相同，设置nextval【2】&#x3D;nextval【1】&#x3D;0，i++，第三个是a与第i个相同就是nextval【3】&#x3D;nextval【2】，第四个与第3个也相同，也是nv【4】&#x3D;nv【3】，第5位是b与第4位是a不同，i不加，nextval【5】&#x3D;next【5】&#x3D;4，所以nextval&#x3D;{0,0,0,0,4}</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;1-next求法&quot;&gt;&lt;a href=&quot;#1-next求法&quot; class=&quot;headerlink&quot; title=&quot;1.next求法&quot;&gt;&lt;/a&gt;1.next求法&lt;/h2&gt;&lt;p&gt;例如s&amp;#x3D;‘abcac’，首先从第一位a开始，设置a为0（如果是-1，后面的都不需要</summary>
-      
-    
-    
-    
-    
-    <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>王道2_2_24</title>
-    <link href="http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-24/"/>
-    <id>http://yoursite.com/2020/07/01/%E7%8E%8B%E9%81%932-2-24/</id>
-    <published>2020-07-01T13:44:57.000Z</published>
-    <updated>2022-10-18T08:54:26.088Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a><a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">题目大意</a></h2><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p><p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p><p>说明：不允许修改给定的链表。</p><p>。</p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol><li>快慢两个指针，fast走两步，slow走一步，如果相遇就是有环</li><li>假设head与入幻点相差a，入环与slow差b，fast比slow多走a+b（2倍关系），若slow再走a会到入幻点（因为入幻与slow差b），而且head走a也是入幻点，所以如果a&#x3D;slow，那么就是入幻点</li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//快慢指针，若相遇择优换</span></span><br><span class="line">        ListNode *fast=head,*slow=head;</span><br><span class="line">        <span class="type">int</span> flag=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(slow&amp;&amp;fast-&gt;next)&#123;</span><br><span class="line">            <span class="comment">//fast走两次，所以需要检查fast的下一个</span></span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            fast=fast-&gt;next-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(fast==slow)&#123;</span><br><span class="line">                flag=<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag)&#123;</span><br><span class="line">            ListNode *p=head;</span><br><span class="line">            <span class="keyword">while</span>(p!=slow)&#123;</span><br><span class="line">                p=p-&gt;next;</span><br><span class="line">                slow=slow-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> p;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目大意&quot;&gt;&lt;a href=&quot;#题目大意&quot; class=&quot;headerlink&quot; title=&quot;题目大意&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/linked-list-cycle-ii/&quot;&gt;题目大意&lt;/a&gt;&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="链表" scheme="http://yoursite.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-    <category term="王道数据结构" scheme="http://yoursite.com/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
