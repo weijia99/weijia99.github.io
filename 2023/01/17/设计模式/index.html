@@ -1,0 +1,192 @@
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>设计模式 | Hexo</title><meta name="keywords" content="设计模式"><meta name="author" content="weijia"><meta name="copyright" content="weijia"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1.设计模式设计模式主要包括一下三种创建者模式,结构模式还有行为模式 2创建者模式主要包括以下工厂模式,单例模式,原型模式还有抽象工厂模式,最后是建造者模式 2.1工厂模式简单点说:两个接口,一个食物类接口,一个工厂类接口,工厂接口来进行创建食物,使用工厂进行创建对象  2.2抽象工厂模式例子就是一个店子可以做咖啡还有甜品,所以继承工厂类,做两个视频,一个咖啡,一个蛋糕  可以看出,每一个工厂类都">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式">
+<meta property="og:url" content="http://yoursite.com/2023/01/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.设计模式设计模式主要包括一下三种创建者模式,结构模式还有行为模式 2创建者模式主要包括以下工厂模式,单例模式,原型模式还有抽象工厂模式,最后是建造者模式 2.1工厂模式简单点说:两个接口,一个食物类接口,一个工厂类接口,工厂接口来进行创建食物,使用工厂进行创建对象  2.2抽象工厂模式例子就是一个店子可以做咖啡还有甜品,所以继承工厂类,做两个视频,一个咖啡,一个蛋糕  可以看出,每一个工厂类都">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2023-01-17T08:45:25.000Z">
+<meta property="article:modified_time" content="2023-01-18T04:14:12.251Z">
+<meta property="article:author" content="weijia">
+<meta property="article:tag" content="设计模式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2023/01/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '设计模式',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-18 12:14:12'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">65</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">53</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">设计模式</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-01-17T08:45:25.000Z" title="Created 2023-01-17 16:45:25">2023-01-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-01-18T04:14:12.251Z" title="Updated 2023-01-18 12:14:12">2023-01-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="设计模式"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id><a href="#" class="headerlink" title></a></h1><h1 id="1-设计模式"><a href="#1-设计模式" class="headerlink" title="1.设计模式"></a>1.设计模式</h1><p>设计模式主要包括一下三种创建者模式,结构模式还有行为模式</p>
+<h1 id="2创建者模式"><a href="#2创建者模式" class="headerlink" title="2创建者模式"></a>2创建者模式</h1><p>主要包括以下工厂模式,单例模式,原型模式还有抽象工厂模式,最后是建造者模式</p>
+<h2 id="2-1工厂模式"><a href="#2-1工厂模式" class="headerlink" title="2.1工厂模式"></a>2.1工厂模式</h2><p>简单点说:两个接口,一个食物类接口,一个工厂类接口,工厂接口来进行创建食物,使用工厂进行创建对象</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/loger.jpg"></p>
+<h2 id="2-2抽象工厂模式"><a href="#2-2抽象工厂模式" class="headerlink" title="2.2抽象工厂模式"></a>2.2抽象工厂模式</h2><p>例子就是一个店子可以做咖啡还有甜品,所以继承工厂类,做两个视频,一个咖啡,一个蛋糕</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/AbatractFactory.jpg"></p>
+<p>可以看出,每一个工厂类都有做产品a还有做产品b的方法</p>
+<h2 id="2-3单例模式"><a href="#2-3单例模式" class="headerlink" title="2.3单例模式"></a>2.3单例模式</h2><p>顾名思义就是无论如何,指挥产生一个对象instance,最简单的方法就是私有构造函数,然后使用静态变量生成instance,这届得到</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Singleton.jpg"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Singleton.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">Singleton * Singleton::instance = <span class="literal">NULL</span>;</span><br><span class="line">Singleton::<span class="built_in">Singleton</span>()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Singleton::~<span class="built_in">Singleton</span>()&#123;</span><br><span class="line">	<span class="keyword">delete</span> instance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Singleton* <span class="title">Singleton::getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (instance == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		instance = <span class="keyword">new</span> <span class="built_in">Singleton</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span>  instance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Singleton::singletonOperation</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;singletonOperation&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4建造者模式"><a href="#2-4建造者模式" class="headerlink" title="2.4建造者模式"></a>2.4建造者模式</h2><p>这个例子就是工厂工人做每一步,然后最后进行组装</p>
+<p>todo:还没写完</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Builder.jpg"></p>
+<h1 id="3-行为模式"><a href="#3-行为模式" class="headerlink" title="3.行为模式"></a>3.行为模式</h1><h2 id="3-1适配器模式"><a href="#3-1适配器模式" class="headerlink" title="3.1适配器模式"></a>3.1适配器模式</h2><p>例子:就是电源适配器(欧洲电源需要转接口才能使用),适配器就是转换头</p>
+<p>所以我们需要实现欧洲的接口,但是继承国内的充电头,一个impl一个extend</p>
+<p>然后在impl里面调用extend函数</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Adapter_classModel.jpg"></p>
+<h2 id="3-2桥接模式"><a href="#3-2桥接模式" class="headerlink" title="3.2桥接模式"></a>3.2桥接模式</h2><p>主要是减少使用继承类,例如四边形,子类是长方形还有正方形,但是子类还有红色和蓝色的长方形</p>
+<p>我们使用颜色类聚类到四边形里面,这样就可以减少子类,所以我们,我们在color里面实现,蓝色还有绿色,</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Bridge.jpg"></p>
+<h2 id="3-3桥接模式"><a href="#3-3桥接模式" class="headerlink" title="3.3桥接模式"></a>3.3桥接模式</h2><p>就是代购火车票,方法都一样的,售票处售票,代购店也要售票,代购店售票的方法就是使用售票处的方法</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Proxy.jpg"></p>
+<p>都要实现接口,同时调用真实接口</p>
+<h2 id="3-4享元模式"><a href="#3-4享元模式" class="headerlink" title="3.4享元模式"></a>3.4享元模式</h2><p>贡献模式,每次调用都是相同的的值,但是修改一些属性而已</p>
+<p>主要使用map,来得到相同的元素,map[i]</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Flyweight.jpg"></p>
+<h2 id="3-5外观模式"><a href="#3-5外观模式" class="headerlink" title="3.5外观模式"></a>3.5外观模式</h2><p>基金经理帮我们来买股票,这样我们就不需自己进行选择股票</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Facade.jpg"></p>
+<h2 id="3-6装饰模式"><a href="#3-6装饰模式" class="headerlink" title="3.6装饰模式"></a>3.6装饰模式</h2><p>就是炒饭+鸡蛋+肉+其他的,因此,炒房还有配料都要继承食物类别</p>
+<p>同时配料类还要聚合食物类,这样就可以进行添加配料</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Decorator.jpg"></p>
+<p>decorate是配料类,聚合食物类,设置get set方法,最后的总价价格&#x3D;this.getprice+this.getfood.getcost</p>
+<h1 id="4-行为型模式"><a href="#4-行为型模式" class="headerlink" title="4.行为型模式"></a>4.行为型模式</h1><h2 id="4-1策略模式"><a href="#4-1策略模式" class="headerlink" title="4.1策略模式"></a>4.1策略模式</h2><p>最简单的模式,直接使用接口实现多个策略就可以,聚合策略就可以</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Strategy.jpg"></p>
+<h2 id="4-2命令模式"><a href="#4-2命令模式" class="headerlink" title="4.2命令模式"></a>4.2命令模式</h2><p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Command.jpg"></p>
+<p>简单来说就是命令来控制厨师,让厨师做事,让服务员收拾订单</p>
+<h2 id="4-3中介模式"><a href="#4-3中介模式" class="headerlink" title="4.3中介模式"></a>4.3中介模式</h2><p>中介这个人看碟子下菜,看对面是什么类型,然后调用不同的交互方法</p>
+<p>使用get set方法来把中介者里面.</p>
+<p>同时colleagues也要把中介放进去</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Mediator.jpg"></p>
+<h2 id="4-4观察者模式"><a href="#4-4观察者模式" class="headerlink" title="4.4观察者模式"></a>4.4观察者模式</h2><p>例子就是订阅公众号,公众号添加用户,公众号推送更新,调用用户更新.使用list添加</p>
+<p>subject是公众号,observe是微信用户,公众号的时候添加用户,使用for</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/Obeserver.jpg"></p>
+<h2 id="4-5状态模式"><a href="#4-5状态模式" class="headerlink" title="4.5状态模式"></a>4.5状态模式</h2><p>state是多个状态有电梯运行,电梯停止,电梯开门等多个状态,减少判断switch逻辑</p>
+<p><img src="https://design-patterns.readthedocs.io/zh_CN/latest/_images/State.jpg"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://yoursite.com">weijia</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2023/01/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">http://yoursite.com/2023/01/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/01/05/%E6%91%84%E5%BD%B1%E6%8A%80%E5%B7%A7/"><img class="next-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">摄影技巧</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">weijia</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">65</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">53</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">1.设计模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E5%88%9B%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">2创建者模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">2.1工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">2.2抽象工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">2.3单例模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.4.</span> <span class="toc-text">2.4建造者模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">3.行为模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.1.</span> <span class="toc-text">3.1适配器模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.2.</span> <span class="toc-text">3.2桥接模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.3.</span> <span class="toc-text">3.3桥接模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.4.</span> <span class="toc-text">3.4享元模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.5.</span> <span class="toc-text">3.5外观模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.6.</span> <span class="toc-text">3.6装饰模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">4.行为型模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">4.1策略模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.2.</span> <span class="toc-text">4.2命令模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.3.</span> <span class="toc-text">4.3中介模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.4.</span> <span class="toc-text">4.4观察者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.5.</span> <span class="toc-text">4.5状态模式</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/01/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式"/></a><div class="content"><a class="title" href="/2023/01/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><time datetime="2023-01-17T08:45:25.000Z" title="Created 2023-01-17 16:45:25">2023-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/05/%E6%91%84%E5%BD%B1%E6%8A%80%E5%B7%A7/" title="摄影技巧"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="摄影技巧"/></a><div class="content"><a class="title" href="/2023/01/05/%E6%91%84%E5%BD%B1%E6%8A%80%E5%B7%A7/" title="摄影技巧">摄影技巧</a><time datetime="2023-01-05T06:51:23.000Z" title="Created 2023-01-05 14:51:23">2023-01-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/27/excel/" title="excel"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="excel"/></a><div class="content"><a class="title" href="/2022/11/27/excel/" title="excel">excel</a><time datetime="2022-11-27T11:59:36.000Z" title="Created 2022-11-27 19:59:36">2022-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" title="数字逻辑"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数字逻辑"/></a><div class="content"><a class="title" href="/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" title="数字逻辑">数字逻辑</a><time datetime="2022-11-26T07:45:52.000Z" title="Created 2022-11-26 15:45:52">2022-11-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/" title="职场networking"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="职场networking"/></a><div class="content"><a class="title" href="/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/" title="职场networking">职场networking</a><time datetime="2022-11-26T07:08:19.000Z" title="Created 2022-11-26 15:08:19">2022-11-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By weijia</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
