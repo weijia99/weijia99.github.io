@@ -1,5 +1,7 @@
-http://yoursite.com/2023/04/15/pve%E6%8A%98%E8%85%BE/
+http://yoursite.com/2023/06/01/deepin%E5%AE%89%E8%A3%85docker/
 http://yoursite.com/2023/04/06/mitos/
+http://yoursite.com/2023/04/19/mysql%E5%AD%A6%E4%B9%A0/
+http://yoursite.com/2023/04/15/pve%E6%8A%98%E8%85%BE/
 http://yoursite.com/2023/04/12/%E5%AF%B9%E6%8A%97%E6%97%A0%E8%81%8A/
 http://yoursite.com/2023/03/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BB%A3%E7%A0%81%E5%B0%8F%E7%BB%93/
 http://yoursite.com/2023/03/03/jvm%E5%B0%8F%E7%BB%93/
@@ -153,3 +155,6 @@ http://yoursite.com/tags/%E6%A0%88/
 http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/
 http://yoursite.com/tags/%E7%BD%91%E8%AF%BE/
 http://yoursite.com/tags/java/
+http://yoursite.com/tags/torch/
+http://yoursite.com/tags/docker/
+http://yoursite.com/tags/mysql/
