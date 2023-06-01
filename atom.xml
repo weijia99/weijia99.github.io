@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2023-06-01T10:18:44.554Z</updated>
+  <updated>2023-06-01T12:01:14.440Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mmlab简介</title>
+    <link href="http://yoursite.com/2023/06/01/mmlab%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yoursite.com/2023/06/01/mmlab%E7%AE%80%E4%BB%8B/</id>
+    <published>2023-06-01T11:50:44.000Z</published>
+    <updated>2023-06-01T12:01:14.440Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="mmlab简介"><a href="#mmlab简介" class="headerlink" title="mmlab简介"></a>mmlab简介</h1><p>mmlab算法库是mmlab实验室在github上开源的一系列算法。由港中文的汤晓鸥教授建立的。本节主要介绍mmlab算法库相关简介</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16856202144211685620214365.png"></p><p>思维导图如上。主要包括目标检测，3d点云，图像分割，图像识别，视频理解，还有AIGC等相关应用。最后还有部署的算法库mmdeploy。目前几乎涵盖了计算机视觉相关的所有领域。在学术界还有工业界都被广泛的使用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;mmlab简介&quot;&gt;&lt;a href=&quot;#mmlab简介&quot; class=&quot;headerlink&quot; title=&quot;mmlab简介&quot;&gt;&lt;/a&gt;mmlab简介&lt;/h1&gt;&lt;p&gt;mmlab算法库是mmlab实验室在github上开源的一系列算法。由港中文的汤晓鸥教授建立的。本节</summary>
+      
+    
+    
+    
+    
+    <category term="pytorch" scheme="http://yoursite.com/tags/pytorch/"/>
+    
+    <category term="mmlab" scheme="http://yoursite.com/tags/mmlab/"/>
+    
+  </entry>
   
   <entry>
     <title>deepin安装docker和pytorch</title>
@@ -457,30 +481,6 @@
     <category term="数字逻辑" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/"/>
     
     <category term="ic" scheme="http://yoursite.com/tags/ic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>职场networking</title>
-    <link href="http://yoursite.com/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/"/>
-    <id>http://yoursite.com/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/</id>
-    <published>2022-11-26T07:08:19.000Z</published>
-    <updated>2022-11-26T07:41:54.209Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="职场networking"><a href="#职场networking" class="headerlink" title="职场networking"></a>职场networking</h1><p>以下内容来源于小林说职场,关注小林的youtube即可</p><h2 id="1-为什么需要"><a href="#1-为什么需要" class="headerlink" title="1.为什么需要"></a>1.为什么需要</h2><ol><li>帮你快速了解整个流程(大一,找到学长学姐,直接知道大学三年,怎么走)</li><li>然后根据这些经验与其他人相互交流,这样别的人也会觉得你是有点东西的</li></ol><h2 id="2-如何开始"><a href="#2-如何开始" class="headerlink" title="2.如何开始"></a>2.如何开始</h2><p>分为线上还有平级社交,想射由于是boss,有点难度.</p><p>但是平级社交容易开始:</p><blockquote><p>平级社交本质就是价值交换</p></blockquote><p>只有我的价值有用才可以开始社交,普通人之间相互开始的.</p><p>如何开始:</p><ol><li>可以帮助他们查资料(做实验的时候)</li><li>举办活动的时候做志愿者</li><li>逢年过节(写上祝福)</li></ol><p>最简单的方式.</p><p><strong>如何溶蚀他人—-把自己要说的话写好,然后再转发给那个帮你的人(可以节约他的时间)</strong></p><h2 id="3-认识人模板"><a href="#3-认识人模板" class="headerlink" title="3.认识人模板"></a>3.认识人模板</h2><p>还是经典的三段论</p><ol><li>自我介绍</li><li>说明来意</li><li>提出需求</li></ol><p>1.自我介绍:</p><blockquote><p>xxx你好,我叫xxx,来自xxx.我从我那个水知道你,知道你是我们学校的做个这有很高方向的人</p></blockquote><p>2.说明来意:</p><blockquote><p>我目前做的研究与你这个有关联,再研究调养期间,发现你的论文对我很有帮助,然后正在逐步学习你的代码</p></blockquote><p>3.提出需求:</p><blockquote><p>然后发现,您的代码,有些逻辑,不太理解.能1请耽误您15分钟的时间,能简介 一下吗.解决之后(说出好处)</p></blockquote><h2 id="4-附录-社交场合如何networking"><a href="#4-附录-社交场合如何networking" class="headerlink" title="4.附录(社交场合如何networking)"></a>4.附录(社交场合如何networking)</h2><h3 id="4-1开始"><a href="#4-1开始" class="headerlink" title="4.1开始"></a>4.1开始</h3><ol><li>自我介绍(hi,你好,我叫xxx,nicetomeetu)</li><li>跨别人(你这个衣服真不错,直接这么做的呀)</li><li>套近乎(看着比较眼熟,你是哪里的)</li><li>插入别人的对话</li><li>mind i joining</li><li>你们再讨论什么呢,这么有意思</li></ol><h3 id="4-2chat-topic"><a href="#4-2chat-topic" class="headerlink" title="4.2chat topic"></a>4.2chat topic</h3><ol><li>你从哪里来的呀(开车呀,好远,哪里吃的不错)</li><li>你从哪里听到这个活动的呀</li><li>你也是这个活动的会员呀</li><li>环境感觉如何</li><li>经典的吃(茶歇)</li><li>我吃的这个不错,你也可以事实上哦</li><li>单独落单了,你也是第一次参加这个吗</li></ol><h3 id="4-3结束"><a href="#4-3结束" class="headerlink" title="4.3结束"></a>4.3结束</h3><ol><li>我去个厕所</li><li>我吃的没有了,弄点吃的</li><li>太晚了,我该回去了</li><li>我同学来了,我和他打个招呼</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;职场networking&quot;&gt;&lt;a href=&quot;#职场networking&quot; class=&quot;headerlink&quot; title=&quot;职场networking&quot;&gt;&lt;/a&gt;职场networking&lt;/h1&gt;&lt;p&gt;以下内容来源于小林说职场,关注小林的youtube即可&lt;/p</summary>
-      
-    
-    
-    
-    
-    <category term="社交" scheme="http://yoursite.com/tags/%E7%A4%BE%E4%BA%A4/"/>
-    
-    <category term="人机" scheme="http://yoursite.com/tags/%E4%BA%BA%E6%9C%BA/"/>
     
   </entry>
   

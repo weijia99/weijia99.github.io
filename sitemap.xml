@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2023/06/01/mmlab%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2023-06-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2023/06/01/deepin%E5%AE%89%E8%A3%85docker/</loc>
     
     <lastmod>2023-06-01</lastmod>
@@ -1278,6 +1287,13 @@
   
   <url>
     <loc>http://yoursite.com/tags/mysql/</loc>
+    <lastmod>2023-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/mmlab/</loc>
     <lastmod>2023-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
