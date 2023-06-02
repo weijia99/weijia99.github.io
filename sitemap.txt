@@ -1,3 +1,4 @@
+http://yoursite.com/2023/06/02/%E4%BA%BA%E4%BD%93%E5%85%B3%E9%94%AE%E7%82%B9%E6%A3%80%E6%B5%8B/
 http://yoursite.com/2023/06/01/mmlab%E7%AE%80%E4%BB%8B/
 http://yoursite.com/2023/06/01/deepin%E5%AE%89%E8%A3%85docker/
 http://yoursite.com/2023/04/06/mitos/
@@ -160,3 +161,5 @@ http://yoursite.com/tags/torch/
 http://yoursite.com/tags/docker/
 http://yoursite.com/tags/mysql/
 http://yoursite.com/tags/mmlab/
+http://yoursite.com/tags/MMPose/
+http://yoursite.com/tags/cv/

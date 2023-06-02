@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2023-06-01T12:01:14.440Z</updated>
+  <updated>2023-06-02T13:49:41.795Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人体关键点检测</title>
+    <link href="http://yoursite.com/2023/06/02/%E4%BA%BA%E4%BD%93%E5%85%B3%E9%94%AE%E7%82%B9%E6%A3%80%E6%B5%8B/"/>
+    <id>http://yoursite.com/2023/06/02/%E4%BA%BA%E4%BD%93%E5%85%B3%E9%94%AE%E7%82%B9%E6%A3%80%E6%B5%8B/</id>
+    <published>2023-06-02T13:28:46.000Z</published>
+    <updated>2023-06-02T13:49:41.795Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="人体关键点检测"><a href="#人体关键点检测" class="headerlink" title="人体关键点检测"></a>人体关键点检测</h1><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1685712470039%E4%BA%BA%E4%BD%93%E5%85%B3%E9%94%AE%E6%A3%80%E6%B5%8B.png"></p><p>今天，这一节课的内容主要可以看成，人体关键点检测的综述。包括2d，3d人天姿态检测。主要介绍上述的算法，还有包括常用评价指标。</p><h2 id="1-检测思路"><a href="#1-检测思路" class="headerlink" title="1.检测思路"></a>1.检测思路</h2><h3 id="1-1自顶向下"><a href="#1-1自顶向下" class="headerlink" title="1.1自顶向下"></a>1.1自顶向下</h3><p>思路就是首先识别出人，之后在进行关键点识别，这样的缺点就是整体精度收到检测器算法，还有一个就是计算量太大了。</p><h3 id="1-2自底向上"><a href="#1-2自底向上" class="headerlink" title="1.2自底向上"></a>1.2自底向上</h3><p>先识别关键点，之后再次识别人类。计算量就少很多。</p><h3 id="1-3基于回归的"><a href="#1-3基于回归的" class="headerlink" title="1.3基于回归的"></a>1.3基于回归的</h3><p>根据图像直接回归出来坐标</p><h3 id="1-4基于热力图"><a href="#1-4基于热力图" class="headerlink" title="1.4基于热力图"></a>1.4基于热力图</h3><p>热力图是输出与原图比例一样的图像，但是每一个通道里面，关键点的坐标是1.预测出关键点既可以进行绘制。同时关键点一般使用max，或者是进行求期望获得</p><h2 id="2-2d检测"><a href="#2-2d检测" class="headerlink" title="2.2d检测"></a>2.2d检测</h2><h3 id="2-1自顶向下"><a href="#2-1自顶向下" class="headerlink" title="2.1自顶向下"></a>2.1自顶向下</h3><p>回归：包括DeepPOse（直接输出坐标），级联DeepPose，RLE（借鉴Flow思想，把分布运用多个高斯分布来进行拟合）</p><p>热力图：HourGlass（跳连接，是对称的自己），baseline（resnet+反卷积），HRNET（高分辨率，自己生成高分辨率+低分辨率的）</p><h3 id="2-2自底向上"><a href="#2-2自底向上" class="headerlink" title="2.2自底向上"></a>2.2自底向上</h3><p>openPose：先进行预测关键点，然后计算亲和度，高得就是同一个人</p><h3 id="2-3单阶段"><a href="#2-3单阶段" class="headerlink" title="2.3单阶段"></a>2.3单阶段</h3><p>一个阶段就可以结算出来结果。</p><p>包括：SPM（回归位置+方向向量），层级SPM（分部位来进行回归）</p><h3 id="2-4TRansform"><a href="#2-4TRansform" class="headerlink" title="2.4TRansform"></a>2.4TRansform</h3><p>PPTR：都是用一套DeRT个骨干网络，先框选人，之后关键点预测的时候把transform里面的q换成关键点）</p><p>TokenPose：cnn得到特征信息，之后在与pose信息一起add，然后放入到transform进行炼丹</p><h2 id><a href="#" class="headerlink" title></a></h2><h2 id="3-3d检测"><a href="#3-3d检测" class="headerlink" title="3.3d检测"></a>3.3d检测</h2><p>难点就是如何从2位换源到3维</p><p>解决思路：</p><ol><li>直接2d还原生成3d   coarse</li><li>利用视频，首先生成单帧的2d ，之后2d再次生3d  cideoPOse</li><li>利用多个视角   voxelPose</li></ol><h2 id="4-评价指标"><a href="#4-评价指标" class="headerlink" title="4.评价指标"></a>4.评价指标</h2><p>PCP：准确率</p><p>PDJ：在一定比例</p><p>PCK：在阈值范围里</p><p>oks：计算公式</p><h2 id="5-DensePOse"><a href="#5-DensePOse" class="headerlink" title="5.DensePOse"></a>5.DensePOse</h2><p>把人体划分成24块，每一个部分256*256，有14个关键点</p><p>主要算法包括：rcnn+dense reg，SMPL，SMPLisy和HMR</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;人体关键点检测&quot;&gt;&lt;a href=&quot;#人体关键点检测&quot; class=&quot;headerlink&quot; title=&quot;人体关键点检测&quot;&gt;&lt;/a&gt;人体关键点检测&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://fastly.jsdelivr.net/gh/weijia99/</summary>
+      
+    
+    
+    
+    
+    <category term="MMPose" scheme="http://yoursite.com/tags/MMPose/"/>
+    
+    <category term="cv" scheme="http://yoursite.com/tags/cv/"/>
+    
+  </entry>
   
   <entry>
     <title>mmlab简介</title>
@@ -457,30 +481,6 @@
     <category term="office" scheme="http://yoursite.com/tags/office/"/>
     
     <category term="excel" scheme="http://yoursite.com/tags/excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数字逻辑</title>
-    <link href="http://yoursite.com/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/"/>
-    <id>http://yoursite.com/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/</id>
-    <published>2022-11-26T07:45:52.000Z</published>
-    <updated>2023-01-05T08:11:53.776Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="数电小结"><a href="#数电小结" class="headerlink" title="数电小结"></a>数电小结</h1><h2 id="1-逻辑代数"><a href="#1-逻辑代数" class="headerlink" title="1.逻辑代数"></a>1.逻辑代数</h2><p>第一章主要是讲逻辑代数，主要是离散数学的知识，这些知识在考验期间学过，就直接跳过。包括逻辑化简，最小项还有最大项。砌筑一个新的知识点就是卡洛图。下面简单介绍一下卡诺图。</p><p>卡诺图：用小方格来表示最小项，一个小方格代表一个最小项，然后将这些最小项按照相邻性排列起来<strong>（00 01 11 10）</strong>。</p><p>注意，是使用01还有11，不是01,10这样排列，这样是为了，能够2个都是1可以消除第一位，只留下一，还有10和00也是可以在一起进行消除的。</p><p>无关项：就是值未知的项，值为x，可0可1，一般是为了凑成最大的圈，就把x设置为1</p><p>卡诺图化简规则</p><ol><li>尽量化最大的圈（只能是2的倍数）</li><li>化尽量少的圈</li><li>然后进行看无关项，如果无关项可以进行辅助化简也加进来</li></ol><h2 id="2-组合逻辑"><a href="#2-组合逻辑" class="headerlink" title="2.组合逻辑"></a>2.组合逻辑</h2><p>基础知识：与或非异或，基本的门电路</p><p>电路分析，一般使用一下方法</p><ol><li>直接按照输入输出进行化简</li><li>或者是对表达式，进行逻辑组合进行化简</li><li>或者是真值表，进行最小项来直接得到结果</li></ol><h3 id="2-1组合逻辑电路"><a href="#2-1组合逻辑电路" class="headerlink" title="2.1组合逻辑电路"></a>2.1组合逻辑电路</h3><p>编码器：就是把独热编码进行转化为相应的二进制代码把（0010）转化为二进制就是10（因为是2位使用，二进制就是10）</p><p>优先编码器：允许同时输入两个以上信号，并按优先级输出。例如：10-4线(如74LS147)、 8-3线(如74LS148)。<strong>就是输入多个有效信号，并且按照有限输出</strong></p><p>译码器：3-8译码器，刚才把2进行编码输出为10，那么译码器就是把10，输出为0010</p><p><img src="https://repo.holgerbest.top/img/fyMXeGraTizmxlK.png"></p><p>其中下面456是使能端，当45为低电平，6为高电平的时候才有效（因此，地址的开头可以设置在使能端，通过使能端的逻辑组合，来达到搜寻特定地址例如a8h到afh，后三位接到123，前面5位接到456，使用逻辑电路进行组合</p><p><strong>74LS138应用1 实现逻辑函数</strong>：将逻辑函数转换成最小项表达式，再转换成与非—与非形式。用一片74138加与非门就可实现三变量逻辑函数。</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729040080261672904007282.png"></p><p>例题：首先画出真值表，得到卡诺图，发现是y2y3y4y5，我们可以在最后面使用与非得到，前面就是选择2345的最小项</p><p>数据选择器：（4选一，需要2位来进行选择，因为2的2次方就是4，这两位数就是地址选择）</p><p><img src="https://repo.holgerbest.top/img/R18Y9mlbF5rQ7Oo.png"></p><p>香浓化简法：把最终的逻辑函数，分成w还有-w，然后最下面进行设置数据选择器。</p><p>例题：2个8选一，构成16选一。</p><p>2片就是16选2，同时还需要设置，使能端，需要进行设置取反</p><p><img src="https://repo.holgerbest.top/img/CP69jouBO1SFlzb.png"></p><h2 id="3-时序电路"><a href="#3-时序电路" class="headerlink" title="3.时序电路"></a>3.时序电路</h2><p>rd的意识就是设置为0</p><p><strong>rs触发器</strong>：特点就是r&#x3D;1，最后q的输出就是为0（r是resert的意思），当s&#x3D;1，最后q就是1（s是set的意思），特征方程如下，rs</p><p><img src="https://repo.holgerbest.top/img/SQ3ACdbkvPrsVBz.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729055030251672905502326.png"></p><p>这个要换成或非门，只需要我们把r还有s设置真值表，，然后就可以得到逻辑函数，我们知道q非还有q是相反的，所以我们的约束条件是rs&#x3D;0，但是当我们输入00的时候，这个条件就不成立，所以就是约束条件。</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729057560251672905755304.png"></p><p>接下来就是d触发器（这个就是寄存器的原型，因为输入什么，输出什么）</p><p><img src="https://repo.holgerbest.top/img/ynDgfWOMzUcA1B5.png"></p><p>下面就是t触发器</p><p><img src="https://repo.holgerbest.top/img/EJTLOymIpvPd3hC.png"></p><p>最后一个就是jk触发器，</p><p><img src="https://repo.holgerbest.top/img/nyEHmc3PxdBgk5T.png"></p><p>他有上述的几个触发器的多个特点，j为1，设置0，k为设置为1，全0就是保持不变，全1就是进行取反</p><p>进行多个变形jk变d</p><p><img src="https://repo.holgerbest.top/img/VRsyxivXWPcTz8A.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729062970281672906296730.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;数电小结&quot;&gt;&lt;a href=&quot;#数电小结&quot; class=&quot;headerlink&quot; title=&quot;数电小结&quot;&gt;&lt;/a&gt;数电小结&lt;/h1&gt;&lt;h2 id=&quot;1-逻辑代数&quot;&gt;&lt;a href=&quot;#1-逻辑代数&quot; class=&quot;headerlink&quot; title=&quot;1.逻辑代</summary>
-      
-    
-    
-    
-    
-    <category term="数字逻辑" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/"/>
-    
-    <category term="ic" scheme="http://yoursite.com/tags/ic/"/>
     
   </entry>
   
