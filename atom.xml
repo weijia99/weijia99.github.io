@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2023-06-02T13:49:41.795Z</updated>
+  <updated>2023-06-03T12:30:29.987Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MMPose实战</title>
+    <link href="http://yoursite.com/2023/06/03/MMPose%E5%AE%9E%E6%88%98/"/>
+    <id>http://yoursite.com/2023/06/03/MMPose%E5%AE%9E%E6%88%98/</id>
+    <published>2023-06-03T11:33:33.000Z</published>
+    <updated>2023-06-03T12:30:29.987Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-mmpose实战"><a href="#1-mmpose实战" class="headerlink" title="1.mmpose实战"></a>1.mmpose实战</h1><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1685794454339MMPose%E5%AE%9E%E6%88%98.png"></p><p>主要包括安装，mmdet实战，mmpose实战等三部分</p><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p>安装方法，可以直接去看官网教程，主要是是首先下载pytorch，之后下载mmcv，使用mim来进行安装。然后在github下载源码，使用源码进行安装。难点包括网速原因（ladder或者是搜索加速网站）</p><p>建议新装一个环境，pytorch和mmcv要一一对应。我之前是2.0.安装之后无法训练，是版本原因。所以重装了一个conda环境。</p><h2 id="2-mmdet"><a href="#2-mmdet" class="headerlink" title="2.mmdet"></a>2.mmdet</h2><p>mmlab代码的整体训练流程</p><ol><li>数据集同意处理程coco的格式，使用lableme</li><li>设置cfg配置文件，这个歌文件包括模型，优化器，超参数，数据集还有pipeline，和权重</li><li>使用train来训练上述cfg或者是分布式训练使用bash脚本bash dist——train模型cfg</li><li>之后就是使用test来进行验证文件 test 模型 +pth进行验证</li><li>之后就是预测，一般使用命令行得到结果</li></ol><h2 id="3-mmpose"><a href="#3-mmpose" class="headerlink" title="3.mmpose"></a>3.mmpose</h2><p>与mmdet同理，还是多个步骤</p><p>最后一步是集合mmdet的权重+mmpose的权重来指定向下来进行预测</p><h2 id="4-作业"><a href="#4-作业" class="headerlink" title="4.作业"></a>4.作业</h2><p>关于中医耳朵</p><ol><li>首先是数据集下载，使用bypy这个python包进行下载</li><li>使用mmdet的训练流程来进行训练</li><li>使用mmposexunlliucheng进行训练</li><li>使用test来进行计算准确率</li><li>集合上述两个一起进行结果预测</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-mmpose实战&quot;&gt;&lt;a href=&quot;#1-mmpose实战&quot; class=&quot;headerlink&quot; title=&quot;1.mmpose实战&quot;&gt;&lt;/a&gt;1.mmpose实战&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://fastly.jsdelivr.net/</summary>
+      
+    
+    
+    
+    
+    <category term="mmlab" scheme="http://yoursite.com/tags/mmlab/"/>
+    
+  </entry>
   
   <entry>
     <title>人体关键点检测</title>
@@ -456,31 +478,6 @@
     
     
     <category term="摄影" scheme="http://yoursite.com/tags/%E6%91%84%E5%BD%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>excel</title>
-    <link href="http://yoursite.com/2022/11/27/excel/"/>
-    <id>http://yoursite.com/2022/11/27/excel/</id>
-    <published>2022-11-27T11:59:36.000Z</published>
-    <updated>2022-11-27T13:00:15.358Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="excel小结"><a href="#excel小结" class="headerlink" title="excel小结"></a>excel小结</h1><p>通过4个模块来学习excel如何使用，学生成绩表，学习如何对表格进行设置列宽，输入的格式</p><h2 id="4-1学生课程表"><a href="#4-1学生课程表" class="headerlink" title="4.1学生课程表"></a>4.1学生课程表</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695505408951669550540036.png"></p><p>这个首先就是需要进行第一行的合并单元格，然后进行插入单元格来近似填充文字。之后就是文字输入（这个是要自动换行，使用alt+enter，还有就是，输入3-4，需要设置单元格格式为文本，这样才不会出现问题。</p><p>一下是重点</p><ol><li>在单元格输入多个文字，使用文本框</li><li>输入数字，不会变成日期，需要把格式设置为文本</li><li>分成多行，需要使用alt+enter</li></ol><p>总结：</p><p>第一个案例还是比较简单的，不需要多次学习</p><h2 id="2-学生成绩表"><a href="#2-学生成绩表" class="headerlink" title="2.学生成绩表"></a>2.学生成绩表</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695508618951669550861471.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695508758951669550875367.png"></p><p>这个没有效果图</p><p>使用官方教程来精简一下：</p><ol><li>第一个计算年龄（这个就需要使用函数，year（today（））-mid（c4,7,4），偶去今年然后减去省份中第7位开始长度为4的值 2022-2001&#x3D;21</li><li>第二个就是使用分裂，来得到班级，我们通过学号发现，前5位就是班级号。所以我们复制学号，然后到班级版一列，使用分裂，固定宽度为5.就可以进行分列</li><li>有效性，就是检查成绩是不是在0-100，使用有效性，需要先进行设置数据范围，之后全出有效性数据，修改数据值</li><li>计算成绩，这个直接使用公式计算，然后下拉</li><li>计算最高，这个直接使用max，count</li><li>这个在数据的条件格式，突出显示前20%就可以</li><li>选择性粘贴，直接右击，保存至，下一个就是直接乘</li><li>自定义排序</li><li>使用ctrl拖动就可以复制</li><li>合规岗使用筛选，之后使用自定义排序就可</li></ol><p>总结：</p><p>这个也不是很难，还是比较简单的。主要包括函数的使用，对程序员还是比较友好的</p><h2 id="3-班费分析图"><a href="#3-班费分析图" class="headerlink" title="3.班费分析图"></a>3.班费分析图</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695513598951669551359372.png"></p><p>这个主要是用来进行作图的，精简步骤如下</p><ol><li>选择包含列名的所有数据，之后选择插入柱状图</li><li>这样每一个系列就是列名</li><li>x和y轴就是从0开始的轴</li><li>水平垂直网格，就是每一行所代表的的</li><li>以上所有的操作都可以右击得到</li></ol><p>总结：</p><p>这个总体也不是很难，主要包括的动作，只需要右击属性，更换不同元素就可以进行设置</p><h2 id="4-图书信息表"><a href="#4-图书信息表" class="headerlink" title="4.图书信息表"></a>4.图书信息表</h2><p>信息量最大的一个，学习了多级分类，还有分类筛选</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695517318951669551731087.png"></p><p>主要包括以上多个功能，我精简的说下如何实现</p><p><strong>高级筛选</strong>，这个需要我们自己首先建立一个筛选表，填上所需要的列名，查找元素，不确定（姓王，可以使用王<em>来代替），这个</em>s正则表达式的任意匹配，上面都是匹配条件，使用高级筛选，选择值为数据区域，条件区域，还有最后的结果区域</p><blockquote><p>单击“高级筛选”工作表，在表内，按要求输入条件数据，单击“开始”选项卡中“筛选”命令的下拉菜单中的“高级筛选”，在弹出的对话框中设置，列表区域设置“图书信息表!$A$2:$J$66”，条件区域设置“高级筛选!$B$2:$F$5”，复制到设置“高级筛选!$B$13”，即可。</p></blockquote><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695519988991669551998303.png"></p><p><strong>分类汇总</strong>：就是进行分类出，这是那个书库，然后还有这些书库里的树又是那几个出版社出版的。</p><ol><li>单击“分类汇总”工作表，在表内选定A2:J66单元格区域,点击“数<strong>据”选项卡中的“排序”命令，设置主要关键字为“所在书库编号”，次要关键字为“出版社”</strong>（数据里的排序，主要关键是书库，次要是出版社）</li><li>第一次汇总，书库，选择分类汇总，字段为书库，汇总为计数，汇总的值是所在书库编号</li><li>下一个就是分类依据是出版社，然后火种为求和，UI中值是价格（选择对价格进行求和）</li></ol><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695525368941669552536684.png"></p><p>数据透视表：这个要求是求出每一个书库每一个出版社，每一种类别的值：</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695527979031669552797175.png"></p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695529268961669552926263.png"></p><p>可以看出，最上面一行是总计，3,6,6,2都是下面的和。</p><p>然后行可以看到是出版社，还有图书类别构成（为什么，因为有4*8行），列就是书库名</p><p>所以我们把书库编号放到列，图书类型，还有出版社方导航，计数值就是图书名称求和</p><p><strong>数据透视图</strong>L:xianshi每一个出版社的人数。</p><p>这个上一个4.3就做过，我们只需要把著作者放到值区域，然后图例就是出版社</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695534069141669553406891.png"></p><p><strong>合并计算</strong>：计算每个出版社的书的价格</p><blockquote><p>单击“合并计算”工作表，选定A1单元格，点击“数据”选项卡的“合并计算”命令，在弹出对话框中“函数”选“求和”、引用位置选择“图书信息表!$E$2:$F$66”，点击“添加”按钮，勾选“首行”、“最左列”，点击“确定”按钮，即可</p></blockquote><p><strong>选择e2到f66是因为，e2是出版社，f2是价格，直接选择这两个，首行代表，首行也要进行计算，最左列，代表是对最左列进行合并汇总</strong></p><p><strong>模拟计算</strong>：学校新增3000的图书，如果还有一个出版社，要出多少钱，之前的大75折扣</p><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16695537958951669553795387.png"></p><p>这个是所有的（b2到b6进行打75这扣扣，目前计算是查，所以需要b6来进行补充，所以使用模拟计算来得到b6的值</p><blockquote><p>这个就相当于求b6，使用函数来得到（x+b6）*0.75&#x3D;3000x已知得的，所以模拟计算就是用来求b65</p></blockquote><p>总结：这个案例还是有很多可圈可点的，学的内容还是很多，我做第二次还是不太熟悉，得多次进行练习。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;excel小结&quot;&gt;&lt;a href=&quot;#excel小结&quot; class=&quot;headerlink&quot; title=&quot;excel小结&quot;&gt;&lt;/a&gt;excel小结&lt;/h1&gt;&lt;p&gt;通过4个模块来学习excel如何使用，学生成绩表，学习如何对表格进行设置列宽，输入的格式&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="office" scheme="http://yoursite.com/tags/office/"/>
-    
-    <category term="excel" scheme="http://yoursite.com/tags/excel/"/>
     
   </entry>
   
