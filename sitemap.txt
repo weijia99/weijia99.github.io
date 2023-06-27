@@ -1,6 +1,7 @@
+http://yoursite.com/2023/04/06/mitos/
+http://yoursite.com/2023/06/14/mmseg%E4%BB%A3%E7%A0%81%E8%AF%BE/
 http://yoursite.com/2023/06/10/mmdet%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%88%98/
 http://yoursite.com/2023/06/07/mmpretrain%E5%AE%9E%E6%88%98/
-http://yoursite.com/2023/04/06/mitos/
 http://yoursite.com/2023/06/03/MMPose%E5%AE%9E%E6%88%98/
 http://yoursite.com/2023/06/02/%E4%BA%BA%E4%BD%93%E5%85%B3%E9%94%AE%E7%82%B9%E6%A3%80%E6%B5%8B/
 http://yoursite.com/2023/06/01/mmlab%E7%AE%80%E4%BB%8B/
@@ -168,3 +169,4 @@ http://yoursite.com/tags/MMPose/
 http://yoursite.com/tags/cv/
 http://yoursite.com/tags/detection/
 http://yoursite.com/tags/image-classification/
+http://yoursite.com/tags/segmentation/
