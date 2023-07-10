@@ -1,3 +1,6 @@
+http://yoursite.com/2023/07/09/cs144%E5%AE%9E%E9%AA%8C/
+http://yoursite.com/2023/07/10/sovits%E8%AE%AD%E7%BB%83%E6%95%99%E7%A8%8B/
+http://yoursite.com/2023/07/09/warp%E9%85%8D%E7%BD%AEclash/
 http://yoursite.com/2023/04/06/mitos/
 http://yoursite.com/2023/06/14/mmseg%E4%BB%A3%E7%A0%81%E8%AF%BE/
 http://yoursite.com/2023/06/10/mmdet%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%88%98/
@@ -170,3 +173,10 @@ http://yoursite.com/tags/cv/
 http://yoursite.com/tags/detection/
 http://yoursite.com/tags/image-classification/
 http://yoursite.com/tags/segmentation/
+http://yoursite.com/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/
+http://yoursite.com/tags/deep-learning/
+http://yoursite.com/tags/cs144/
+http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/
+http://yoursite.com/tags/warp/
+http://yoursite.com/tags/cf/
+http://yoursite.com/tags/clash/
