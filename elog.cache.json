@@ -1,0 +1,1373 @@
+{
+  "docs": [
+    {
+      "id": 187066103,
+      "doc_id": "ol0xhlylldcb49t0",
+      "updated": 1726710693000,
+      "properties": {
+        "title": "场景优化",
+        "date": "2024-09-19 09:39:41",
+        "updated": "2024-09-19 09:51:33",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1726710360433-7f48f7ec-200b-48bc-9069-dda80d4b16ad.png",
+        "description": "聚合写上一章节场景题目，介绍的点赞系统，就是使用的聚合写操作，之前点赞都是每次一次，可以在内存里面聚合之后，然后再进行100个合在一起的，进行一次加100，减少数据库的压力或者数据库进行批量插入，普通的接口，没有聚合，使用压测 wrk，900qps@schedule 是进行定时逻辑，调用次数3..."
+      },
+      "catalog": [
+        {
+          "title": "java",
+          "doc_id": "ol0xhlylldcb49t0"
+        },
+        {
+          "title": "场景面试相关问题",
+          "doc_id": "ol0xhlylldcb49t0"
+        }
+      ],
+      "realName": "场景优化",
+      "relativePath": "\\场景优化.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 188909287,
+      "doc_id": "gaqhzm7wgop4kgsm",
+      "updated": 1727963128000,
+      "properties": {
+        "title": "第二周，GIN入门",
+        "date": "2024-10-03 21:03:19",
+        "updated": "2024-10-03 21:45:28",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1727960975879-69b8efa7-7210-44e9-aebc-9ba048065f69.png",
+        "description": "1.入门首先最简单的直接抄袭官网的快速开始，常见的三步。1.定义server的断开。2.设置路由对应handle函数。3.设置handle函数设置server设置对应的处理函数，匿名函数，传入的是ctx是关键开始run路由匹配参照spring的request param和正则匹配通过param..."
+      },
+      "catalog": [
+        {
+          "title": "go语言",
+          "doc_id": "gaqhzm7wgop4kgsm"
+        },
+        {
+          "title": "极客时间",
+          "doc_id": "gaqhzm7wgop4kgsm"
+        }
+      ],
+      "realName": "第二周，GIN入门",
+      "relativePath": "\\第二周，GIN入门.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 188906576,
+      "doc_id": "wqf4l831yg2t3klk",
+      "updated": 1727960622000,
+      "properties": {
+        "title": "第一周，go语言拾遗",
+        "date": "2024-10-03 19:56:17",
+        "updated": "2024-10-03 21:03:42",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1727956986927-b9d68bdf-c839-4ebc-abf1-e35003ecff6e.png",
+        "description": "本节主要讲解的是go语言的基础语法，主要参照的是自己的遗留问题。文件路径package和java里面的包一样，也是需要先定义好文件夹路径package的名字可以与文件夹的名字不一样，同一个文件夹下面的包名药一直，test文件除外基础数据和java差不多也是int，uint，float这些数字的..."
+      },
+      "catalog": [
+        {
+          "title": "go语言",
+          "doc_id": "wqf4l831yg2t3klk"
+        },
+        {
+          "title": "极客时间",
+          "doc_id": "wqf4l831yg2t3klk"
+        }
+      ],
+      "realName": "第一周，go语言拾遗",
+      "relativePath": "\\第一周，go语言拾遗.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 186760374,
+      "doc_id": "vvxgz6o8kcc4ln00",
+      "updated": 1726666467000,
+      "properties": {
+        "title": "场景题目",
+        "date": "2024-09-16 15:43:20",
+        "updated": "2024-09-18 21:34:27",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1726483969620-501b1524-3cdd-491e-a5c3-8c9dea260d32.png",
+        "description": "两种思路，一个是4个d询问场景，询问qps，主要业务，业务流程询问服务，主要是暴露什么接口接下来就是storage，使用什么数据库还有schma，为什么不用其他接下来就是看还有没有优化的，进行防止盗刷，限流什么的还有caps沟通c，进行交流，业务逻辑，qps，精准度要求（能不能多卖，还是少买）..."
+      },
+      "catalog": [
+        {
+          "title": "java",
+          "doc_id": "vvxgz6o8kcc4ln00"
+        },
+        {
+          "title": "场景面试相关问题",
+          "doc_id": "vvxgz6o8kcc4ln00"
+        }
+      ],
+      "realName": "场景题目",
+      "relativePath": "\\场景题目.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 186698066,
+      "doc_id": "kpnktlpociyz16pl",
+      "updated": 1726472601000,
+      "properties": {
+        "title": "海量数据题目",
+        "date": "2024-09-15 21:36:58",
+        "updated": "2024-09-16 15:43:21",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1726465167465-97df603a-ce95-4d29-8831-dfffeb77f9b2.png",
+        "description": "所谓海量数据处理就是在大数据情况下来处理具体情况就是内存有限，数据太大无法处理完成所有，因此需要使用特殊处理。常见的方案就是时间换空间，使用bitmap，哈希，trie树灯解决空间换时间，进行hash到小文件，然后统计小文之后归并统计常见的方案分治外排序划分bitmaptrie树倒排序分治方案..."
+      },
+      "catalog": [
+        {
+          "title": "java",
+          "doc_id": "kpnktlpociyz16pl"
+        },
+        {
+          "title": "场景面试相关问题",
+          "doc_id": "kpnktlpociyz16pl"
+        }
+      ],
+      "realName": "海量数据题目",
+      "relativePath": "\\海量数据题目.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 186680219,
+      "doc_id": "rznizbgtwfvtg0z5",
+      "updated": 1726407365000,
+      "properties": {
+        "title": "智力题",
+        "date": "2024-09-15 16:23:45",
+        "updated": "2024-09-15 21:36:05",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1726388970296-e5503ccb-6d06-43b6-b934-b7114172494d.png",
+        "description": "智力题一半都是都是在面试腾讯时候才会进行面试的问题，常见的问题就是包括烧绳子烧绳子问题题意：使用两个如何得到15分钟。题解：可以进行对着烧，就是两边一起烧绳子，结果就是加速得到绳子，就是半小时了稍晚第一根绳子，然后第二根绳子还有半小时，接下来对第二根绳子接着对半烧，那就是只有15分钟了最少试剂..."
+      },
+      "catalog": [
+        {
+          "title": "java",
+          "doc_id": "rznizbgtwfvtg0z5"
+        },
+        {
+          "title": "场景面试相关问题",
+          "doc_id": "rznizbgtwfvtg0z5"
+        }
+      ],
+      "realName": "智力题",
+      "relativePath": "\\智力题.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 185582510,
+      "doc_id": "mhfrgfby7z3tb246",
+      "updated": 1725698077000,
+      "properties": {
+        "title": "系统设计具体流程",
+        "date": "2024-09-07 16:28:08",
+        "updated": "2024-09-07 16:34:37",
+        "description": "估算qps第1步 ：了解问题并确定设计范围需要开发什么功能多少个人使用技术栈是什么最重要的功能是什么，是按照什么顺序排列的流量多大，可以包含什么格式第2步：提出高层次的设计方案并获得认同service，具体的服务第三步就是选择数据库storage总结第1步 理解问题并确定设计范围：3-10分钟..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "mhfrgfby7z3tb246"
+        }
+      ],
+      "realName": "系统设计具体流程",
+      "relativePath": "\\系统设计具体流程.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 184529255,
+      "doc_id": "hg7k93vskdrrva8l",
+      "updated": 1725072439000,
+      "properties": {
+        "title": "数据库题解",
+        "date": "2024-08-30 20:13:04",
+        "updated": "2024-08-31 10:47:19",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1725019993862-45349e4f-e86d-40a2-b8b4-207368d16f6d.png",
+        "description": "索隆各科成绩select b.sname, c.sid ,  c.cname,c.score  FROM result AS c , student AS b where c.sid = b.sid and b.sname=\"索隆\"打印出路飞的数学成绩（百度）select b.sname, c..."
+      },
+      "catalog": [
+        {
+          "title": "python算法",
+          "doc_id": "hg7k93vskdrrva8l"
+        }
+      ],
+      "realName": "数据库题解",
+      "relativePath": "\\数据库题解.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 184489074,
+      "doc_id": "gvg4fveacnkzd0gf",
+      "updated": 1726727893000,
+      "properties": {
+        "title": "经典算法题目",
+        "date": "2024-08-30 14:45:04",
+        "updated": "2024-09-19 14:38:13",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1725284672302-f8181cbe-1bc7-4a56-beaf-bde643557449.png",
+        "description": "239491450(把right挂到左子树的最右边就行，然后返回左边的值6694284376518377209115126244442572 双重dfs31378215678lcr120287链表赵环1044912堆排序，只需要一直往下swqp，然后进行交换头节点295对顶堆394，两个st，..."
+      },
+      "catalog": [
+        {
+          "title": "python算法",
+          "doc_id": "gvg4fveacnkzd0gf"
+        }
+      ],
+      "realName": "经典算法题目",
+      "relativePath": "\\经典算法题目.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 183970878,
+      "doc_id": "rl295gearvz670kr",
+      "updated": 1727495977000,
+      "properties": {
+        "title": "常用的api",
+        "date": "2024-08-27 10:05:41",
+        "updated": "2024-09-28 11:59:37",
+        "description": "char字符串进行加减法使用ord(c)来获得unicode代码，之后chr来进行编码回去 s = list(s) for i,c in enumerate(s):     dis = min(ord(c)-ord('a'), ord('z')-ord(c)+1)     if dis "
+      },
+      "catalog": [
+        {
+          "title": "python算法",
+          "doc_id": "rl295gearvz670kr"
+        }
+      ],
+      "realName": "常用的api",
+      "relativePath": "\\常用的api.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 183672587,
+      "doc_id": "igu58hhypech146u",
+      "updated": 1726388626000,
+      "properties": {
+        "title": "场景面试相关问题",
+        "date": "2024-08-24 21:39:54",
+        "updated": "2024-09-15 16:23:46",
+        "description": "主要包括智力题还有海量数据题目和系统设计的场景题目。"
+      },
+      "catalog": [
+        {
+          "title": "java",
+          "doc_id": "igu58hhypech146u"
+        }
+      ],
+      "realName": "场景面试相关问题",
+      "relativePath": "\\场景面试相关问题.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 183672599,
+      "doc_id": "hmwmg2obunbccxwe",
+      "updated": 1724509201000,
+      "properties": {
+        "title": "k8s wsl部署问题汇总",
+        "date": "2024-08-24 21:40:04",
+        "updated": "2024-08-24 22:20:01",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1724507138184-1854b1ea-de5e-431e-90cd-75da81ff91d1.png",
+        "description": "wsl部署k8s，直接安装docker windows进行打开k8s就行，不需要自己遭罪的使用什么脚本来安装deployment部署内容，使用的spec作为container来实现容器部署，container里面进行定义image镜像，副本数量，镜像端口，这个镜像是docker对dockerf..."
+      },
+      "catalog": [
+        {
+          "title": "中间件学习",
+          "doc_id": "hmwmg2obunbccxwe"
+        },
+        {
+          "title": "k8s",
+          "doc_id": "hmwmg2obunbccxwe"
+        }
+      ],
+      "realName": "k8s wsl部署问题汇总",
+      "relativePath": "\\k8s wsl部署问题汇总.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 183475355,
+      "doc_id": "ui9hugigxsuzziyc",
+      "updated": 1724404683000,
+      "properties": {
+        "title": "java基础问题",
+        "date": "2024-08-23 09:35:34",
+        "updated": "2024-08-23 17:18:03",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1724377233457-46c62664-1864-4508-8b04-f6019de8c647.png",
+        "description": "重写的范围综上：重写就是子类对父类方法的重新改造，外部样子不能改变，内部逻辑可以改变。方法的重写要遵循两同两小一大”（以下内容摘录自《疯狂]va讲义》）：·“两同”即方法名相同、形参列表相同；·“两小\"指的是子类方法返回值类型应比父类方法返回值类型更小或相等，子类方法声明抛出的异常类应比父类方..."
+      },
+      "catalog": [
+        {
+          "title": "java",
+          "doc_id": "ui9hugigxsuzziyc"
+        }
+      ],
+      "realName": "java基础问题",
+      "relativePath": "\\java基础问题.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 176319709,
+      "doc_id": "kvasnxc5aeg9un4s",
+      "updated": 1719997370000,
+      "properties": {
+        "title": "nlp任务",
+        "date": "2024-07-03 15:15:24",
+        "updated": "2024-07-03 17:02:50",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1719992183415-03f15df5-3638-49ca-9cfc-3618eae82902.png",
+        "description": "情感类别分类整体的思路就是，进行数据清洗，然后设置编码的时候，把fp函数首先经过tokenlization，之后设置label是数据集上的label，然后进行返回。使用分类模型。之后的评估函数是f1还有acc，然后设置trainer读取ds分割ds对数据集使用map进行fp变换设置model之..."
+      },
+      "catalog": [
+        {
+          "title": "AI",
+          "doc_id": "kvasnxc5aeg9un4s"
+        },
+        {
+          "title": "nlp",
+          "doc_id": "kvasnxc5aeg9un4s"
+        }
+      ],
+      "realName": "nlp任务",
+      "relativePath": "\\nlp任务.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 176147241,
+      "doc_id": "ray3w088kdu80tgf",
+      "updated": 1719910445000,
+      "properties": {
+        "title": "es",
+        "date": "2024-07-02 14:50:36",
+        "updated": "2024-07-02 16:54:05",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1719907987230-3347aacd-3f8c-4c03-8f73-156a0a8403af.png",
+        "description": "问题引入倒排序，就是通过搜索引擎输入关键词，插入出文章，改怎么处理使用倒排索引，就是进行切词，然后根据词语，设置哪些文章出现了这个词语但是这样查询就是ON的复杂度，一个个查询单词，因此可以使用字典树单词+出现的列表就构成了倒排索引因为数据太大，只能放入到disk里面term index数据压缩..."
+      },
+      "catalog": [
+        {
+          "title": "中间件学习",
+          "doc_id": "ray3w088kdu80tgf"
+        }
+      ],
+      "realName": "es",
+      "relativePath": "\\es.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 176143960,
+      "doc_id": "yssna17mzkgw6idk",
+      "updated": 1719907605000,
+      "properties": {
+        "title": "rocket mq",
+        "date": "2024-07-02 14:35:44",
+        "updated": "2024-07-02 16:06:45",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1719906718228-0e60bcab-2c37-4e90-9c53-f3b2a17cc754.png",
+        "description": "问题引入上一节介绍了kafka是一个消息队列，但是如果我想某个消息过了半小时之后再次进行消费，这就是延时消息，这个使用需要rocket mq与kafka对比都是消息队列，那么就可以进行对比kafka是使用zookeper来进行，rocket mq使用的nameserver分区被修改程队列使用的..."
+      },
+      "catalog": [
+        {
+          "title": "中间件学习",
+          "doc_id": "yssna17mzkgw6idk"
+        }
+      ],
+      "realName": "rocket mq",
+      "relativePath": "\\rocket mq.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 179351796,
+      "doc_id": "fb2dos6znaggfavz",
+      "updated": 1723980966000,
+      "properties": {
+        "title": "raft实现",
+        "date": "2024-07-24 20:56:36",
+        "updated": "2024-08-18 19:36:06",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1721826081013-792a578c-813a-43cc-b927-1ed23faaa927.png",
+        "description": "raft论文介绍主要流程图图 1 ：复制状态机的结构。一致性算法管理着来自客户端指令的复制日志。状态机从日志中处理相同顺序的相同指令，所以产生的结果也是相同的。通过一致性传送log，发送指令，最终达到状态机一致关键词followercandidateleader只有candidate才可以变成..."
+      },
+      "catalog": [
+        {
+          "title": "go语言",
+          "doc_id": "fb2dos6znaggfavz"
+        },
+        {
+          "title": "raft",
+          "doc_id": "fb2dos6znaggfavz"
+        }
+      ],
+      "realName": "raft实现",
+      "relativePath": "\\raft实现.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 176143910,
+      "doc_id": "uio3t4xb1x3l35gn",
+      "updated": 1719911631000,
+      "properties": {
+        "title": "k8s",
+        "date": "2024-07-02 14:35:24",
+        "updated": "2024-07-02 17:13:51",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1719911333939-37ad56b8-7e41-40a6-8f95-933a2b4b0e56.png",
+        "description": "问题引出当你部署的博客访问量太大，结果挂了，需要重启，内存大于多少g才可以，这个时候又是自己手动来进行部署，肥肠的耗时间。介绍k8s通过yaml，来进行自动重启，自动扩容架构原理也是控制节点还有工作节点组成控制节点api server：手动实现的api来进行操作scheduler：查看哪一个工..."
+      },
+      "catalog": [
+        {
+          "title": "中间件学习",
+          "doc_id": "uio3t4xb1x3l35gn"
+        }
+      ],
+      "realName": "k8s",
+      "relativePath": "\\k8s.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 176143940,
+      "doc_id": "wxvoe8amksmv67sc",
+      "updated": 1719906223000,
+      "properties": {
+        "title": "kafka",
+        "date": "2024-07-02 14:35:37",
+        "updated": "2024-07-02 15:43:43",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/webp/26023389/1719903482291-693369e4-a17b-479f-a9e1-57456bb9bc1d.webp",
+        "description": "为什么需要kafkakafka也是一种消息队列。问题引入当a服务每次产生200个消息，但是b服务每秒只能处理100个消息，消息处理不过来，就加入一个中间层，那就是kafka消息队列介绍消息队列名称里面包含队列两个字，那他就是一种队列数据结构高性能为了能让更多的消费者嫩能够消费消息队列，可以吧一..."
+      },
+      "catalog": [
+        {
+          "title": "中间件学习",
+          "doc_id": "wxvoe8amksmv67sc"
+        }
+      ],
+      "realName": "kafka",
+      "relativePath": "\\kafka.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 176143501,
+      "doc_id": "xaagg1q5na66gm9a",
+      "updated": 1727960875000,
+      "properties": {
+        "title": "langchain使用",
+        "date": "2024-07-02 14:32:50",
+        "updated": "2024-10-03 21:07:55",
+        "description": "问题引入现有llm只能对话，无法进行操作，查询相关data如果要换一个llm，那就需要重新更新llm的代码不能实现根据不同任务选择不同的llm无法有记忆，不能查到最新的消息langchain介绍解耦合了，变成prompt，model，chain，agent，vector等多个模块LangCha..."
+      },
+      "catalog": [
+        {
+          "title": "AI",
+          "doc_id": "xaagg1q5na66gm9a"
+        },
+        {
+          "title": "nlp",
+          "doc_id": "xaagg1q5na66gm9a"
+        }
+      ],
+      "realName": "langchain使用",
+      "relativePath": "\\langchain使用.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 168669102,
+      "doc_id": "eq155c9c4aebc18a",
+      "updated": 1715095797000,
+      "properties": {
+        "title": "7.聊天室设计",
+        "date": "2024-05-07 22:54:12",
+        "updated": "2024-05-07 23:29:57",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1715093818637-d1fba3bc-dc76-46a4-ba29-57d2ebe0f026.png",
+        "description": "目的设计qq聊天，discord场景需要发送消息注册登录通讯录其他功能限制登录状态用户在线状态qps计算微信越活10亿，每日发送450Bqps最大是520k一条记录是30bytes，那就是1.3T一天服务信息存放实时推送消息（fcm）存储出现无法进行群聊存放，而且查询where太多了这边是使用..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "eq155c9c4aebc18a"
+        }
+      ],
+      "realName": "7.聊天室设计",
+      "relativePath": "\\7.聊天室设计.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 168659252,
+      "doc_id": "mpi480bcvhim48nk",
+      "updated": 1715093651000,
+      "properties": {
+        "title": "6.文档协同系统",
+        "date": "2024-05-07 21:15:38",
+        "updated": "2024-05-07 22:54:11",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1715090468079-96e454d1-019a-4cad-ab77-547ad33c1a6e.png",
+        "description": "目的设计多人同时在线编辑文档，如腾讯文档场景需求协同编辑编辑的主要功能newedit保存加入协同协同可以展示谁在编辑内容锁定使用websocket可以进行主动和被动更新，支持双向通信url设计使用短连接，而且连接不能包含文件路径信息文件存放参考gfs的设计方式，metadata存放到db，内容..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "mpi480bcvhim48nk"
+        }
+      ],
+      "realName": "6.文档协同系统",
+      "relativePath": "\\6.文档协同系统.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 168351673,
+      "doc_id": "wz032eu6wrpalpfw",
+      "updated": 1714922299000,
+      "properties": {
+        "title": "5.分布式系统",
+        "date": "2024-05-05 22:43:44",
+        "updated": "2024-05-05 23:18:19",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1714920534487-20dbdaca-50cb-47cf-b380-d3ee2333cb75.png",
+        "description": "场景需求写入文件，读取文件支持多大的文件多态机器存储文件服务客户端与服务端服务端如何进行沟通， 构建一个master节点，进行接受请求点对点master-slaverstorage存放文件多次访问原信息原信息内容信息通过原信息找到内容信息存放1tb的，那就是借鉴二级分页的方式来处理，index..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "wz032eu6wrpalpfw"
+        }
+      ],
+      "realName": "5.分布式系统",
+      "relativePath": "\\5.分布式系统.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 168300471,
+      "doc_id": "nufskipyiiw5ks7b",
+      "updated": 1714875643000,
+      "properties": {
+        "title": "常用代码总结",
+        "date": "2024-05-05 10:05:33",
+        "updated": "2024-05-05 10:20:43",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1714874754218-9f69b6c6-6f7c-4429-871a-f27e73b82140.png",
+        "description": "基础入门暂时无法在飞书文档外展示此内容镜像使用clash使用使用hf-mirror进行下载数据集https://hf-mirror.com/HF_ENDPOINT=https://hf-mirror.com python your_script.pyPipeline介绍常见的使用方法加载pip..."
+      },
+      "catalog": [
+        {
+          "title": "AI",
+          "doc_id": "nufskipyiiw5ks7b"
+        },
+        {
+          "title": "nlp",
+          "doc_id": "nufskipyiiw5ks7b"
+        }
+      ],
+      "realName": "常用代码总结",
+      "relativePath": "\\常用代码总结.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 168300447,
+      "doc_id": "eirmk3dvkvikiury",
+      "updated": 1714920126000,
+      "properties": {
+        "title": "4.优惠券设计系统",
+        "date": "2024-05-05 10:05:11",
+        "updated": "2024-05-05 22:42:06",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1714915283095-1d3a0cb7-9558-402d-ad71-f9cc9e1dab7b.png",
+        "description": "分析还是4s，首先是场景场景需求发送优惠券领取优惠券使用优惠券商家侧新增优惠券发送优惠券用户侧领取优惠券下单使用优惠券支付qps计算按照点击次数，还有多少人，多少个优惠券服务传统的电商服务订单服务支付服务+优惠券服务存在的问题分布式事务超发送优惠券防止重复领取大批量发送优惠券（发红包类似）st..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "eirmk3dvkvikiury"
+        }
+      ],
+      "realName": "4.优惠券设计系统",
+      "relativePath": "\\4.优惠券设计系统.md",
+      "needUpdate": 1,
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 168300330,
+      "doc_id": "smksvgedrtxlsfio",
+      "updated": 1714874670000,
+      "properties": {
+        "title": "3.设计短连接系统",
+        "date": "2024-05-05 10:03:20",
+        "updated": "2024-05-05 10:04:30",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1714874611802-b8640130-6a84-4096-ac46-20b1a9e7840e.png",
+        "description": "0.设计news feed的api选择返回协议一般是使用json来进行返回设计翻页选择第二种，因为第一种，万一有插入，再次下滑就会看到已经看过了的内容如何判断没有下一页的内容就是多取一个值，去得到就进行返回，作为next，不然就是null，没有下一个如何设计@提及到其他人直接使用http抄连接..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "smksvgedrtxlsfio"
+        }
+      ],
+      "realName": "3.设计短连接系统",
+      "relativePath": "\\3.设计短连接系统.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 165534689,
+      "doc_id": "fvfte25ef81pgmxz",
+      "updated": 1726105904000,
+      "properties": {
+        "title": "1.设计news feed",
+        "date": "2024-04-14 14:57:36",
+        "updated": "2024-09-12 09:51:44",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/jpeg/26023389/1713078479247-46a9114c-ba20-4296-a342-826b3b449321.jpeg",
+        "description": "0.基础知识1.设计新闻feed参考上面的4s法则pull模式主要思路就是进行拉取最新的朋友动态，然后进行排序 1.数据库读取所有的好友动态，然后k路排序，选择最新的100条返回 2.写入的时候直接进行写入总体流程图如下缺陷n次db查询太慢了，push模式用户推送过来，不要自己去拉这样就要进行..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "fvfte25ef81pgmxz"
+        }
+      ],
+      "realName": "1.设计news feed",
+      "relativePath": "\\1.设计news feed.md",
+      "docPath": "./source/_posts"
+    },
+    {
+      "id": 165539409,
+      "doc_id": "pg2gsvd5hdd8shm2",
+      "updated": 1713084708000,
+      "properties": {
+        "title": "2.设计秒杀系统",
+        "date": "2024-04-14 15:43:49",
+        "updated": "2024-04-14 16:51:48",
+        "cover": "https://cdn.nlark.com/yuque/0/2024/png/26023389/1713081221350-504c3cb2-c892-45eb-9bea-4d713047984e.png",
+        "description": "1.场景商家创建秒杀活动进行ing配置用户秒杀页面抢购下单支付2.服务抢购模块库存模块订单模块支付模块存储商品信息表id价格name库存信息表商品id库存id活动id（与秒杀活动对应）数量锁定（支付还没有付款的）秒杀活动表秒杀id商品id价格数量订单信息表订单id用户id商品id活动id是否付..."
+      },
+      "catalog": [
+        {
+          "title": "系统设计",
+          "doc_id": "pg2gsvd5hdd8shm2"
+        }
+      ],
+      "realName": "2.设计秒杀系统",
+      "relativePath": "\\2.设计秒杀系统.md",
+      "docPath": "./source/_posts"
+    }
+  ],
+  "catalog": [
+    {
+      "uuid": "THYr6xwYRDo4T4ma",
+      "type": "TITLE",
+      "title": "python算法",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 0,
+      "depth": 1,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "",
+      "sibling_uuid": "sCeeejEsWeskeqhW",
+      "child_uuid": "a51wZTM_u7NBR0Od",
+      "parent_uuid": "",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "a51wZTM_u7NBR0Od",
+      "type": "DOC",
+      "title": "数据库题解",
+      "url": "hg7k93vskdrrva8l",
+      "slug": "hg7k93vskdrrva8l",
+      "id": 184529255,
+      "doc_id": 184529255,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "THYr6xwYRDo4T4ma",
+      "sibling_uuid": "45ShodNNc30T9aKl",
+      "child_uuid": "",
+      "parent_uuid": "THYr6xwYRDo4T4ma",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "45ShodNNc30T9aKl",
+      "type": "DOC",
+      "title": "经典算法题目",
+      "url": "gvg4fveacnkzd0gf",
+      "slug": "gvg4fveacnkzd0gf",
+      "id": 184489074,
+      "doc_id": 184489074,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "a51wZTM_u7NBR0Od",
+      "sibling_uuid": "8rF7QL_OymqecCpm",
+      "child_uuid": "",
+      "parent_uuid": "THYr6xwYRDo4T4ma",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "8rF7QL_OymqecCpm",
+      "type": "DOC",
+      "title": "常用的api",
+      "url": "rl295gearvz670kr",
+      "slug": "rl295gearvz670kr",
+      "id": 183970878,
+      "doc_id": 183970878,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "45ShodNNc30T9aKl",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "THYr6xwYRDo4T4ma",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "sCeeejEsWeskeqhW",
+      "type": "TITLE",
+      "title": "java",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 0,
+      "depth": 1,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "THYr6xwYRDo4T4ma",
+      "sibling_uuid": "oPtse3bVghFsAR4D",
+      "child_uuid": "tOaq4cqrYHI_OdQQ",
+      "parent_uuid": "",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "tOaq4cqrYHI_OdQQ",
+      "type": "DOC",
+      "title": "场景面试相关问题",
+      "url": "igu58hhypech146u",
+      "slug": "igu58hhypech146u",
+      "id": 183672587,
+      "doc_id": 183672587,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "sCeeejEsWeskeqhW",
+      "sibling_uuid": "tRdaVjwkceFc9ASo",
+      "child_uuid": "OkP-9I6yqXwmbBy1",
+      "parent_uuid": "sCeeejEsWeskeqhW",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "OkP-9I6yqXwmbBy1",
+      "type": "DOC",
+      "title": "场景优化",
+      "url": "ol0xhlylldcb49t0",
+      "slug": "ol0xhlylldcb49t0",
+      "id": 187066103,
+      "doc_id": 187066103,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "tOaq4cqrYHI_OdQQ",
+      "sibling_uuid": "mzVwvGXNKcEwrmm6",
+      "child_uuid": "",
+      "parent_uuid": "tOaq4cqrYHI_OdQQ",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "mzVwvGXNKcEwrmm6",
+      "type": "DOC",
+      "title": "场景题目",
+      "url": "vvxgz6o8kcc4ln00",
+      "slug": "vvxgz6o8kcc4ln00",
+      "id": 186760374,
+      "doc_id": 186760374,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "OkP-9I6yqXwmbBy1",
+      "sibling_uuid": "ML-Ahc2DGYk1lB4-",
+      "child_uuid": "",
+      "parent_uuid": "tOaq4cqrYHI_OdQQ",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "ML-Ahc2DGYk1lB4-",
+      "type": "DOC",
+      "title": "海量数据题目",
+      "url": "kpnktlpociyz16pl",
+      "slug": "kpnktlpociyz16pl",
+      "id": 186698066,
+      "doc_id": 186698066,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "mzVwvGXNKcEwrmm6",
+      "sibling_uuid": "NoUdCSogHG-iUS4P",
+      "child_uuid": "",
+      "parent_uuid": "tOaq4cqrYHI_OdQQ",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "NoUdCSogHG-iUS4P",
+      "type": "DOC",
+      "title": "智力题",
+      "url": "rznizbgtwfvtg0z5",
+      "slug": "rznizbgtwfvtg0z5",
+      "id": 186680219,
+      "doc_id": 186680219,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "ML-Ahc2DGYk1lB4-",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "tOaq4cqrYHI_OdQQ",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "tRdaVjwkceFc9ASo",
+      "type": "DOC",
+      "title": "java基础问题",
+      "url": "ui9hugigxsuzziyc",
+      "slug": "ui9hugigxsuzziyc",
+      "id": 183475355,
+      "doc_id": 183475355,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "tOaq4cqrYHI_OdQQ",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "sCeeejEsWeskeqhW",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "oPtse3bVghFsAR4D",
+      "type": "TITLE",
+      "title": "go语言",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 0,
+      "depth": 1,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "sCeeejEsWeskeqhW",
+      "sibling_uuid": "GDWFWbccAf51FQPl",
+      "child_uuid": "JESSMcdzwkIxiKvZ",
+      "parent_uuid": "",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "JESSMcdzwkIxiKvZ",
+      "type": "TITLE",
+      "title": "极客时间",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "oPtse3bVghFsAR4D",
+      "sibling_uuid": "T6FlnbEWaV8nVjr7",
+      "child_uuid": "Sh-7jGC097O59chh",
+      "parent_uuid": "oPtse3bVghFsAR4D",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "Sh-7jGC097O59chh",
+      "type": "DOC",
+      "title": "第二周，GIN入门",
+      "url": "gaqhzm7wgop4kgsm",
+      "slug": "gaqhzm7wgop4kgsm",
+      "id": 188909287,
+      "doc_id": 188909287,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "JESSMcdzwkIxiKvZ",
+      "sibling_uuid": "BUWwEbvon51KfO7B",
+      "child_uuid": "",
+      "parent_uuid": "JESSMcdzwkIxiKvZ",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "BUWwEbvon51KfO7B",
+      "type": "DOC",
+      "title": "第一周，go语言拾遗",
+      "url": "wqf4l831yg2t3klk",
+      "slug": "wqf4l831yg2t3klk",
+      "id": 188906576,
+      "doc_id": 188906576,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "Sh-7jGC097O59chh",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "JESSMcdzwkIxiKvZ",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "T6FlnbEWaV8nVjr7",
+      "type": "TITLE",
+      "title": "raft",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "JESSMcdzwkIxiKvZ",
+      "sibling_uuid": "",
+      "child_uuid": "FgZi6Y1DKwa0QcM8",
+      "parent_uuid": "oPtse3bVghFsAR4D",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "FgZi6Y1DKwa0QcM8",
+      "type": "DOC",
+      "title": "raft实现",
+      "url": "fb2dos6znaggfavz",
+      "slug": "fb2dos6znaggfavz",
+      "id": 179351796,
+      "doc_id": 179351796,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "T6FlnbEWaV8nVjr7",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "T6FlnbEWaV8nVjr7",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "GDWFWbccAf51FQPl",
+      "type": "TITLE",
+      "title": "中间件学习",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 0,
+      "depth": 1,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "oPtse3bVghFsAR4D",
+      "sibling_uuid": "9zBFC0PXthYopPPg",
+      "child_uuid": "4jibUbD5uq39Wi3G",
+      "parent_uuid": "",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "4jibUbD5uq39Wi3G",
+      "type": "DOC",
+      "title": "es",
+      "url": "ray3w088kdu80tgf",
+      "slug": "ray3w088kdu80tgf",
+      "id": 176147241,
+      "doc_id": 176147241,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "GDWFWbccAf51FQPl",
+      "sibling_uuid": "51W6fGV8MX_X7wPI",
+      "child_uuid": "",
+      "parent_uuid": "GDWFWbccAf51FQPl",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "51W6fGV8MX_X7wPI",
+      "type": "DOC",
+      "title": "rocket mq",
+      "url": "yssna17mzkgw6idk",
+      "slug": "yssna17mzkgw6idk",
+      "id": 176143960,
+      "doc_id": 176143960,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "4jibUbD5uq39Wi3G",
+      "sibling_uuid": "C4f3ywQSZWuy3kej",
+      "child_uuid": "",
+      "parent_uuid": "GDWFWbccAf51FQPl",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "C4f3ywQSZWuy3kej",
+      "type": "DOC",
+      "title": "kafka",
+      "url": "wxvoe8amksmv67sc",
+      "slug": "wxvoe8amksmv67sc",
+      "id": 176143940,
+      "doc_id": 176143940,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "51W6fGV8MX_X7wPI",
+      "sibling_uuid": "OzqKigeSyh_GG0PT",
+      "child_uuid": "",
+      "parent_uuid": "GDWFWbccAf51FQPl",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "OzqKigeSyh_GG0PT",
+      "type": "DOC",
+      "title": "k8s",
+      "url": "uio3t4xb1x3l35gn",
+      "slug": "uio3t4xb1x3l35gn",
+      "id": 176143910,
+      "doc_id": 176143910,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "C4f3ywQSZWuy3kej",
+      "sibling_uuid": "mylBK-Go1hFoA_Jd",
+      "child_uuid": "P8jlksEzuc9HVsOS",
+      "parent_uuid": "GDWFWbccAf51FQPl",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "P8jlksEzuc9HVsOS",
+      "type": "DOC",
+      "title": "k8s wsl部署问题汇总",
+      "url": "hmwmg2obunbccxwe",
+      "slug": "hmwmg2obunbccxwe",
+      "id": 183672599,
+      "doc_id": 183672599,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "OzqKigeSyh_GG0PT",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "OzqKigeSyh_GG0PT",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "mylBK-Go1hFoA_Jd",
+      "type": "DOC",
+      "title": "docker",
+      "url": "oz57bykng0i3kfig",
+      "slug": "oz57bykng0i3kfig",
+      "id": 176143886,
+      "doc_id": 176143886,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 0,
+      "prev_uuid": "OzqKigeSyh_GG0PT",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "GDWFWbccAf51FQPl",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "9zBFC0PXthYopPPg",
+      "type": "DOC",
+      "title": "AI",
+      "url": "kybgfe5ad96pvwxr",
+      "slug": "kybgfe5ad96pvwxr",
+      "id": 168300455,
+      "doc_id": 168300455,
+      "level": 0,
+      "depth": 1,
+      "open_window": 1,
+      "visible": 0,
+      "prev_uuid": "GDWFWbccAf51FQPl",
+      "sibling_uuid": "ZfpDZQ1YC8P4be3-",
+      "child_uuid": "4Q9Duk2QOEt8WoYX",
+      "parent_uuid": "",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "4Q9Duk2QOEt8WoYX",
+      "type": "DOC",
+      "title": "nlp",
+      "url": "tsa7s2luvgp12i54",
+      "slug": "tsa7s2luvgp12i54",
+      "id": 168300460,
+      "doc_id": 168300460,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 0,
+      "prev_uuid": "9zBFC0PXthYopPPg",
+      "sibling_uuid": "",
+      "child_uuid": "AVCfmUMlAbntuOHw",
+      "parent_uuid": "9zBFC0PXthYopPPg",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "AVCfmUMlAbntuOHw",
+      "type": "DOC",
+      "title": "langchain使用",
+      "url": "xaagg1q5na66gm9a",
+      "slug": "xaagg1q5na66gm9a",
+      "id": 176143501,
+      "doc_id": 176143501,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "4Q9Duk2QOEt8WoYX",
+      "sibling_uuid": "qHdcVFH7PyzK__zF",
+      "child_uuid": "",
+      "parent_uuid": "4Q9Duk2QOEt8WoYX",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "qHdcVFH7PyzK__zF",
+      "type": "DOC",
+      "title": "微调和量化",
+      "url": "zlxkpnt3dygfvg9r",
+      "slug": "zlxkpnt3dygfvg9r",
+      "id": 176143446,
+      "doc_id": 176143446,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 0,
+      "prev_uuid": "AVCfmUMlAbntuOHw",
+      "sibling_uuid": "0T5s1sgJvA1JGRf1",
+      "child_uuid": "",
+      "parent_uuid": "4Q9Duk2QOEt8WoYX",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "0T5s1sgJvA1JGRf1",
+      "type": "DOC",
+      "title": "nlp任务",
+      "url": "kvasnxc5aeg9un4s",
+      "slug": "kvasnxc5aeg9un4s",
+      "id": 176319709,
+      "doc_id": 176319709,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "qHdcVFH7PyzK__zF",
+      "sibling_uuid": "slUpEVSxLkG6g5Jr",
+      "child_uuid": "",
+      "parent_uuid": "4Q9Duk2QOEt8WoYX",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "slUpEVSxLkG6g5Jr",
+      "type": "DOC",
+      "title": "常用代码总结",
+      "url": "nufskipyiiw5ks7b",
+      "slug": "nufskipyiiw5ks7b",
+      "id": 168300471,
+      "doc_id": 168300471,
+      "level": 2,
+      "depth": 3,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "0T5s1sgJvA1JGRf1",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "4Q9Duk2QOEt8WoYX",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "ZfpDZQ1YC8P4be3-",
+      "type": "TITLE",
+      "title": "系统设计",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 0,
+      "depth": 1,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "9zBFC0PXthYopPPg",
+      "sibling_uuid": "",
+      "child_uuid": "szYV151hY3BYwhJM",
+      "parent_uuid": "",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "szYV151hY3BYwhJM",
+      "type": "DOC",
+      "title": "无标题文档",
+      "url": "cgstgb4c9ftopw4c",
+      "slug": "cgstgb4c9ftopw4c",
+      "id": 186678697,
+      "doc_id": 186678697,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 0,
+      "prev_uuid": "ZfpDZQ1YC8P4be3-",
+      "sibling_uuid": "UDk5YXotgni4pFd3",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "UDk5YXotgni4pFd3",
+      "type": "DOC",
+      "title": "系统设计具体流程",
+      "url": "mhfrgfby7z3tb246",
+      "slug": "mhfrgfby7z3tb246",
+      "id": 185582510,
+      "doc_id": 185582510,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "szYV151hY3BYwhJM",
+      "sibling_uuid": "tgTMxpvARlbXXaY-",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "tgTMxpvARlbXXaY-",
+      "type": "TITLE",
+      "title": "新分组",
+      "url": "",
+      "slug": "#",
+      "id": "",
+      "doc_id": "",
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "UDk5YXotgni4pFd3",
+      "sibling_uuid": "OYZRxNFNFKds_Wnu",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "OYZRxNFNFKds_Wnu",
+      "type": "DOC",
+      "title": "7.聊天室设计",
+      "url": "eq155c9c4aebc18a",
+      "slug": "eq155c9c4aebc18a",
+      "id": 168669102,
+      "doc_id": 168669102,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "tgTMxpvARlbXXaY-",
+      "sibling_uuid": "a_mDwdnFMvanuMT8",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "a_mDwdnFMvanuMT8",
+      "type": "DOC",
+      "title": "6.文档协同系统",
+      "url": "mpi480bcvhim48nk",
+      "slug": "mpi480bcvhim48nk",
+      "id": 168659252,
+      "doc_id": 168659252,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "OYZRxNFNFKds_Wnu",
+      "sibling_uuid": "JOsvVVBl7hGkdLgG",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "JOsvVVBl7hGkdLgG",
+      "type": "DOC",
+      "title": "5.分布式系统",
+      "url": "wz032eu6wrpalpfw",
+      "slug": "wz032eu6wrpalpfw",
+      "id": 168351673,
+      "doc_id": 168351673,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "a_mDwdnFMvanuMT8",
+      "sibling_uuid": "-nAmPgwp6iWqkuU4",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "-nAmPgwp6iWqkuU4",
+      "type": "DOC",
+      "title": "4.优惠券设计系统",
+      "url": "eirmk3dvkvikiury",
+      "slug": "eirmk3dvkvikiury",
+      "id": 168300447,
+      "doc_id": 168300447,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "JOsvVVBl7hGkdLgG",
+      "sibling_uuid": "4NtyVgIzZMq0sIRU",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "4NtyVgIzZMq0sIRU",
+      "type": "DOC",
+      "title": "3.设计短连接系统",
+      "url": "smksvgedrtxlsfio",
+      "slug": "smksvgedrtxlsfio",
+      "id": 168300330,
+      "doc_id": 168300330,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "-nAmPgwp6iWqkuU4",
+      "sibling_uuid": "ORbkJ-hn_76OOVzi",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "ORbkJ-hn_76OOVzi",
+      "type": "DOC",
+      "title": "2.设计秒杀系统",
+      "url": "pg2gsvd5hdd8shm2",
+      "slug": "pg2gsvd5hdd8shm2",
+      "id": 165539409,
+      "doc_id": 165539409,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "4NtyVgIzZMq0sIRU",
+      "sibling_uuid": "iym1bwUTEa85wQEL",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    },
+    {
+      "uuid": "iym1bwUTEa85wQEL",
+      "type": "DOC",
+      "title": "1.设计news feed",
+      "url": "fvfte25ef81pgmxz",
+      "slug": "fvfte25ef81pgmxz",
+      "id": 165534689,
+      "doc_id": 165534689,
+      "level": 1,
+      "depth": 2,
+      "open_window": 1,
+      "visible": 1,
+      "prev_uuid": "ORbkJ-hn_76OOVzi",
+      "sibling_uuid": "",
+      "child_uuid": "",
+      "parent_uuid": "ZfpDZQ1YC8P4be3-",
+      "_serializer": "v2.toc_item"
+    }
+  ]
+}
