@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale">
+<meta property="article:author" content="weijia">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-kafka" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/02/kafka/" class="article-date">
+  <time datetime="2024-07-02T06:35:37.000Z" itemprop="datePublished">2024-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/02/kafka/">kafka</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="为什么需要kafka"><a href="#为什么需要kafka" class="headerlink" title="为什么需要kafka"></a>为什么需要kafka</h1><p>kafka也是一种消息队列。</p>
+<p>问题引入</p>
+<blockquote>
+<p>当a服务每次产生200个消息，但是b服务每秒只能处理100个消息，消息处理不过来，就加入一个中间层，那就是kafka</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/266c49b80cd0a3c45e0b6841abc7eead.webp?token=AGECE2NDCPLH6Y3EBQGE6TLG72W2W"></p>
+<h1 id="消息队列介绍"><a href="#消息队列介绍" class="headerlink" title="消息队列介绍"></a>消息队列介绍</h1><p>消息队列名称里面包含队列两个字，那他就是一种<font style="background-color:#FBDE28;">队列数据结构</font></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/4b47732547ec9233320a304f5d6a660e.webp?token=AGECE2IONEAEWMIIZRPHT43G72W2Y"></p>
+<h1 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h1><p>为了能让更多的消费者嫩能够消费消息队列，可以吧一个kafka被多个生产者还有消费者来进行使用</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f4e406d5caa16382290b78afb7759bdf.webp?token=AGECE2KJPBEARUWZLZRQYGLG72W24"></p>
+<p>但是会引出一个问题</p>
+<blockquote>
+<p>多个生产者还有消费者抢夺一个消息队列</p>
+</blockquote>
+<p>这里可以使用topic来进行表示生产者还有消费者是哪一个主题，选择特定的消息队列来消费</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/3c7cbe4f82a5b42ba6798ec37115fcef.webp?token=AGECE2KQXDSCHLH4RQCDNJ3G72W26"></p>
+<p>但是一个消息队列的topic还是太多也容易出现争抢问题，这样我们可以对消息队列进行分区，每<font style="background-color:#FBDE28;">一个消费者值属于特定的分区（jdk1.7的hashmap思想）</font></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9818298cde7effc6a58664bb777b7eab.png?token=AGECE2O2LRFLDSQ3WXXAVELG72W3C"></p>
+<h1 id="高扩展性"><a href="#高扩展性" class="headerlink" title="高扩展性"></a>高扩展性</h1><p>扩展就是进行加机器的意思</p>
+<blockquote>
+<p>当分区过多在一个机器上，内存可能会爆炸</p>
+</blockquote>
+<p>因此可以将分区分散部署到不同的机器上面（分布式），分区的荷载一起交一个broker</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1af890f857f0e3259ed16b984e46ece5.png?token=AGECE2IV7VPC7RSOVP7VOZTG72W3I"></p>
+<h1 id="高可用性"><a href="#高可用性" class="headerlink" title="高可用性"></a>高可用性</h1><p>问题：当这个机器的broker全部挂掉，那不就是没有机器可以使用了吗？</p>
+<p>多加几个副本，分散到不同的broker上面，使用选举策略来进行选举</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d5560fe52450a426bc70590c9d09f003.png?token=AGECE2N72ZRWHM7JTTTMAZDG72W3M"></p>
+<h1 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h1><p>如果所有的机器全部都挂了，那就是需要存放到本地disk里面。</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/4faebd3c7e043b6c5cae07ba14a9abf1.png?token=AGECE2M33WH3LOVBFSWB6BLG72W3Q"></p>
+<h1 id="注册中心"><a href="#注册中心" class="headerlink" title="注册中心"></a>注册中心</h1><p>zookerp</p>
+<p>主要是为了服务发现，还有进行选举使用，定期与broker来进行沟通，看是否坏了</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ff59bf5d1ad6af7600ff31bc9229c427.png?token=AGECE2I2CXPPWI4AAB3DWMLG72W3U"></p>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="顺序消费"><a href="#顺序消费" class="headerlink" title="顺序消费"></a>顺序消费</h2><p>我们知道kafka一个topic对应多个分区，如果要顺序消费，那就是让分区变成，那就是顺序消费</p>
+<p>或者是在发送消息制定特定的分区，这样都是一个分区</p>
+<h2 id="消息不丢失"><a href="#消息不丢失" class="headerlink" title="消息不丢失"></a>消息不丢失</h2><h3 id="生产不丢失"><a href="#生产不丢失" class="headerlink" title="生产不丢失"></a>生产不丢失</h3><p>生产是使用kafkatemplate来进行send操作的，可以使用get来进行知道，同时设置retry次数</p>
+<p>异步是使用future，可以使用下面的操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ListenableFuture&lt;SendResult&lt;String, Object&gt;&gt; future = kafkaTemplate.send(topic, o);</span><br><span class="line">future.addCallback(result -&gt; logger.info(<span class="string">&quot;生产者成功发送消息到topic:&#123;&#125; partition:&#123;&#125;的消息&quot;</span>, result.getRecordMetadata().topic(), result.getRecordMetadata().partition()),</span><br><span class="line">                   ex -&gt; logger.error(<span class="string">&quot;生产者发送消失败，原因：&#123;&#125;&quot;</span>, ex.getMessage()));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="消费不丢失"><a href="#消费不丢失" class="headerlink" title="消费不丢失"></a>消费不丢失</h3><p>那就是只有消费完了，然后设置offset为已经消费，而不是一开始就自动提交</p>
+<h3 id="kafka弄丢了消息"><a href="#kafka弄丢了消息" class="headerlink" title="kafka弄丢了消息"></a>kafka弄丢了消息</h3><p>设置acks&#x3D;all，这个代表所有的副本全部同步后才叫发送成功</p>
+<h2 id="kafka不重复消费"><a href="#kafka不重复消费" class="headerlink" title="kafka不重复消费"></a>kafka不重复消费</h2><p>消费不提交的时候，使用手动提交offset出现的问题</p>
+<p>做幂等校验。使用mysql主键或者redis的set来进行操作。</p>
+<h2 id="kafka重试机制"><a href="#kafka重试机制" class="headerlink" title="kafka重试机制"></a>kafka重试机制</h2><h3 id="消费重试"><a href="#消费重试" class="headerlink" title="消费重试"></a>消费重试</h3><p>问题引出</p>
+<blockquote>
+<p>当一个消费被卡主，后续的消费会不会卡主</p>
+</blockquote>
+<p>默认的操作就是对异常操作进行重试，如果不行就跳过这个。</p>
+<p>最大的重试次数是-1</p>
+<p>重试失败后如何进行告警，重写handler</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DelErrorHandler</span> <span class="keyword">extends</span> <span class="title class_">DefaultErrorHandler</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DelErrorHandler</span><span class="params">(FixedBackOff backOff)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(<span class="literal">null</span>,backOff);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">handleRemaining</span><span class="params">(Exception thrownException, List&lt;ConsumerRecord&lt;?, ?&gt;&gt; records, Consumer&lt;?, ?&gt; consumer, MessageListenerContainer container)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.handleRemaining(thrownException, records, consumer, container);</span><br><span class="line">        log.info(<span class="string">&quot;重试多次失败&quot;</span>);</span><br><span class="line">        <span class="comment">// 自定义操作</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="死信队列"><a href="#死信队列" class="headerlink" title="死信队列"></a>死信队列</h3><p>当重试过多，会进行跳过，这个时候就会进入到死信队列</p>
+<p>@RetryableTopic 是 Spring Kafka 中的一个注解,它用于配置某个 Topic 支持消息重试，更推荐使用这个注解来完成重试。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 重试 5 次，重试间隔 100 毫秒,最大间隔 1 秒</span><br><span class="line">@RetryableTopic(</span><br><span class="line">        attempts = &quot;5&quot;,</span><br><span class="line">        backoff = @Backoff(delay = 100, maxDelay = 1000)</span><br><span class="line">)</span><br><span class="line">@KafkaListener(topics = &#123;KafkaConst.TEST_TOPIC&#125;, groupId = &quot;apple&quot;)</span><br><span class="line">private void customer(String message) &#123;</span><br><span class="line">    log.info(&quot;kafka customer:&#123;&#125;&quot;, message);</span><br><span class="line">    Integer n = Integer.parseInt(message);</span><br><span class="line">    if (n % 5 == 0) &#123;</span><br><span class="line">        throw new RuntimeException();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当达到最大重试次数后，如果仍然无法成功处理消息，消息会被发送到对应的死信队列中。对于死信队列的处理，既可以用 @DltHandler 处理，也可以使用 @KafkaListener 重新消费。</p>
+<hr>
+<p>著作权归JavaGuide(javaguide.cn)所有 基于MIT协议 原文链接：<a href="https://javaguide.cn/high-performance/message-queue/kafka-questions-01.html">https://javaguide.cn/high-performance/message-queue/kafka-questions-01.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/07/02/kafka/" data-id="cm1tjy5wf001v8cw7flv1co9u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-k8s" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/02/k8s/" class="article-date">
+  <time datetime="2024-07-02T06:35:24.000Z" itemprop="datePublished">2024-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/02/k8s/">k8s</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题引出"><a href="#问题引出" class="headerlink" title="问题引出"></a>问题引出</h1><p>当你部署的博客访问量太大，结果挂了，需要重启，内存大于多少g才可以，这个时候又是自己手动来进行部署，肥肠的耗时间。</p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>k8s通过yaml，来进行自动重启，自动扩容</p>
+<h1 id="架构原理"><a href="#架构原理" class="headerlink" title="架构原理"></a>架构原理</h1><p>也是控制节点还有工作节点组成</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/6437bc447da6354fd96577bb1c7295e1.png?token=AGECE2NFA4FWB3ZFEHRHMG3G72WZ4"></p>
+<h2 id="控制节点"><a href="#控制节点" class="headerlink" title="控制节点"></a>控制节点</h2><p>api server：手动实现的api来进行操作</p>
+<p>scheduler：查看哪一个工作node足够，然后才能部署</p>
+<p>controller ：进行创建，关闭服务</p>
+<p>etcd：来保存一些数据</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9a6dccbb62160debee5cc985a8d99cf3.png?token=AGECE2JZF2ZVHZ7YUNGAPMTG72W2A"></p>
+<h2 id="pod"><a href="#pod" class="headerlink" title="pod"></a>pod</h2><p>多个container组成一个pod</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ed035cfa1b5fd40e0e6430ecc0bdca20.png?token=AGECE2LQECDUJJSKX6ZL6PTG72W2E"></p>
+<p>pod运行在node，</p>
+<p>k8s可以将pod移动到其他node上面</p>
+<p>kublet这个是接受上面controller的命令的</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0b1a4f79bebb8056500dd82bd0bd1c57.png?token=AGECE2PVNANQPKP3GFY2SIDG72W2I"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/40eb8cd7fa6c1bb1c2fd15d80350cfe8.png?token=AGECE2N7JNWUMGXBRVA7CA3G72W2M"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/07/02/k8s/" data-id="cm1tjy5we001r8cw7bouk8mdt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-langchain使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/07/02/langchain%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2024-07-02T06:32:50.000Z" itemprop="datePublished">2024-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/07/02/langchain%E4%BD%BF%E7%94%A8/">langchain使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h1><ol>
+<li>现有llm只能对话，无法进行操作，查询相关data</li>
+<li>如果要换一个llm，那就需要重新更新llm的代码</li>
+<li>不能实现根据不同任务选择不同的llm</li>
+<li>无法有记忆，不能查到最新的消息</li>
+</ol>
+<h1 id="langchain介绍"><a href="#langchain介绍" class="headerlink" title="langchain介绍"></a>langchain介绍</h1><ol>
+<li>解耦合了，变成prompt，model，chain，agent，vector等多个模块</li>
+</ol>
+<p><font style="color:rgb(25, 27, 31);">LangChain 提供了对向量数据库的支持，能够把超长的 txt、pdf 等通过大模型转换为 embedding 的形式，存到向量数据库中，然后利用数据库进行检索。这样就可以支持更多长度的输入，解放了 LLM 的优势。</font></p>
+<p><font style="color:rgb(25, 27, 31);"></font></p>
+<p><font style="color:rgb(25, 27, 31);"></font></p>
+<h1 id="基本模块介绍"><a href="#基本模块介绍" class="headerlink" title="基本模块介绍"></a><font style="color:rgb(25, 27, 31);">基本模块介绍</font></h1><p>最简单的运行模板</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DASHSCOPE_API_KEY=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> langchain_community.llms <span class="keyword">import</span> Tongyi</span><br><span class="line"><span class="keyword">from</span> langchain.chains <span class="keyword">import</span> LLMChain</span><br><span class="line"><span class="keyword">from</span> langchain.prompts <span class="keyword">import</span> PromptTemplate</span><br><span class="line">llm=Tongyi(temperature=<span class="number">1</span>,dashscope_api_key=DASHSCOPE_API_KEY)</span><br><span class="line"></span><br><span class="line">prompt =PromptTemplate.from_template(<span class="string">&quot;给我一个很土但是听起来很好养活的&#123;animal&#125;名字&quot;</span>)</span><br><span class="line">prompt.<span class="built_in">format</span>(animal=<span class="string">&quot;狗&quot;</span>)</span><br><span class="line"></span><br><span class="line">chain = LLMChain(llm=llm, prompt=prompt)</span><br><span class="line">chain.run(<span class="string">&quot;老鹰&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>定义llm</li>
+<li>定义prompt</li>
+<li>定义chain，传入llm还有提示</li>
+<li>之后使用run来预测</li>
+</ol>
+<h2 id="model"><a href="#model" class="headerlink" title="model"></a>model</h2><p>这是标准的llm模块，方便介入各种大模型，zhipu，chatgpt，qwen等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DASHSCOPE_API_KEY=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> langchain_community.llms <span class="keyword">import</span> Tongyi</span><br><span class="line"><span class="keyword">from</span> langchain.chains <span class="keyword">import</span> LLMChain</span><br><span class="line"><span class="keyword">from</span> langchain.prompts <span class="keyword">import</span> PromptTemplate</span><br><span class="line">llm=Tongyi(temperature=<span class="number">1</span>,dashscope_api_key=DASHSCOPE_API_KEY)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain.llms <span class="keyword">import</span> OpenAI</span><br><span class="line">llm = OpenAI(openai_api_key=<span class="string">&quot;...&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>直接通过llm模块皆可以快速引入各种模型，具体参考官网的llm</p>
+<h3 id="自定义model"><a href="#自定义model" class="headerlink" title="自定义model"></a>自定义model</h3><p>只需要继承llm类，实现_call方法，同时设置一个属性是静态，返回模型的名称。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span>   <span class="title class_">weijia</span>(<span class="title class_ inherited__">LLM</span>):</span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_llm_type</span>(<span class="params">self</span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;weijia-ai&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_call</span>(<span class="params">self,</span></span><br><span class="line"><span class="params">               prompt:<span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">               stop:<span class="type">Optional</span>[<span class="type">List</span>[<span class="built_in">str</span>]]=<span class="literal">None</span>,</span></span><br><span class="line"><span class="params">               run_manager:<span class="type">Optional</span>[CallbackManagerForLLMRun] = <span class="literal">None</span></span></span><br><span class="line"><span class="params">               </span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        pd = prompt.find(<span class="string">&quot;吗&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> pd &gt;=<span class="number">0</span> :</span><br><span class="line">            <span class="keyword">return</span> prompt[:pd]+<span class="string">&quot;.&quot;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;哦。&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="prompt"><a href="#prompt" class="headerlink" title="prompt"></a>prompt</h2><p>这是提示模块，就是输入的指令，可以分为的下面多个提示词。</p>
+<blockquote>
+<p>为什么需要提示词</p>
+</blockquote>
+<ol>
+<li>指令，扮演猫娘</li>
+<li>案例学习，现在我要你计算1+2&#x3D;？，我们知道1+1&#x3D;2，然后。。，最后。。给定一个事例，按照这个事例来进行输出</li>
+<li>提问，询问这个文档的主题是什么</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">prompt =PromptTemplate.from_template(<span class="string">&quot;给我一个很土但是听起来很好养活的&#123;animal&#125;名字&quot;</span>)</span><br><span class="line">prompt.<span class="built_in">format</span>(animal=<span class="string">&quot;狗&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以模板的样子来进行设置提示词，animal就是可以传入的参数，</p>
+<p><font style="background-color:#FBDE28;">案例学习</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain.prompts.few_shot <span class="keyword">import</span> FewShotPromptTemplate</span><br><span class="line"><span class="keyword">from</span> langchain.prompts.prompt <span class="keyword">import</span> PromptTemplate</span><br><span class="line"></span><br><span class="line">examples = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;question&quot;</span>:<span class="string">&quot;你好吗？&quot;</span>,</span><br><span class="line">        <span class="string">&quot;answer&quot;</span>:<span class="string">&quot;帅哥，我很好&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;question&quot;</span>:<span class="string">&quot;今天周几？&quot;</span>,</span><br><span class="line">        <span class="string">&quot;answer&quot;</span>:<span class="string">&quot;帅哥，今天是周一&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;question&quot;</span>:<span class="string">&quot;今天天气怎么样？&quot;</span>,</span><br><span class="line">        <span class="string">&quot;answer&quot;</span>:<span class="string">&quot;帅哥，今天天气很好&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line"><span class="comment"># 给定的案例，需要包含question和answer字段，然后使用参数的prompt</span></span><br><span class="line">example_prompt = PromptTemplate(input_variables=[<span class="string">&quot;question&quot;</span>,<span class="string">&quot;answer&quot;</span>],template=<span class="string">&quot;Question:&#123;question&#125;\n&#123;answer&#125;&quot;</span>)</span><br><span class="line"><span class="comment"># prompt 是通过上面传参形成的模板</span></span><br><span class="line">prompt = FewShotPromptTemplate(example_prompt=example_prompt,examples=examples,suffix=<span class="string">&quot;Question: &#123;input&#125;&quot;</span>,input_variables=[<span class="string">&quot;input&quot;</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(prompt.<span class="built_in">format</span>(<span class="built_in">input</span>=<span class="string">&quot;我怎么这么丑?&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>使用的是少样本学习，给定example，之后使用fewshot来实现填充，最后一个是末尾加入一个suffix，相当于提问</p>
+<ol>
+<li>定义example，使用{}来包括，放入到一个大列表</li>
+<li>之后调用普通模板，只需要传入上面的格式</li>
+<li>最后是fewshot，传入example，传入链，最后是加入后缀，就是自己要提问的</li>
+</ol>
+<p><font style="background-color:#FBDE28;">与fintune区别：finetue是需要微调llm，fewshot不需要，直接是提示工程</font></p>
+<p><font style="background-color:#FBDE28;"></font></p>
+<p><font style="background-color:#FBDE28;"></font></p>
+<p><font style="background-color:#FBDE28;">聊天提示模板</font></p>
+<p>思路就是把上轮的对话内容也加入到提示里面来</p>
+<p><font style="background-color:#FBDE28;"></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain.prompts <span class="keyword">import</span> (</span><br><span class="line">    ChatPromptTemplate,</span><br><span class="line">    PromptTemplate,</span><br><span class="line">    SystemMessagePromptTemplate,</span><br><span class="line">    AIMessagePromptTemplate,</span><br><span class="line">    HumanMessagePromptTemplate,</span><br><span class="line">)</span><br><span class="line"><span class="keyword">from</span> langchain.schema <span class="keyword">import</span> (</span><br><span class="line">    AIMessage,</span><br><span class="line">    HumanMessage,</span><br><span class="line">    SystemMessage</span><br><span class="line">)</span><br><span class="line">template=<span class="string">&quot;You are a helpful assistant that translates &#123;input_language&#125; to &#123;output_language&#125;.&quot;</span></span><br><span class="line">system_message_prompt = SystemMessagePromptTemplate.from_template(template)</span><br><span class="line">human_template=<span class="string">&quot;&#123;text&#125;&quot;</span></span><br><span class="line">human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)</span><br><span class="line">chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])</span><br><span class="line"></span><br><span class="line"><span class="comment"># get a chat completion from the formatted messages</span></span><br><span class="line">chat_prompt.format_prompt(input_language=<span class="string">&quot;English&quot;</span>, output_language=<span class="string">&quot;French&quot;</span>, text=<span class="string">&quot;I love programming.&quot;</span>).to_messages()</span><br></pre></td></tr></table></figure>
+
+<p><font style="background-color:#FBDE28;"></font></p>
+<h2 id="路由提示"><a href="#路由提示" class="headerlink" title="路由提示"></a>路由提示</h2><blockquote>
+<p>如何让llm判断是什么类型，然后进行选择哪一个提示。一个是取名字，一个是做数学题，我想让他帮忙进行取名字</p>
+</blockquote>
+<p>使用路由提示，和网关作用差不多，gateway选择微服务。</p>
+<p>那就需要两个提示，一个提示是gateway提示，还有一个是所有提示的聚合</p>
+<p><font style="background-color:#FBDE28;"></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">naming_template=<span class="string">&quot;&quot;&quot;你是一个非常有创意的起名字专家. \</span></span><br><span class="line"><span class="string">你非常擅长给新生儿们起好听的，富含寓意的名字. \</span></span><br><span class="line"><span class="string">用中文给出回答 \</span></span><br><span class="line"><span class="string">这里是问题： \</span></span><br><span class="line"><span class="string">&#123;input&#125;&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">math_template =<span class="string">&quot;&quot;&quot;You are a very good mathematician.You are great at answering math questions.</span></span><br><span class="line"><span class="string">You are so good because you are able to break down hard problems into their component parts, \</span></span><br><span class="line"><span class="string">answer the component parts,and then put them together to answer the broader question.</span></span><br><span class="line"><span class="string">Here is a question:</span></span><br><span class="line"><span class="string">&#123;input&#125;&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">prompt_infos = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;name&quot;</span>: <span class="string">&quot;naming&quot;</span>,</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;给新生儿起名字&quot;</span>,</span><br><span class="line">        <span class="string">&quot;template&quot;</span>: naming_template</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;name&quot;</span>: <span class="string">&quot;math&quot;</span>,</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;解数学问题&quot;</span>,</span><br><span class="line">        <span class="string">&quot;template&quot;</span>: math_template</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> langchain.prompts <span class="keyword">import</span> PromptTemplate</span><br><span class="line"><span class="keyword">from</span> langchain.chains <span class="keyword">import</span> LLMChain, ConversationChain</span><br><span class="line"></span><br><span class="line">DASHSCOPE_API_KEY=</span><br><span class="line"><span class="keyword">from</span> langchain_community.llms <span class="keyword">import</span> Tongyi</span><br><span class="line">llm=Tongyi(temperature=<span class="number">1</span>,dashscope_api_key=DASHSCOPE_API_KEY)</span><br><span class="line">destination_chains = &#123;&#125;</span><br><span class="line"><span class="comment"># 这是所有的提示，需要初始化</span></span><br><span class="line"><span class="keyword">for</span> p_info <span class="keyword">in</span> prompt_infos:</span><br><span class="line">    name = p_info[<span class="string">&quot;name&quot;</span>]</span><br><span class="line">    prompt_template = p_info[<span class="string">&quot;template&quot;</span>]</span><br><span class="line">    prompt = PromptTemplate(template=prompt_template,input_variable=[<span class="string">&quot;input&quot;</span>])</span><br><span class="line">    chain =LLMChain(prompt=prompt,llm=llm)</span><br><span class="line">    destination_chains[name] = chain</span><br><span class="line">default_chain = ConversationChain(llm=llm,output_key=<span class="string">&quot;text&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建路由器</span></span><br><span class="line"><span class="comment"># 加载路由器</span></span><br><span class="line"><span class="keyword">from</span> langchain.chains.router.llm_router <span class="keyword">import</span> LLMRouterChain,RouterOutputParser</span><br><span class="line"><span class="keyword">from</span> langchain.chains.router.multi_prompt_prompt <span class="keyword">import</span> MULTI_PROMPT_ROUTER_TEMPLATE</span><br><span class="line"><span class="comment"># 形成路由器</span></span><br><span class="line">destinations =[<span class="string">f&quot;<span class="subst">&#123;p[<span class="string">&#x27;name&#x27;</span>]&#125;</span>:<span class="subst">&#123;p[<span class="string">&#x27;description&#x27;</span>]&#125;</span>&quot;</span> <span class="keyword">for</span> p <span class="keyword">in</span> prompt_infos]</span><br><span class="line">destination_str = <span class="string">&quot;,&quot;</span>.join(destinations)</span><br><span class="line"><span class="comment"># 也是需要放入llm，llm根据描述来判断选择哪一个name，之后dest根据name获取对应的提示</span></span><br><span class="line">router_template = MULTI_PROMPT_ROUTER_TEMPLATE.<span class="built_in">format</span>(destinations=destination_str)</span><br><span class="line">router_prompt = PromptTemplate(template=router_template,input_variable=[<span class="string">&quot;input&quot;</span>],output_parser=RouterOutputParser())</span><br><span class="line"><span class="comment"># 这个只是进行选择哪一个prompt</span></span><br><span class="line">router_chain = LLMRouterChain.from_llm(llm,router_prompt)</span><br><span class="line"><span class="keyword">from</span> langchain.chains.router <span class="keyword">import</span> MultiPromptChain</span><br><span class="line"><span class="comment"># 定义路由器+所有的prompt</span></span><br><span class="line">chain = MultiPromptChain(router_chain=router_chain,destination_chains=destination_chains,default_chain=default_chain,verbose=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(chain.run(<span class="string">&quot;计算100的1/2次方&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li>定义所有的prompt，有dest，根据dest【name】来获取</li>
+<li>定义router路由，根据描述来进行选择name，之后使用dest的name来进行获取 </li>
+<li>然后放入到运行的链<font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">chain</font><font style="color:rgb(225, 0, 35);background-color:rgb(250, 250, 250);">&#x3D;</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">MultiPromptChain</font><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);">(</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">router_chain</font><font style="color:rgb(225, 0, 35);background-color:rgb(250, 250, 250);">&#x3D;</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">router_chain</font><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);">,</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">destination_chains</font><font style="color:rgb(225, 0, 35);background-color:rgb(250, 250, 250);">&#x3D;</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">destination_chains</font><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);">,</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">default_chain</font><font style="color:rgb(225, 0, 35);background-color:rgb(250, 250, 250);">&#x3D;</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">default_chain</font><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);">,</font><font style="color:rgb(35, 41, 48);background-color:rgb(250, 250, 250);">verbose</font><font style="color:rgb(225, 0, 35);background-color:rgb(250, 250, 250);">&#x3D;</font><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);">True)</font></li>
+</ol>
+<p><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);"></font></p>
+<h2 id="数据连接"><a href="#数据连接" class="headerlink" title="数据连接"></a><font style="color:rgb(38, 38, 38);background-color:rgb(250, 250, 250);">数据连接</font></h2><blockquote>
+<p>大模型只有语言知识，但是如果是要外接入数据，那就是需要进行读取数据，例如pdf等数据，这就是需要是用data connection来进行解码数据</p>
+</blockquote>
+<p>例如pdf还有csv等数据。</p>
+<p>最终输出的是doc模块</p>
+<p>如果pdf页数太大，超过llm的token，这个时候还需要进去切词。这个就是<font style="background-color:#FBDE28;">分割器。可以参考MapReduce的操作</font></p>
+<p>整体流程</p>
+<ol>
+<li>输入pdf</li>
+<li>进行分割</li>
+<li>之后使用doc来进行embedding</li>
+<li>最后存放到向量数据库</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain.document_loaders <span class="keyword">import</span> PyPDFLoader</span><br><span class="line">loader = PyPDFLoader(<span class="string">&quot;./se230522013.pdf&quot;</span>)</span><br><span class="line"><span class="comment"># documents = loader.load()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义分割器</span></span><br><span class="line"><span class="keyword">from</span> langchain.text_splitter <span class="keyword">import</span> RecursiveCharacterTextSplitter</span><br><span class="line"><span class="comment"># 表示的分割的块是100，有20个进行重合</span></span><br><span class="line">text_splitter = RecursiveCharacterTextSplitter(</span><br><span class="line">    chunk_size=<span class="number">100</span>,</span><br><span class="line">    chunk_overlap=<span class="number">20</span>,</span><br><span class="line">    length_function=<span class="built_in">len</span></span><br><span class="line">)</span><br><span class="line">pages =loader.load_and_split(text_splitter)</span><br><span class="line"><span class="comment"># 进行切分文档</span></span><br><span class="line"><span class="comment"># 编码器</span></span><br><span class="line"><span class="keyword">from</span> langchain_community.embeddings <span class="keyword">import</span> ModelScopeEmbeddings</span><br><span class="line">model_id = <span class="string">&quot;damo/nlp_corom_sentence-embedding_english-base&quot;</span></span><br><span class="line">embeddings = ModelScopeEmbeddings(model_id=model_id)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 放入db</span></span><br><span class="line"><span class="keyword">from</span> langchain.vectorstores <span class="keyword">import</span> Chroma</span><br><span class="line">db = Chroma.from_documents(pages, embeddings)</span><br><span class="line">query = <span class="string">&quot;Artificial Intelligence&quot;</span></span><br><span class="line">docs = db.similarity_search(query, k=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="memory"><a href="#memory" class="headerlink" title="memory"></a>memory</h2><h2 id="agent"><a href="#agent" class="headerlink" title="agent"></a>agent</h2><p>之前的使用llmmath来进行解决数学题，学会调用工具</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/07/02/langchain%E4%BD%BF%E7%94%A8/" data-id="cm1tjy5wg001z8cw7fx5f6qif" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-日本旅游" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/06/23/%E6%97%A5%E6%9C%AC%E6%97%85%E6%B8%B8/" class="article-date">
+  <time datetime="2024-06-23T07:41:47.000Z" itemprop="datePublished">2024-06-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/06/23/%E6%97%A5%E6%9C%AC%E6%97%85%E6%B8%B8/">日本旅游</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="日本出游"><a href="#日本出游" class="headerlink" title="日本出游"></a>日本出游</h1><h2 id="1-事前准备"><a href="#1-事前准备" class="headerlink" title="1.事前准备"></a>1.事前准备</h2><h3 id="1-1-证件办理"><a href="#1-1-证件办理" class="headerlink" title="1.1 证件办理"></a>1.1 证件办理</h3><p><strong>护照办理</strong></p>
+<p>前往当地出入境进行办理，已经有护照的需要保证自己的护照是有半年的有效期。</p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy0quStR-Ax5GgRc2xtAryqZoCXKVMlqymWRdCf1S9G1QvMB4G" alt="护照"></p>
+<p><strong>签证办理</strong></p>
+<p>由于日本和我国并不是免签国家，因此需要进行办理签证。这里我选择的是大学生简化的电子签证，只需要提交学信网学籍信息还有身份证和户口本，护照信息就可以进行办理，由于日本不接受个人送签，因此需要旅行社进行代办（注意选择好自己的领区，我的是上海领区选择的是飞猪的新好游，一般是7-8个工作日出签）。如果是毕业三年之内的本科生以上学历也可以使用学生签证。其他的则需要提供银行流水。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191302196941719130218822.png" alt="17191302196941719130218822.png"></p>
+<h3 id="1-2日元准备"><a href="#1-2日元准备" class="headerlink" title="1.2日元准备"></a>1.2日元准备</h3><blockquote>
+<p>这里插入银行卡</p>
+</blockquote>
+<p><strong>日元现金</strong></p>
+<p>我这里是使用的兴业银行进行外汇取现的，主要是兴业的汇率比较好，而且周围只有这个银行可以进行外汇储蓄，直接在手机银行搜索外汇取现预约，就可以进行线下兑汇。兑汇的前提是需要有日元外汇准备，因此需要啊购汇，收集银行搜索结汇购汇就可以进行购汇，我这次值取现1w的现金还是不太够，因此还准备了银行卡进行取现。</p>
+<p><strong>银行卡</strong></p>
+<p>这次只使用了3张卡，一个是兴业银行的寰宇人生借记卡，广发的美国运通借记卡还有一个是汇丰的蓝狮子mastercard。</p>
+<p>第一个卡是在日本直接进行现金取现，而且取现前5次不收手续费，汇率不错。大部分我都是在罗森的atm进行外汇取现，只需要插入银行卡，然后人脸识别，之后输入密码，就可以直接进行取现，汇率也还不错。</p>
+<p>广发运通是用来购买从新宿到富士山的车票，不支持国内的银联，因此使用的是运通。订购的网址</p>
+<p><a href="https://www.highwaybus.com/gp/inbound/inbPlanList?lineId=110&lang=CZ1">https://www.highwaybus.com/gp/inbound/inbPlanList?lineId=110&amp;lang=CZ1</a></p>
+<p>最后一个汇丰主要是落地日本当晚，出关时间太晚了，然后又不熟悉日本的铁路系统，错过了末班车。因此绑定了国外的滴滴，使用的是汇丰这张万事达卡，打车到了酒店，直接进行扣费。</p>
+<h3 id="1-3流量卡"><a href="#1-3流量卡" class="headerlink" title="1.3流量卡"></a>1.3流量卡</h3><p>买的是淘宝的亿点流量卡，这个需要手动设置apn，才能进行上网。</p>
+<p><strong>注意</strong>：建议提前在国内发送短信打开漫游，不然，你就在国外接收不到国内app的短信，无法登录查看订单，这个执行联系移动联通电信的客服。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191303147001719130314018.png" alt="17191303147001719130314018.png"></p>
+<h3 id="1-4交通卡"><a href="#1-4交通卡" class="headerlink" title="1.4交通卡"></a>1.4交通卡</h3><p>这里我使用的是iphone还有iwatch来进行支付的。主要的是进行开通suica卡，也叫做西瓜卡，直接在钱包里面进行添加，付款直接是国内的银联卡，使用的是绑定apple pay的建行卡。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191303336941719130332949.png" alt="17191303336941719130332949.png"></p>
+<p>jr新干线这个则是需要进行进行订票，这个可以在地铁的外面进行订票，还有smartjr这个可以进行订购，这个目前没有研究。</p>
+<h3 id="1-5vjw填写"><a href="#1-5vjw填写" class="headerlink" title="1.5vjw填写"></a>1.5vjw填写</h3><p>这个是为了进行入关申报的，直接在国内可以填写，一个是边检还有一个是海关申报，具体可以参考下面流程</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191309846931719130984158.png" alt="17191309846931719130984158.png"></p>
+<h3 id="1-7机票预订"><a href="#1-7机票预订" class="headerlink" title="1.7机票预订"></a>1.7机票预订</h3><blockquote>
+<p>加图片</p>
+</blockquote>
+<p>这里我预订的是国泰航空的，机票往返合计1800（主要是购买的香港机场兑换的免费机票+税票），一个人可以携带2个23kg的行李还有餐食提供。对我自己来说，这是第一次坐国泰，国泰的乘务人员还可以， 餐食不错，还有饭后冰淇淋是哈根达斯，同时还是大客机，提供空中wifi还有娱乐屏幕。但是我全程还是用英文和空乘交流的，因此没有感受到什么歧视。</p>
+<h3 id="1-8酒店订购"><a href="#1-8酒店订购" class="headerlink" title="1.8酒店订购"></a>1.8酒店订购</h3><p>本次只住了三个酒店，其中最推荐的是横滨伊势佐木町岐山酒店，酒店服务很不错，而且价格还不贵。入住的时候我说的是英文，前台直接让我说中文直接来进行交流</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191324036941719132403104.png" alt="17191324036941719132403104.png"></p>
+<h3 id="1-8必备app"><a href="#1-8必备app" class="headerlink" title="1.8必备app"></a>1.8必备app</h3><ol>
+<li>ChatGPT</li>
+<li>谷歌地图</li>
+<li>Klook</li>
+<li>携程</li>
+</ol>
+<p>1.GPT直接进行翻译菜单，然后让他帮你进行食谱推荐。还有可以直接使用4o的语音功能，让他当一个中日翻译进行对话翻译。</p>
+<p><img src="https://github.com/silensmile/Nippon/blob/master/PHOTO/IMG_2155.JPG"></p>
+<p>2.谷歌地图：非常重要的一张，由于不熟悉日本的轨道交通，落地当晚就做错了。通过几次的摸索，才了解如何正确的坐车。只要记住日本是一个非常讲究效率和时间的国家，重点看列车发出的时间（如果时间不对，你就会被列车送到一个不知道是哪里地方的地方）</p>
+<blockquote>
+<p>插入图片</p>
+</blockquote>
+<ol>
+<li>首先看你需要去哪一个站台</li>
+<li>然后再看发车的时间（时间一定要和谷歌地图时间一致，如果超过可以参考下一班发车时间）</li>
+<li>最后就是发车的目的，上车的时候还是可以参考一下下一站是不是和谷歌地图时间一致</li>
+</ol>
+<p>关于新干线，skyline这些需要单独进行购票，因此最好在出发的时候可以问一下车站人员，是否需要额外购票，如果有西瓜卡。（英语就可以，大部分日本人的英文水平都不错）</p>
+<p>3.klook</p>
+<p>这个是用来进行景点的门票，东京塔还有东京通票等等。酒店也可以这里订购，多一个比较平台</p>
+<p>4.携程</p>
+<p>进行订购酒店</p>
+<h3 id="1-9生活物品携带"><a href="#1-9生活物品携带" class="headerlink" title="1.9生活物品携带"></a>1.9生活物品携带</h3><p>无须携带转换头，日本也是使用两孔插头</p>
+<ol>
+<li>充电宝</li>
+<li>手机，手表，耳机，电脑</li>
+<li>口罩</li>
+<li>雨伞（日本经常下雨，注意出发的时候日期）</li>
+<li>零钱包（自动贩卖机还有罗森找零会有很多零钱，因此需要一个零钱包）</li>
+<li><strong>垃圾袋</strong>（这个一定要带，日本真的没有垃圾桶，我都是一个垃圾袋待会酒店扔垃圾）</li>
+<li>带点感冒药，创口贴</li>
+</ol>
+<h3 id="1-10入境流程"><a href="#1-10入境流程" class="headerlink" title="1.10入境流程"></a>1.10入境流程</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191325626931719132561989.png" alt="17191325626931719132561989.png"></p>
+<h2 id="2-游记"><a href="#2-游记" class="headerlink" title="2.游记"></a>2.游记</h2><p>本次主要是5天5夜，主要是在东京附近，主要包括东京，横滨，镰仓，富士山。因此不涉及到jr新干线</p>
+<h3 id="2-1出发到日本"><a href="#2-1出发到日本" class="headerlink" title="2.1出发到日本"></a>2.1出发到日本</h3><p>由于买的是国泰的航空，出发地是香港，因此需要从香港坐飞机到国泰。（预订的时候，我才知道国外平台订购机票不需要身份证号和护照号，只要确保自己的姓名还有邮箱是对的即可，护照签证信息需要值机的时候才填写）。因此需要出境到香港才能坐机。这就涉及到两个海关，一个是内地边检还有一个是香港的边检。我们需要从内地出境-香港入境-香港出境。整体流程如下</p>
+<ol>
+<li>使用护照通过内地边检，走人工通道，例行询问为什么出境</li>
+<li>入境香港前，找到入港信息申报单，进行填写，然后走人工通道，很快就入境了</li>
+<li>我是福田口岸出境的，因此还需要坐大巴到香港机场（小红书推荐的20港币直达香港机场路线）b1和a36大巴</li>
+<li>国泰值机，直接使用护照进行放入到值机机器，出来登机票，但是还需要去人工柜台检查签证才可以办理托运，总体也是很快</li>
+<li>出境香港，进行一次安检和一次离境就行。</li>
+</ol>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191334076931719133407018.png" alt="17191334076931719133407018.png"></p>
+<h3 id="2-2镰仓出行"><a href="#2-2镰仓出行" class="headerlink" title="2.2镰仓出行"></a>2.2镰仓出行</h3><p>镰仓这一天，主要是把江之岛通票进行完了一遍。主要是在藤泽站进行购买通票，880日元</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191431286931719143128516.png" alt="17191431286931719143128516.png"></p>
+<p>主要参考的是这个流程</p>
+<ol>
+<li>首先在藤泽站</li>
+<li>到江之岛进行免费存包-这是在1号站台才有存包的地方，我们到的是2号站台</li>
+<li>之后就是到经典打卡页面镰仓高校。打卡标志性火车-还有动漫青春猪头的圣地巡游</li>
+<li>之后就是到长谷寺，参观日本寺庙</li>
+<li>最后就是到达，镰仓站，找了几个当地的几个小吃吃了一下。</li>
+</ol>
+<p>当晚回去横滨，吃了三田制面所的浇面（应该是这个吧，给了一万汤，自己吧面放进去吃）</p>
+<blockquote>
+<p>图片</p>
+</blockquote>
+<h3 id="2-2横滨出行"><a href="#2-2横滨出行" class="headerlink" title="2.2横滨出行"></a>2.2横滨出行</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/17191463846951719146384031.png" alt="17191463846951719146384031.png"></p>
+<p>横滨住的酒店就在中心，就打卡了周围的摩天轮，确实很大，海上安保处，还参观了横滨的中华街（说实话，还是挺热闹的，不知道为什么日本人吃包子都是串在一起），早上吃了昨天心心念念没迟到的一兰拉面，昨天本来是想吃一兰拉面，结果没想到只能cash only。又没有带银行卡，才去的三田，用的西瓜卡进行付款。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719145482693IMG20240616104839.jpg" alt="1719145482693IMG20240616104839.jpg"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719145032692IMG20240616123331.jpg" alt="1719145032692IMG20240616123331.jpg"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719145238693IMG20240616125816.jpg" alt="1719145238693IMG20240616125816.jpg"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719145297709IMG20240616134208.jpg" alt="1719145297709IMG20240616134208.jpg"></p>
+<p>中午吃了日本的烧鸟，这个还是国内的烧烤好吃，完全是烟威，还是鸡肉，这个价格太贵了。</p>
+<p>晚上就转车到新宿，因为定了第二天去富士山的大巴</p>
+<h3 id="2-3富士山"><a href="#2-3富士山" class="headerlink" title="2.3富士山"></a>2.3富士山</h3><p>这边是去的河口湖，直接在highwaybu进行订票的</p>
+<p>首先打卡的就是富士山下的罗森，犹抱琵琶半遮面，没有全部露出来</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719145888693IMG20240617115142.jpg" alt="1719145888693IMG20240617115142.jpg"></p>
+<p>之后坐了富士山的缆车，直达山顶可以看到全部的状态。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719146024693IMG20240617145828.jpg" alt="1719146024693IMG20240617145828.jpg"></p>
+<p>本来还想去山口胡看一看的，结果山口胡，使用谷歌地图导航，出现的全是平假名，没有汉字，导致做错了班车，直接到达了河口湖的终点，河口湖自然博物馆。因此是终点往前开始走的。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719146469693IMG20240617150743.jpg" alt="1719146469693IMG20240617150743.jpg"></p>
+<p>下次推荐应该早点来的，可以注解一个自行车，围绕着河口湖进行游玩，这样可以更好的观看河口湖的全貌</p>
+<p>晚上回去就是吃了附近的炸天妇罗饭，味道还是可以的，而且也不贵，才800日元，接近国内一线城市的物价了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719146571776IMG20240617204007.jpg" alt="1719146571776IMG20240617204007.jpg"></p>
+<p>最后一天就是去东京</p>
+<h3 id="2-4东京出行"><a href="#2-4东京出行" class="headerlink" title="2.4东京出行"></a>2.4东京出行</h3><p>最后一天是东京，但是东京下着大雨，最特种兵的一天，连着去了n多个景点，去了浅野寺，抽了一个大吉，然后又去晴空塔（不是是东京塔，比东京塔高很多），然后去了秋叶原，打卡了最大animation，二次元圣地了。</p>
+<p>之后去了东京塔，提前klook’买了门票，38层，感觉不是很高，之前上班实习的公司我都是在40多层。晚上吃了正宗的额寿喜烧，一个人才1200元非常便宜了，地点在新宿真正的肉屋，是一个老爷爷开的。傍晚，还去参观了涉谷，涉谷的人流量真的好多，而且还有很多外国人，感觉和国内完全不一样。</p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719149055694IMG20240618185827.jpg" alt="1719149055694IMG20240618185827.jpg"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/1719149282694IMG20240618210057.jpg" alt="1719149282694IMG20240618210057.jpg"></p>
+<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><p> 百闻不如一见，日本这几天旅行，对我来说我感觉非常好。首先真的是注重礼仪，基本都是遵守排队，在地铁上都是遵守先下后上，其中有一天，有一个老爷爷闯了红灯，我在等红灯，看到我之后，他才反应过来，自己闯红灯了，疯狂对我说私密马森。然后日本的交通设计的是效率第一，没有安检，安检们是常开的，不刷卡才是逼上去。最后就是严格遵守谷歌地图的时间，基本不会晚点，那么你坐的车就不会出现问题。</p>
+<h2 id="4附录：港澳旅行"><a href="#4附录：港澳旅行" class="headerlink" title="4附录：港澳旅行"></a>4附录：港澳旅行</h2><p>港澳旅行，因为被体检时间要求，临时压缩到一天了。具体游玩需要准备的和日本准备的差不多</p>
+<p><strong>香港事前准备</strong></p>
+<ol>
+<li>八达通，也是苹果钱包开启，使用银联卡支付</li>
+<li>境外流量，使用的是oppo钱包的流量，购买的是12元10g一天的流量</li>
+<li>行李寄存使用的是小程序存知己，可以直接在线下进行找老板存心里，30一件，比高铁站便宜多了</li>
+</ol>
+<p>主要游玩景点，还是艺术馆，时代广场，天星小轮等</p>
+<p><strong>澳门准备</strong></p>
+<p>需要提前换回，澳门支付系统太老旧了，只能支付宝进行支付公交。其他的小食部分都是只要现金，由于银行卡被我寄存到葡京酒店，因此没办法取现，只能找了几个网红地方看看，官也街大三巴，新葡京等地方。</p>
+<p>白嫖提示：</p>
+<ol>
+<li>在港珠澳大桥口岸坐的是娱乐赌场方向的发财车，送到外港港口</li>
+<li>这里可以自由选择娱乐场所，我选择葡京，因为可以免费寄存行李</li>
+<li>本来还有免费的小吃，不过6.12之后就取消了</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/06/23/%E6%97%A5%E6%9C%AC%E6%97%85%E6%B8%B8/" data-id="cm1tjy5x6004t8cw74kr14sdc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%87%BA%E8%A1%8C/" rel="tag">出行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%96%E6%B1%87/" rel="tag">外汇</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">旅游</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-7.聊天室设计" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/05/07/7.%E8%81%8A%E5%A4%A9%E5%AE%A4%E8%AE%BE%E8%AE%A1/" class="article-date">
+  <time datetime="2024-05-07T14:54:12.000Z" itemprop="datePublished">2024-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/07/7.%E8%81%8A%E5%A4%A9%E5%AE%A4%E8%AE%BE%E8%AE%A1/">7.聊天室设计</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>设计qq聊天，discord</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="需要"><a href="#需要" class="headerlink" title="需要"></a>需要</h3><ol>
+<li>发送消息</li>
+<li>注册登录</li>
+<li>通讯录</li>
+</ol>
+<p>其他功能</p>
+<ol>
+<li>限制登录状态</li>
+<li>用户在线状态</li>
+</ol>
+<h3 id="qps计算"><a href="#qps计算" class="headerlink" title="qps计算"></a>qps计算</h3><p>微信越活10亿，每日发送450B</p>
+<p>qps最大是520k</p>
+<p>一条记录是30bytes，那就是1.3T一天</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/8160e21afda8031067abf8d8fe2eda80.png?token=AGECE2J4FNKYZ5QE4NK2WYLG72W34"></p>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><ol>
+<li>信息存放</li>
+<li>实时推送消息（fcm）</li>
+</ol>
+<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/37fcfebfd2dd891024f7b33f84f3c599.png?token=AGECE2O6P2YLFRM2OKG2743G72W4A"></p>
+<p>出现无法进行群聊存放，而且查询where太多了</p>
+<p>这边是使用一个thread作为一个会话，thread就相当于你与每一个人的会话</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1624f61052a0d93b49da4cf81c7f310a.png?token=AGECE2PLYLIH4PT5BIQQAY3G72W4I"></p>
+<p>只需要查询，thread——id就可以确定会话，然后会话id联系一条msg</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/8d34e5d561401047684999256e96138a.png?token=AGECE2IMLJKHWE3RC2F42XTG72W4K"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/dd39d73756ec62e2b60fb0abcb755142.png?token=AGECE2N6DKH7HTLWSYBANV3G72W4O"></p>
+<h4 id="添加未读取的消息数量"><a href="#添加未读取的消息数量" class="headerlink" title="添加未读取的消息数量"></a>添加未读取的消息数量</h4><p>这样就需要查分thread表格</p>
+<p>个人设置这个会话的属性+为读取数量</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/26263e0bd473b922f67c903a7d09cf06.png?token=AGECE2INPSUL2JPGLORH2T3G72W4U"></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="如何查询threadid"><a href="#如何查询threadid" class="headerlink" title="如何查询threadid"></a>如何查询threadid</h3><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f11457aff228ba7d6f709a2a4fab1496.png?token=AGECE2J76KVMI6DMQQZ6FBDG72W4W"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT thread_id FROM threads WHERE user_ids = SORT(ARRAY[user_id_A, user_id_B]) AND thread_type = &#x27;private&#x27;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>直接进行排序后，然后查询uid就可以得到，使用haxi加快</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/2b26c82a2841d381f76b26a0b09ed514.png?token=AGECE2IVW3XM26VMDJUPQJTG72W42"></p>
+<h2 id="存储-1"><a href="#存储-1" class="headerlink" title="存储"></a>存储</h2><p>使用sql来存放</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/79a9a95f54f92dddda7070e5da07487f.png?token=AGECE2N65AYZTU7D72S7JU3G72W46"></p>
+<h2 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b74f99cfccb613cda5b220fd6fd94c37.png?token=AGECE2MLZPHESQ5T4XHNMETG72W5C"></p>
+<p>自救就是poll或者pull</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f02aa601a1124f12613db28d53a534b2.png?token=AGECE2JHGMDB6737IK7CWM3G72W5G"></p>
+<p>web接受消息</p>
+<ol>
+<li>打开一个推送服务，推送服务自己推送</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/2daa25ea5e4c5b7bac40bbe6132cfd51.png?token=AGECE2PPPOAVQFNPEDZRACDG72W5K"></p>
+<h2 id="支持群聊"><a href="#支持群聊" class="headerlink" title="支持群聊"></a>支持群聊</h2><p>群聊500+，490死人，那就是浪费了490push机会</p>
+<p>应该使用channel方式，上线才进行检验属于那个channel，执法一次消息</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/de62b24104eee01904e4c8186ddbb07d.png?token=AGECE2LIQ5OPX7D63L6ORQLG72W5M"></p>
+<h2 id="单机登录’"><a href="#单机登录’" class="headerlink" title="单机登录’"></a>单机登录’</h2><p>使用redis，查找session，看是不是存在web</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/85018b20486221b3dee8b3fa17d2cf16.png?token=AGECE2IQ2SVVAWASWCZQDYLG72W5Q"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/05/07/7.%E8%81%8A%E5%A4%A9%E5%AE%A4%E8%AE%BE%E8%AE%A1/" data-id="cm1tjy5vx00088cw7g93xhx53" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-6.文档协同系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/05/07/6.%E6%96%87%E6%A1%A3%E5%8D%8F%E5%90%8C%E7%B3%BB%E7%BB%9F/" class="article-date">
+  <time datetime="2024-05-07T13:15:38.000Z" itemprop="datePublished">2024-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/07/6.%E6%96%87%E6%A1%A3%E5%8D%8F%E5%90%8C%E7%B3%BB%E7%BB%9F/">6.文档协同系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>设计多人同时在线编辑文档，如腾讯文档</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><h4 id="协同编辑"><a href="#协同编辑" class="headerlink" title="协同编辑"></a>协同编辑</h4><p>编辑的主要功能</p>
+<ol>
+<li>new</li>
+<li>edit</li>
+<li>保存</li>
+</ol>
+<p>加入协同</p>
+<ol>
+<li>协同</li>
+<li>可以展示谁在编辑</li>
+<li>内容锁定</li>
+</ol>
+<p>:::color2<br>使用websocket可以进行主动和被动更新，支持双向通信</p>
+<p>:::</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1715090468079-96e454d1-019a-4cad-ab77-547ad33c1a6e.png"></p>
+<h4 id="url设计"><a href="#url设计" class="headerlink" title="url设计"></a>url设计</h4><p>使用短连接，而且连接不能包含文件路径信息</p>
+<h4 id="文件存放"><a href="#文件存放" class="headerlink" title="文件存放"></a>文件存放</h4><p>参考gfs的设计方式，metadata存放到db，内容信息在文件系统</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/82a5fef2a590881cb3a9a96a2ba76fdc.png?token=AGECE2ITEIUH65XZVUU5TR3G72W6W"></p>
+<p>修改方式是以行来作为修改的，使用双向链表进行构建数据结构，然后来执行</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/fff05527b5d64f3b572e3d52bc9125a2.png?token=AGECE2KXEHJR5BRRNJFQXRDG72W62"></p>
+<p>具体的修改逻辑，客户端告诉服务端是在哪一个的方向进行操作，然后处理之后，同步传给其他客户端</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/568bd22af715c7a4e3c8f1a98f60c8cf.png?token=AGECE2OZ7M75QDI3VH7K3ATG72W66"></p>
+<h4 id="编辑操作"><a href="#编辑操作" class="headerlink" title="编辑操作"></a>编辑操作</h4><p>为了避免多次进行调用，可以存放到redis，然后定时任务，这样可以一次性的写一批数据</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f7d00833e45da6bed6f8efe333833084.png?token=AGECE2LKLBB7SJW7MHGIH5LG72W7C"></p>
+<h4 id="显示多个人的图像"><a href="#显示多个人的图像" class="headerlink" title="显示多个人的图像"></a>显示多个人的图像</h4><p>多个人的信息是实时变化的</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/8aca385b8f7ce47a69bd9b66e79b3a8c.png?token=AGECE2OOHTVERFCCBEU7QD3G72W7I"></p>
+<p>正在编辑的，写入redis</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/6435ed41c914f50a468db44aae2ff75c.png?token=AGECE2LRW6MV223SBUORC5TG72W7O"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/05/07/6.%E6%96%87%E6%A1%A3%E5%8D%8F%E5%90%8C%E7%B3%BB%E7%BB%9F/" data-id="cm1tjy5vx00078cw778locm4c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-5.分布式系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/05/05/5.%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" class="article-date">
+  <time datetime="2024-05-05T14:43:44.000Z" itemprop="datePublished">2024-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/05/5.%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/">5.分布式系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/251f81e4b78e1668de8ec4ccadf45c33.png?token=AGECE2KHB3Y7K2JFFPTHARLG72W7Y"></p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><ol>
+<li>写入文件，读取文件</li>
+<li>支持多大的文件</li>
+<li>多态机器存储文件</li>
+</ol>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><p>客户端与服务端</p>
+<p>服务端如何进行沟通，</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/c44462f9fc4e03fddd08f2303a61593c.png?token=AGECE2OEQYBNEEPCLDRNYWLG72W74"></p>
+<p>构建一个master节点，进行接受请求</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/8ff058c44040bbd7d5db04a7e66057ef.png?token=AGECE2NR334ODDQ5XNCKMFDG72W76"></p>
+<ol>
+<li>点对点</li>
+<li>master-slaver</li>
+</ol>
+<h2 id="storage"><a href="#storage" class="headerlink" title="storage"></a>storage</h2><p>存放文件</p>
+<p>多次访问原信息</p>
+<ol>
+<li>原信息</li>
+<li>内容信息</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/492a8d79112c0c8c04b6b86b783247ee.png?token=AGECE2NQN3VBAEVZAGWE6XDG72XAC"></p>
+<p>通过原信息找到内容信息</p>
+<p>存放1tb的，那就是借鉴二级分页的方式来处理，index，存放的是chunk</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/e23aa40ca1c4626d22b21f4320f93801.png?token=AGECE2OGID5WC3B3FGRFPUDG72XAG"></p>
+<p>存放到多个服务器，</p>
+<p>使用index放多个server的offset</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/82dc7e52cd3823e0db44514042723cb4.png?token=AGECE2P4NLKWAN5S2PMRF2DG72XAK"></p>
+<h2 id="如何写入一个文件"><a href="#如何写入一个文件" class="headerlink" title="如何写入一个文件"></a>如何写入一个文件</h2><p>拆分为chunk，然后进行传输</p>
+<ol>
+<li>与master进行沟通</li>
+<li>master分配chunk server</li>
+<li>之后开始写入</li>
+<li>返回写入成果</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/90d329b002a458bfcb617138b6a43b17.png?token=AGECE2NXG6SZ5XARH6U7T4DG72XAO"></p>
+<p>修改的话，参考redis，直接删除</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b3c55b5d552d2432fad3cd98985b5add.png?token=AGECE2JB6ROCP6UTQB4AYXTG72XAS"></p>
+<h2 id="如何读取"><a href="#如何读取" class="headerlink" title="如何读取"></a>如何读取</h2><p>参考上面的思路，还是需要master得到list列表</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/3b334cd2371f2d22a076b157405e3733.png?token=AGECE2M3Q7IIHHXO3J2HK3TG72XAW"></p>
+<h2 id="如何避免数据丢失"><a href="#如何避免数据丢失" class="headerlink" title="如何避免数据丢失"></a>如何避免数据丢失</h2><p>使用replicate</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a3f3602f99cffffa1be54a1178d31d32.png?token=AGECE2PNYCPWMVSVOZNVLUDG72XA2"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/fe7d49d6c093f18cb1e7b998439f6f0e.png?token=AGECE2PWLP6YVZQCAIEVUNTG72XA6"></p>
+<h2 id="如何发现chunke服务器寄了"><a href="#如何发现chunke服务器寄了" class="headerlink" title="如何发现chunke服务器寄了"></a>如何发现chunke服务器寄了</h2><p>使用心跳机制</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/05/05/5.%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" data-id="cm1tjy5vu00048cw7epya9vor" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-常用代码总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/05/05/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2024-05-05T02:05:33.000Z" itemprop="datePublished">2024-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/05/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93/">常用代码总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id><a href="#" class="headerlink" title></a></h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/051faac2684603508dd8f24e84f3c679.png?token=AGECE2NJA2R6NT45IXYSLIDG72XBI"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ca54d15c248481c7aefe5b992c21b028.png?token=AGECE2LOSE2CXLFVNX4QYE3G72XBM"></p>
+<h1 id="基础入门"><a href="#基础入门" class="headerlink" title="基础入门"></a>基础入门</h1><p>暂时无法在飞书文档外展示此内容</p>
+<h2 id="镜像使用"><a href="#镜像使用" class="headerlink" title="镜像使用"></a>镜像使用</h2><ol>
+<li>clash使用</li>
+<li>使用hf-mirror进行下载数据集</li>
+</ol>
+<p><a href="https://hf-mirror.com/">https://hf-mirror.com/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HF_ENDPOINT=https://hf-mirror.com python your_script.py</span><br></pre></td></tr></table></figure>
+
+<h2 id="Pipeline"><a href="#Pipeline" class="headerlink" title="Pipeline"></a>Pipeline</h2><p>介绍常见的使用方法</p>
+<ol>
+<li>加载pipeline</li>
+<li>设置类型，设置model，设置分词器，设置device</li>
+<li>进行推理输出</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from transformers import pipeline</span><br><span class="line">model.config.id2label = id2_labelpipe = pipeline(&quot;text-classification&quot;, model=model, tokenizer=tokenizer, device=0)</span><br><span class="line">sen = &quot;我觉得不错！&quot;</span><br><span class="line">pipe(sen)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tokenizer"><a href="#Tokenizer" class="headerlink" title="Tokenizer"></a>Tokenizer</h2><p><a href="https://transformers.run/c2/2021-12-11-transformers-note-2/">https://transformers.run/c2/2021-12-11-transformers-note-2/</a></p>
+<p>参考这个，主要是进行介绍分词器的操作</p>
+<p>主要的是attention_mask,input_ids还有labels</p>
+<p>使用的流程</p>
+<ol>
+<li>使用tokenizer进行传入string来进行编码</li>
+<li>得到上述三个，然后ids是编码值，只有mask是1的才进行计算，计算的结果要与label来进行计算优化得到loss，一半使用的交叉熵来进行计算</li>
+</ol>
+<p>主要是使用一个函数来把字符串转化为则三个dict，一般自己进构建也叫预处理</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/22f793a0740ca862271d0a2ad45952d5.png?token=AGECE2K6KD6NZWOISLU6R73G72XBO"></p>
+<p>使用.map直接根据函数来进行转换，使用batch，表示可以进行批处理，之后移除掉不需要的列名</p>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>model</p>
+<p>上述的思维导图已经进行介绍了，主要就是根据不同的类型，加载不同的模型</p>
+<p><font style="background-color:rgb(255,245,235);">python语法提示</font></p>
+<p><font style="background-color:rgb(255,245,235);"> model(</font><strong><font style="background-color:rgb(255,245,235);"></font></strong>**<font style="background-color:rgb(255,245,235);">inputs)，这个表示进行拆解inputs输入，并且按照所需要的参数，进行放置</font></p>
+<p>其余的操作和之前的cv差不多，也是通过构建init，forward，来进行计算的。</p>
+<p>只不过分为neck还有head，head就是全连接层，进行微调使用的</p>
+<p>loss一般继承到了model里面</p>
+<h2 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h2><p>这个是另外一个包，使用的Dataset还有load</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load_dataset(&quot;madao33/new-title-chinese&quot;) #在线进行加载数据集</span><br></pre></td></tr></table></figure>
+
+<p>进行划分数据集</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataset.train_test_split(test_size=0.1)</span><br></pre></td></tr></table></figure>
+
+<p>数据集抽取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datasets[&quot;train&quot;].select([0, 1])</span><br></pre></td></tr></table></figure>
+
+<p>第三方进行加载</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dataset.from_pandas(data)</span><br></pre></td></tr></table></figure>
+
+<p><strong>datacollator介绍</strong></p>
+<p><font style="background-color:rgb(255,245,235);">进行对齐文本，使dataset输出的一样的额大小torch.Size([4, 128])</font></p>
+<h2 id="Evaluate"><a href="#Evaluate" class="headerlink" title="Evaluate"></a>Evaluate</h2><p>前面进行介绍的主要是使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import evaluate</span><br><span class="line">clf_metrics = evaluate.combine([&quot;accuracy&quot;, &quot;f1&quot;])</span><br></pre></td></tr></table></figure>
+
+<p>还需要进行构建计算的函数</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/e4d67e1ff7e75daa7f114b83d709115d.png?token=AGECE2OFWQGHDUFRBV7NJVDG72XBS"></p>
+<h2 id="Trainer"><a href="#Trainer" class="headerlink" title="Trainer"></a>Trainer</h2><p>简化了自己进行写train函数的逻辑</p>
+<p>通过arg设置保存的地方，lr还有epoch等相关超参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">args = TrainingArguments(</span><br><span class="line">    output_dir=&quot;./chatbot&quot;,</span><br><span class="line">    per_device_train_batch_size=16,</span><br><span class="line">    gradient_accumulation_steps=8,</span><br><span class="line">    logging_steps=10,</span><br><span class="line">    num_train_epochs=2</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">trainer = Trainer(</span><br><span class="line">    model=model,</span><br><span class="line">    args=args,</span><br><span class="line">    train_dataset=tokenized_ds,</span><br><span class="line">    data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/05/05/%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93/" data-id="cm1tjy5x100488cw7gnjacwxk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-4.优惠券设计系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/05/05/4.%E4%BC%98%E6%83%A0%E5%88%B8%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F/" class="article-date">
+  <time datetime="2024-05-05T02:05:11.000Z" itemprop="datePublished">2024-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/05/4.%E4%BC%98%E6%83%A0%E5%88%B8%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F/">4.优惠券设计系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>还是4s，首先是场景</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><ol>
+<li>发送优惠券</li>
+<li>领取优惠券</li>
+<li>使用优惠券</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d86184d99a24b0d09ea41f42f37aaef2.png?token=AGECE2NVQIBEBXGDDV2TNW3G72XCM"></p>
+<p>商家侧</p>
+<ol>
+<li>新增优惠券</li>
+<li>发送优惠券</li>
+</ol>
+<p>用户侧</p>
+<ol>
+<li>领取优惠券</li>
+<li>下单</li>
+<li>使用优惠券</li>
+<li>支付</li>
+</ol>
+<h3 id="qps计算"><a href="#qps计算" class="headerlink" title="qps计算"></a>qps计算</h3><p>按照点击次数，还有多少人，多少个优惠券</p>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><p>传统的电商服务</p>
+<ol>
+<li>订单服务</li>
+<li>支付服务</li>
+</ol>
+<p>+优惠券服务</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/29f54ef306e22fc8ec1763710196f0fe.png?token=AGECE2J2MHDFZEKGN455HFTG72XCQ"></p>
+<h3 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h3><ol>
+<li>分布式事务</li>
+<li>超发送优惠券</li>
+<li>防止重复领取</li>
+<li>大批量发送优惠券（发红包类似）</li>
+</ol>
+<h2 id="storage"><a href="#storage" class="headerlink" title="storage"></a>storage</h2><p>设计scheme</p>
+<p>优惠券（包含多少张，什么规则，已经发送的，已经使用的）</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a4563a7a2a7798ec8423e288863a38f7.png?token=AGECE2NNBHHMDXVNLWXRDZLG72XCU"></p>
+<p>规则表（什么规则）</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/863875b558aa4d3767f3d11d2dafc119.png?token=AGECE2MMTHTKYXDP3HA7C2DG72XCY"></p>
+<p>用户领取表（用户id，还有券id，券的状态）</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/fafe3f9c2a34d9f8edef872fffa04a4f.png?token=AGECE2ICBXTLQ4RNR4JC3V3G72XC4"></p>
+<h3 id="触达系统"><a href="#触达系统" class="headerlink" title="触达系统"></a>触达系统</h3><p>就是推送系统，推送发圈的消息</p>
+<p>消息（发送内容，from，to）</p>
+<p>优化消息表，使用外键<img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/7044903c34a7a42846fc1fd459435226.png?token=AGECE2MJJJIV3UXBP77W7C3G72XC6"></p>
+<h3 id="大批量发券"><a href="#大批量发券" class="headerlink" title="大批量发券"></a>大批量发券</h3><p>使用消息队列进行解耦</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/6ffaf4af9d61fe7a61d8f4676ceeba3f.png?token=AGECE2ONAGYMDMKQUNUSPA3G72XDC"></p>
+<p>出现重复消费的问题</p>
+<p>使用事务来进行操作</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/63cf8f92562d138d588add179ce442bf.png?token=AGECE2O4PQIEXXTKSLWS7Z3G72XDG"></p>
+<p>更新优惠券还有领券信息</p>
+<p>使用》0来进行更新的</p>
+<h3 id="重复领券"><a href="#重复领券" class="headerlink" title="重复领券"></a>重复领券</h3><p>使用redis，sadd</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d39c940ab7fdc1cb4859b13a307f2535.png?token=AGECE2JPBOXIAWMUHBGM6SDG72XDI"> 语法是sadd key member</p>
+<p>key是券的id，member是uid</p>
+<p>直接查询<img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/e6ca07fa8c8b9bfa8083de66f30e77d9.png?token=AGECE2OPLE7J6JAXP655A6TG72XDM"></p>
+<h3 id="校验优惠券"><a href="#校验优惠券" class="headerlink" title="校验优惠券"></a>校验优惠券</h3><p>下单的时候校验</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1714917431068-2d124c32-6a77-4544-a986-8658f81f60b8.png"></p>
+<p>校验内容</p>
+<ol>
+<li>国企</li>
+<li>是否符合一则</li>
+<li>是否互斥</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/41547593165f8e0b94f0b5abd0fe36c1.png?token=AGECE2J6QBSYJFDXSDDVXY3G72XDO"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/dbafc304a2d16a0311d44a641dfd2191.png?token=AGECE2K2VSBLFZKV5JDJXGTG72XDU"></p>
+<p>现在设计到多个系统，需要使用分布式事务，tcc来进行解决</p>
+<p>加入新表，uid，表id，操作</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/045c01ca225eccd5fad4e2fd9956f31d.png?token=AGECE2IWCE7CCXENZJLRJR3G72XDY"></p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="过期提醒"><a href="#过期提醒" class="headerlink" title="过期提醒"></a>过期提醒</h3><p>三种策略</p>
+<ol>
+<li>定时扫表（影响业务）</li>
+<li>延时消息（消息堆积）</li>
+<li>新增通知表</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/972e4fc64049a2d008b157bccaee92ae.png?token=AGECE2NYU6G4UZCMPBWUD5DG72XD4"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1714920112827-350f85f3-1de2-4b60-be7e-9108d79738db.png"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/485d21c811844e42557abc1f85f05000.png?token=AGECE2PXCGGQHQHNGUSDMWTG72XEA"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/05/05/4.%E4%BC%98%E6%83%A0%E5%88%B8%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F/" data-id="cm1tjy5vw00068cw79iut14xv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-3.设计短连接系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/05/05/3.%E8%AE%BE%E8%AE%A1%E7%9F%AD%E8%BF%9E%E6%8E%A5%E7%B3%BB%E7%BB%9F/" class="article-date">
+  <time datetime="2024-05-05T02:03:20.000Z" itemprop="datePublished">2024-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/05/05/3.%E8%AE%BE%E8%AE%A1%E7%9F%AD%E8%BF%9E%E6%8E%A5%E7%B3%BB%E7%BB%9F/">3.设计短连接系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="0-设计news-feed的api"><a href="#0-设计news-feed的api" class="headerlink" title="0.设计news feed的api"></a>0.设计news feed的api</h1><h2 id="选择返回协议"><a href="#选择返回协议" class="headerlink" title="选择返回协议"></a>选择返回协议</h2><p>一般是使用json来进行返回</p>
+<h2 id="设计翻页"><a href="#设计翻页" class="headerlink" title="设计翻页"></a>设计翻页</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/5a86a9446d68aa73fcae1232d5372297.png?token=AGECE2NOBI6FXCR363AVIMLG72XEM"></p>
+<p><font style="background-color:rgb(255,245,235);">选择第二种，因为第一种，万一有插入，再次下滑就会看到已经看过了的内容</font></p>
+<h2 id="如何判断没有下一页的内容"><a href="#如何判断没有下一页的内容" class="headerlink" title="如何判断没有下一页的内容"></a>如何判断没有下一页的内容</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/7755ca061f831af24d6d71457223d1c4.png?token=AGECE2LSC5OBJ3Z3M4AU4OTG72XEQ"></p>
+<p><font style="background-color:rgb(255,245,235);">就是多取一个值，去得到就进行返回，作为next，不然就是null，没有下一个</font></p>
+<h2 id="如何设计-提及到其他人"><a href="#如何设计-提及到其他人" class="headerlink" title="如何设计@提及到其他人"></a>如何设计@提及到其他人</h2><p>直接使用http抄连接</p>
+<p>缺点</p>
+<ol>
+<li>js跨域攻击</li>
+<li>url进行修改，从at name变成at uid，就要全部进行重写</li>
+</ol>
+<h1 id="设计短连接"><a href="#设计短连接" class="headerlink" title="设计短连接"></a>设计短连接</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>4s分析法</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ddf8375bdcb7de073852d8e29bfc2be2.png?token=AGECE2NAFK6AVGJEG4WHS6TG72XEU"></p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><ol>
+<li>计算qps，思考需要的容量，计算顶峰对多的qps，然后计算一年的就可以得到容量</li>
+</ol>
+<p><strong>主要功能</strong></p>
+<ol>
+<li>把长链接转换为短连接</li>
+<li>短连接恢复为长连接 ，并且使用301重定向跳转</li>
+</ol>
+<p><strong>询问</strong></p>
+<ol>
+<li>长链接和短连接是不是11对应</li>
+<li>是不是太久就要释放</li>
+</ol>
+<p><font style="background-color:#FBDE28;">需要设计什么</font></p>
+<p>需<font style="background-color:#FBDE28;">求</font></p>
+<p><strong>qps</strong></p>
+<ol>
+<li>日活100M，平均1天可以求出0.1条</li>
+<li>计算写入w，1100*0.1&#x2F;86400 &#x3D;100</li>
+<li>计算读取，一天读取一条，那就是2k</li>
+<li>计算一年存放的大小100<em>0.11</em>100 &#x3D;1G</li>
+</ol>
+<h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><p>服务只需要一个短连接服务</p>
+<p>主要是设计接口的api，还有返回方式</p>
+<p>需要两个api，讴歌encoder，一个decoded</p>
+<p>使用的发送方式get，返回一个重定向，还有post，post发送长链接，返回短连接</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/3e6963cf3d211df10852b772a7845b83.png?token=AGECE2NFLJBO27CG4GQHLUTG72XE2"></p>
+<h2 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h2><p>选择存放的结构，sql还是nosql，之后是存放使用的scheme</p>
+<p>Sql vs nosql</p>
+<ol>
+<li>是否需要事务-不用</li>
+<li>是否需要丰富的sql语句-不用</li>
+</ol>
+<p>因此选择nosql</p>
+<h2 id="encoder算法"><a href="#encoder算法" class="headerlink" title="encoder算法"></a>encoder算法</h2><ol>
+<li>直接hash（冲突）</li>
+<li>hash+set（生成过慢）</li>
+<li>base62，将</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/fb6b256e051fed1533a992ebf3a9917d.png?token=AGECE2NXFU2IWBOSLIM3ZVTG72XE6"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/8cc1efe7b89be7fb72ac44074f6d9de0.png?token=AGECE2IMM7TXOBWOVLZGCY3G72XFC"></p>
+<p>构建索引对长链接还有短链接</p>
+<h2 id="整体流程"><a href="#整体流程" class="headerlink" title="整体流程"></a>整体流程</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b5ccde19c8091707c33f914d6abfe655.png?token=AGECE2MMBGCXLDL6PJJ2U53G72XFG"></p>
+<ol>
+<li>如果不存在这个长链接</li>
+<li>就进行插入，并且返回短连接</li>
+</ol>
+<h2 id="Scale"><a href="#Scale" class="headerlink" title="Scale"></a>Scale</h2><h3 id="如何提高响应速度"><a href="#如何提高响应速度" class="headerlink" title="如何提高响应速度"></a>如何提高响应速度</h3><p>使用缓存—存放shoirt到长的连接</p>
+<p>基于位置的提速</p>
+<ol>
+<li>Cdn</li>
+<li>使用dns找最近的解析器</li>
+<li>中心化的sql+分布式的redis</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1f5f8e3ae1d1e0a2e55078435cfe3c9d.png?token=AGECE2LQRJYO2YYUE7AMPALG72XFK"></p>
+<h3 id="接着扩展mysql集群"><a href="#接着扩展mysql集群" class="headerlink" title="接着扩展mysql集群"></a>接着扩展mysql集群</h3><p>解决写不过来的问题，读取瓶颈问题</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1abdb51266acb6e97942a92991d87b85.png?token=AGECE2KV5IC2RK67PNYI4B3G72XFO"></p>
+<p>此时此刻需要分库分表</p>
+<p><font style="background-color:rgb(255,245,235);">水平分库还有垂直分库</font></p>
+<p>只有水平分库，需要选取分片键这时候就是需要全局自增id</p>
+<ol>
+<li>使用一个服务器来实现这个歌功能（缺点，单点失效）</li>
+<li>使用zooker来进行实现自增</li>
+</ol>
+<p>分片策略：</p>
+<p>得到的hash+原始段链接</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/8320cb54b178e75d0519db80b0155aba.png?token=AGECE2JRKZ53N3ZJXDZ2WMTG72XFS"></p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9140c756295d4e37d6b63a712e15adac.png?token=AGECE2K7QKAOSJ6ZVAOPBZ3G72XFW"></p>
+<h3 id="多地区优化"><a href="#多地区优化" class="headerlink" title="多地区优化"></a>多地区优化</h3><p>根据地区分片，然后us的走us，cn走cn的</p>
+<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/12f789281adba139c24087623ee98e41.png?token=AGECE2IE6TS4PZJ2XUCHK73G72XF2"></p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2024/05/05/3.%E8%AE%BE%E8%AE%A1%E7%9F%AD%E8%BF%9E%E6%8E%A5%E7%B3%BB%E7%BB%9F/" data-id="cm1tjy5vs00028cw74ajh01yn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MMPose/" rel="tag">MMPose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/btc/" rel="tag">btc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cf/" rel="tag">cf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clash/" rel="tag">clash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash-course/" rel="tag">crash course</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs144/" rel="tag">cs144</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/detection/" rel="tag">detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ic/" rel="tag">ic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/image-classification/" rel="tag">image classification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mastercard/" rel="tag">mastercard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mmlab/" rel="tag">mmlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nemu/" rel="tag">nemu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/office/" rel="tag">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa/" rel="tag">pa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pat/" rel="tag">pat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag">pa，一生一芯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag">pve，虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytorch/" rel="tag">pytorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/segmentation/" rel="tag">segmentation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/torch/" rel="tag">torch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/usdt/" rel="tag">usdt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/warp/" rel="tag">warp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/" rel="tag">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%BA/" rel="tag">人机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag">使用工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%87%91/" rel="tag">入金</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" rel="tag">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BA%E8%A1%8C/" rel="tag">出行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%B2%BB/" rel="tag">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag">回溯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" rel="tag">土耳其</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E6%B1%87/" rel="tag">外汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" rel="tag">多萝西</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag">心理学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" rel="tag">数字逻辑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">旅游</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag">最短路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" rel="tag">栈的应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B0%B4%E9%A2%98/" rel="tag">水题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%87%E4%B8%B0/" rel="tag">汇丰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag">滑动窗口</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">王道数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BA%A4/" rel="tag">社交</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" rel="tag">社会学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" rel="tag">算法基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag">线性代数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E8%AF%BE/" rel="tag">网课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" rel="tag">计算机教程缺失的一课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" rel="tag">语音识别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" rel="tag">跨境交易</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%93%E5%85%A5/" rel="tag">输入</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" rel="tag">运筹学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" rel="tag">银行卡</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" rel="tag">面试经验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A6%99%E6%B8%AF/" rel="tag">香港</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/MMPose/" style="font-size: 10px;">MMPose</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/bilibili/" style="font-size: 10px;">bilibili</a> <a href="/tags/btc/" style="font-size: 10px;">btc</a> <a href="/tags/cf/" style="font-size: 10px;">cf</a> <a href="/tags/clash/" style="font-size: 10px;">clash</a> <a href="/tags/crash-course/" style="font-size: 10px;">crash course</a> <a href="/tags/cs144/" style="font-size: 10px;">cs144</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/detection/" style="font-size: 10px;">detection</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/ic/" style="font-size: 10px;">ic</a> <a href="/tags/image-classification/" style="font-size: 10px;">image classification</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/leetcode/" style="font-size: 11.43px;">leetcode</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked list</a> <a href="/tags/linux/" style="font-size: 12.86px;">linux</a> <a href="/tags/mastercard/" style="font-size: 10px;">mastercard</a> <a href="/tags/mmlab/" style="font-size: 12.86px;">mmlab</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nemu/" style="font-size: 10px;">nemu</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/office/" style="font-size: 10px;">office</a> <a href="/tags/pa/" style="font-size: 11.43px;">pa</a> <a href="/tags/pat/" style="font-size: 18.57px;">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 10px;">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/pytorch/" style="font-size: 14.29px;">pytorch</a> <a href="/tags/segmentation/" style="font-size: 10px;">segmentation</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/torch/" style="font-size: 10px;">torch</a> <a href="/tags/usdt/" style="font-size: 10px;">usdt</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/warp/" style="font-size: 10px;">warp</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/%E4%BA%BA%E6%9C%BA/" style="font-size: 10px;">人机</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">使用工具</a> <a href="/tags/%E5%85%A5%E9%87%91/" style="font-size: 10px;">入金</a> <a href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" style="font-size: 10px;">公开课</a> <a href="/tags/%E5%87%BA%E8%A1%8C/" style="font-size: 10px;">出行</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 10px;">分治</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 11.43px;">动态规划</a> <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 10px;">后序遍历</a> <a href="/tags/%E5%9B%9E%E6%BA%AF/" style="font-size: 10px;">回溯</a> <a href="/tags/%E5%9B%BE/" style="font-size: 12.86px;">图</a> <a href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" style="font-size: 10px;">土耳其</a> <a href="/tags/%E5%A4%96%E6%B1%87/" style="font-size: 11.43px;">外汇</a> <a href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" style="font-size: 10px;">多萝西</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">学习方法</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 15.71px;">排序</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" style="font-size: 10px;">数字逻辑</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 17.14px;">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 10px;">数论</a> <a href="/tags/%E6%97%85%E6%B8%B8/" style="font-size: 10px;">旅游</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" style="font-size: 10px;">最短路径</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" style="font-size: 10px;">栈的应用</a> <a href="/tags/%E6%A0%91/" style="font-size: 14.29px;">树</a> <a href="/tags/%E6%B0%B4%E9%A2%98/" style="font-size: 15.71px;">水题</a> <a href="/tags/%E6%B1%87%E4%B8%B0/" style="font-size: 10px;">汇丰</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 11.43px;">深度学习</a> <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" style="font-size: 10px;">滑动窗口</a> <a href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14.29px;">王道数据结构</a> <a href="/tags/%E7%A4%BE%E4%BA%A4/" style="font-size: 10px;">社交</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" style="font-size: 10px;">社会学</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">算法基础</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 10px;">线性代数</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a> <a href="/tags/%E7%BD%91%E8%AF%BE/" style="font-size: 10px;">网课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" style="font-size: 10px;">计算机教程缺失的一课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" style="font-size: 10px;">语音识别</a> <a href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" style="font-size: 10px;">跨境交易</a> <a href="/tags/%E8%BE%93%E5%85%A5/" style="font-size: 10px;">输入</a> <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" style="font-size: 10px;">运筹学</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 10px;">运维</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 11.43px;">递归</a> <a href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" style="font-size: 10px;">银行卡</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 15.71px;">链表</a> <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 10px;">闲谈</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 10px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" style="font-size: 10px;">面试经验</a> <a href="/tags/%E9%A6%99%E6%B8%AF/" style="font-size: 10px;">香港</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/10/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/03/d/">d</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/03/nothing/">nothing</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/">第二周，GIN入门</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">第一周，go语言拾遗</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2024 weijia<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
