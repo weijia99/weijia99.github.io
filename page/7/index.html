@@ -1,1088 +1,349 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="weijia"><meta name="copyright" content="weijia"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/page/7/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="weijia">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/page/7/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-04 01:27:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-数字逻辑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" class="article-date">
-  <time datetime="2022-11-26T07:45:52.000Z" itemprop="datePublished">2022-11-26</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/">数字逻辑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数电小结"><a href="#数电小结" class="headerlink" title="数电小结"></a>数电小结</h1><h2 id="1-逻辑代数"><a href="#1-逻辑代数" class="headerlink" title="1.逻辑代数"></a>1.逻辑代数</h2><p>第一章主要是讲逻辑代数，主要是离散数学的知识，这些知识在考验期间学过，就直接跳过。包括逻辑化简，最小项还有最大项。砌筑一个新的知识点就是卡洛图。下面简单介绍一下卡诺图。</p>
-<p>卡诺图：用小方格来表示最小项，一个小方格代表一个最小项，然后将这些最小项按照相邻性排列起来<strong>（00 01 11 10）</strong>。</p>
-<p>注意，是使用01还有11，不是01,10这样排列，这样是为了，能够2个都是1可以消除第一位，只留下一，还有10和00也是可以在一起进行消除的。</p>
-<p>无关项：就是值未知的项，值为x，可0可1，一般是为了凑成最大的圈，就把x设置为1</p>
-<p>卡诺图化简规则</p>
-<ol>
-<li>尽量化最大的圈（只能是2的倍数）</li>
-<li>化尽量少的圈</li>
-<li>然后进行看无关项，如果无关项可以进行辅助化简也加进来</li>
-</ol>
-<h2 id="2-组合逻辑"><a href="#2-组合逻辑" class="headerlink" title="2.组合逻辑"></a>2.组合逻辑</h2><p>基础知识：与或非异或，基本的门电路</p>
-<p>电路分析，一般使用一下方法</p>
-<ol>
-<li>直接按照输入输出进行化简</li>
-<li>或者是对表达式，进行逻辑组合进行化简</li>
-<li>或者是真值表，进行最小项来直接得到结果</li>
-</ol>
-<h3 id="2-1组合逻辑电路"><a href="#2-1组合逻辑电路" class="headerlink" title="2.1组合逻辑电路"></a>2.1组合逻辑电路</h3><p>编码器：就是把独热编码进行转化为相应的二进制代码把（0010）转化为二进制就是10（因为是2位使用，二进制就是10）</p>
-<p>优先编码器：允许同时输入两个以上信号，并按优先级输出。例如：10-4线(如74LS147)、 8-3线(如74LS148)。<strong>就是输入多个有效信号，并且按照有限输出</strong></p>
-<p>译码器：3-8译码器，刚才把2进行编码输出为10，那么译码器就是把10，输出为0010</p>
-<p><img src="https://repo.holgerbest.top/img/fyMXeGraTizmxlK.png"></p>
-<p>其中下面456是使能端，当45为低电平，6为高电平的时候才有效（因此，地址的开头可以设置在使能端，通过使能端的逻辑组合，来达到搜寻特定地址例如a8h到afh，后三位接到123，前面5位接到456，使用逻辑电路进行组合</p>
-<p><strong>74LS138应用1 实现逻辑函数</strong>：将逻辑函数转换成最小项表达式，再转换成与非—与非形式。用一片74138加与非门就可实现三变量逻辑函数。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729040080261672904007282.png"></p>
-<p>例题：首先画出真值表，得到卡诺图，发现是y2y3y4y5，我们可以在最后面使用与非得到，前面就是选择2345的最小项</p>
-<p>数据选择器：（4选一，需要2位来进行选择，因为2的2次方就是4，这两位数就是地址选择）</p>
-<p><img src="https://repo.holgerbest.top/img/R18Y9mlbF5rQ7Oo.png"></p>
-<p>香浓化简法：把最终的逻辑函数，分成w还有-w，然后最下面进行设置数据选择器。</p>
-<p>例题：2个8选一，构成16选一。</p>
-<p>2片就是16选2，同时还需要设置，使能端，需要进行设置取反</p>
-<p><img src="https://repo.holgerbest.top/img/CP69jouBO1SFlzb.png"></p>
-<h2 id="3-时序电路"><a href="#3-时序电路" class="headerlink" title="3.时序电路"></a>3.时序电路</h2><p>rd的意识就是设置为0</p>
-<p><strong>rs触发器</strong>：特点就是r&#x3D;1，最后q的输出就是为0（r是resert的意思），当s&#x3D;1，最后q就是1（s是set的意思），特征方程如下，rs</p>
-<p><img src="https://repo.holgerbest.top/img/SQ3ACdbkvPrsVBz.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729055030251672905502326.png"></p>
-<p>这个要换成或非门，只需要我们把r还有s设置真值表，，然后就可以得到逻辑函数，我们知道q非还有q是相反的，所以我们的约束条件是rs&#x3D;0，但是当我们输入00的时候，这个条件就不成立，所以就是约束条件。</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729057560251672905755304.png"></p>
-<p>接下来就是d触发器（这个就是寄存器的原型，因为输入什么，输出什么）</p>
-<p><img src="https://repo.holgerbest.top/img/ynDgfWOMzUcA1B5.png"></p>
-<p>下面就是t触发器</p>
-<p><img src="https://repo.holgerbest.top/img/EJTLOymIpvPd3hC.png"></p>
-<p>最后一个就是jk触发器，</p>
-<p><img src="https://repo.holgerbest.top/img/nyEHmc3PxdBgk5T.png"></p>
-<p>他有上述的几个触发器的多个特点，j为1，设置0，k为设置为1，全0就是保持不变，全1就是进行取反</p>
-<p>进行多个变形jk变d</p>
-<p><img src="https://repo.holgerbest.top/img/VRsyxivXWPcTz8A.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16729062970281672906296730.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" data-id="cm1tjy5x5004q8cw7f6t69nkl" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ic/" rel="tag">ic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" rel="tag">数字逻辑</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-职场networking" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/" class="article-date">
-  <time datetime="2022-11-26T07:08:19.000Z" itemprop="datePublished">2022-11-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/">职场networking</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="职场networking"><a href="#职场networking" class="headerlink" title="职场networking"></a>职场networking</h1><p>以下内容来源于小林说职场,关注小林的youtube即可</p>
-<h2 id="1-为什么需要"><a href="#1-为什么需要" class="headerlink" title="1.为什么需要"></a>1.为什么需要</h2><ol>
-<li>帮你快速了解整个流程(大一,找到学长学姐,直接知道大学三年,怎么走)</li>
-<li>然后根据这些经验与其他人相互交流,这样别的人也会觉得你是有点东西的</li>
-</ol>
-<h2 id="2-如何开始"><a href="#2-如何开始" class="headerlink" title="2.如何开始"></a>2.如何开始</h2><p>分为线上还有平级社交,想射由于是boss,有点难度.</p>
-<p>但是平级社交容易开始:</p>
-<blockquote>
-<p>平级社交本质就是价值交换</p>
-</blockquote>
-<p>只有我的价值有用才可以开始社交,普通人之间相互开始的.</p>
-<p>如何开始:</p>
-<ol>
-<li>可以帮助他们查资料(做实验的时候)</li>
-<li>举办活动的时候做志愿者</li>
-<li>逢年过节(写上祝福)</li>
-</ol>
-<p>最简单的方式.</p>
-<p><strong>如何溶蚀他人—-把自己要说的话写好,然后再转发给那个帮你的人(可以节约他的时间)</strong></p>
-<h2 id="3-认识人模板"><a href="#3-认识人模板" class="headerlink" title="3.认识人模板"></a>3.认识人模板</h2><p>还是经典的三段论</p>
-<ol>
-<li>自我介绍</li>
-<li>说明来意</li>
-<li>提出需求</li>
-</ol>
-<p>1.自我介绍:</p>
-<blockquote>
-<p>xxx你好,我叫xxx,来自xxx.我从我那个水知道你,知道你是我们学校的做个这有很高方向的人</p>
-</blockquote>
-<p>2.说明来意:</p>
-<blockquote>
-<p>我目前做的研究与你这个有关联,再研究调养期间,发现你的论文对我很有帮助,然后正在逐步学习你的代码</p>
-</blockquote>
-<p>3.提出需求:</p>
-<blockquote>
-<p>然后发现,您的代码,有些逻辑,不太理解.能1请耽误您15分钟的时间,能简介 一下吗.解决之后(说出好处)</p>
-</blockquote>
-<h2 id="4-附录-社交场合如何networking"><a href="#4-附录-社交场合如何networking" class="headerlink" title="4.附录(社交场合如何networking)"></a>4.附录(社交场合如何networking)</h2><h3 id="4-1开始"><a href="#4-1开始" class="headerlink" title="4.1开始"></a>4.1开始</h3><ol>
-<li>自我介绍(hi,你好,我叫xxx,nicetomeetu)</li>
-<li>跨别人(你这个衣服真不错,直接这么做的呀)</li>
-<li>套近乎(看着比较眼熟,你是哪里的)</li>
-<li>插入别人的对话</li>
-<li>mind i joining</li>
-<li>你们再讨论什么呢,这么有意思</li>
-</ol>
-<h3 id="4-2chat-topic"><a href="#4-2chat-topic" class="headerlink" title="4.2chat topic"></a>4.2chat topic</h3><ol>
-<li>你从哪里来的呀(开车呀,好远,哪里吃的不错)</li>
-<li>你从哪里听到这个活动的呀</li>
-<li>你也是这个活动的会员呀</li>
-<li>环境感觉如何</li>
-<li>经典的吃(茶歇)</li>
-<li>我吃的这个不错,你也可以事实上哦</li>
-<li>单独落单了,你也是第一次参加这个吗</li>
-</ol>
-<h3 id="4-3结束"><a href="#4-3结束" class="headerlink" title="4.3结束"></a>4.3结束</h3><ol>
-<li>我去个厕所</li>
-<li>我吃的没有了,弄点吃的</li>
-<li>太晚了,我该回去了</li>
-<li>我同学来了,我和他打个招呼</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/" data-id="cm1tjy5xe005y8cw70co84xyk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%BA%E6%9C%BA/" rel="tag">人机</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A4%BE%E4%BA%A4/" rel="tag">社交</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-人际社会学" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/25/%E4%BA%BA%E9%99%85%E7%A4%BE%E4%BC%9A%E5%AD%A6/" class="article-date">
-  <time datetime="2022-11-25T07:17:18.000Z" itemprop="datePublished">2022-11-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/25/%E4%BA%BA%E9%99%85%E7%A4%BE%E4%BC%9A%E5%AD%A6/">人际社会学</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="人机解剖"><a href="#人机解剖" class="headerlink" title="人机解剖"></a>人机解剖</h1><h2 id="1-什么叫魅力"><a href="#1-什么叫魅力" class="headerlink" title="1.什么叫魅力"></a>1.什么叫魅力</h2><blockquote>
-<p>刚开始不认识对方还是和和气气的,认识之后就对对方可以调戏.这是因为我们知道了对方的框架.</p>
-</blockquote>
-<p>框架:</p>
-<ol>
-<li>对方能接受的底线(一开始不知道对方的底线)</li>
-<li>包括对方喜欢什么,还有不接受什么</li>
-</ol>
-<p>人与人认识,就是认识对方的框架</p>
-<hr>
-<p>能量:</p>
-<blockquote>
-<p>为什么会在开始,就知道这个人能不能决胜.(因为已经做好准备了,兵马未动,粮草先行)</p>
-</blockquote>
-<p>决定你能不能取胜都是事前的准备(例如1km,取决于之前的锻炼,而不i是今天自己的爆发)</p>
-<p>做好准备就是决定能量的多少就是你的实力</p>
-<hr>
-<p>实力:</p>
-<ol>
-<li>社会是幕强的</li>
-<li>绝对实力再任何技巧面前都是没用的(只要篮球够好,总有一堆人喜欢你的)</li>
-<li>赢家通吃(长得帅一堆女生)</li>
-</ol>
-<hr>
-<p>提升实力:</p>
-<p>能量&#x3D;&#x3D;&gt;包括实力</p>
-<p>实力&#x3D;价值+稀缺性</p>
-<p>实力可以包括:</p>
-<ol>
-<li>兴趣(使用电脑)</li>
-<li>优势(数学&amp;英语)</li>
-</ol>
-<p>价值:取决于你所在位置的用途(滑雪对boss没什么用,只能当运动员)</p>
-<p>稀缺性:阳光,空气还有水都有价值(但没有稀缺性,信息是有稀缺性的)</p>
-<hr>
-<p>稀缺性构建:</p>
-<ol>
-<li>信息过剩(查询到有用信息,查询会计师信息)</li>
-<li>知识(知道信息,学习知识,使用某本书)</li>
-<li>能力(需要联系的,能够和别人谈笑风生,都需要联系自己的交往能力的)</li>
-<li>认识,能出其他人的角度思考</li>
-<li>资源(资源永远是稀缺的,没人带你无法入门)</li>
-</ol>
-<hr>
-<blockquote>
-<p>重点部分</p>
-</blockquote>
-<p><strong>构成实力:</strong></p>
-<ol>
-<li><strong>干就完事了(不要多想)</strong></li>
-<li>保持真实</li>
-<li>再自己的主场(自己的主场,别人大佬也会请教你的,或者是自己的学晓)</li>
-</ol>
-<h2 id="2-人机关系痛苦"><a href="#2-人机关系痛苦" class="headerlink" title="2.人机关系痛苦"></a>2.人机关系痛苦</h2><h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><blockquote>
-<p>自己的需求得不到</p>
-</blockquote>
-<p>没有曼珠自己的需求</p>
-<p>需求,不可能一直满足,所以会有痛苦.相反</p>
-<p>当当时得到满足了,那个需求,那么一瞬间就是快乐</p>
-<blockquote>
-<ol>
-<li>辩证的知道,没有痛苦就没有快乐</li>
-<li>痛苦是常态</li>
-</ol>
-</blockquote>
-<h3 id="他人攻击谩骂"><a href="#他人攻击谩骂" class="headerlink" title="他人攻击谩骂"></a>他人攻击谩骂</h3><blockquote>
-<p>别人不喜欢,无所谓了</p>
-</blockquote>
-<blockquote>
-<p>体温，为什么会被别人不喜欢</p>
-<p>因为，他攻击力，是因为你当前这个角色没做好</p>
-</blockquote>
-<p>人是一切关系社会的综合，</p>
-<p><strong>人也是角色的综合</strong></p>
-<ol>
-<li>自己是学生</li>
-<li>自己也是老师</li>
-<li>自己也是儿子</li>
-<li>自己也是男朋友</li>
-<li>自己也是同学</li>
-<li>自己也是公司员工</li>
-</ol>
-<p><strong>高情商就是处理号自己的角色</strong></p>
-<p>家长对孩子也是要辩证的</p>
-<ol>
-<li>孩子顶撞自己</li>
-<li>孩子考试好了(阳)</li>
-</ol>
-<p>他只是攻击这个角色,并不是攻击我</p>
-<hr>
-<blockquote>
-<p><strong>关于忍不忍</strong></p>
-</blockquote>
-<p><strong>主要是看是不是自己的核心利益</strong></p>
-<p>辞职:这个时候辞职了,有没有下一家</p>
-<h3 id="为什么会霸凌"><a href="#为什么会霸凌" class="headerlink" title="为什么会霸凌"></a>为什么会霸凌</h3><blockquote>
-<p>一步步试探底线,发现你都可以接受(所以刚开始就要说不)</p>
-</blockquote>
-<p>为什么会干欺凌(因为没有代价)</p>
-<p>如何解决:</p>
-<ol>
-<li>使劲闹大</li>
-<li>增加犯错成本</li>
-</ol>
-<h2 id="3-恋爱"><a href="#3-恋爱" class="headerlink" title="3.恋爱"></a>3.恋爱</h2><p>分为下面多个阶段</p>
-<h3 id="陌生人到男女朋友-暧昧期"><a href="#陌生人到男女朋友-暧昧期" class="headerlink" title="陌生人到男女朋友(暧昧期)"></a>陌生人到男女朋友(暧昧期)</h3><p>为什么会有的人自来熟(一见如故),因为他默认把你当作他多年的朋友.</p>
-<p><strong>距离:你觉得近 就近,你觉得渊就远</strong></p>
-<p>什么时候调:把对方当作你的情人</p>
-<p>男女朋友(状态):</p>
-<ol>
-<li>直接开始吃饭</li>
-<li>直接开始约会</li>
-<li>直接做男女朋友的事</li>
-</ol>
-<h3 id="吸引"><a href="#吸引" class="headerlink" title="吸引"></a>吸引</h3><p>被你吸引事因为:</p>
-<ol>
-<li>被你这个人的世界所吸引(朋友圈,显示high value)</li>
-<li>再这个领域事top(篮球)</li>
-<li>会才艺(做饭)</li>
-<li>处于焦点(经常出现,刷脸熟,容易被人记住)</li>
-</ol>
-<blockquote>
-<p>人在专注的时候,别人会被你的世界吸引过来</p>
-</blockquote>
-<h3 id="激情"><a href="#激情" class="headerlink" title="激情"></a>激情</h3><p>好奇心(想了解你这个人的一切)</p>
-<p>如何保持激情,就是保持好奇心,就是增加神秘感(你有你的世界,如果被知道了,就再增加)</p>
-<h3 id="平淡"><a href="#平淡" class="headerlink" title="平淡"></a>平淡</h3><p>淡下去了,就去增加自己的神秘感</p>
-<p>美好的声音≠好妻子</p>
-<blockquote>
-<p>结婚,找舒服的,想出舒服(情绪稳定,不要找个祖宗)(闹啊,你不爱我呀,打电话啊)</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/25/%E4%BA%BA%E9%99%85%E7%A4%BE%E4%BC%9A%E5%AD%A6/" data-id="cm1tjy5wu003c8cw73bc9ddr7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" rel="tag">多萝西</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" rel="tag">社会学</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-pa1-1小结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/19/pa1-1%E5%B0%8F%E7%BB%93/" class="article-date">
-  <time datetime="2022-11-19T12:41:21.000Z" itemprop="datePublished">2022-11-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/19/pa1-1%E5%B0%8F%E7%BB%93/">pa1.1小结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="pa1-1"><a href="#pa1-1" class="headerlink" title="pa1.1"></a>pa1.1</h1><p>本章主要是要求大家进行使用构建完成简易表达式，主要包括单步执行，打印寄存器，还有扫描内存</p>
-<blockquote>
-<p>为什么使用static，因为使用static可以解决两个c文件有相同函数名的问题，不会造成编译问题</p>
-</blockquote>
-<h2 id="单步执行"><a href="#单步执行" class="headerlink" title="单步执行"></a>单步执行</h2><p>但不执行，我们可以看到远吗使用的cmdc这个函数</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">int</span> <span class="title function_">cmd_c</span><span class="params">(<span class="type">char</span> *args)</span> &#123;</span><br><span class="line"><span class="comment">//    -1是65535最大的2的64-1</span></span><br><span class="line">  cpu_exec(<span class="number">-1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>使用cpu_exec代表就是直接执行，使用-1，因为这是uint，无符号，-1的无符号就是最大值</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">cpu_exec</span><span class="params">(<span class="type">uint64_t</span> n)</span> &#123;</span><br><span class="line">  g_print_step = (n &lt; MAX_INST_TO_PRINT);</span><br><span class="line">  <span class="keyword">switch</span> (nemu_state.state) &#123;</span><br><span class="line">    <span class="keyword">case</span> NEMU_END: <span class="keyword">case</span> NEMU_ABORT:</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;Program execution has ended. To restart the program, exit NEMU and run again.\n&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">default</span>: nemu_state.state = NEMU_RUNNING;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>所以我们只需要对当前的函数，进行查找出需要执行的步数，然后调用cpu——exec来进行执行代码</p>
-<p>使用strtok来进行抽取参数就可以</p>
-<p>然后转换函数可以直接使用atoi</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">int</span> <span class="title function_">cmd_si</span><span class="params">(<span class="type">char</span> *args)</span>&#123;</span><br><span class="line">    <span class="comment">/* extract the first argument */</span></span><br><span class="line">    <span class="comment">/*get steps,default is 1*/</span></span><br><span class="line">    <span class="type">char</span> *arg = strtok(<span class="literal">NULL</span>, <span class="string">&quot; &quot;</span>);</span><br><span class="line">    <span class="type">int</span> i=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(arg==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="comment">/* no argument given */</span></span><br><span class="line">        i=<span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        i=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt; <span class="built_in">strlen</span>(arg);j++)&#123;</span><br><span class="line">            i=i*<span class="number">10</span>+arg[j]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//    printf(&quot;%s&quot;,arg);</span></span><br><span class="line">    cpu_exec(i);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="打印寄存器"><a href="#打印寄存器" class="headerlink" title="打印寄存器"></a>打印寄存器</h2><blockquote>
-<p>打印寄存器就更简单了. 不过既然寄存器的结构是ISA相关的, 我们希望能为简易调试器屏蔽ISA的差异. 框架代码已经为大家准备了如下的API:</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// nemu/src/isa/$ISA/reg.c</span><br><span class="line">void isa_reg_display(void);</span><br></pre></td></tr></table></figure>
-
-<p>执行<code>info r</code>之后, 就调用<code>isa_reg_display()</code>, 在里面直接通过<code>printf()</code>输出所有寄存器的值即可. 如果你从来没有使用过<code>printf()</code>, 请RTFM或者STFW. 如果你不知道要输出什么, 你可以参考GDB中的输出.</p>
-</blockquote>
-<p>这个因为我们使用的riscv，所以需要去riscv里面进行修改isa——display这个函数。</p>
-<p>直接调用isa，主要思路就是在reg里面进行遍历每一个寄存器，然后reg里面有gpr这个可以直接获取值。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">isa_reg_display</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; ++i) &#123;</span><br><span class="line"><span class="comment">//        printf(&quot;%s %s&quot;,regs[i],isa_reg_str2val(regs[i],false));</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%-3s :0x%08lx |  \n&quot;</span>, regs[i], cpu.gpr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="扫描内存"><a href="#扫描内存" class="headerlink" title="扫描内存"></a>扫描内存</h2><p>这个意思就是求出地址附近的10个值。如何求出值，观看rtfsc，可以发现调用vaddr，传入地址，还有字节数就行。默认riscv一个地址有4B，所以我们就传入就行</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">int</span> <span class="title function_">cmd_x</span><span class="params">(<span class="type">char</span> *args)</span>&#123;</span><br><span class="line">    <span class="comment">/* get N info,with the start of exp*/</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * vaddr_read(addr,len),这个len是长度的意思，单位是byte，一条指令默认4B，所以取的4</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="type">char</span> *arg= strtok(<span class="literal">NULL</span>, <span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N=atoi(arg);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="type">paddr_t</span> exprs=<span class="number">0x80000000</span>;</span><br><span class="line"><span class="comment">//    printf(&quot;0x%08x&quot;,exprs);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//    printf(&quot;Address    Dword block ... Byte sequence\n&quot;);</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;0x%8x  0x%08lx\n&quot;</span>,exprs + i*<span class="number">4</span>,vaddr_read(exprs + i * <span class="number">4</span>,<span class="number">4</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后地址的话，每次都是更新4，。直接+4就可以</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说还是比较简单的，但是由于是第一次接触到这种作业，还是查了不少资料。重点还是要看jyy的2020ics的习题课</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/19/pa1-1%E5%B0%8F%E7%BB%93/" data-id="cm1tjy5wk002j8cw74lb79i2k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pa/" rel="tag">pa</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-leetcode150" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/19/leetcode150/" class="article-date">
-  <time datetime="2022-11-19T12:33:58.000Z" itemprop="datePublished">2022-11-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/19/leetcode150/">leetcode150</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="leetcode-150"><a href="#leetcode-150" class="headerlink" title="leetcode 150"></a>leetcode 150</h1><blockquote>
-<p>Evaluate the value of an arithmetic expression in <a href="http://en.wikipedia.org/wiki/Reverse_Polish_notation">Reverse Polish Notation</a>.</p>
-<p>Valid operators are <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code>. Each operand may be an integer or another expression.</p>
-<p><strong>Note</strong> that division between two integers should truncate toward zero.</p>
-<p>It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a result, and there will not be any division by zero operation.</p>
-</blockquote>
-<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>本题是给你了逆波兰表达式，让你自己求，这个结果。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>我们可以发现，这个就是后缀表达式，使用后缀遍历，然后我们也可以发现，这个树的叶子节点就是数字。</p>
-<p>整体思路就是遍历这个字符串，然后发现是数字就push到stack里面，然后发现是符号就pop出来两个数字，对他进行操作。</p>
-<p>最后返回栈顶元素</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    stack&lt;<span class="type">long</span> <span class="type">long</span>&gt; s;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">evalRPN</span><span class="params">(vector&lt;string&gt;&amp; tokens)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 简单的后缀表达式求和</span></span><br><span class="line">        set&lt;string&gt; rec;</span><br><span class="line">        rec.<span class="built_in">insert</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">        rec.<span class="built_in">insert</span>(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">        rec.<span class="built_in">insert</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">        rec.<span class="built_in">insert</span>(<span class="string">&quot;/&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:tokens)&#123;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(rec.<span class="built_in">find</span>(i)!=rec.<span class="built_in">end</span>())&#123;</span><br><span class="line">                <span class="type">int</span> a=s.<span class="built_in">top</span>();</span><br><span class="line">                s.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="type">int</span> b=s.<span class="built_in">top</span>();</span><br><span class="line">                s.<span class="built_in">pop</span>();</span><br><span class="line">                <span class="comment">// cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b&lt;&lt;endl;</span></span><br><span class="line">                <span class="keyword">if</span>(i==<span class="string">&quot;+&quot;</span>)&#123;</span><br><span class="line">                    s.<span class="built_in">push</span>(a+b);</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i==<span class="string">&quot;-&quot;</span>)&#123;</span><br><span class="line">                    s.<span class="built_in">push</span>(b-a);</span><br><span class="line"></span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i==<span class="string">&quot;*&quot;</span>)&#123;</span><br><span class="line">                    s.<span class="built_in">push</span>((<span class="type">long</span> <span class="type">long</span>)a*(<span class="type">long</span> <span class="type">long</span> )b);</span><br><span class="line"></span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    s.<span class="built_in">push</span>(b/a);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            </span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                s.<span class="built_in">push</span>(<span class="built_in">atoi</span>(i.<span class="built_in">c_str</span>()));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.<span class="built_in">top</span>();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/19/leetcode150/" data-id="cm1tjy5wg001x8cw73di0cxfa" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-leetcode148" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/19/leetcode148/" class="article-date">
-  <time datetime="2022-11-19T12:13:00.000Z" itemprop="datePublished">2022-11-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/19/leetcode148/">leetcode148</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="leetcode-148"><a href="#leetcode-148" class="headerlink" title="leetcode 148"></a>leetcode 148</h1><blockquote>
-<p>Given the <code>head</code> of a linked list, return <em>the list after sorting it in <strong>ascending order</strong></em>.</p>
-</blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16688601431171668860143064.png"></p>
-<blockquote>
-<p><strong>Follow up:</strong> Can you sort the linked list in <code>O(n logn)</code> time and <code>O(1)</code> memory (i.e. constant space)?</p>
-</blockquote>
-<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>把链表进行排序输出，但是只能使用o1的空间，nlogn的时间。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>使用nlogn的方法来进行排序只有快排还有归并，但是都是用来递归，那空间就是on。所以只能使用迭代的方法来进行排序。</p>
-<p>地带也是给予归并的，就是我们手动从下到上，手动进行排序。排序完成一层厚，再次进行下一层来排序。</p>
-<p>现在我们进行引进dummy还有cur，dummy使用尾插法，来构建新的完整的链表（这是新一层的）</p>
-<p>每一层开始的时候p&#x3D;q&#x3D;head，</p>
-<p>然后q多走i补来达到下一组的开始</p>
-<p>然后引进p还有q，pq是两组的开头，对pq进行循环遍历，次数小于1,2,4，（这是分组的方式）。同事还有一个 o，o是2i的位置（表示新的一组开始进行排序，连接），这个都是用cur来进行尾插法。之后再把head&#x3D;o，开始进行下一组</p>
-<p>完成一层厚，我们让head&#x3D;dummy-》next。</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><blockquote>
-<p><code>[4,3,1,7,8,9,2,11,5,6]</code>.这个进行排序</p>
-</blockquote>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">step=<span class="number">1</span>: (<span class="number">3</span>-&gt;<span class="number">4</span>)-&gt;(<span class="number">1</span>-&gt;<span class="number">7</span>)-&gt;(<span class="number">8</span>-&gt;<span class="number">9</span>)-&gt;(<span class="number">2</span>-&gt;<span class="number">11</span>)-&gt;(<span class="number">5</span>-&gt;<span class="number">6</span>)</span><br><span class="line">step=<span class="number">2</span>: (<span class="number">1</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">7</span>)-&gt;(<span class="number">2</span>-&gt;<span class="number">8</span>-&gt;<span class="number">9</span>-&gt;<span class="number">11</span>)-&gt;(<span class="number">5</span>-&gt;<span class="number">6</span>)</span><br><span class="line">step=<span class="number">4</span>: (<span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">7</span>-&gt;<span class="number">8</span>-&gt;<span class="number">9</span>-&gt;<span class="number">11</span>)-&gt;(<span class="number">5</span>-&gt;<span class="number">6</span>)</span><br><span class="line">step=<span class="number">8</span>: (<span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">5</span>-&gt;<span class="number">6</span>-&gt;<span class="number">7</span>-&gt;<span class="number">8</span>-&gt;<span class="number">9</span>-&gt;<span class="number">11</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>我们可以看第一轮i&#x3D;1，dummy-&gt;next表示step1这个完整的链表（3417.。），cur都是尾插法，然后p&#x3D;4，q&#x3D;3，o&#x3D;1，34</p>
-<p>结束后就是head&#x3D;o，p&#x3D;head&#x3D;1，q&#x3D;7，然后接着进行更新</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">   <span class="comment">/*1.首先求出长度n</span></span><br><span class="line"><span class="comment">   2.第一个for i是求出层数</span></span><br><span class="line"><span class="comment">   3.第二个for是求出分了几组，想领2gei是一组</span></span><br><span class="line"><span class="comment">   4.然后对q走到下一个开头，p是当前的开头</span></span><br><span class="line"><span class="comment">   5.对o走到2i的位置，使他们可以接着循环</span></span><br><span class="line"><span class="comment">   6.之后就是常规的归并方法使用while</span></span><br><span class="line"><span class="comment">   7.一层遍历结束完成后，让cur-&gt;next=null,同事更新head为dummy-》nexzt表示新的开头</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">sortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 使用地带进行排序</span></span><br><span class="line">        <span class="type">int</span> n=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">auto</span> cur=head;</span><br><span class="line">        <span class="keyword">while</span>(cur)&#123;</span><br><span class="line">            n++;</span><br><span class="line">            cur=cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;n;i*=<span class="number">2</span>)&#123;</span><br><span class="line">             <span class="keyword">auto</span> dummy=<span class="keyword">new</span> <span class="built_in">ListNode</span>(<span class="number">-1</span>);</span><br><span class="line">            <span class="comment">//  dummy指示的是一层的开始</span></span><br><span class="line">            cur=dummy;</span><br><span class="line">            <span class="comment">//第一层循环是层数，从第一个开始,1,2,4</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j+=<span class="number">2</span>*i)&#123;</span><br><span class="line">                <span class="comment">//第二个循环是组好，然后进行比较</span></span><br><span class="line">                <span class="comment">//  在组好开始进行排序 这是一次组里的比较</span></span><br><span class="line">               </span><br><span class="line">                <span class="comment">// auto cur=dummy;使用cur来进行插入</span></span><br><span class="line">                <span class="keyword">auto</span> p=head;<span class="comment">//第一组开始</span></span><br><span class="line">                 <span class="keyword">auto</span> q=p;<span class="comment">//第二组开始</span></span><br><span class="line">                </span><br><span class="line">                <span class="comment">//找到下一个组开始的0号</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>;k&lt;i&amp;&amp;q;k++)&#123;</span><br><span class="line">                    q=q-&gt;next;</span><br><span class="line">                    <span class="comment">//下一组的开始</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">auto</span> o=q;<span class="comment">//下一组的开始标签，使用2i开始</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>;k&lt;i&amp;&amp;o;k++)&#123;</span><br><span class="line">                    o=o-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> l=<span class="number">0</span>;</span><br><span class="line">                <span class="type">int</span> r=<span class="number">0</span>;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// 两个开始,第一组开始都是1开始比较</span></span><br><span class="line">                <span class="keyword">while</span>(p&amp;&amp;q&amp;&amp;l&lt;i&amp;&amp;r&lt;i)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(p-&gt;val&lt;q-&gt;val)&#123;</span><br><span class="line">                        l++;</span><br><span class="line">                     cur-&gt;next=p;</span><br><span class="line">                     cur=cur-&gt;next;</span><br><span class="line">                     p=p-&gt;next;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        r++;</span><br><span class="line">                        cur-&gt;next=q;</span><br><span class="line">                        cur=cur-&gt;next;</span><br><span class="line">                        q=q-&gt;next;</span><br><span class="line">                        <span class="comment">//尾插法</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span>(p&amp;&amp;l&lt;i)&#123;</span><br><span class="line">                    l++;</span><br><span class="line">                     cur-&gt;next=p;</span><br><span class="line">                     cur=cur-&gt;next; </span><br><span class="line">                     p=p-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span>(q&amp;&amp;r&lt;i)&#123;</span><br><span class="line">                   r++;</span><br><span class="line">                        cur-&gt;next=q;</span><br><span class="line">                        cur=cur-&gt;next;</span><br><span class="line">                        q=q-&gt;next;</span><br><span class="line">                        <span class="comment">//尾插法 </span></span><br><span class="line">                &#125;</span><br><span class="line">                head=o;<span class="comment">//下一次开始</span></span><br><span class="line">                <span class="comment">// cout&lt;&lt;head-&gt;val&lt;&lt;&quot; &quot;;</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 整个结束了，插入到开始</span></span><br><span class="line">            cur-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">            <span class="comment">//尾插法，是因为要保持开始的顺序不变</span></span><br><span class="line">            head=dummy-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/19/leetcode148/" data-id="cm1tjy5wh00228cw787ul9ndn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linked-list/" rel="tag">linked list</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-pa配置vscode" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/18/pa%E9%85%8D%E7%BD%AEvscode/" class="article-date">
-  <time datetime="2022-11-18T12:59:12.000Z" itemprop="datePublished">2022-11-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/18/pa%E9%85%8D%E7%BD%AEvscode/">pa配置vscode</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="pa配置vscode"><a href="#pa配置vscode" class="headerlink" title="pa配置vscode"></a>pa配置vscode</h1><h2 id="1-为什么会写这一个"><a href="#1-为什么会写这一个" class="headerlink" title="1.为什么会写这一个"></a>1.为什么会写这一个</h2><p>目前正在写nju pa。pa是用makefile进行构建的，然后使用了多个自定义宏，导致，无法进行，直接的和之前一样，按一下run就可以运行。所以得进行手动配置。</p>
-<p>还有就是，没有使用ide进行编码，导致一堆{}对齐的问题，然后找bug比较难受</p>
-<h2 id="2-配置方法"><a href="#2-配置方法" class="headerlink" title="2.配置方法"></a>2.配置方法</h2><p>根据jyy<a href="https://www.bilibili.com/video/BV1qa4y1j7xk?p=4&vd_source=d043013c6aa637931d747eae4c52b842">的课程</a>在1小时16分钟左右的时候，只需要进行vscode配置一会儿就可以正常使用。把defines里面进行添加宏就可以，这个宏如何查找，在第三届讲makefile的时候介绍过。我们使用make -nB(可以进行强制编译所有的)然后我们使用vim</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687772080711668777207848.png"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make -nB \</span><br><span class="line"> | grep -ve &#x27;^\(\#\|echo\|mkdir\)&#x27; \</span><br><span class="line"> | vim -</span><br></pre></td></tr></table></figure>
-
-<p>然后进行搜索 -D ，这个参数就是在编译里面加入自定义宏，然后我们把这些宏进行拷贝过来，使用管道连接，去除echo 还有mkidr，传递给vim，vim用搜索按钮查找就可以</p>
-<h2 id="3-vscode配置教程"><a href="#3-vscode配置教程" class="headerlink" title="3.vscode配置教程"></a>3.vscode配置教程</h2><p>参考教程：<a href="https://zhuanlan.zhihu.com/p/87864677">https://zhuanlan.zhihu.com/p/87864677</a></p>
-<ol>
-<li>安装c++插件</li>
-<li>安装远程开发（我是用的虚拟机，进行ssh开发）</li>
-<li>之后就是通过ssh连接虚拟机，然后插件安装后，进行设置</li>
-<li>进行配置c_cpp_properties.json，在defines进行添加宏（无人其他改动）</li>
-<li><strong>接下来就是配置gdb</strong></li>
-</ol>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Linux&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;includePath&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$&#123;workspaceFolder&#125;/**&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;defines&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;__GUESR_ISA__=riscv64&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;_GNU_SOURCE&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;__STDC_CONSTANT_MACROS&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;__STDC_FORMAT_MACROS&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;__STDC_LIMIT_MACROS&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;compilerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/clang&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cStandard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c17&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cppStandard&quot;</span><span class="punctuation">:</span> <span class="string">&quot;c++14&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;intelliSenseMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;linux-clang-x64&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="number">4</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>gdb配置有坑：</p>
-<p>参考下面 ： <a href="https://www.youtube.com/watch?v=9VpiGwp8Vos&ab_channel=SavvyNik">https://www.youtube.com/watch?v=9VpiGwp8Vos&amp;ab_channel=SavvyNik</a></p>
-<p>我们要进行配置gdb，就得要在编译过程加入- g ，这个可以在makefile发现是在build.mk里面的，我们加入-g选项。然后还得设置launch.json</p>
-<p>参考如下：<a href="https://blog.csdn.net/zztiger123/article/details/105544640">https://blog.csdn.net/zztiger123/article/details/105544640</a></p>
-<p>修改program为build下面那个输出的，然后cwd，修改为nemu的目录</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 使用 IntelliSense 了解相关属性。 </span></span><br><span class="line">    <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">    <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;(gdb) Launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceRoot&#125;/nemu/build/riscv64-nemu-interpreter&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;-b&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;stopAtConnect&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceRoot&#125;/nemu&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">            <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;为 gdb 启用整齐打印&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span>  <span class="string">&quot;将反汇编风格设置为 Intel&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-gdb-set disassembly-flavor intel&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;miDebuggerPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/gdb&quot;</span><span class="punctuation">,</span> </span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>这个结束之后，有个坑，jyy在is_mode_batch这个函数设置为true，我用gdb就追踪不了，我输入p命令的结果，把那个函数值设置为false就可以走正常流程，进行追踪。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;make&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;make -j8&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppbuild&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;C/C++: gcc 生成活动文件&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/gcc&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-fdiagnostics-color=always&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;file&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;fileDirname&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;problemMatcher&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;$gcc&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;detail&quot;</span><span class="punctuation">:</span> <span class="string">&quot;调试器生成的任务。&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-clion应该也一样"><a href="#4-clion应该也一样" class="headerlink" title="4.clion应该也一样"></a>4.clion应该也一样</h2><p>明天有空在进行配置clion，修改自定义make目标，然后进行添加，可以参考下面的连接</p>
-<p><a href="https://www.jetbrains.com/help/clion/custom-build-targets.html#custom-rundebug">https://www.jetbrains.com/help/clion/custom-build-targets.html#custom-rundebug</a></p>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><p>pa确实难，对于我这个非科班跨考的。不过感觉也学到挺多知识的，好的大学，课程真的可以和没过高校的课程差不多，现在才做完1.2，还得接着写。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/18/pa%E9%85%8D%E7%BD%AEvscode/" data-id="cm1tjy5wm002r8cw70fc28742" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nemu/" rel="tag">nemu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pa/" rel="tag">pa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-学习技巧" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/18/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/" class="article-date">
-  <time datetime="2022-11-18T09:48:27.000Z" itemprop="datePublished">2022-11-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/18/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/">学习技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-学习技巧"><a href="#1-学习技巧" class="headerlink" title="1.学习技巧"></a>1.学习技巧</h1><p>来源于youtube 的crashcourse 里面分为10节进行讲述，如何学习。一个半小时左右可以看完，还是很不错的。具体连接如下</p>
-<p><a href="https://youtu.be/IhuwS5ZLwKY">https://youtu.be/IhuwS5ZLwKY</a></p>
-<p>看完了这个视频，解决了我研一所与到的多个问题，是使用笔记本还是手写做笔记。做笔记的方法有哪些怎么进行读书</p>
-<h2 id="1-1学会做笔记"><a href="#1-1学会做笔记" class="headerlink" title="1.1学会做笔记"></a>1.1学会做笔记</h2><p>分为下面几个重点</p>
-<p>1.<strong>工具</strong></p>
-<ol>
-<li>电脑</li>
-<li>传统的笔记本</li>
-</ol>
-<blockquote>
-<p><strong>研究表明，使用电脑的打字速度会更快，但是，打字只会让自己变成一个记忆机器，没有自己的思考。人的大佬不能并行处理时间（打字还有进行思考），所以得需要使用纸币来进行记录，这样不会进行打断思路</strong></p>
-</blockquote>
-<p>2.<strong>记录内容</strong></p>
-<ol>
-<li>idea</li>
-<li>专业术语</li>
-<li>例子</li>
-</ol>
-<p>3.<strong>笔记记录方式</strong></p>
-<ol>
-<li>思维导图，xmind</li>
-<li>cmu笔记，使用左边hint，右边笔记，下面是总结</li>
-<li>总结（目录法），就是word</li>
-</ol>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687713222201668771322176.png" alt="word大纲"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687713750721668771374689.png"></p>
-<h2 id="1-2读书"><a href="#1-2读书" class="headerlink" title="1.2读书"></a>1.2读书</h2><p>只能处理4-7bit的信息</p>
-<p>看论文的方法</p>
-<p>如何学习可课本教科书</p>
-<ol>
-<li>简介</li>
-<li>标题</li>
-<li>课后习题</li>
-</ol>
-<p><strong>如何快速的阅读</strong></p>
-<ol>
-<li>设置时间ddl</li>
-<li>使用highlight</li>
-<li>使用跳读,(跳过 and,or)</li>
-<li>消除默读现象</li>
-</ol>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687716960771668771695525.png"></p>
-<p>广泛的阅读还有其他多看书</p>
-<ol>
-<li>观点花点</li>
-<li>论证的用破折号</li>
-</ol>
-<h2 id="1-3回忆与记忆"><a href="#1-3回忆与记忆" class="headerlink" title="1.3回忆与记忆"></a>1.3回忆与记忆</h2><p>recall&amp;memory</p>
-<p>工作记忆只能处理4-7位的信息</p>
-<p>长期记忆需要进行连接</p>
-<p>记忆喜欢记得是图像,有形的(使用注记法),就是被关键词,使用联想法</p>
-<p>然后就是记忆衰退的方法,多次检索,就会容易回忆(就是多次开始记录)</p>
-<p>盒子记录：就是anki，会的就进入下一个盒子，不会的就重新回到第一个盒子</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687725300721668772529814.png"></p>
-<p>，每天学习，没三天学习</p>
-<h2 id="1-4如何做组织管理"><a href="#1-4如何做组织管理" class="headerlink" title="1.4如何做组织管理"></a>1.4如何做组织管理</h2><p>这一节，解决了我之前想的，到底如何进行处理数据。使用日历+todo+笔记系统（calendar+todo+typora）</p>
-<p>学习必须要在学习环境，在图书馆，或者咖啡店</p>
-<p><strong>及时捕获自己的想法</strong></p>
-<ol>
-<li>任务</li>
-<li>事件</li>
-<li>还有知识</li>
-<li>想法（论文的idea）</li>
-</ol>
-<p><strong>输出自己的想法</strong></p>
-<ol>
-<li>写作</li>
-<li>代码</li>
-</ol>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687728890711668772888770.png"></p>
-<p><strong>记录自己的戒指信息还有任务详情</strong></p>
-<p>谷歌日历来进行记录</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687730720801668773071545.png"></p>
-<p>云端笔记如何记录：</p>
-<blockquote>
-<p>使用电脑结构，跟目录，时间，课程</p>
-</blockquote>
-<p>quick catch：</p>
-<ol>
-<li>当时有的信息，就储存下来</li>
-<li>使用todo，记录今天发生的事件</li>
-</ol>
-<p>每周计划还有每日计划</p>
-<ol>
-<li>每个星期天来做（分成几个小块）</li>
-<li><strong>杂事（全部在一起处理）</strong></li>
-<li>还要复盘，每周（什么做了。什么没做）</li>
-</ol>
-<p>为什么无法坚持，因为熵增定律</p>
-<h2 id="1-5如何专注"><a href="#1-5如何专注" class="headerlink" title="1.5如何专注"></a>1.5如何专注</h2><blockquote>
-<p>这个解决了，我为什么感觉什么都没有学到专注不了自己喜欢的东西</p>
-</blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687735320721668773531358.png"></p>
-<p>基于任务的（做数学题），自顶向下的，但是会匹配</p>
-<p>如何加强自己</p>
-<ol>
-<li>环境</li>
-<li>兴趣爱好</li>
-<li>还有大脑的状态</li>
-</ol>
-<p><strong>加强自己专注</strong></p>
-<ol>
-<li>去图书馆（健身房就会自己想去健身）</li>
-<li>停止多线程，经常切换，会让自己的大脑没有思路</li>
-<li>关闭手机（断网，有时候多就是少，关闭手机还有电脑）（请勿打扰）</li>
-<li>把我任务进行结块（摘要，结论，研究方法，实验）</li>
-<li>使用forset或者番茄土豆（不要切换任务）</li>
-<li>还要学会放松</li>
-</ol>
-<h2 id="1-6拖延症"><a href="#1-6拖延症" class="headerlink" title="1.6拖延症"></a>1.6拖延症</h2><blockquote>
-<p>又是一个好的course，给解决拖延症提供了思路</p>
-</blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687744690781668774468167.png"></p>
-<p>预期可以考到那个学校（求其上这得中）</p>
-<p>价值越高（就是工作给的钱，就不会不拖延）</p>
-<p>冲动做其他的事，拖延的时间越长，就容易拖延（</p>
-<p><strong>减少冲动</strong></p>
-<ol>
-<li>分解任务</li>
-</ol>
-<p><strong>寻求帮助</strong></p>
-<ol>
-<li><p>成立学习小组</p>
-</li>
-<li><p>提高奖励（看完论文和朋友看电影</p>
-</li>
-<li><p>提高体验（打游戏，很久时间）</p>
-</li>
-<li><p>去图书馆</p>
-</li>
-<li><p>使用block进行阻挡网络</p>
-</li>
-<li><p>使用番茄土豆</p>
-</li>
-</ol>
-<p><strong>进行娱乐</strong></p>
-<h2 id="1-10体育学习"><a href="#1-10体育学习" class="headerlink" title="1.10体育学习"></a>1.10体育学习</h2><p>健身版提供助学习，还是要运动。 </p>
-<p>用进废退</p>
-<p>定期训练</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/18/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/" data-id="cm1tjy5x000438cw749tcffn1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crash-course/" rel="tag">crash course</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">学习方法</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-虚拟机网络" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/18/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-date">
-  <time datetime="2022-11-18T09:32:01.000Z" itemprop="datePublished">2022-11-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/18/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C/">虚拟机网络</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="vmware桥接没有网络"><a href="#vmware桥接没有网络" class="headerlink" title="vmware桥接没有网络"></a>vmware桥接没有网络</h1><p>好久没有登录虚拟机，虚拟机的桥接出现问题。我以为是这个虚拟机iso的问题。于是我对manjaro这个linux进行折腾了半天。从下午折腾到晚上。</p>
-<p>主要包括，自己手动进行网络配置，然后重新建立网卡，还使用其他网络工具。最后我对网络进行啥用nat可以联网，但是使用nat联网，我的jetbrains gateway的配置识别不了，换了nat的ip也进不去。于是我准备使用新的iso，同时在manjaro里面下载github，把我写的代码进行上传。manjaro仓库有github第三方，可以直接下载。然后我是用deepin进行安装，安装完成后，我也是使用桥接的方式来进行连接，结果发现网络还是连接不了。那我就意识到是vmware的问题，于是我去stfw，网上进行搜索，发现这个问题是因为vmwarre进行桥接的时候识别不了，本机现在联网的网卡，需要自己手动设置。我 手动设置之后，结果两个linux都连上网了，又是折腾了一下午。</p>
-<p>主要还是对manjaro这个系统不熟悉，我看到他的问题，显示已经连上网络，但是不能上网，我就以为是可能香谷歌那种，只是上不了谷歌才显示的，于是就以为是linux的问题。但是deepin安装完成后，直接就是显示网络平已经断开，所以，我才觉得是虚拟机的问题。</p>
-<hr>
-<p>总结</p>
-<ol>
-<li>主要是对manjaro这个linux发行版不熟悉</li>
-<li>然后就是vmaware这个软件的bug</li>
-</ol>
-<p>具体解决方法</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16687647390781668764738161.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/18/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-id="cm1tjy5xf00658cw7apfo9yge" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-多源bfs" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/12/%E5%A4%9A%E6%BA%90bfs/" class="article-date">
-  <time datetime="2022-11-12T13:26:33.000Z" itemprop="datePublished">2022-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/12/%E5%A4%9A%E6%BA%90bfs/">多源bfs</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="多源bfs-最小树"><a href="#多源bfs-最小树" class="headerlink" title="多源bfs&amp;最小树"></a>多源bfs&amp;最小树</h1><h2 id="0-证明"><a href="#0-证明" class="headerlink" title="0.证明"></a>0.证明</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682604660491668260465791.png"></p>
-<p>归纳法,开始为0,不用证明</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682605600491668260559129.png"></p>
-<p>去除对头的第一个元素x,可以加入3个x+1的元素,最多有两端</p>
-<p>两个特性,一般是队列,前面是x,后面是x+1</p>
-<p>默认开始的元素是最小值,喝dij的使用优先队列的最小值一样.</p>
-<p>入队就是最小值的</p>
-<h2 id="1-bfs"><a href="#1-bfs" class="headerlink" title="1.bfs"></a>1.bfs</h2><h3 id="1-1矩阵距离"><a href="#1-1矩阵距离" class="headerlink" title="1.1矩阵距离"></a>1.1矩阵距离</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682596642021668259663290.png"></p>
-<blockquote>
-<p>大致意识就是求每个位置到1的最短距离</p>
-</blockquote>
-<p>这个就是求最短路,求每个点到一堆起点的距离,建立一个虚拟起点,让1 作为起点开始寻找,然后使用虚拟起点,连接所有的 1</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682598242021668259823715.png"></p>
-<p>思路:先把所有是1的位置加入到queue里面,距离是0</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682603282041668260328053.png"></p>
-<p>重点是找到放入所有的值,还有一个就是进行更新,tt&#x3D;-1</p>
-<hr>
-<p>总体思路如下</p>
-<ol>
-<li>使用1作为开始的点,把所有的1进行插入到队列</li>
-<li>之后就是常规bfs,进行pop</li>
-<li>然后第二阶段就是搜索周围的元素,找到符合的元素,二姐没有被使用(没有被使用就是距离为-1),使用的直接continue</li>
-<li>然后进行更新,更新之后在把他插入到队列里面,</li>
-</ol>
-<h2 id="2-魔棒"><a href="#2-魔棒" class="headerlink" title="2.魔棒"></a>2.魔棒</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682614080511668261407501.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682616770571668261677035.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682616960541668261695181.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16682617290551668261728112.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/12/%E5%A4%9A%E6%BA%90bfs/" data-id="cm1tjy5wz00418cw7fkzl8p3s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MMPose/" rel="tag">MMPose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/btc/" rel="tag">btc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cf/" rel="tag">cf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clash/" rel="tag">clash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash-course/" rel="tag">crash course</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs144/" rel="tag">cs144</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/detection/" rel="tag">detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ic/" rel="tag">ic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/image-classification/" rel="tag">image classification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mastercard/" rel="tag">mastercard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mmlab/" rel="tag">mmlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nemu/" rel="tag">nemu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/office/" rel="tag">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa/" rel="tag">pa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pat/" rel="tag">pat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag">pa，一生一芯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag">pve，虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytorch/" rel="tag">pytorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/segmentation/" rel="tag">segmentation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/torch/" rel="tag">torch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/usdt/" rel="tag">usdt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/warp/" rel="tag">warp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/" rel="tag">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%BA/" rel="tag">人机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag">使用工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%87%91/" rel="tag">入金</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" rel="tag">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BA%E8%A1%8C/" rel="tag">出行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%B2%BB/" rel="tag">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag">回溯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" rel="tag">土耳其</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E6%B1%87/" rel="tag">外汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" rel="tag">多萝西</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag">心理学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" rel="tag">数字逻辑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">旅游</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag">最短路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" rel="tag">栈的应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B0%B4%E9%A2%98/" rel="tag">水题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%87%E4%B8%B0/" rel="tag">汇丰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag">滑动窗口</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">王道数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BA%A4/" rel="tag">社交</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" rel="tag">社会学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" rel="tag">算法基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag">线性代数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E8%AF%BE/" rel="tag">网课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" rel="tag">计算机教程缺失的一课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" rel="tag">语音识别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" rel="tag">跨境交易</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%93%E5%85%A5/" rel="tag">输入</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" rel="tag">运筹学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" rel="tag">银行卡</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" rel="tag">面试经验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A6%99%E6%B8%AF/" rel="tag">香港</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/MMPose/" style="font-size: 10px;">MMPose</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/bilibili/" style="font-size: 10px;">bilibili</a> <a href="/tags/btc/" style="font-size: 10px;">btc</a> <a href="/tags/cf/" style="font-size: 10px;">cf</a> <a href="/tags/clash/" style="font-size: 10px;">clash</a> <a href="/tags/crash-course/" style="font-size: 10px;">crash course</a> <a href="/tags/cs144/" style="font-size: 10px;">cs144</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/detection/" style="font-size: 10px;">detection</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/ic/" style="font-size: 10px;">ic</a> <a href="/tags/image-classification/" style="font-size: 10px;">image classification</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/leetcode/" style="font-size: 11.43px;">leetcode</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked list</a> <a href="/tags/linux/" style="font-size: 12.86px;">linux</a> <a href="/tags/mastercard/" style="font-size: 10px;">mastercard</a> <a href="/tags/mmlab/" style="font-size: 12.86px;">mmlab</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nemu/" style="font-size: 10px;">nemu</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/office/" style="font-size: 10px;">office</a> <a href="/tags/pa/" style="font-size: 11.43px;">pa</a> <a href="/tags/pat/" style="font-size: 18.57px;">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 10px;">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/pytorch/" style="font-size: 14.29px;">pytorch</a> <a href="/tags/segmentation/" style="font-size: 10px;">segmentation</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/torch/" style="font-size: 10px;">torch</a> <a href="/tags/usdt/" style="font-size: 10px;">usdt</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/warp/" style="font-size: 10px;">warp</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/%E4%BA%BA%E6%9C%BA/" style="font-size: 10px;">人机</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">使用工具</a> <a href="/tags/%E5%85%A5%E9%87%91/" style="font-size: 10px;">入金</a> <a href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" style="font-size: 10px;">公开课</a> <a href="/tags/%E5%87%BA%E8%A1%8C/" style="font-size: 10px;">出行</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 10px;">分治</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 11.43px;">动态规划</a> <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 10px;">后序遍历</a> <a href="/tags/%E5%9B%9E%E6%BA%AF/" style="font-size: 10px;">回溯</a> <a href="/tags/%E5%9B%BE/" style="font-size: 12.86px;">图</a> <a href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" style="font-size: 10px;">土耳其</a> <a href="/tags/%E5%A4%96%E6%B1%87/" style="font-size: 11.43px;">外汇</a> <a href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" style="font-size: 10px;">多萝西</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">学习方法</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 15.71px;">排序</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" style="font-size: 10px;">数字逻辑</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 17.14px;">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 10px;">数论</a> <a href="/tags/%E6%97%85%E6%B8%B8/" style="font-size: 10px;">旅游</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" style="font-size: 10px;">最短路径</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" style="font-size: 10px;">栈的应用</a> <a href="/tags/%E6%A0%91/" style="font-size: 14.29px;">树</a> <a href="/tags/%E6%B0%B4%E9%A2%98/" style="font-size: 15.71px;">水题</a> <a href="/tags/%E6%B1%87%E4%B8%B0/" style="font-size: 10px;">汇丰</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 11.43px;">深度学习</a> <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" style="font-size: 10px;">滑动窗口</a> <a href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14.29px;">王道数据结构</a> <a href="/tags/%E7%A4%BE%E4%BA%A4/" style="font-size: 10px;">社交</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" style="font-size: 10px;">社会学</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">算法基础</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 10px;">线性代数</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a> <a href="/tags/%E7%BD%91%E8%AF%BE/" style="font-size: 10px;">网课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" style="font-size: 10px;">计算机教程缺失的一课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" style="font-size: 10px;">语音识别</a> <a href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" style="font-size: 10px;">跨境交易</a> <a href="/tags/%E8%BE%93%E5%85%A5/" style="font-size: 10px;">输入</a> <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" style="font-size: 10px;">运筹学</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 10px;">运维</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 11.43px;">递归</a> <a href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" style="font-size: 10px;">银行卡</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 15.71px;">链表</a> <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 10px;">闲谈</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 10px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" style="font-size: 10px;">面试经验</a> <a href="/tags/%E9%A6%99%E6%B8%AF/" style="font-size: 10px;">香港</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/10/04/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/d/">d</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/nothing/">nothing</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/">第二周，GIN入门</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">第一周，go语言拾遗</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2024 weijia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">98</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/26/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" title="数字逻辑">数字逻辑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-26T07:45:52.000Z" title="Created 2022-11-26 15:45:52">2022-11-26</time></span></div><div class="content">数电小结1.逻辑代数第一章主要是讲逻辑代数，主要是离散数学的知识，这些知识在考验期间学过，就直接跳过。包括逻辑化简，最小项还有最大项。砌筑一个新的知识点就是卡洛图。下面简单介绍一下卡诺图。
+卡诺图：用小方格来表示最小项，一个小方格代表一个最小项，然后将这些最小项按照相邻性排列起来（00 01 11 10）。
+注意，是使用01还有11，不是01,10这样排列，这样是为了，能够2个都是1可以消除第一位，只留下一，还有10和00也是可以在一起进行消除的。
+无关项：就是值未知的项，值为x，可0可1，一般是为了凑成最大的圈，就把x设置为1
+卡诺图化简规则
+
+尽量化最大的圈（只能是2的倍数）
+化尽量少的圈
+然后进行看无关项，如果无关项可以进行辅助化简也加进来
+
+2.组合逻辑基础知识：与或非异或，基本的门电路
+电路分析，一般使用一下方法
+
+直接按照输入输出进行化简
+或者是对表达式，进行逻辑组合进行化简
+或者是真值表，进行最小项来直接得到结果
+
+2.1组合逻辑电路编码器：就是把独热编码进行转化为相应的二进制代码把（0010）转化为二进制就是10（因为是2位使用，二进制就是10）
+优先编码器：允许同时输 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/26/%E8%81%8C%E5%9C%BAnetworking/" title="职场networking">职场networking</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-26T07:08:19.000Z" title="Created 2022-11-26 15:08:19">2022-11-26</time></span></div><div class="content">职场networking以下内容来源于小林说职场,关注小林的youtube即可
+1.为什么需要
+帮你快速了解整个流程(大一,找到学长学姐,直接知道大学三年,怎么走)
+然后根据这些经验与其他人相互交流,这样别的人也会觉得你是有点东西的
+
+2.如何开始分为线上还有平级社交,想射由于是boss,有点难度.
+但是平级社交容易开始:
+
+平级社交本质就是价值交换
+
+只有我的价值有用才可以开始社交,普通人之间相互开始的.
+如何开始:
+
+可以帮助他们查资料(做实验的时候)
+举办活动的时候做志愿者
+逢年过节(写上祝福)
+
+最简单的方式.
+如何溶蚀他人—-把自己要说的话写好,然后再转发给那个帮你的人(可以节约他的时间)
+3.认识人模板还是经典的三段论
+
+自我介绍
+说明来意
+提出需求
+
+1.自我介绍:
+
+xxx你好,我叫xxx,来自xxx.我从我那个水知道你,知道你是我们学校的做个这有很高方向的人
+
+2.说明来意:
+
+我目前做的研究与你这个有关联,再研究调养期间,发现你的论文对我很有帮助,然后正在逐步学习你的代码
+
+3.提出需求:
+
+然后发现,您的代码,有些逻辑,不太理解.能1请耽误您15分钟的时间,能简介 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/25/%E4%BA%BA%E9%99%85%E7%A4%BE%E4%BC%9A%E5%AD%A6/" title="人际社会学">人际社会学</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-25T07:17:18.000Z" title="Created 2022-11-25 15:17:18">2022-11-25</time></span></div><div class="content">人机解剖1.什么叫魅力
+刚开始不认识对方还是和和气气的,认识之后就对对方可以调戏.这是因为我们知道了对方的框架.
+
+框架:
+
+对方能接受的底线(一开始不知道对方的底线)
+包括对方喜欢什么,还有不接受什么
+
+人与人认识,就是认识对方的框架
+
+能量:
+
+为什么会在开始,就知道这个人能不能决胜.(因为已经做好准备了,兵马未动,粮草先行)
+
+决定你能不能取胜都是事前的准备(例如1km,取决于之前的锻炼,而不i是今天自己的爆发)
+做好准备就是决定能量的多少就是你的实力
+
+实力:
+
+社会是幕强的
+绝对实力再任何技巧面前都是没用的(只要篮球够好,总有一堆人喜欢你的)
+赢家通吃(长得帅一堆女生)
+
+
+提升实力:
+能量&#x3D;&#x3D;&gt;包括实力
+实力&#x3D;价值+稀缺性
+实力可以包括:
+
+兴趣(使用电脑)
+优势(数学&amp;英语)
+
+价值:取决于你所在位置的用途(滑雪对boss没什么用,只能当运动员)
+稀缺性:阳光,空气还有水都有价值(但没有稀缺性,信息是有稀缺性的)
+
+稀缺性构建:
+
+信息过剩(查询到有用信息,查询会计师信息)
+知识(知道信息,学习知识,使用某本书)
+能力(需要联系 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/19/pa1-1%E5%B0%8F%E7%BB%93/" title="pa1.1小结">pa1.1小结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-19T12:41:21.000Z" title="Created 2022-11-19 20:41:21">2022-11-19</time></span></div><div class="content">pa1.1本章主要是要求大家进行使用构建完成简易表达式，主要包括单步执行，打印寄存器，还有扫描内存
+
+为什么使用static，因为使用static可以解决两个c文件有相同函数名的问题，不会造成编译问题
+
+单步执行但不执行，我们可以看到远吗使用的cmdc这个函数
+12345static int cmd_c(char *args) &#123;//    -1是65535最大的2的64-1  cpu_exec(-1);  return 0;&#125;
+
+
+
+使用cpu_exec代表就是直接执行，使用-1，因为这是uint，无符号，-1的无符号就是最大值
+123456789void cpu_exec(uint64_t n) &#123;  g_print_step = (n &lt; MAX_INST_TO_PRINT);  switch (nemu_state.state) &#123;    case NEMU_END: case NEMU_ABORT:      printf(&quot;Program execution has ended. To restart the prog ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/19/leetcode150/" title="leetcode150">leetcode150</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-19T12:33:58.000Z" title="Created 2022-11-19 20:33:58">2022-11-19</time></span></div><div class="content">leetcode 150
+Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+Valid operators are +, -, *, and /. Each operand may be an integer or another expression.
+Note that division between two integers should truncate toward zero.
+It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a result, and there will not be any division by zero operation.
+
+题意本题是给你了逆波兰表达式，让你自己求，这个结果。
+思路我们可以发现，这个就是后缀表达式，使用后缀遍历，然后我们也可以发现，这个树的叶子节点就是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/19/leetcode148/" title="leetcode148">leetcode148</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-19T12:13:00.000Z" title="Created 2022-11-19 20:13:00">2022-11-19</time></span></div><div class="content">leetcode 148
+Given the head of a linked list, return the list after sorting it in ascending order.
+
+
+
+Follow up: Can you sort the linked list in O(n logn) time and O(1) memory (i.e. constant space)?
+
+题意把链表进行排序输出，但是只能使用o1的空间，nlogn的时间。
+思路使用nlogn的方法来进行排序只有快排还有归并，但是都是用来递归，那空间就是on。所以只能使用迭代的方法来进行排序。
+地带也是给予归并的，就是我们手动从下到上，手动进行排序。排序完成一层厚，再次进行下一层来排序。
+现在我们进行引进dummy还有cur，dummy使用尾插法，来构建新的完整的链表（这是新一层的）
+每一层开始的时候p&#x3D;q&#x3D;head，
+然后q多走i补来达到下一组的开始
+然后引进p还有q，pq是两组的开头，对pq进行循环遍历，次数小于1,2,4，（这是分组的方式）。同事还有一个 o，o是2i的位 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/18/pa%E9%85%8D%E7%BD%AEvscode/" title="pa配置vscode">pa配置vscode</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-18T12:59:12.000Z" title="Created 2022-11-18 20:59:12">2022-11-18</time></span></div><div class="content">pa配置vscode1.为什么会写这一个目前正在写nju pa。pa是用makefile进行构建的，然后使用了多个自定义宏，导致，无法进行，直接的和之前一样，按一下run就可以运行。所以得进行手动配置。
+还有就是，没有使用ide进行编码，导致一堆{}对齐的问题，然后找bug比较难受
+2.配置方法根据jyy的课程在1小时16分钟左右的时候，只需要进行vscode配置一会儿就可以正常使用。把defines里面进行添加宏就可以，这个宏如何查找，在第三届讲makefile的时候介绍过。我们使用make -nB(可以进行强制编译所有的)然后我们使用vim
+
+123make -nB \ | grep -ve &#x27;^\(\#\|echo\|mkdir\)&#x27; \ | vim -
+
+然后进行搜索 -D ，这个参数就是在编译里面加入自定义宏，然后我们把这些宏进行拷贝过来，使用管道连接，去除echo 还有mkidr，传递给vim，vim用搜索按钮查找就可以
+3.vscode配置教程参考教程：https://zhuanlan.zhihu.com/p/87864677
+
+安装c++插件
+安装远 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/18/%E5%AD%A6%E4%B9%A0%E6%8A%80%E5%B7%A7/" title="学习技巧">学习技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-18T09:48:27.000Z" title="Created 2022-11-18 17:48:27">2022-11-18</time></span></div><div class="content">1.学习技巧来源于youtube 的crashcourse 里面分为10节进行讲述，如何学习。一个半小时左右可以看完，还是很不错的。具体连接如下
+https://youtu.be/IhuwS5ZLwKY
+看完了这个视频，解决了我研一所与到的多个问题，是使用笔记本还是手写做笔记。做笔记的方法有哪些怎么进行读书
+1.1学会做笔记分为下面几个重点
+1.工具
+
+电脑
+传统的笔记本
+
+
+研究表明，使用电脑的打字速度会更快，但是，打字只会让自己变成一个记忆机器，没有自己的思考。人的大佬不能并行处理时间（打字还有进行思考），所以得需要使用纸币来进行记录，这样不会进行打断思路
+
+2.记录内容
+
+idea
+专业术语
+例子
+
+3.笔记记录方式
+
+思维导图，xmind
+cmu笔记，使用左边hint，右边笔记，下面是总结
+总结（目录法），就是word
+
+
+
+1.2读书只能处理4-7bit的信息
+看论文的方法
+如何学习可课本教科书
+
+简介
+标题
+课后习题
+
+如何快速的阅读
+
+设置时间ddl
+使用highlight
+使用跳读,(跳过 and,or)
+消除默读现象
+
+
+广泛的阅读还有其他多看书
+
+观点花点
+论证的用 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/18/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="虚拟机网络">虚拟机网络</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-18T09:32:01.000Z" title="Created 2022-11-18 17:32:01">2022-11-18</time></span></div><div class="content">vmware桥接没有网络好久没有登录虚拟机，虚拟机的桥接出现问题。我以为是这个虚拟机iso的问题。于是我对manjaro这个linux进行折腾了半天。从下午折腾到晚上。
+主要包括，自己手动进行网络配置，然后重新建立网卡，还使用其他网络工具。最后我对网络进行啥用nat可以联网，但是使用nat联网，我的jetbrains gateway的配置识别不了，换了nat的ip也进不去。于是我准备使用新的iso，同时在manjaro里面下载github，把我写的代码进行上传。manjaro仓库有github第三方，可以直接下载。然后我是用deepin进行安装，安装完成后，我也是使用桥接的方式来进行连接，结果发现网络还是连接不了。那我就意识到是vmware的问题，于是我去stfw，网上进行搜索，发现这个问题是因为vmwarre进行桥接的时候识别不了，本机现在联网的网卡，需要自己手动设置。我 手动设置之后，结果两个linux都连上网了，又是折腾了一下午。
+主要还是对manjaro这个系统不熟悉，我看到他的问题，显示已经连上网络，但是不能上网，我就以为是可能香谷歌那种，只是上不了谷歌才显示的，于是就以为是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/12/%E5%A4%9A%E6%BA%90bfs/" title="多源bfs">多源bfs</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-12T13:26:33.000Z" title="Created 2022-11-12 21:26:33">2022-11-12</time></span></div><div class="content">多源bfs&amp;最小树0.证明
+归纳法,开始为0,不用证明
+
+去除对头的第一个元素x,可以加入3个x+1的元素,最多有两端
+两个特性,一般是队列,前面是x,后面是x+1
+默认开始的元素是最小值,喝dij的使用优先队列的最小值一样.
+入队就是最小值的
+1.bfs1.1矩阵距离
+
+大致意识就是求每个位置到1的最短距离
+
+这个就是求最短路,求每个点到一堆起点的距离,建立一个虚拟起点,让1 作为起点开始寻找,然后使用虚拟起点,连接所有的 1
+
+思路:先把所有是1的位置加入到queue里面,距离是0
+
+重点是找到放入所有的值,还有一个就是进行更新,tt&#x3D;-1
+
+总体思路如下
+
+使用1作为开始的点,把所有的1进行插入到队列
+之后就是常规bfs,进行pop
+然后第二阶段就是搜索周围的元素,找到符合的元素,二姐没有被使用(没有被使用就是距离为-1),使用的直接continue
+然后进行更新,更新之后在把他插入到队列里面,
+
+2.魔棒
+
+
+
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><a class="extend next" rel="next" href="/page/8/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">weijia</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">98</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/04/hello-world/" title="Hello World">Hello World</a><time datetime="2024-10-03T16:28:42.712Z" title="Created 2024-10-04 00:28:42">2024-10-04</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/03/d/" title="d">d</a><time datetime="2024-10-03T15:55:06.000Z" title="Created 2024-10-03 23:55:06">2024-10-03</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/03/nothing/" title="nothing">nothing</a><time datetime="2024-10-03T15:55:01.000Z" title="Created 2024-10-03 23:55:01">2024-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门"><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727960975879-69b8efa7-7210-44e9-aebc-9ba048065f69.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二周，GIN入门"/></a><div class="content"><a class="title" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门">第二周，GIN入门</a><time datetime="2024-10-03T13:03:19.000Z" title="Created 2024-10-03 21:03:19">2024-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗"><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727956986927-b9d68bdf-c839-4ebc-abf1-e35003ecff6e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一周，go语言拾遗"/></a><div class="content"><a class="title" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗">第一周，go语言拾遗</a><time datetime="2024-10-03T11:56:17.000Z" title="Created 2024-10-03 19:56:17">2024-10-03</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/tags/DFS/" style="font-size: 1.1em; color: #999">DFS</a> <a href="/tags/MMPose/" style="font-size: 1.1em; color: #999">MMPose</a> <a href="/tags/action/" style="font-size: 1.1em; color: #999">action</a> <a href="/tags/bilibili/" style="font-size: 1.1em; color: #999">bilibili</a> <a href="/tags/btc/" style="font-size: 1.1em; color: #999">btc</a> <a href="/tags/cf/" style="font-size: 1.1em; color: #999">cf</a> <a href="/tags/clash/" style="font-size: 1.1em; color: #999">clash</a> <a href="/tags/crash-course/" style="font-size: 1.1em; color: #999">crash course</a> <a href="/tags/cs144/" style="font-size: 1.1em; color: #999">cs144</a> <a href="/tags/cv/" style="font-size: 1.1em; color: #999">cv</a> <a href="/tags/deep-learning/" style="font-size: 1.1em; color: #999">deep learning</a> <a href="/tags/detection/" style="font-size: 1.1em; color: #999">detection</a> <a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/excel/" style="font-size: 1.1em; color: #999">excel</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/ic/" style="font-size: 1.1em; color: #999">ic</a> <a href="/tags/image-classification/" style="font-size: 1.1em; color: #999">image classification</a> <a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/tags/jvm/" style="font-size: 1.1em; color: #999">jvm</a> <a href="/tags/leetcode/" style="font-size: 1.2em; color: #999da3">leetcode</a> <a href="/tags/linked-list/" style="font-size: 1.1em; color: #999">linked list</a> <a href="/tags/linux/" style="font-size: 1.3em; color: #99a1ac">linux</a> <a href="/tags/mastercard/" style="font-size: 1.1em; color: #999">mastercard</a> <a href="/tags/mmlab/" style="font-size: 1.3em; color: #99a1ac">mmlab</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/nemu/" style="font-size: 1.1em; color: #999">nemu</a> <a href="/tags/npm/" style="font-size: 1.1em; color: #999">npm</a> <a href="/tags/office/" style="font-size: 1.1em; color: #999">office</a> <a href="/tags/pa/" style="font-size: 1.2em; color: #999da3">pa</a> <a href="/tags/pat/" style="font-size: 1.5em; color: #99a9bf">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 1.1em; color: #999">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 1.1em; color: #999">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/pytorch/" style="font-size: 1.4em; color: #99a5b6">pytorch</a> <a href="/tags/segmentation/" style="font-size: 1.1em; color: #999">segmentation</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/torch/" style="font-size: 1.1em; color: #999">torch</a> <a href="/tags/usdt/" style="font-size: 1.1em; color: #999">usdt</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">October 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">August 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">121</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-03T17:27:25.967Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By weijia</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

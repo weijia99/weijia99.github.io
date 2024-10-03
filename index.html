@@ -1,1059 +1,309 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="weijia"><meta name="copyright" content="weijia"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="weijia">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-04 01:27:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/10/04/hello-world/" class="article-date">
-  <time datetime="2024-10-03T16:28:42.712Z" itemprop="datePublished">2024-10-04</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/10/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/10/04/hello-world/" data-id="cm1tjy5wc001i8cw7hdmb6yjt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-d" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/10/03/d/" class="article-date">
-  <time datetime="2024-10-03T15:55:06.000Z" itemprop="datePublished">2024-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/10/03/d/">d</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/10/03/d/" data-id="cm1tjy5w900188cw78wes9dt4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-nothing" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/10/03/nothing/" class="article-date">
-  <time datetime="2024-10-03T15:55:01.000Z" itemprop="datePublished">2024-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/10/03/nothing/">nothing</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/10/03/nothing/" data-id="cm1tjy5wl002l8cw7esu2e7b4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第二周，GIN入门" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" class="article-date">
-  <time datetime="2024-10-03T13:03:19.000Z" itemprop="datePublished">2024-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/">第二周，GIN入门</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-入门"><a href="#1-入门" class="headerlink" title="1.入门"></a>1.入门</h1><p>首先最简单的直接抄袭官网的快速开始，常见的三步。1.定义server的断开。2.设置路由对应handle函数。3.设置handle函数</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ccb9d52bdd48f22e00244b608e64ede1.png?token=AGECE2OZ66JW2LSJYPS3NQDG72WDY"></p>
-<ol>
-<li>设置server</li>
-<li>设置对应的处理函数，匿名函数，传入的是ctx是关键</li>
-<li>开始run</li>
-</ol>
-<h2 id="路由匹配"><a href="#路由匹配" class="headerlink" title="路由匹配"></a>路由匹配</h2><p>参照spring的request param和正则匹配</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f0411e25f3e7e25a5aa5b95d2a2de0e0.png?token=AGECE2NBVZSV74BCWCVUISLG72WD6"></p>
-<p>通过param来获取参数，这个与java<font style="background-color:#FBDE28;">@request param</font>取值差不多的思路</p>
-<p>还有一种<font style="background-color:#FBDE28;">是在？这种参数，</font>查询参数，使用query进行获取</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9de678930dfcb14e293b05b4329c2934.png?token=AGECE2NYQ2E7DBXLMVXLLPLG72WEC"></p>
-<h1 id="设置register函数"><a href="#设置register函数" class="headerlink" title="设置register函数"></a>设置register函数</h1><blockquote>
-<p>当需要注册的路由太多，我们需要进行调用的server.get次数就会很多次。可以进行抽象出来一个方法，放到专属的类，每一个路由都在类里面就有处理方法。</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/c501efd1a7253d328030d649cfc23418.png?token=AGECE2P3WBJHIRFOAS44AG3G72WEG"></p>
-<p>下面就是优雅之后的代码。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9497128b0e43301c60bf291612ef876e.png?token=AGECE2K3HGWGHCGTDS54U4DG72WEK"></p>
-<h2 id="分组路由"><a href="#分组路由" class="headerlink" title="分组路由"></a>分组路由</h2><p>相当于spring的requestmapping放入到类最前面的路径</p>
-<p>通过ug来接着子路径</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/aad681de2fd34d93819c5778d07c748e.png?token=AGECE2IGNKYVUHQX5KN2A73G72WEO"></p>
-<h1 id="数据接受"><a href="#数据接受" class="headerlink" title="数据接受"></a>数据接受</h1><h2 id="vo传输"><a href="#vo传输" class="headerlink" title="vo传输"></a>vo传输</h2><p>与java类似，传输数据前后端，使用的需要vo，pojo来进行json传输数据。不同的是java可以自动封装传输的数据位class对象，这边需要把前后端的进行映射才能组装位vo，使用的是反引号·</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1cd06b1ef0d3bbbcf3bb61edac21efa8.png?token=AGECE2K6CP5DMAOU7R5KKATG72WEU"></p>
-<p><font style="color:#ED740C;">这个也与email小写就是私有变量有关，所以需要进行编码</font></p>
-<h2 id="绑定接受"><a href="#绑定接受" class="headerlink" title="绑定接受"></a>绑定接受</h2><p>主要是在ctx数据，调用ctx来进行绑定数据</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/62baf837038d6b89187cff06e59773e1.png?token=AGECE2LLUAAQOFLK6VUB6GDG72WEY"></p>
-<h2 id="业务处理"><a href="#业务处理" class="headerlink" title="业务处理"></a>业务处理</h2><p>使用正则进行校验密码是否符合规则</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0d15d8c52ffa4ec42cdfc4df863bed4d.png?token=AGECE2LGDE22PECR5KIN4MDG72WE4"></p>
-<p>之后直接调用这些</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/19268f4cb075fcbeb81bcbcbe9363a62.png?token=AGECE2LSNWLTUMCXZ6R773DG72WFA"></p>
-<h1 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h1><p>后端的是8080端口，前端的是3000端口，这就设计到跨域问题</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1a84704adda37b138603dd1799f1c5c1.png?token=AGECE2P3RQVZHOLGDL7KFMDG72WFQ"></p>
-<p>csrf，这个时候需要引入中间件，设置cors可以进行访问对应的路径</p>
-<p>解决的方案使用preflight，就是发给server后，server返回我接受3000所有发过来的方法。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/34c72da4a2d0160c09a324c700201eb6.png?token=AGECE2JSZ4OOIVVGHQZYVZ3G72WFU"></p>
-<p>通过这里middleware进行注册，授权访问。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a0527c2e021bcd46d7fdcfbf8b0895f0.png?token=AGECE2ODCDZL6HKMGNLTYP3G72WF2"></p>
-<p>相当于spring的filter，这里面来进行处理，在这个allow里面进行允许，3000的端口</p>
-<h1 id="gorm入门"><a href="#gorm入门" class="headerlink" title="gorm入门"></a>gorm入门</h1><p>最终的数据操作还是要落到数据库的crud，所以需要gorm</p>
-<h2 id="0、docker安装mysql"><a href="#0、docker安装mysql" class="headerlink" title="0、docker安装mysql"></a>0、docker安装mysql</h2><p>使用docker-compose来进行安装，这里基本上，就是构建操作的image，映射的端口还有volume。这个相当于节省了自己写docker命令，</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b57dbe40157c0df10f99b667c9012d67.png?token=AGECE2KILXGVTA6CD3TXIKTG72WF6"></p>
-<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><ol>
-<li>定义连接</li>
-<li>定义对应的class</li>
-<li>操作数据对象</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/6e70d6c203a3fceb36489b897027740e.png?token=AGECE2O6YXPS3NIYD57VHYLG72WGQ"></p>
-<h2 id="class对象定义"><a href="#class对象定义" class="headerlink" title="class对象定义"></a>class对象定义</h2><p>这里用到<font style="background-color:#FBDE28;">组合的语法，</font>传入class，不加变量就是组合，之后自定义自己需要的变量</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a57b3ea83cefe6e4b8e59c88701c0c7b.png?token=AGECE2JGPTDDOYNVQEYOZYDG72WGW"></p>
-<h1 id="service-repository-dao"><a href="#service-repository-dao" class="headerlink" title="service-repository-dao"></a>service-repository-dao</h1><p>相当于mvc的三层操作方法，repository表示database和redis，都是可以进行返回数据的地方，dao才是最终去数据的操作。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a40eefd96b46e7c02297056ef7ace7ef.png?token=AGECE2KEJ4MQ6R2DZUWJP73G72WG2"></p>
-<p>web文件夹是相当于视图层了，service代表业务的完整流程，class变成其他的class。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" data-id="cm1tjy5xd005w8cw72doc7xa7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-第一周，go语言拾遗" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" class="article-date">
-  <time datetime="2024-10-03T11:56:17.000Z" itemprop="datePublished">2024-10-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">第一周，go语言拾遗</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本节主要讲解的是go语言的基础语法，主要参照的是自己的遗留问题。</p>
-<h1 id="文件路径"><a href="#文件路径" class="headerlink" title="文件路径"></a>文件路径</h1><h2 id="package"><a href="#package" class="headerlink" title="package"></a>package</h2><p>和java里面的包一样，也是需要先定义好文件夹路径</p>
-<p>package的名字可以与文件夹的名字不一样，同一个文件夹下面的包名药一直，test文件除外</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/3a093da88d6ce2171247f5e3a29f60a6.png?token=AGECE2KKSNTZTRBWVMEVVALG72WHE"></p>
-<h2 id="基础数据"><a href="#基础数据" class="headerlink" title="基础数据"></a>基础数据</h2><p>和java差不多也是int，uint，float这些</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/650d6d11a76e0771b81c9a8fb140c502.png?token=AGECE2JYNMOACWXFRDGUD43G72WHK"></p>
-<p>数字的极限，只能通过使用math包来进行获取</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b8056e8ba4db9c3e14680882bf2b174b.png?token=AGECE2PA5B4HU6NISN2A5TLG72WHO"></p>
-<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><p>与python类似，使用反引号这是个特点&#96;进行作为字符串</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/e37d05e1672f313baefef246512e8323.png?token=AGECE2LAY47C5XJXSZA7KQ3G72WHS"></p>
-<h1 id="常量与变量"><a href="#常量与变量" class="headerlink" title="常量与变量"></a>常量与变量</h1><p>使用var来进行定义，这个与js差不多，自动类型推断，先写变量名称在写类型，与rust差不多。</p>
-<p>。通过使用大小写来作为pubilc与private的进行区别。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d12d12908ddefd5965378077c6833049.png?token=AGECE2PUFNMXWDJOBUYAXVTG72WHW"></p>
-<p>使用：&#x3D;来进行类型推断。只有局部变量才可以</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d089224da19e1a497b7cfba9551b16fd.png?token=AGECE2LWRKUVSAAHVRBYI6TG72WH4"></p>
-<p>常量，使用const来进行修饰。这个字不可以进行修改的</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/55d6436c3449dca1fcfe7c7f819ee4ab.png?token=AGECE2M2QYTKJS7HSWVQWFDG72WIC"></p>
-<p>iota进行自增加，主要是自我增加。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a798ab7f2a1a0082b64f0153c32369dd.png?token=AGECE2NMADWJNQ3IBMF6JR3G72WIG"></p>
-<h1 id="方法声明"><a href="#方法声明" class="headerlink" title="方法声明"></a>方法声明</h1><p>常见的代码，首先 定义是函数，然后设置名称和类型。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b1c04c4efe91f85974c7b089a09bd339.png?token=AGECE2JSACDVS2FJ5FULN33G72WIK"></p>
-<p>可以返回多个类型与python类似</p>
-<p>返回值的接受与变量差不多，直接使用：&#x3D;来进行接受返回值。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/27bc303fddc3c6c8d44164fda30ca690.png?token=AGECE2LJG4S6OHJXCESUC73G72WIO"></p>
-<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><blockquote>
-<p>主要思想就是把函数作为参数，然后如果要使用函数，直接加上（）进行调用，没有括号就是普通的变量</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/40f64782bb62257bb6b10eb3d06cf5c7.png?token=AGECE2IOKZ5YGX2PS62ZY63G72WIY"></p>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>这个概念与rust的概念差不多，就是函数的自带参数，可以传入到她返回的函数里面。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/29d3ea64fd7cfce26ea2f8a90687bef6.png?token=AGECE2PQX2WZOLODPGG6WOLG72WI2"></p>
-<h2 id="不定参数"><a href="#不定参数" class="headerlink" title="不定参数"></a>不定参数</h2><p>这个与java类似，差不多就是。。。表示</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/38e32681df6a36654d7fe4fbc0a8c248.png?token=AGECE2J2DN4J4NIVV7FWLQ3G72WJA"></p>
-<h2 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h2><p>经典的关键字，相当于java的finally，但是我可以提前写，这是最后要执行的语句</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/afcc91f99008e8c59f6a88e4c68fbc86.png?token=AGECE2PRXLYEZNJBSRFTXF3G72WJE"></p>
-<p>顶用顺序与栈类似，filo，第一个最后一个调用</p>
-<h1 id="内置数据结构"><a href="#内置数据结构" class="headerlink" title="内置数据结构"></a>内置数据结构</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>相当于arraylist，使用切片可以作为扩容，</p>
-<p>主要的操作，使用make进行构建，append初始化，make可以坐初始化和capacity的初始化</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ca220cabfb464f745941f4de640c824a.png?token=AGECE2NA6GOUYPMJJLJQ4ULG72WJU"></p>
-<blockquote>
-<p>只要进行扩容了，数组就不是同一个数组的啦，那就不相等了</p>
-</blockquote>
-<p>范围获取，参考python，铅笔后开</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d6ddf70a8941b69bc5300cbb2691d0d2.png?token=AGECE2P3E62ESWSDERXBHHTG72WJ2"></p>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>hashmap的视线，也是通过构造make来实现</p>
-<p>map[string]int这种返回类型，</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f9584b9dd796bee0f3c0ab0ab38d8546.png?token=AGECE2LLH4E6JP562ITY7KDG72WJ6"></p>
-<p>赋值就和pyton差不多了</p>
-<p>读取的时候，要自己进行处理，不存在的逻辑。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0c87a0c73b4d7ca0e149ca3684e2baf2.png?token=AGECE2NYBTNJZNSUWDUSXOTG72WKC"></p>
-<p>返回err</p>
-<p>，删除元素使用delete进行</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/85dd6169c0496ac559483795fa7fa5e0.png?token=AGECE2KGXMAKCTO632TQW7LG72WKE"></p>
-<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>与java的接口差不多</p>
-<p>语法就是tppe a interface，进行定义类型行为</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/f3b80543db4d78a98e62d974571756d7.png?token=AGECE2KKLCUGWJE4O7MOVLLG72WKI"></p>
-<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><p>与class类似，只要实现上面接口的所有方法就是实现，无须关键字</p>
-<p>前面的犯法，加上限定范围，与rust类似，表明是class的函数</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/daced2fe4a8f337034d522241ab2a841.png?token=AGECE2M57P52G6JM7VTLWXDG72WKM"></p>
-<p>初始化，这个参考的是c++的，直接使用{}就可以进行初始化，加入&amp;，表明取到地址了。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/dd8037ad287980a8ee6016e77e6f07e5.png?token=AGECE2KQBD2AM3YUIMGHG7TG72WKU"></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0d31cf0400997aa471a955f04d2356c8.png?token=AGECE2IRQD6RXO3BCH6MS7TG72WK6"></p>
-<p>*是具体操作对象，&amp;是取地址，参照c++的语法。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/b70262dcbb6bbecfa654417e63976f57.png?token=AGECE2NZN5V63XM6QY6CT23G72WLA"></p>
-<p>一般方法，使用指针在前面，</p>
-<p>class实现interface接口，使用ide自动搜索interface，限定参数都是地址。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/2859c00d503cbf5c0259cd38b75605b2.png?token=AGECE2P4W6PNEJPBJDBBKBTG72WLG"></p>
-<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><p>与java类似，也是使用T来作为</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a83bd47918753998b7ac2bcdb09eef42.png?token=AGECE2LASCNOIL3UYBMFWTTG72WLK"></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d85576cf2cd618052afde864167163d1.png?token=AGECE2M4UZRTUGSWHB4Z27DG72WLO"></p>
-<p>参照，这些语法来进行，number是作为约束，与java的？这种限定差不多</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" data-id="cm1tjy5xc005r8cw72ghkfftt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-场景优化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/09/19/%E5%9C%BA%E6%99%AF%E4%BC%98%E5%8C%96/" class="article-date">
-  <time datetime="2024-09-19T01:39:41.000Z" itemprop="datePublished">2024-09-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/09/19/%E5%9C%BA%E6%99%AF%E4%BC%98%E5%8C%96/">场景优化</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="聚合写"><a href="#聚合写" class="headerlink" title="聚合写"></a>聚合写</h1><p>上一章节场景题目，介绍的点赞系统，就是使用的聚合写操作，之前点赞都是每次一次，可以在内存里面聚合之后，然后再进行100个合在一起的，进行一次加100，减少数据库的压力</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ad0d92b39a32d83f0acc500923608be2.png?token=AGECE2NDD4ARJDBKABD44M3G72WDM"></p>
-<p>或者数据库进行批量插入，<img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0cf7814276fd6e328c3d87ae5093b637.png?token=AGECE2IMPVU7AZLTUQJGQA3G72WDO"></p>
-<p>普通的接口，没有聚合，使用压测 wrk，900qps</p>
-<p>@schedule 是进行定时逻辑，调用次数300来使用</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/09/19/%E5%9C%BA%E6%99%AF%E4%BC%98%E5%8C%96/" data-id="cm1tjy5wy003t8cw7282y8w1q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-场景题目" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/09/16/%E5%9C%BA%E6%99%AF%E9%A2%98%E7%9B%AE/" class="article-date">
-  <time datetime="2024-09-16T07:43:20.000Z" itemprop="datePublished">2024-09-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/09/16/%E5%9C%BA%E6%99%AF%E9%A2%98%E7%9B%AE/">场景题目</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>两种思路，一个是4个d</p>
-<ol>
-<li>询问场景，询问qps，主要业务，业务流程</li>
-<li>询问服务，主要是暴露什么接口</li>
-<li>接下来就是storage，使用什么数据库还有schma，为什么不用其他</li>
-<li>接下来就是看还有没有优化的，进行防止盗刷，限流什么的</li>
-</ol>
-<p>还有caps</p>
-<ol>
-<li>沟通c，进行交流，业务逻辑，qps，精准度要求（能不能多卖，还是少买），难点分析</li>
-<li>a架构，服务，存储，流程</li>
-<li>p观点展开，难点1，难点2</li>
-<li>s总结，开场出结论，然后索引要点</li>
-</ol>
-<h1 id="秒杀专题"><a href="#秒杀专题" class="headerlink" title="秒杀专题"></a>秒杀专题</h1><h2 id="c对话"><a href="#c对话" class="headerlink" title="c对话"></a>c对话</h2><p>主要询问qps，业务流程，难点</p>
-<p>主要的业务流程：首先是查询时间是否到了秒杀时间，之后开始秒杀，是否还有名额，然后进行购买，秒杀库存，之后生辰订单，付款</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/407a7a43ac3bf11c53763932ff93359d.png?token=AGECE2IGBMRXNRAYPN23LBTG72WLY"></p>
-<p>请求量估计，如果是一般的5k，单个mysql就行，1w两个mysql，超过直接上redis，10w之后就是集群，每一个redis配置下平均的秒杀数量</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d38a9eb871663bc1f07843f612dc3edd.png?token=AGECE2N3LHRJS5OOW2XSWJDG72WL4"></p>
-<p>超卖与少买的问题，使用redis、</p>
-<ol>
-<li>redis寄了，丢掉命令</li>
-<li>主从切换，丢了</li>
-<li>查询不是原子的</li>
-</ol>
-<p>少买</p>
-<ol>
-<li>库存减少，但是订单失败</li>
-<li>用户不付款，回滚失败</li>
-</ol>
-<p>难点分析</p>
-<ol>
-<li>高并发，人流量大-风控，限流，验证码，薛峰</li>
-<li>高精准</li>
-<li>大吉黄牛，进行限额</li>
-</ol>
-<h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><p>主要是进行服务，存储来设计</p>
-<p>服务方面</p>
-<ol>
-<li>商品信息</li>
-<li>秒杀信息</li>
-<li>与扣减库存</li>
-<li>库存数量</li>
-<li>订单服务</li>
-</ol>
-<p>数据库方面</p>
-<p>设计表，信息表，mysql秒杀记录表（订单编号，秒杀编号，用户id，抢购数量，状态</p>
-<p>整体服务流程</p>
-<ol>
-<li>拉取信息秒杀</li>
-<li>开始抢购，使用redis来获取，丢进kafka来进行生成订单</li>
-<li>消耗库存，写入到订单里面，更新redis学习</li>
-</ol>
-<h2 id="要点分析"><a href="#要点分析" class="headerlink" title="要点分析"></a>要点分析</h2><p>具体的难点分析，主要是scale</p>
-<p>是否超过限额</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/7a5f8acce850ae4f4222d1970ca9e363.png?token=AGECE2JZCKARBQYJ4KQV73TG72WL6"></p>
-<p>前端得到秒杀状态，通过轮训redis信息</p>
-<p>lua脚本进行与扣减，不会超卖的原因是乐观锁，stock》&#x3D;1</p>
-<p>退回逻辑：直接轮训mysql的值</p>
-<p>黄牛：进行限流</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不同量级的秒杀是不一样 的，常见的几十万qps，高并发使用消息队列和redis，精准通过mysql来避免</p>
-<h1 id="扫码登录实现"><a href="#扫码登录实现" class="headerlink" title="扫码登录实现"></a>扫码登录实现</h1><h2 id="c沟通"><a href="#c沟通" class="headerlink" title="c沟通"></a>c沟通</h2><p>主要了解业务流程，还有qps和难点，就是了解场景</p>
-<p>具体流程</p>
-<ol>
-<li>展示二维码</li>
-<li>手机扫码出现头像信息</li>
-<li>然后就是手机确认</li>
-<li>之后登录</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ef38c7ec9373c3b3c23014c09bb04547.png?token=AGECE2PNTRHLIDJXN4ZAVPDG72WMC"></p>
-<p>因此需要二维码服务器，</p>
-<p>难点，是唯一一个电脑在线</p>
-<h2 id="服务设计"><a href="#服务设计" class="headerlink" title="服务设计"></a>服务设计</h2><p>考虑服务还有存储</p>
-<p>服务</p>
-<ol>
-<li>登录服务</li>
-</ol>
-<p>数据库</p>
-<ol>
-<li>一个设备对应一个token，使用token鉴权</li>
-<li>redis进行存放</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1bf19ccc404fa43443cdbced035569a3.png?token=AGECE2PSL2TPNMUUMDEEN3TG72WMG"></p>
-<p>具体流程</p>
-<ol>
-<li>pc产生二维码id，并且把二维码id与这个电脑放到redis</li>
-<li>电脑轮训得到展示</li>
-<li>扫码，请求发送服务端，关联uid与二维码id，更新二维码状态</li>
-<li>使用临时token登录，然后生成新的pctoken与电脑</li>
-</ol>
-<h2 id="要点总结"><a href="#要点总结" class="headerlink" title="要点总结"></a>要点总结</h2><p>主要三个流程，第一个就是首先生成token的时候，之后就是扫码时候，最后就是确认之后</p>
-<p>schema编排</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0ccd31d877e4efc6e4cf231db9710d2f.png?token=AGECE2IV3TZYLB3BPYF4AV3G72WMI"></p>
-<p>扫码后的编码</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/03b6bb51b79f2ab36606687a24067486.png?token=AGECE2KBX7QJSFRAX5TGZALG72WMM"></p>
-<p>临时关联的token，进行记录用户头像信息</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/fb05309f837d29adc51f8e46d682f697.png?token=AGECE2PSALFZTS77V5XX5B3G72WMO"></p>
-<p>最后更新状态为已经扫码的3</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/4e4c193fdeb6642297661882e7b2cc43.png?token=AGECE2MYERHM2L3MQF3K6GLG72WMS"></p>
-<p>:::info<br>为什么需要使用临时token，避免扫一下就登录，直接扣钱，太尴尬</p>
-<p>:::</p>
-<h1 id="技术服务"><a href="#技术服务" class="headerlink" title="技术服务"></a>技术服务</h1><p>相当于点赞服务</p>
-<h2 id="c需求对齐"><a href="#c需求对齐" class="headerlink" title="c需求对齐"></a>c需求对齐</h2><p>业务流程，qps，难点，精准度</p>
-<ol>
-<li>登录进去</li>
-<li>看到好的就进行点赞</li>
-<li>点赞结束，统计点赞次数</li>
-</ol>
-<h2 id="a服务"><a href="#a服务" class="headerlink" title="a服务"></a>a服务</h2><p>主要是服务模块，一个计数，还有一个网关</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/0513196b4cdd47b02b466f969ceb6d7e.png?token=AGECE2MW3IROO5NN5BARRWTG72WMW"></p>
-<p>存储设计，redis还有mysql</p>
-<p>使用redis作为cache提前返回</p>
-<p>mysql，一个博文id点赞次数</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/c91fd39986a52eff9fc686598069ebf0.png?token=AGECE2JF36C47ODGM5WNITLG72WMY"></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1e0be451f30b98878083dd9daf284562.png?token=AGECE2JBXSFOSBW3UFF36VTG72WM4"></p>
-<h2 id="要点分析-1"><a href="#要点分析-1" class="headerlink" title="要点分析"></a>要点分析</h2><p>数据存放，多行数据，id与action绑定，一个id对应点赞，对应观看</p>
-<p>异步操作：通过归并请求才会给你答案，一次次加1，等于一次加n</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/df1a77bae8b9c40a8271e5deb86faa05.png?token=AGECE2IULO3Q6ZPOKWMBJYTG72WNA"></p>
-<p>精准度问题</p>
-<p>少点赞了，多点赞了其他人的，通过加记录，唯一记录，countrecord</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/7fd3debb7b28a4120134154a8d56124e.png?token=AGECE2LELPMSUXJWLMHEO3TG72WNE"></p>
-<p>这个就是可以写abcd-105，用户对应的点赞的博文</p>
-<h1 id="短链系统设计"><a href="#短链系统设计" class="headerlink" title="短链系统设计"></a>短链系统设计</h1><h2 id="c沟通-1"><a href="#c沟通-1" class="headerlink" title="c沟通"></a>c沟通</h2><p>询问qps，业务流程，难点</p>
-<p>请求量对齐：普通的qps</p>
-<p>设计对齐:一一对齐，长时间不使用不会消失</p>
-<h2 id="架构对齐"><a href="#架构对齐" class="headerlink" title="架构对齐"></a>架构对齐</h2><p>服务：转换服务，encoder，decoder，重定向301</p>
-<p>storage：两个索引：一个短的，一个长的</p>
-<h2 id="要点展开"><a href="#要点展开" class="headerlink" title="要点展开"></a>要点展开</h2><p>使用302重定向，生成算法base62，全局唯一id，需要将url编码为一个整数，对应的是自增id，使用雪花，uuid</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/48ee23b457a5133fb03062120c4f5a14.png?token=AGECE2JBYYFWPP5M2K6QWTLG72WNI"></p>
-<p>scale：进行优化</p>
-<ol>
-<li>使用cdn提高查询速度</li>
-<li>redis进行缓存</li>
-</ol>
-<p>数据进行优化：水平拆分（分库分表）</p>
-<p>sharding key，使用id来进行</p>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>主要是encoder还有的从的人来作为难点，使用base62，但是要全局id，使用唯一uuid</p>
-<h1 id="订单系统实现"><a href="#订单系统实现" class="headerlink" title="订单系统实现"></a>订单系统实现</h1><h2 id="c需求对齐-1"><a href="#c需求对齐-1" class="headerlink" title="c需求对齐"></a>c需求对齐</h2><p>qps，业务流程，难点</p>
-<p>流程：进行购物车选择购物，创建订单，支付订单，确认收获</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/2e7313d79cdcb4b44e5a8b9a3a108717.png?token=AGECE2OHEYEOSQOPZCFIYOTG72WNM"></p>
-<p>订单：创建</p>
-<p>支付：支付失败，超时支付，支付成功</p>
-<p>发货：超时发货提醒</p>
-<p>qps：直接拉倒100w</p>
-<p>高精准：是否运行超卖还有少买《主从同步时延，订单丢失，没有兜底</p>
-<h2 id="架构实现"><a href="#架构实现" class="headerlink" title="架构实现"></a>架构实现</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/d32b9f62fedcb4d86a227d5dcea5c4b6.png?token=AGECE2LUJTWQ7ULM7PT2XMLG72WNQ"></p>
-<h2 id="要点分析-2"><a href="#要点分析-2" class="headerlink" title="要点分析"></a>要点分析</h2><p>storage：核心使用mysql，我的订单列表，使用redis的list可以获取</p>
-<p>高精准如何确保：使用状态机模型，先定义好状态，自动售卖机逻辑一样，整个流程基本都是同步，除了发送通知是异步，其余都是正确的</p>
-<h2 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/96fa9a03b99aa5ab8176b910400ca617.png?token=AGECE2PTUMGUWTLEKA632D3G72WNS"></p>
-<h3 id="订单下单服务"><a href="#订单下单服务" class="headerlink" title="订单下单服务"></a>订单下单服务</h3><p>创建订单，需要分库分销sharding</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/40570584f8e0025d69a84c292daad617.png?token=AGECE2MXELH3RQOHK6TQFSLG72WNW"></p>
-<ol>
-<li>任务创建，生成任务，后续使用插入到第二个队列和async一样，失败就是重试</li>
-<li>异步调用</li>
-<li>状态机处理，失败任务，多次失败就进行降级</li>
-<li>幂等性，插入到redis这样，回首先查询不存在，然后再次进行校验</li>
-</ol>
-<h1 id="游戏排行榜设计"><a href="#游戏排行榜设计" class="headerlink" title="游戏排行榜设计"></a>游戏排行榜设计</h1><p>传统的排行榜系统，使用redis，进行zset来获取zarrange</p>
-<p><font style="background-color:#FBDE28;">通过分数+时间戳作为联合分数，这样可以进行排序</font><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/e5bc5b684ce6d967367a2f916d8de1e1.png?token=AGECE2MMPT2OZKDTTH6WV2LG72WN2"></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/5ef8a0988c77868ec54fec0291c00d7a.png?token=AGECE2OCF4YPEOILOPEV6JTG72WN6"></p>
-<h2 id="海量数据下的排行榜"><a href="#海量数据下的排行榜" class="headerlink" title="海量数据下的排行榜"></a>海量数据下的排行榜</h2><p>区间划分：每一个分数，一个区间</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/476d18bb3ea1f85282f66da039704380.png?token=AGECE2LMHDWLK324FKTOHTTG72WOA"></p>
-<h2 id="只需要钱k个的"><a href="#只需要钱k个的" class="headerlink" title="只需要钱k个的"></a>只需要钱k个的</h2><p>使用heap就可以</p>
-<p>当用户信息变更，排行榜下次生成的时候写入，</p>
-<p>排序结果生成就返回用户信息</p>
-<p>试试查询，那就是轮训就可以，通过zrevrank放入member 还有id来获取</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> redis</span><br><span class="line"></span><br><span class="line">def <span class="title function_">get_user_rank</span><span class="params">(user_id)</span>:</span><br><span class="line">    # 连接到 Redis 服务器</span><br><span class="line">    r = redis.Redis(host=<span class="string">&#x27;localhost&#x27;</span>, port=<span class="number">6379</span>, db=<span class="number">0</span>)</span><br><span class="line">    </span><br><span class="line">    # 假设 <span class="string">&#x27;leaderboard&#x27;</span> 是我们的排行榜的名字</span><br><span class="line">    # 获取用户的排名，Redis 排名默认从 <span class="number">0</span> 开始，因此实际显示时需要加 <span class="number">1</span></span><br><span class="line">    rank = r.zrevrank(<span class="string">&#x27;leaderboard&#x27;</span>, user_id)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> rank is not None:</span><br><span class="line">        <span class="keyword">return</span> rank + <span class="number">1</span>  # 人类可读的排名（从 <span class="number">1</span> 开始）</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> None  # 表示用户不存在于排行榜中</span><br><span class="line"></span><br><span class="line"># 示例：获取用户 <span class="string">&#x27;user1&#x27;</span> 的排名</span><br><span class="line">user_id = <span class="string">&#x27;user1&#x27;</span></span><br><span class="line">rank = get_user_rank(user_id)</span><br><span class="line"><span class="keyword">if</span> rank:</span><br><span class="line">    print(f<span class="string">&quot;The rank of &#123;user_id&#125; is &#123;rank&#125;.&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(f<span class="string">&quot;&#123;user_id&#125; is not on the leaderboard.&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/09/16/%E5%9C%BA%E6%99%AF%E9%A2%98%E7%9B%AE/" data-id="cm1tjy5wy003x8cw73wmi7rwe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-海量数据题目" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/09/15/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E9%A2%98%E7%9B%AE/" class="article-date">
-  <time datetime="2024-09-15T13:36:58.000Z" itemprop="datePublished">2024-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/09/15/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E9%A2%98%E7%9B%AE/">海量数据题目</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>所谓海量数据处理就是在大数据情况下来处理具体情况就是内存有限，数据太大无法处理完成所有，因此需要使用特殊处理。</p>
-<p>常见的方案就是</p>
-<ol>
-<li>时间换空间，使用bitmap，哈希，trie树灯解决</li>
-<li>空间换时间，进行hash到小文件，然后统计小文之后归并统计</li>
-</ol>
-<p>常见的方案</p>
-<ol>
-<li>分治</li>
-<li>外排序</li>
-<li>划分</li>
-<li>bitmap</li>
-<li>trie树</li>
-<li>倒排序</li>
-</ol>
-<h1 id="分治方案"><a href="#分治方案" class="headerlink" title="分治方案"></a>分治方案</h1><p>顾名思义：就是数据量太多，无法一次性装入到内存，就会hash小文件，统计小文件的</p>
-<h2 id="统计访问最多的ip地址"><a href="#统计访问最多的ip地址" class="headerlink" title="统计访问最多的ip地址"></a>统计访问最多的ip地址</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/40dc77c653a406621f9944ec66004894.png?token=AGECE2LNIUXIHS4I5CLVPX3G72WOI"></p>
-<p>题解：</p>
-<ol>
-<li>使用hash取模1000，分到1000小文件</li>
-<li>之后维护一个hashmap来计算频率，可以得到前1000个最大的ip</li>
-<li>然后使用快排或者使用堆排序</li>
-</ol>
-<h2 id="统计300w里面的热门10个查询"><a href="#统计300w里面的热门10个查询" class="headerlink" title="统计300w里面的热门10个查询"></a>统计300w里面的热门10个查询</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/2ed2797f840a94c1185573fc2a7bfa3f.png?token=AGECE2I5XMYQESYSM6SSHEDG72WOM"></p>
-<p>大约只有300w个有效，然后就是计算长度300*1k&#x2F;4&#x3D;0.75G,可以直接丢到内存进行处理结果</p>
-<ol>
-<li>使用hash进行计算ip对应的值</li>
-<li>然后直接堆排序，是Nlogk</li>
-</ol>
-<h2 id="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h2><p>2^30&#x2F;2^4 &#x3D; 2^26</p>
-<p>2^20&#x2F;2^4&#x3D;2^16</p>
-<p>26-16&#x3D;10,计算得到1024个小文件丢入到</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/907abb1abd0519f99f1dc21a000aa5d5.png?token=AGECE2PQGC32T2QZA4ULOZTG72WOQ"></p>
-<h2 id="海量数据在100台电脑上，统计出-前10个"><a href="#海量数据在100台电脑上，统计出-前10个" class="headerlink" title="海量数据在100台电脑上，统计出 前10个"></a>海量数据在100台电脑上，统计出 前10个</h2><p>这个和maoreduce操作差不多，首先就是对当前的电脑进行map，之后把所有的值，之后对每一个key进行映射到新的文件里面，这个是merge操作，最后就是排序操作</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/546a90860503a513fbfa12fc1ace2efe.png?token=AGECE2P3T6L7Q236CXPY47LG72WOY"></p>
-<p>还有一个方法1，是所有的元素相同的都在一个机器，直接使用堆排序生成结果。</p>
-<ol>
-<li>对每一个电脑的进行排序</li>
-<li>然后进行堆排序</li>
-</ol>
-<h2 id="每个文件都看了有query重复，10个文件，每个1g"><a href="#每个文件都看了有query重复，10个文件，每个1g" class="headerlink" title="每个文件都看了有query重复，10个文件，每个1g"></a>每个文件都看了有query重复，10个文件，每个1g</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/995221b93a3f729c306c1ec44cba38e4.png?token=AGECE2KR4ULJX4PKDMOJOCDG72WO2"></p>
-<p>直接参照上面的解法1MapReduce，进行映射，然后统计，排序</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/a2e09a26d83d77a6731f29217ff7b62c.png?token=AGECE2OH72XPFXEIZZNH5RDG72WO6"></p>
-<h2 id="找出共有的url地址"><a href="#找出共有的url地址" class="headerlink" title="找出共有的url地址"></a>找出共有的url地址</h2><p>共有的一半可以使用同一个hash函数，都会映射到同一个文件，然后每一个a1，b1进行这样比较</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/459112fb8151536dffc5d6f8d23120bf.png?token=AGECE2J3SVQBSM7CQD3DPGDG72WPC"></p>
-<h2 id="100万里面100的数量"><a href="#100万里面100的数量" class="headerlink" title="100万里面100的数量"></a>100万里面100的数量</h2><ol>
-<li>使用力扣题目思想，进行淘汰局部队列</li>
-<li>或者快排思想，计算左边有100个了的值</li>
-<li>最后就是一个堆排序</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/71434c363ba42160c1d8ee8290b5d620.png?token=AGECE2KJYMIVWUYQM4QKB5TG72WPG"></p>
-<h1 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h1><p>外部排序就是，分隔号文件之后，然后进行把这个文件排好序，最终使用多路归并排序。</p>
-<ol>
-<li>分为a1,2,3,4</li>
-<li>对a1,2,3,4进行排好序</li>
-<li>现在就是使用归并排序，得到一个完整的</li>
-</ol>
-<h2 id="给定10的7文件进行排序"><a href="#给定10的7文件进行排序" class="headerlink" title="给定10的7文件进行排序"></a>给定10的7文件进行排序</h2><p>直接使用bitmap，有20个bit，然后输入设置为1，之后输出有1的，如果文件太大，那就是分批来进行解决。</p>
-<blockquote>
-<p>解法二：多路归并</p>
-<p>诚然，在面对本题时，还可以通过计算分析出可以用如2的位图法</p>
-<p>解决，但实际上，很多的时候，我们都面临着这样一个问题，文</p>
-<p>件太大，无法一次性放入内存中计算处理，那这个时候咋办呢？</p>
-<p>分而治之，大而化小，也就是把整个大文件分为若干大小的几</p>
-<p>块，然后分别对每一块进行排序，最后完成整个过程的排序。k趟</p>
-<p>算法可以在kn的时间开销内和n&#x2F;k的空间开销内完成对最多n个小</p>
-<p>于n的无重复正整数的排序。</p>
-<p>比如可分为2块(k&#x3D;2,1趟反正占用的内存只有1.25&#x2F;2M)</p>
-<p>1w4999999和5000000w9999999。</p>
-<p>先遍历一趟，首先排序处理1w4999999之间的整数（用</p>
-<p>5000000&#x2F;8&#x3D;625000个字的存储空间来排序0~4999999之间的整</p>
-<p>数)，然后再第二趟，对50000011000000之间的整数进行排序</p>
-<p>处理。</p>
-</blockquote>
-<h1 id="多层划分"><a href="#多层划分" class="headerlink" title="多层划分"></a>多层划分</h1><p>按区间划分处理1-100,101-200</p>
-<h2 id="2-5个数找出不重复的"><a href="#2-5个数找出不重复的" class="headerlink" title="2.5个数找出不重复的"></a>2.5个数找出不重复的</h2><p><font style="background-color:#FBDE28;">进行区间划分4个厚，然后使用bitmap，首先第一次读取是1，再一次读取就是0，直接输出所有的1</font></p>
-<p>分析：有点像鸽巢原理，整数个数为232，也就是我们可以将这</p>
-<p>232个数，划分为28个区域（比如用单个文件代表一个区域），</p>
-<p>然后将数据分离到不同的区域，然后不同的区域在利用bitmap就</p>
-<p>可以直接解决了。也就是说只要有足够的磁盘空间，就可以很方</p>
-<p>便的解决。</p>
-<h2 id="5亿个数，找出中位数"><a href="#5亿个数，找出中位数" class="headerlink" title="5亿个数，找出中位数"></a><font style="background-color:#FBDE28;">5亿个数，找出中位数</font></h2><p>区间划分，之后统计个数，使用数学计算中位数在哪一个区间，还有指引。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/76eb829ce485016103e3bb27773e2aeb.png?token=AGECE2IFAOTXANJ6T2FJUBTG72WPM"></p>
-<h1 id="Bitmap"><a href="#Bitmap" class="headerlink" title="Bitmap"></a>Bitmap</h1><p>上面的找出重复的数，可以使用双位bitmap，00没出现，01出现1次，10出现多次，11,没意义</p>
-<h1 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h1><h2 id="10w个单词，判断单词是否存在"><a href="#10w个单词，判断单词是否存在" class="headerlink" title="10w个单词，判断单词是否存在"></a>10w个单词，判断单词是否存在</h2><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9d50f456c286a714bbce34b1f5e82dd5.png?token=AGECE2LOCS76CR3LAX53YOTG72WPQ"></p>
-<h1 id="倒排序"><a href="#倒排序" class="headerlink" title="倒排序"></a>倒排序</h1><p>es，使用的方案，学术论文查询，根据关键词查出论文</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/09/15/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E9%A2%98%E7%9B%AE/" data-id="cm1tjy5x6004v8cw7fyc68wbi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-智力题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/09/15/%E6%99%BA%E5%8A%9B%E9%A2%98/" class="article-date">
-  <time datetime="2024-09-15T08:23:45.000Z" itemprop="datePublished">2024-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/09/15/%E6%99%BA%E5%8A%9B%E9%A2%98/">智力题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>智力题一半都是都是在面试腾讯时候才会进行面试的问题，常见的问题就是包括烧绳子</p>
-<h1 id="烧绳子问题"><a href="#烧绳子问题" class="headerlink" title="烧绳子问题"></a>烧绳子问题</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/9ee45afe8c576369e1d4ea7b120c5a84.png?token=AGECE2KF7RAUXFTJCWSZFFTG72WPY"></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/605bdfd03bc8a72374ecd8e8393787c2.png?token=AGECE2MV4PQIGH624TOG6VTG72WP4"></p>
-<p>题意：使用两个如何得到15分钟。</p>
-<p>题解：可以进行对着烧，就是两边一起烧绳子，结果就是加速得到绳子，就是半小时了稍晚第一根绳子，然后第二根绳子还有半小时，接下来对第二根绳子接着对半烧，那就是只有15分钟了</p>
-<h1 id="最少试剂问题"><a href="#最少试剂问题" class="headerlink" title="最少试剂问题"></a>最少试剂问题</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/5f63f607ba58be1bc1a191e90708dc20.png?token=AGECE2M7B4IDSRLEIFWZH33G72WP6"></p>
-<p>这个是常见的的二进制编码问题，直接进行分组二进制按第一位是1的，第二位是1的</p>
-<p>题意：使用最少的来进行检测那些人有病</p>
-<p>题解：直接二进制检测，第一根试剂看有没有毒，第二根试剂看又没有毒，第三根有没有毒然后01二进制编码</p>
-<p>或者直接使用二分法则，看那一边有问题，50,25,13,7,4,2,1</p>
-<h1 id="过桥问题"><a href="#过桥问题" class="headerlink" title="过桥问题"></a>过桥问题</h1><blockquote>
-<p>过桥问题</p>
-<p>在漆黑的夜里，甲乙丙丁共四位旅行者来到了一座狭窄而且没有</p>
-<p>护栏的桥边。如果不借助手电筒的话，大家是无论如何也不敢过</p>
-<p>桥的。不幸的是，四个人一共只带了一只手电筒，而桥窄得只够</p>
-<p>让两个人同时过。如果各自单独过桥的话，四人所需要的时间分</p>
-<p>别是T1、T2、T3、T4分钟（假设T1&lt;T2&lt;T3&lt;T4);而如</p>
-<p>果两人同时过桥，所需要的时间就是走得比较慢的那个人单独行</p>
-<p>动时所需的时间。</p>
-<p>问题：如何设计一个方案，让这四人尽快过桥。</p>
-</blockquote>
-<p>题意：就是一个桥只能通过两个人，一定要有light才可以进行通过，如何时间最短。</p>
-<p>题解：1、使用最短作业的思路，就是每次都是最短的t1来送人过去，然后他自己回来</p>
-<p>t2+t1+t3+t1+t4</p>
-<p>2、还可以最后一次送走的t2，首先t1，t2一起来，然后t1回来，t3，t4一起走，t2回来，最后t1，t2一起走，那就是t2+t1+t4+t2+t2</p>
-<p>接下来就是进行对比</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/af41e66d3a941a8f4b93e25713b8d4ae.png?token=AGECE2NVXNBORTZGWPREDYLG72WQA"></p>
-<p><font style="background-color:#FBDE28;">推广：当推广到5个人，就是t1，t2出去，t1回来，那就变成4个人的情景</font></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/3b0ab4d531c6bbef0a627ce8d81e83f6.png?token=AGECE2MITF2WZPL6PTDHXR3G72WQE"></p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ee66495c9484e168ea1577e28e3001a1.png?token=AGECE2O2E2PIWB23UOAIKULG72WQG"></p>
-<p><font style="background-color:#DF2A3F;">总结最终的差值就是：以此类推，</font></p>
-<p><font style="background-color:#DF2A3F;">两种方案的差异，只与最快的人、次快的人和次慢的</font></p>
-<p><font style="background-color:#DF2A3F;">人的单独过桥时间有关，而与其他人的</font></p>
-<p><font style="background-color:#DF2A3F;">快慢无关。因此只需考虑最快的人时间+次慢的人的时间-2*次</font></p>
-<p><font style="background-color:#DF2A3F;">块的人时间的大小即可选定实际方案。</font></p>
-<p><font style="background-color:#FBDE28;"></font></p>
-<p><font style="background-color:#FBDE28;"></font></p>
-<h1 id="赛马问题"><a href="#赛马问题" class="headerlink" title="赛马问题"></a>赛马问题</h1><p>问题：36匹马，6个赛道，至少赛多少次能挑出前3名（每次赛马成绩不变)</p>
-<p>常见的多路归并排序方案</p>
-<p>题解：使用正常的分组，每一个区间，可以得到6组，然后6次排序之后，每一个小组的排名都可以知道，可以知道每一组第一名，这样可以得到签6名，通过前三名所在的，再次进行比赛，可能第一个所在的小组前三都在他自己，第二个所在的组23在他自己，第三名所在的可能只有3，这样筛选出3,2,1个在1,2,3小组里面最后一轮进行比赛</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/2259e72591e88e46b84cff0596141e9e.png?token=AGECE2KERYYWLJXCNUVSAETG72WQK"></p>
-<p>25匹马5条跑道找最快的5匹马，需要跑几次？</p>
-<p>参考回答：最少8次最多9次</p>
-<p>题解：参考上文的5组之后+1（得到第一）+1（得到23）</p>
-<h1 id="硬币问题"><a href="#硬币问题" class="headerlink" title="硬币问题"></a>硬币问题</h1><p>问题：有23枚硬币在桌上，10枚正面朝上。假设别人蒙住你</p>
-<p>的眼睛，而你的手又摸不出硬币的反正面。让你用最好的方法</p>
-<p>把这些硬币分成两堆，每堆正面朝上的硬币个数相同。（可以</p>
-<p>进行硬币翻转)</p>
-<p><font style="color:#FFFFFF;background-color:#DF2A3F;"></font></p>
-<p><font style="color:#FFFFFF;background-color:#DF2A3F;">题解：数学问题，假设一堆x个（y个正的，x-y反），另外一堆就是23-x（10-y个正的，13-x+y个反的），对第一堆x进行翻转，x-y&#x3D;10-y，x&#x3D;10，直接翻转10个</font></p>
-<p><font style="color:#FFFFFF;background-color:#DF2A3F;"></font></p>
-<h1 id="分盐问题"><a href="#分盐问题" class="headerlink" title="分盐问题"></a>分盐问题</h1><p>问题：有一个天平，2克和7克砝码各一个。如何利用天平砝码在三次内将140克盐分成50,90克两份。</p>
-<p>2与7可以得到5（那就是可以得到左右相差10），或者9</p>
-<p>题解：140-70-35开始做方程x+2&#x3D;35-x+7,可以得到x&#x3D;20，另外是15,35+15&#x3D;50</p>
-<p><font style="background-color:#DF2A3F;">先得到9-18</font></p>
-<p><font style="background-color:#DF2A3F;">一共就是27la，剩下凑出23，等于4，那么就是凑方程</font></p>
-<p><font style="background-color:#DF2A3F;">7+18-2&#x3D;23</font></p>
-<p><font style="background-color:#DF2A3F;"></font></p>
-<h1 id="高楼扔鸡蛋问题"><a href="#高楼扔鸡蛋问题" class="headerlink" title="高楼扔鸡蛋问题"></a>高楼扔鸡蛋问题</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/1c770e0a1d50cda8f650e874aa31606f.png?token=AGECE2LZ2JLQBCI3BOATPZTG72WQO"></p>
-<p>题解：传统的思路是通过二分法，来进行7次尝试，现在不行。只有两个，只能通过区间划分，传统10个一组，然后最大尝试机会（99楼，18次，如果是9楼，只要10次，这样就不平均），为了将19次方到10次里面，第一组x，第二组x-1，第三组x-2，一直加到1</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/346461232f32cfc3f440288230556b76.png?token=AGECE2IDV5XTQPIQNFNNZHDG72WQS"></p>
-<p>为<font style="background-color:#FBDE28;">什么这样计算，1+x表示第一层楼的最后一个得到次数，2+x-1&#x3D;x+1，表示第二次楼的最后一个的概率</font></p>
-<p><font style="background-color:#FBDE28;"></font></p>
-<h1 id="8个球求质量轻"><a href="#8个球求质量轻" class="headerlink" title="8个球求质量轻"></a>8个球求质量轻</h1><p>3,3,2，然后直接计算比较，3这个随机比较</p>
-<h1 id="给定随机函数生成另外的随机函数"><a href="#给定随机函数生成另外的随机函数" class="headerlink" title="给定随机函数生成另外的随机函数"></a>给定随机函数生成另外的随机函数</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/e3b8cbd5c208005153b3decd32700cd3.png?token=AGECE2LKVLWFVUDCBIZEBK3G72WQU"></p>
-<p>记住公式就行，表示生成的概率在1-21</p>
-<ol>
-<li>首先生成平房以内的，一定是随机</li>
-<li>然后再范围里找最近的</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/73d5e8bb34255a8e7395cf45bad78255.png?token=AGECE2OXK7OOAEGUAXSUIWDG72WQY"></p>
-<h1 id="利用空瓶子换饮料"><a href="#利用空瓶子换饮料" class="headerlink" title="利用空瓶子换饮料"></a>利用空瓶子换饮料</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/ada460110c3e1ab0161064df2bcc28bd.png?token=AGECE2JGIQBKD7Z5EOQGQOLG72WQ2"></p>
-<p>·第二种思维：利用借瓶子的思想</p>
-<p>·。因为兑换一瓶饮料需要三个空瓶，这瓶饮料如果是找老板借来的，那么喝完后这个空瓶将会还给他，同时需要附赠给他</p>
-<p>另<font style="background-color:#FBDE28;">外两个空瓶，即每消耗手里两个空瓶就获得一瓶饮料</font></p>
-<p>。但是值得注意的是，上面只是一种假设，实际情况老板是不会借给你的，因此我<font style="background-color:#FBDE28;">们至少需要保留2个空瓶，这样可以在</font></p>
-<p>998个瓶子剩下一个瓶子时，对其进行补足为3个空瓶，从而兑换一瓶新饮料</p>
-<p>。此时使用998个瓶子进行上述的兑换，将获得499瓶饮料</p>
-<p>。之前留下的两个瓶子正好无法兑换，最终获得饮料为1000+499&#x3D;1499瓶</p>
-<ol>
-<li>一般情况下2个瓶子就可以换回一个，因为-3+1，我只需要付出2个就行</li>
-<li>最后我要保留最后两个，那就是1000-2&#x3D;998,998&#x2F;2&#x3D;499</li>
-<li>合计就是1000+499</li>
-</ol>
-<h1 id="三人三鬼问题"><a href="#三人三鬼问题" class="headerlink" title="三人三鬼问题"></a>三人三鬼问题</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/677df8d6f6f7d24b1292fa9de4385649.png?token=AGECE2OZE4CXSZYAKKMATN3G72WQ6"></p>
-<p>有三个人眼三个鬼要过河河上没挤只有条小船然后船一次只能渡一个人和一个鬼或者两个鬼或着两个人无论在那边岸上只有<br>是人比更少的情况下如两是一人三鬼两人，三鬼一人人会故鬼吃然而船又一定而要人或是操作才能抗行要有人或鬼划码）问，<br>如何安全的把三人三鬼渡过河对岸？</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/132b1110a46cc8fd2131b0d84dbdda3c.png?token=AGECE2NNJ5IXO6SKUOKTIELG72WRC"></p>
-<p>先两鬼过去。在一鬼回来。对面有一鬼。这边有三人两鬼。<br>再两鬼过去。在一鬼回来。对面有两鬼。这边有三人一鬼。<br>再两人过去。一人一鬼回来。对面一人一鬼。这边两人两鬼。<br>最后两人过去。一鬼回来。对面三人。这边三鬼。<br>剩下的就三个鬼二个过去一个回来在接另外个就ok了。</p>
-<h1 id="时分重合"><a href="#时分重合" class="headerlink" title="时分重合"></a>时分重合</h1><p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/67a9553ebc87748e80d528b5948214cd.png?token=AGECE2KQ7HQV3HV54MZYD6LG72WRE"></p>
-<p>在24小时里，时针走2圈，分针则走24圈。时针与分针重合大约22.22次，但考虑到仅提及时针与分针的重合，每次它们重合时</p>
-<h2 id="猜帽子的颜色"><a href="#猜帽子的颜色" class="headerlink" title="猜帽子的颜色"></a>猜帽子的颜色</h2><p>如果最后一个前面黑色帽子的数量是奇数就猜黑，不然就猜白色，剩下的就是数自己看到的黑色帽子的数量与上一轮给的是否一样（不一样就报白色）（白色是偶数）数量不一致就报黑，然后黑猫数量减一，与自己看到的黑猫进行比较，一致就是白，不一致就是黑。</p>
-<p><img src="https://raw.githubusercontent.com/weijia99/sync2hexo/master/78dbc253335db87a284ac67b60adbb66.png?token=AGECE2OYMUMBQSY3DXPNDEDG72WRO"></p>
-<p>一百个奴隶站成一纵列，每人头上随机戴上了黑色或白色的帽子。各人不知自己帽子的颜色，但却能看见自己前面所有人帽子的颜色。然后，从最后一个奴隶开始，每人只能用同一种声调和音量说一个字：“黑”或“白”。如果说中了自己帽子的颜色，就存活；说错了就被放出去处决。每个人的回答，所有奴隶都能听见，但是否说对，其他人不得而知。在这之前，所有奴隶可以聚在一起商量策略。问：如果所有奴隶都足够聪明且反应足够快，100个人的最大存活率是多少？  </p>
-<p>参考答案：这是一道经典的推理题。  </p>
-<ol>
-<li><p>最后一个人，如果看<font style="background-color:#FBDE28;">到前面有奇数顶黑帽子就说“黑”，否则说“白</font>”。他有50%的生存机会。  </p>
-</li>
-<li><p>其他人根据最后一个人的答案，记下黑帽的奇偶性。之后，每<font style="background-color:#FBDE28;">当再听到“黑”时，意味着已知的黑帽数量减一。</font><br>从倒数第二人开始，他依据自己看到<font style="background-color:#FBDE28;">的信息与前面传递的信息综合判断：若两者相同则报“白</font>”，不同则报“黑”。<br>如此，除最后一人外的99</p>
-</li>
-<li><p>最后一个黑色是代表技术个黑色帽子</p>
-</li>
-<li><p>然后自己看的数量与前面的数量奇偶性不一样，自己就是黑色的，之后黑色数量减一</p>
-</li>
-<li><p>然后进行记录的黑色与自己看到的黑色来比较</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/09/15/%E6%99%BA%E5%8A%9B%E9%A2%98/" data-id="cm1tjy5x6004x8cw76na2ggki" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-系统设计具体流程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2024/09/07/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B/" class="article-date">
-  <time datetime="2024-09-07T08:28:08.000Z" itemprop="datePublished">2024-09-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/09/07/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B/">系统设计具体流程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="估算qps"><a href="#估算qps" class="headerlink" title="估算qps"></a>估算qps</h1><h2 id="第1步-：了解问题并确定设计范围"><a href="#第1步-：了解问题并确定设计范围" class="headerlink" title="第1步 ：了解问题并确定设计范围"></a><strong>第1步 ：了解问题并确定设计范围</strong></h2><ol>
-<li>需要开发什么功能</li>
-<li>多少个人使用</li>
-<li>技术栈是什么</li>
-<li><font style="background-color:#FBDE28;">最重要的功能是什么，是按照什么顺序排列的</font></li>
-<li><font style="background-color:#FBDE28;">流量多大，可以包含什么格式</font></li>
-</ol>
-<p><font style="background-color:#FBDE28;"></font></p>
-<p><font style="background-color:#FBDE28;"></font></p>
-<h2 id="第2步：提出高层次的设计方案并获得认同"><a href="#第2步：提出高层次的设计方案并获得认同" class="headerlink" title="第2步：提出高层次的设计方案并获得认同"></a><strong>第2步：提出高层次的设计方案并获得认同</strong></h2><p>service，具体的服务</p>
-<h2 id="第三步就是选择数据库"><a href="#第三步就是选择数据库" class="headerlink" title="第三步就是选择数据库"></a>第三步就是选择数据库</h2><p>storage</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>第1步 理解问题并确定设计范围：3-10分钟</li>
-<li>第2步 提出高层次的设计并获得认同：10-15分钟</li>
-<li>第3步 深入设计：10-25分钟</li>
-<li>第4步 总结：3-5分钟</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2024/09/07/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B/" data-id="cm1tjy5xd005t8cw718ypfi7k" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MMPose/" rel="tag">MMPose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/btc/" rel="tag">btc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cf/" rel="tag">cf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clash/" rel="tag">clash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash-course/" rel="tag">crash course</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs144/" rel="tag">cs144</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/detection/" rel="tag">detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ic/" rel="tag">ic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/image-classification/" rel="tag">image classification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mastercard/" rel="tag">mastercard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mmlab/" rel="tag">mmlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nemu/" rel="tag">nemu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/office/" rel="tag">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa/" rel="tag">pa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pat/" rel="tag">pat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag">pa，一生一芯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag">pve，虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytorch/" rel="tag">pytorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/segmentation/" rel="tag">segmentation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/torch/" rel="tag">torch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/usdt/" rel="tag">usdt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/warp/" rel="tag">warp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/" rel="tag">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%BA/" rel="tag">人机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag">使用工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%87%91/" rel="tag">入金</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" rel="tag">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BA%E8%A1%8C/" rel="tag">出行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%B2%BB/" rel="tag">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag">回溯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" rel="tag">土耳其</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E6%B1%87/" rel="tag">外汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" rel="tag">多萝西</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag">心理学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" rel="tag">数字逻辑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">旅游</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag">最短路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" rel="tag">栈的应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B0%B4%E9%A2%98/" rel="tag">水题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%87%E4%B8%B0/" rel="tag">汇丰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag">滑动窗口</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">王道数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BA%A4/" rel="tag">社交</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" rel="tag">社会学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" rel="tag">算法基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag">线性代数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E8%AF%BE/" rel="tag">网课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" rel="tag">计算机教程缺失的一课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" rel="tag">语音识别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" rel="tag">跨境交易</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%93%E5%85%A5/" rel="tag">输入</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" rel="tag">运筹学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" rel="tag">银行卡</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" rel="tag">面试经验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A6%99%E6%B8%AF/" rel="tag">香港</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/MMPose/" style="font-size: 10px;">MMPose</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/bilibili/" style="font-size: 10px;">bilibili</a> <a href="/tags/btc/" style="font-size: 10px;">btc</a> <a href="/tags/cf/" style="font-size: 10px;">cf</a> <a href="/tags/clash/" style="font-size: 10px;">clash</a> <a href="/tags/crash-course/" style="font-size: 10px;">crash course</a> <a href="/tags/cs144/" style="font-size: 10px;">cs144</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/detection/" style="font-size: 10px;">detection</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/ic/" style="font-size: 10px;">ic</a> <a href="/tags/image-classification/" style="font-size: 10px;">image classification</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/leetcode/" style="font-size: 11.43px;">leetcode</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked list</a> <a href="/tags/linux/" style="font-size: 12.86px;">linux</a> <a href="/tags/mastercard/" style="font-size: 10px;">mastercard</a> <a href="/tags/mmlab/" style="font-size: 12.86px;">mmlab</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nemu/" style="font-size: 10px;">nemu</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/office/" style="font-size: 10px;">office</a> <a href="/tags/pa/" style="font-size: 11.43px;">pa</a> <a href="/tags/pat/" style="font-size: 18.57px;">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 10px;">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/pytorch/" style="font-size: 14.29px;">pytorch</a> <a href="/tags/segmentation/" style="font-size: 10px;">segmentation</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/torch/" style="font-size: 10px;">torch</a> <a href="/tags/usdt/" style="font-size: 10px;">usdt</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/warp/" style="font-size: 10px;">warp</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/%E4%BA%BA%E6%9C%BA/" style="font-size: 10px;">人机</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">使用工具</a> <a href="/tags/%E5%85%A5%E9%87%91/" style="font-size: 10px;">入金</a> <a href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" style="font-size: 10px;">公开课</a> <a href="/tags/%E5%87%BA%E8%A1%8C/" style="font-size: 10px;">出行</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 10px;">分治</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 11.43px;">动态规划</a> <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 10px;">后序遍历</a> <a href="/tags/%E5%9B%9E%E6%BA%AF/" style="font-size: 10px;">回溯</a> <a href="/tags/%E5%9B%BE/" style="font-size: 12.86px;">图</a> <a href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" style="font-size: 10px;">土耳其</a> <a href="/tags/%E5%A4%96%E6%B1%87/" style="font-size: 11.43px;">外汇</a> <a href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" style="font-size: 10px;">多萝西</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">学习方法</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 15.71px;">排序</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" style="font-size: 10px;">数字逻辑</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 17.14px;">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 10px;">数论</a> <a href="/tags/%E6%97%85%E6%B8%B8/" style="font-size: 10px;">旅游</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" style="font-size: 10px;">最短路径</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" style="font-size: 10px;">栈的应用</a> <a href="/tags/%E6%A0%91/" style="font-size: 14.29px;">树</a> <a href="/tags/%E6%B0%B4%E9%A2%98/" style="font-size: 15.71px;">水题</a> <a href="/tags/%E6%B1%87%E4%B8%B0/" style="font-size: 10px;">汇丰</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 11.43px;">深度学习</a> <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" style="font-size: 10px;">滑动窗口</a> <a href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14.29px;">王道数据结构</a> <a href="/tags/%E7%A4%BE%E4%BA%A4/" style="font-size: 10px;">社交</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" style="font-size: 10px;">社会学</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">算法基础</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 10px;">线性代数</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a> <a href="/tags/%E7%BD%91%E8%AF%BE/" style="font-size: 10px;">网课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" style="font-size: 10px;">计算机教程缺失的一课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" style="font-size: 10px;">语音识别</a> <a href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" style="font-size: 10px;">跨境交易</a> <a href="/tags/%E8%BE%93%E5%85%A5/" style="font-size: 10px;">输入</a> <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" style="font-size: 10px;">运筹学</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 10px;">运维</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 11.43px;">递归</a> <a href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" style="font-size: 10px;">银行卡</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 15.71px;">链表</a> <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 10px;">闲谈</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 10px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" style="font-size: 10px;">面试经验</a> <a href="/tags/%E9%A6%99%E6%B8%AF/" style="font-size: 10px;">香港</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/10/04/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/d/">d</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/nothing/">nothing</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/">第二周，GIN入门</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">第一周，go语言拾遗</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2024 weijia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">98</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/10/04/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-03T16:28:42.712Z" title="Created 2024-10-04 00:28:42">2024-10-04</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/10/03/d/" title="d">d</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-03T15:55:06.000Z" title="Created 2024-10-03 23:55:06">2024-10-03</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/10/03/nothing/" title="nothing">nothing</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-03T15:55:01.000Z" title="Created 2024-10-03 23:55:01">2024-10-03</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门"><img class="post_bg" src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727960975879-69b8efa7-7210-44e9-aebc-9ba048065f69.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二周，GIN入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门">第二周，GIN入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-03T13:03:19.000Z" title="Created 2024-10-03 21:03:19">2024-10-03</time></span></div><div class="content">1.入门首先最简单的直接抄袭官网的快速开始，常见的三步。1.定义server的断开。2.设置路由对应handle函数。3.设置handle函数
+
+
+设置server
+设置对应的处理函数，匿名函数，传入的是ctx是关键
+开始run
+
+路由匹配参照spring的request param和正则匹配
+
+通过param来获取参数，这个与java@request param取值差不多的思路
+还有一种是在？这种参数，查询参数，使用query进行获取
+
+设置register函数
+当需要注册的路由太多，我们需要进行调用的server.get次数就会很多次。可以进行抽象出来一个方法，放到专属的类，每一个路由都在类里面就有处理方法。
+
+
+下面就是优雅之后的代码。
+
+分组路由相当于spring的requestmapping放入到类最前面的路径
+通过ug来接着子路径
+
+数据接受vo传输与java类似，传输数据前后端，使用的需要vo，pojo来进行json传输数据。不同的是java可以自动封装传输的数据位class对象，这边需要把前后端的进行映射才能组装位vo，使用的是反引号·
+
+这个也与email小写就是私有 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗"><img class="post_bg" src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727956986927-b9d68bdf-c839-4ebc-abf1-e35003ecff6e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一周，go语言拾遗"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗">第一周，go语言拾遗</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-10-03T11:56:17.000Z" title="Created 2024-10-03 19:56:17">2024-10-03</time></span></div><div class="content">本节主要讲解的是go语言的基础语法，主要参照的是自己的遗留问题。
+文件路径package和java里面的包一样，也是需要先定义好文件夹路径
+package的名字可以与文件夹的名字不一样，同一个文件夹下面的包名药一直，test文件除外
+
+基础数据和java差不多也是int，uint，float这些
+
+数字的极限，只能通过使用math包来进行获取
+
+string与python类似，使用反引号这是个特点&#96;进行作为字符串
+
+常量与变量使用var来进行定义，这个与js差不多，自动类型推断，先写变量名称在写类型，与rust差不多。
+。通过使用大小写来作为pubilc与private的进行区别。
+
+使用：&#x3D;来进行类型推断。只有局部变量才可以
+
+常量，使用const来进行修饰。这个字不可以进行修改的
+
+iota进行自增加，主要是自我增加。
+
+方法声明常见的代码，首先 定义是函数，然后设置名称和类型。
+
+可以返回多个类型与python类似
+返回值的接受与变量差不多，直接使用：&#x3D;来进行接受返回值。
+
+函数式编程
+主要思想就是把函数作为参数，然后如果要使用函数，直接加上（）进行调 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/09/19/%E5%9C%BA%E6%99%AF%E4%BC%98%E5%8C%96/" title="场景优化"><img class="post_bg" src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1726710360433-7f48f7ec-200b-48bc-9069-dda80d4b16ad.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="场景优化"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/19/%E5%9C%BA%E6%99%AF%E4%BC%98%E5%8C%96/" title="场景优化">场景优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-19T01:39:41.000Z" title="Created 2024-09-19 09:39:41">2024-09-19</time></span></div><div class="content">聚合写上一章节场景题目，介绍的点赞系统，就是使用的聚合写操作，之前点赞都是每次一次，可以在内存里面聚合之后，然后再进行100个合在一起的，进行一次加100，减少数据库的压力
+
+或者数据库进行批量插入，
+普通的接口，没有聚合，使用压测 wrk，900qps
+@schedule 是进行定时逻辑，调用次数300来使用
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/09/16/%E5%9C%BA%E6%99%AF%E9%A2%98%E7%9B%AE/" title="场景题目"><img class="post_bg" src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1726483969620-501b1524-3cdd-491e-a5c3-8c9dea260d32.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="场景题目"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/16/%E5%9C%BA%E6%99%AF%E9%A2%98%E7%9B%AE/" title="场景题目">场景题目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-16T07:43:20.000Z" title="Created 2024-09-16 15:43:20">2024-09-16</time></span></div><div class="content">两种思路，一个是4个d
+
+询问场景，询问qps，主要业务，业务流程
+询问服务，主要是暴露什么接口
+接下来就是storage，使用什么数据库还有schma，为什么不用其他
+接下来就是看还有没有优化的，进行防止盗刷，限流什么的
+
+还有caps
+
+沟通c，进行交流，业务逻辑，qps，精准度要求（能不能多卖，还是少买），难点分析
+a架构，服务，存储，流程
+p观点展开，难点1，难点2
+s总结，开场出结论，然后索引要点
+
+秒杀专题c对话主要询问qps，业务流程，难点
+主要的业务流程：首先是查询时间是否到了秒杀时间，之后开始秒杀，是否还有名额，然后进行购买，秒杀库存，之后生辰订单，付款
+
+请求量估计，如果是一般的5k，单个mysql就行，1w两个mysql，超过直接上redis，10w之后就是集群，每一个redis配置下平均的秒杀数量
+
+超卖与少买的问题，使用redis、
+
+redis寄了，丢掉命令
+主从切换，丢了
+查询不是原子的
+
+少买
+
+库存减少，但是订单失败
+用户不付款，回滚失败
+
+难点分析
+
+高并发，人流量大-风控，限流，验证码，薛峰
+高精准
+大吉黄牛，进行限额
+
+架构设计主要是进行服务，存 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/09/15/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E9%A2%98%E7%9B%AE/" title="海量数据题目"><img class="post_bg" src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1726465167465-97df603a-ce95-4d29-8831-dfffeb77f9b2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海量数据题目"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/15/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E9%A2%98%E7%9B%AE/" title="海量数据题目">海量数据题目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-15T13:36:58.000Z" title="Created 2024-09-15 21:36:58">2024-09-15</time></span></div><div class="content">所谓海量数据处理就是在大数据情况下来处理具体情况就是内存有限，数据太大无法处理完成所有，因此需要使用特殊处理。
+常见的方案就是
+
+时间换空间，使用bitmap，哈希，trie树灯解决
+空间换时间，进行hash到小文件，然后统计小文之后归并统计
+
+常见的方案
+
+分治
+外排序
+划分
+bitmap
+trie树
+倒排序
+
+分治方案顾名思义：就是数据量太多，无法一次性装入到内存，就会hash小文件，统计小文件的
+统计访问最多的ip地址
+题解：
+
+使用hash取模1000，分到1000小文件
+之后维护一个hashmap来计算频率，可以得到前1000个最大的ip
+然后使用快排或者使用堆排序
+
+统计300w里面的热门10个查询
+大约只有300w个有效，然后就是计算长度300*1k&#x2F;4&#x3D;0.75G,可以直接丢到内存进行处理结果
+
+使用hash进行计算ip对应的值
+然后直接堆排序，是Nlogk
+
+有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词2^30&#x2F;2^4 &#x3D; 2^26
+2^20&#x2F;2^4 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/09/15/%E6%99%BA%E5%8A%9B%E9%A2%98/" title="智力题"><img class="post_bg" src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1726388970296-e5503ccb-6d06-43b6-b934-b7114172494d.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智力题"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/15/%E6%99%BA%E5%8A%9B%E9%A2%98/" title="智力题">智力题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-15T08:23:45.000Z" title="Created 2024-09-15 16:23:45">2024-09-15</time></span></div><div class="content">智力题一半都是都是在面试腾讯时候才会进行面试的问题，常见的问题就是包括烧绳子
+烧绳子问题
+
+题意：使用两个如何得到15分钟。
+题解：可以进行对着烧，就是两边一起烧绳子，结果就是加速得到绳子，就是半小时了稍晚第一根绳子，然后第二根绳子还有半小时，接下来对第二根绳子接着对半烧，那就是只有15分钟了
+最少试剂问题
+这个是常见的的二进制编码问题，直接进行分组二进制按第一位是1的，第二位是1的
+题意：使用最少的来进行检测那些人有病
+题解：直接二进制检测，第一根试剂看有没有毒，第二根试剂看又没有毒，第三根有没有毒然后01二进制编码
+或者直接使用二分法则，看那一边有问题，50,25,13,7,4,2,1
+过桥问题
+过桥问题
+在漆黑的夜里，甲乙丙丁共四位旅行者来到了一座狭窄而且没有
+护栏的桥边。如果不借助手电筒的话，大家是无论如何也不敢过
+桥的。不幸的是，四个人一共只带了一只手电筒，而桥窄得只够
+让两个人同时过。如果各自单独过桥的话，四人所需要的时间分
+别是T1、T2、T3、T4分钟（假设T1&lt;T2&lt;T3&lt;T4);而如
+果两人同时过桥，所需要的时间就是走得比较慢的那个人单独行
+动时所 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2024/09/07/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B/" title="系统设计具体流程">系统设计具体流程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-07T08:28:08.000Z" title="Created 2024-09-07 16:28:08">2024-09-07</time></span></div><div class="content">估算qps第1步 ：了解问题并确定设计范围
+需要开发什么功能
+多少个人使用
+技术栈是什么
+最重要的功能是什么，是按照什么顺序排列的
+流量多大，可以包含什么格式
+
+
+
+第2步：提出高层次的设计方案并获得认同service，具体的服务
+第三步就是选择数据库storage
+总结
+第1步 理解问题并确定设计范围：3-10分钟
+第2步 提出高层次的设计并获得认同：10-15分钟
+第3步 深入设计：10-25分钟
+第4步 总结：3-5分钟
+
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">weijia</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">98</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/04/hello-world/" title="Hello World">Hello World</a><time datetime="2024-10-03T16:28:42.712Z" title="Created 2024-10-04 00:28:42">2024-10-04</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/03/d/" title="d">d</a><time datetime="2024-10-03T15:55:06.000Z" title="Created 2024-10-03 23:55:06">2024-10-03</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/03/nothing/" title="nothing">nothing</a><time datetime="2024-10-03T15:55:01.000Z" title="Created 2024-10-03 23:55:01">2024-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门"><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727960975879-69b8efa7-7210-44e9-aebc-9ba048065f69.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二周，GIN入门"/></a><div class="content"><a class="title" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门">第二周，GIN入门</a><time datetime="2024-10-03T13:03:19.000Z" title="Created 2024-10-03 21:03:19">2024-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗"><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727956986927-b9d68bdf-c839-4ebc-abf1-e35003ecff6e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一周，go语言拾遗"/></a><div class="content"><a class="title" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗">第一周，go语言拾遗</a><time datetime="2024-10-03T11:56:17.000Z" title="Created 2024-10-03 19:56:17">2024-10-03</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/tags/DFS/" style="font-size: 1.1em; color: #999">DFS</a> <a href="/tags/MMPose/" style="font-size: 1.1em; color: #999">MMPose</a> <a href="/tags/action/" style="font-size: 1.1em; color: #999">action</a> <a href="/tags/bilibili/" style="font-size: 1.1em; color: #999">bilibili</a> <a href="/tags/btc/" style="font-size: 1.1em; color: #999">btc</a> <a href="/tags/cf/" style="font-size: 1.1em; color: #999">cf</a> <a href="/tags/clash/" style="font-size: 1.1em; color: #999">clash</a> <a href="/tags/crash-course/" style="font-size: 1.1em; color: #999">crash course</a> <a href="/tags/cs144/" style="font-size: 1.1em; color: #999">cs144</a> <a href="/tags/cv/" style="font-size: 1.1em; color: #999">cv</a> <a href="/tags/deep-learning/" style="font-size: 1.1em; color: #999">deep learning</a> <a href="/tags/detection/" style="font-size: 1.1em; color: #999">detection</a> <a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/excel/" style="font-size: 1.1em; color: #999">excel</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/ic/" style="font-size: 1.1em; color: #999">ic</a> <a href="/tags/image-classification/" style="font-size: 1.1em; color: #999">image classification</a> <a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/tags/jvm/" style="font-size: 1.1em; color: #999">jvm</a> <a href="/tags/leetcode/" style="font-size: 1.2em; color: #999da3">leetcode</a> <a href="/tags/linked-list/" style="font-size: 1.1em; color: #999">linked list</a> <a href="/tags/linux/" style="font-size: 1.3em; color: #99a1ac">linux</a> <a href="/tags/mastercard/" style="font-size: 1.1em; color: #999">mastercard</a> <a href="/tags/mmlab/" style="font-size: 1.3em; color: #99a1ac">mmlab</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/nemu/" style="font-size: 1.1em; color: #999">nemu</a> <a href="/tags/npm/" style="font-size: 1.1em; color: #999">npm</a> <a href="/tags/office/" style="font-size: 1.1em; color: #999">office</a> <a href="/tags/pa/" style="font-size: 1.2em; color: #999da3">pa</a> <a href="/tags/pat/" style="font-size: 1.5em; color: #99a9bf">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 1.1em; color: #999">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 1.1em; color: #999">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/pytorch/" style="font-size: 1.4em; color: #99a5b6">pytorch</a> <a href="/tags/segmentation/" style="font-size: 1.1em; color: #999">segmentation</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/torch/" style="font-size: 1.1em; color: #999">torch</a> <a href="/tags/usdt/" style="font-size: 1.1em; color: #999">usdt</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">October 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">August 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">121</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-03T17:27:25.967Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By weijia</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

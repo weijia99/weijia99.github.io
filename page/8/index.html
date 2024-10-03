@@ -1,849 +1,337 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="weijia"><meta name="copyright" content="weijia"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/page/8/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="weijia">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/page/8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-04 01:27:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 7.3.0"></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-pa1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/11/pa1/" class="article-date">
-  <time datetime="2022-11-11T03:40:00.000Z" itemprop="datePublished">2022-11-11</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/11/pa1/">pa1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h2><h3 id="单步执行"><a href="#单步执行" class="headerlink" title="单步执行"></a>单步执行</h3><blockquote>
-<p>单步执行的功能十分简单, 而且框架代码中已经给出了模拟CPU执行方式的函数, 你只要使用相应的参数去调用它就可以了. 如果你仍然不知道要怎么做, RTFSC</p>
-</blockquote>
-<p>我们从源代码可以看到这个，通过查看c（继续执行发现）他条用了一个exec函数，我们的目的，就是通过求职，得到那个数字是多少，然后调用exec这个函数，如何得到数字，使用strtok进行得到，之后得到的是char，转换需要使用atoi来进行使用</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="打印寄存器"><a href="#打印寄存器" class="headerlink" title="打印寄存器"></a>打印寄存器</h3><blockquote>
-<p>打印寄存器就更简单了. 不过既然寄存器的结构是ISA相关的, 我们希望能为简易调试器屏蔽ISA的差异. 框架代码已经为大家准备了如下的API:</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// nemu/src/isa/$ISA/reg.c</span><br><span class="line">void isa_reg_display(void);</span><br></pre></td></tr></table></figure>
-
-<p>执行<code>info r</code>之后, 就调用<code>isa_reg_display()</code>, 在里面直接通过<code>printf()</code>输出所有寄存器的值即可. 如果你从来没有使用过<code>printf()</code>, 请RTFM或者STFW. 如果你不知道要输出什么, 你可以参考GDB中的输出</p>
-</blockquote>
-<p>通过这个可以知道，我们需要使用打印寄存器，只需要调用isa——display，因为我们选择的是riscv，所以我们需要在，make menuconfig里面选择isa，同事也要去对应的架构下面完善这个打印函数，这个打印函数还要输出数字，这个数值，是使用gdr这个api得到的，这个在头文件里有定义</p>
-<p>代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="扫描内存"><a href="#扫描内存" class="headerlink" title="扫描内存"></a>扫描内存</h3><blockquote>
-<p>扫描内存的实现也不难, 对命令进行解析之后, 先求出表达式的值. 但你还没有实现表达式求值的功能, 现在可以先实现一个简单的版本: 规定表达式<code>EXPR</code>中只能是一个十六进制数, 例如</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x 10 0x80000000</span><br></pre></td></tr></table></figure>
-
-<p>这样的简化可以让你暂时不必纠缠于表达式求值的细节. 解析出待扫描内存的起始地址之后, 就可以使用循环将指定长度的内存数据通过十六进制打印出来. 如果你不知道要怎么输出, 同样的, 你可以参考GDB中的输出. 问题是, 我们要如何访问客户计算机的内存数据呢? (答案早就说了喂)</p>
-<p>实现了扫描内存的功能之后, 你可以打印<code>0x80000000</code>或者<code>0x100000</code>附近的内存, 你应该会看到程序的代码, 和内置客户程序的内容进行对比, 检查你的实现是否正确.</p>
-</blockquote>
-<p>刚开始没有看懂题目意思，主要是使用，后面这个地址，来得到后10位地址的指，一个地址有4B，因此800下一个就是804，夹具体调用的函数是vaddr——read（addr，len），这个len是字节长度，写4就是4B，暂时是固定所有制来进行执行的</p>
-<p>代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/11/pa1/" data-id="cm1tjy5wl002n8cw72h9l3ta3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag">pa，一生一芯</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-word技巧" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/11/word%E6%8A%80%E5%B7%A7/" class="article-date">
-  <time datetime="2022-11-11T02:18:29.000Z" itemprop="datePublished">2022-11-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/11/word%E6%8A%80%E5%B7%A7/">word技巧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="word操作技巧"><a href="#word操作技巧" class="headerlink" title="word操作技巧"></a>word操作技巧</h1><h2 id="3-1项目"><a href="#3-1项目" class="headerlink" title="3.1项目"></a>3.1项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681334072201668133406077.png"></p>
-<ol>
-<li>带圈字符在拼音那里</li>
-<li>然后段落可以设置行间距</li>
-<li>选择之后可以设置字体，字体又是可以分为大小，还有样式</li>
-<li>项目符号就是指那个三角形，编号是123，直接右击都是可以使用</li>
-<li>最后的是使用对齐方式，使用居中对齐</li>
-<li>还有一件事，可以使用格式刷，对已经设置好样式的文本进行复制粘贴。不需要自己手动设置格式</li>
-</ol>
-<h2 id="3-2项目"><a href="#3-2项目" class="headerlink" title="3.2项目"></a>3.2项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681337809981668133780647.png"></p>
-<p>这个主要是学习表格的使用</p>
-<ol>
-<li>前面的格式样式设置就不提了</li>
-<li>然后是插入表格</li>
-<li>插入之后</li>
-<li>选择之后表单有对齐的功能，使用对齐</li>
-<li>还有合并单元格</li>
-<li>.进行设置行高还有列宽</li>
-<li>之后就是wps的功能，使用公式进行求和还有求级，product（left），还有sum</li>
-<li>之后设置格式，设置的格式有，人民币大写，还有一些其他</li>
-<li>设置表格变宽，使用全选进行设置，设置表格样式，选择线性颜色，还有粗细度</li>
-</ol>
-<h2 id="3-3项目"><a href="#3-3项目" class="headerlink" title="3.3项目"></a>3.3项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681348640571668134864015.png"></p>
-<p>目前，难度比较大的一个。</p>
-<p>学习这个就是药了解到文本框的作用。使用普通的文本没有办法</p>
-<ol>
-<li>文本框进行插入，插入之后可以对他进行字体设置吗，还有字体效果，同事去除文本边框</li>
-<li>接下来就是进行图片插入，插入之后药把文字进行浮动与上方，不然不好移动图片</li>
-<li>之后就是手指下沉</li>
-<li>还有设置文字的行间距这些，就可以skip</li>
-<li>最后一个就是进行插入分栏，插入分栏，需要选择药进行芬兰的段落，还要进行选择分割线。注意不要选择到回车键</li>
-<li>然后就是艺术字进行设置，艺术字插入之后就是对齐，还有一些其他效果。</li>
-</ol>
-<h2 id="3-4项目"><a href="#3-4项目" class="headerlink" title="3.4项目"></a>3.4项目</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16681357919941668135791288.png"></p>
-<p>本次项目还是实际作用比较大，这个对于文档排版还是很有帮助的</p>
-<ol>
-<li>首先就是设置标题，在进行设置标题之前，我们可以对标题格式进行自定义设置</li>
-<li>然后就是对正文样式，还有标题2的样式进行设置</li>
-<li>之后就是对每一本部分进行选择设置</li>
-<li><strong>重点使用分节符，在第一页的最开头</strong>（这样可以分成，正文还有目录2节）‘</li>
-<li>之后就是进行目录的插入，也要进行设置，在应用你进行插入目录</li>
-<li>最后就是也没页脚之间的设置，使用页眉，可以定义最上面</li>
-<li>使用页脚可以定义页码，在不同节的页码，我们就不连接上一节了。然后重新设置页码</li>
-<li>最后就是插入封面，这个也是有点的</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这些项目的操作，重点还是文本框的使用，行间距还有字体。对于我们使用的是最后一个项目，如何进行word排版，发出文章。还有那个字体和插入图片的意思。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/11/word%E6%8A%80%E5%B7%A7/" data-id="cm1tjy5wq003a8cw79icd2wol" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/word/" rel="tag">word</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-框架代码" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/11/08/%E6%A1%86%E6%9E%B6%E4%BB%A3%E7%A0%81/" class="article-date">
-  <time datetime="2022-11-08T02:30:13.000Z" itemprop="datePublished">2022-11-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/08/%E6%A1%86%E6%9E%B6%E4%BB%A3%E7%A0%81/">框架代码</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/11/08/%E6%A1%86%E6%9E%B6%E4%BB%A3%E7%A0%81/" data-id="cm1tjy5x7004z8cw7cvmz7by6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="git-github的action" class="article article-type-git" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/26/github%E7%9A%84action/" class="article-date">
-  <time datetime="2022-10-26T09:58:55.000Z" itemprop="datePublished">2022-10-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/26/github%E7%9A%84action/">github的action</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="action-操作"><a href="#action-操作" class="headerlink" title="action 操作"></a>action 操作</h1><h2 id="1-workflow是什么"><a href="#1-workflow是什么" class="headerlink" title="1.workflow是什么"></a>1.workflow是什么</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667785330551666778532504.png"></p>
-<p>假设你开发的java软件又bug,用户提交问题到issue,代码人员进行修复,修复完成,之后进行pull request,然后就进行合并,合并之后旧的进行测试才能发布,这就是一个流程</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667787870631666778786133.png"></p>
-<h2 id="2-名称解释"><a href="#2-名称解释" class="headerlink" title="2.名称解释"></a>2.名称解释</h2><p><strong>event</strong></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667789010571666778900736.png"></p>
-<p>就是我触发的条件(pull request)</p>
-<p>workflow就是一系列自动化流程</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667789610561666778960997.png"></p>
-<p>常用的cicd</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667791370571666779136700.png"></p>
-<h2 id="3-为什么使用action"><a href="#3-为什么使用action" class="headerlink" title="3.为什么使用action"></a>3.为什么使用action</h2><p>因为你 不想配置环境变量   </p>
-<h2 id="3-demo"><a href="#3-demo" class="headerlink" title="3.demo"></a>3.demo</h2><h3 id="3-1yaml教程"><a href="#3-1yaml教程" class="headerlink" title="3.1yaml教程"></a>3.1yaml教程</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667809480571666780947313.png"></p>
-<p>使用tab就是一个对象,使用kv来记录纸</p>
-<p>使用过 list记录多个,那就需要-</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667810550641666781054310.png"></p>
-<h3 id="3-2demo简介"><a href="#3-2demo简介" class="headerlink" title="3.2demo简介"></a>3.2demo简介</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667812140551666781213509.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667812860561666781285494.png"></p>
-<ol>
-<li>name是可选</li>
-<li>on就是event,单位需要出发的事件</li>
-</ol>
-<p>jobs,就是执行的事件</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667813680551666781367823.png"></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667815090571666781508152.png"></p>
-<p>到这一步就是进行代码检查,使用github编译好的checkout</p>
-<p>每一个-,代表一个list,就代表一次操作</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667816150561666781614964.png"></p>
-<blockquote>
-<p>uses,时使用别人的action,run是自己执行linux命令</p>
-</blockquote>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667816900551666781689860.png"></p>
-<h2 id="4-cicd在哪里执行"><a href="#4-cicd在哪里执行" class="headerlink" title="4.cicd在哪里执行"></a>4.cicd在哪里执行</h2><p>在github的服务器上 </p>
-<p>jobs是并行的,如果publish需要build,那就要使用关键字,need</p>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><p>首先 on 是触发条件(push,pull)</p>
-<p>接下来就是正常的jobs</p>
-<p>首先第一步就是checkout,第二部就是设置值环境时候用java,然后就是读取使用run,之后就clone文件,并且进入,之后就是build,一般使用gradle,并且权限777</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16667840363551666784036329.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/26/github%E7%9A%84action/" data-id="cm1tjy5wb001e8cw7fmcecake" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/action/" rel="tag">action</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-元编程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/25/%E5%85%83%E7%BC%96%E7%A8%8B/" class="article-date">
-  <time datetime="2022-10-25T11:23:57.000Z" itemprop="datePublished">2022-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/25/%E5%85%83%E7%BC%96%E7%A8%8B/">元编程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="元编程"><a href="#元编程" class="headerlink" title="元编程"></a>元编程</h1><h2 id="1-概念解释"><a href="#1-概念解释" class="headerlink" title="1.概念解释"></a>1.概念解释</h2><p>就相当云java构建spring项目,进行build.使用规则来定义如何使用这些文件来的到,jar包</p>
-<p>cmake 比make跟smart,cmake查找本地的哭,make只会自己寻找文件</p>
-<p>使用make来进行build固件,make寻找makefile来进行make </p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666973194161666697319373.png"></p>
-<p>上面是需按照那两个文件,然后接下来才是进行编译代码</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666974668991666697465989.png"></p>
-<h2 id="2-ci持续集成"><a href="#2-ci持续集成" class="headerlink" title="2.ci持续集成"></a>2.ci持续集成</h2><p>自动进行构建,每一个event出发一个action,自动调用</p>
-<p>例如本文的网站,当我写好一个markdwon文件,然后使用push操作,github就会进行ci,并且生成网页</p>
-<h2 id="3-测速"><a href="#3-测速" class="headerlink" title="3.测速"></a>3.测速</h2><p>单元测试,值测试某一个功能</p>
-<p>集成测试,测试代码交互之间是不是又问题</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/25/%E5%85%83%E7%BC%96%E7%A8%8B/" data-id="cm1tjy5wv003h8cw7bfwcbcx3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-git控制" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/25/git%E6%8E%A7%E5%88%B6/" class="article-date">
-  <time datetime="2022-10-25T02:26:53.000Z" itemprop="datePublished">2022-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/25/git%E6%8E%A7%E5%88%B6/">git控制</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git操作"><a href="#git操作" class="headerlink" title="git操作"></a>git操作</h1><h2 id="1-模型"><a href="#1-模型" class="headerlink" title="1.模型"></a>1.模型</h2><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666653059061666665304945.png"></p>
-<p>模型树。对于文件夹，叫做tree，对于文件叫做blob，根目录是root</p>
-<p>git工作流</p>
-<p>使用分支branch，还有merge合并</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666656019051666665601612.png"></p>
-<p>元数据：作者，message</p>
-<p><strong>数据模型</strong></p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666657919001666665791145.png"></p>
-<p>定义的文件为数组，tree是hash隐射，然后commit是要提交的stack</p>
-<p>一个obejcect是一个版本，维护，使用hash进行映射</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666659669051666665966713.png"></p>
-<h2 id="2git-demo"><a href="#2git-demo" class="headerlink" title="2git demo"></a>2git demo</h2><p>暂存区</p>
-<blockquote>
-<p>为什么add和commit分开</p>
-</blockquote>
-<p>因为add可能已经完成了一个新的feature，还有一些没有完成，只提交完成的就可以进行发布</p>
-<p>也可能不想上传日志文件</p>
-<p>git checkout 进行版本切换回退 </p>
-<p>git diff进行代码比较</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666813658981666681365480.png"></p>
-<p>可以比较不同时期某个文件的的区别</p>
-<h2 id="3-分支"><a href="#3-分支" class="headerlink" title="3.分支"></a>3.分支</h2><p>git branch cat，新建一个cat分支</p>
-<p> <img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666817818981666681781631.png"></p>
-<p>可以之间checkout -b创新建新分支，然后进去</p>
-<p>回到什么功能都没有的master分支，进行合并cat和dog分支</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666821539001666682152951.png"></p>
-<p>首先git merge cat</p>
-<p>然后出现合并不兼容的情况（conflic）</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666822748981666682274329.png"></p>
-<p>因为那个if判断不对</p>
-<p>最终结果</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666824468971666682446494.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/25/git%E6%8E%A7%E5%88%B6/" data-id="cm1tjy5wc001g8cw741isb3lg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-acw数论" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/24/acw%E6%95%B0%E8%AE%BA/" class="article-date">
-  <time datetime="2022-10-24T13:31:35.000Z" itemprop="datePublished">2022-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/24/acw%E6%95%B0%E8%AE%BA/">acw数论</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="4-数学知识"><a href="#4-数学知识" class="headerlink" title="4.数学知识"></a>4.数学知识</h1><h2 id="4-1质数"><a href="#4-1质数" class="headerlink" title="4.1质数"></a>4.1质数</h2><h3 id="4-1-1基本算法"><a href="#4-1-1基本算法" class="headerlink" title="4.1.1基本算法"></a>4.1.1基本算法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_prime</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(i&lt;<span class="number">2</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n/;i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(n%i==<span class="number">0</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-1-2分解质因数"><a href="#4-1-2分解质因数" class="headerlink" title="4.1.2分解质因数"></a>4.1.2分解质因数</h3><p>从小到大尝试每一个因素</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void divide(int n)&#123;</span><br><span class="line">	for(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">		if(n%i==0)&#123;</span><br><span class="line">		int s=0;</span><br><span class="line">		#求出i的次数</span><br><span class="line">		while(n%i==0)&#123;</span><br><span class="line">		n/=s;</span><br><span class="line">		i++;</span><br><span class="line">		&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>优化版本</p>
-<p>n中至多质保函一个最多大于根号n的因子</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void divide(int n)&#123;</span><br><span class="line">	for(int i=2;i&lt;=n/i;i++)&#123;</span><br><span class="line">		if(n%i==0)&#123;</span><br><span class="line">		int s=0;</span><br><span class="line">		#求出i的次数</span><br><span class="line">		while(n%i==0)&#123;</span><br><span class="line">		n/=i;</span><br><span class="line">		s++;</span><br><span class="line">		&#125;</span><br><span class="line">		#这个循环是求出质数i的次数</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	if(n&gt;1)print(n)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="4-1-3筛质数"><a href="#4-1-3筛质数" class="headerlink" title="4.1.3筛质数"></a>4.1.3筛质数</h3><p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666190608981666619060512.png"></p>
-<p>筛选倍数，直到n，是质数的倍数的直接pass</p>
-<p>核心思想，反思倍数的，坑定不是质数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void get_prime(int n)&#123;</span><br><span class="line">	for(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">		if(!st[i])&#123;</span><br><span class="line">		prime[cnt++]=i;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int j=i+i;j&lt;=n;j+=i)&#123;</span><br><span class="line">		st[i]=true;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<hr>
-<p>下面这个是线性筛法</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666205978511666620597830.png"></p>
-<p>为什么是正确的，n只会倍最小质因子甩掉。从小到大枚举质数，每次筛掉i和质数</p>
-<p><strong>当break发生意味着prime【j】是i的最小质因子，因此primes【j】</strong></p>
-<p>第一次出现摸他为0 ，一定是质因子</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666209365431666620936520.png"></p>
-<p>如果摸不是0，pj也一定是pj*i的最小质因子</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/24/acw%E6%95%B0%E8%AE%BA/" data-id="cm1tjy5w5000v8cw7473uhjn0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" rel="tag">算法基础</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-bilibili视频下载" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/24/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/" class="article-date">
-  <time datetime="2022-10-24T13:02:31.000Z" itemprop="datePublished">2022-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/24/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/">bilibili视频下载</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-哔哩哔哩下载"><a href="#1-哔哩哔哩下载" class="headerlink" title="1.哔哩哔哩下载"></a>1.哔哩哔哩下载</h1><p>发现一个好用的工具,直接输入连接,就可以批量下载哔哩哔哩视频</p>
-<p>推荐大家star</p>
-<p><a href="https://github.com/leiurayer/downkyi">leiurayer&#x2F;downkyi: 哔哩下载姬downkyi，B站视频下载工具，支持批量下载，支持8K、HDR、杜比视界，提供工具箱（音视频提取、去水印等）。 (github.com)</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/24/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/" data-id="cm1tjy5w700108cw7haqf2zkq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag">使用工具</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-command教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/24/command%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2022-10-24T09:39:20.000Z" itemprop="datePublished">2022-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/24/command%E6%95%99%E7%A8%8B/">command教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="命令行教程"><a href="#命令行教程" class="headerlink" title="命令行教程"></a>命令行教程</h1><p>工作流，终端复用，dotfile配置，还有远程服务器</p>
-<h2 id="2-工作流"><a href="#2-工作流" class="headerlink" title="2.工作流"></a>2.工作流</h2><p>ctrl+c是打断程序</p>
-<p>ctrl+z是暂停</p>
-<p>ctrl+\是结束程序 </p>
-<p><strong>使用&amp;表示程序后台执行</strong></p>
-<p>使用jobs可以查看当前执行的进程状态，</p>
-<p>使用bg %1，回复倍暂停的jobs</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666049269001666604925973.png"></p>
-<p>产生式挂起进程使用nohup</p>
-<h2 id="2-tmux"><a href="#2-tmux" class="headerlink" title="2.tmux"></a>2.tmux</h2><p>一般使用screen，不过也学习一下</p>
-<p>三大核心，session，windows，panel</p>
-<ul>
-<li><p>会话</p>
-<p>- 每个会话都是一个独立的工作区，其中包含一个或多个窗口</p>
-<ul>
-<li><code>tmux</code> 开始一个新的会话</li>
-<li><code>tmux new -s NAME</code> 以指定名称开始一个新的会话</li>
-<li><code>tmux ls</code> 列出当前所有会话</li>
-<li>在 <code>tmux</code> 中输入 <code>&lt;C-b&gt; d</code> ，将当前会话分离</li>
-<li><code>tmux a</code> 重新连接最后一个会话。您也可以通过 <code>-t</code> 来指定具体的会话</li>
-</ul>
-</li>
-</ul>
-<p>windows&#x3D;&#x3D;tab（浏览器的窗口）</p>
-<ul>
-<li><p>会话</p>
-<p>- 每个会话都是一个独立的工作区，其中包含一个或多个窗口</p>
-<ul>
-<li><code>tmux</code> 开始一个新的会话</li>
-<li><code>tmux new -s NAME</code> 以指定名称开始一个新的会话</li>
-<li><code>tmux ls</code> 列出当前所有会话</li>
-<li>在 <code>tmux</code> 中输入 <code>&lt;C-b&gt; d</code> ，将当前会话分离</li>
-<li><code>tmux a</code> 重新连接最后一个会话。您也可以通过 <code>-t</code> 来指定具体的会话</li>
-</ul>
-</li>
-</ul>
-<p>ctrl+a （n，是下一个，p是之前一个tmux窗口</p>
-<h2 id="3-重命名"><a href="#3-重命名" class="headerlink" title="3.重命名"></a>3.重命名</h2><p>alias把长命令进行缩短</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666058858981666605885498.png"></p>
-<p>alias gc&#x3D;“git clone”</p>
-<p>如何写入重命名，关闭终端，重命名就结束了</p>
-<p><strong>直接写入到dotfiles</strong></p>
-<h2 id="4-符号链接"><a href="#4-符号链接" class="headerlink" title="4.符号链接"></a>4.符号链接</h2><p>就是和快捷方式一样</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16666064699001666606468924.png"></p>
-<h2 id="5-ssh"><a href="#5-ssh" class="headerlink" title="5.ssh"></a>5.ssh</h2><p>这个已经熟练了</p>
-<p>、</p>
-<p>还有设置别名，在ssh里面进行配置，就不用一个刚刚输入IP了</p>
-<h2 id="6-homework"><a href="#6-homework" class="headerlink" title="6.homework"></a>6.homework</h2><h3 id="6-1任务控制"><a href="#6-1任务控制" class="headerlink" title="6.1任务控制"></a>6.1任务控制</h3><blockquote>
-<ol>
-<li>我们可以使用类似 <code>ps aux | grep</code> 这样的命令来获取任务的 pid ，然后您可以基于pid 来结束这些进程。但我们其实有更好的方法来做这件事。在终端中执行 <code>sleep 10000</code> 这个任务。然后用 <code>Ctrl-Z</code> 将其切换到后台并使用 <code>bg</code>来继续允许它。现在，使用 <a href="https://www.man7.org/linux/man-pages/man1/pgrep.1.html"><code>pgrep</code></a> 来查找 pid 并使用 <a href="https://www.man7.org/linux/man-pages/man1/pgrep.1.html"><code>pkill</code></a> 结束进程而不需要手动输入pid。(提示：: 使用 <code>-af</code> 标记)。</li>
-</ol>
-</blockquote>
-<p>这一题使用的pger&#x3D;&#x3D;ps aux|grep python</p>
-<p>pgrep python</p>
-<p>使用prep sleep可以得到</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sleep 10000</span><br><span class="line">Ctrl-Z</span><br><span class="line">bg</span><br><span class="line"></span><br><span class="line">pgrep sleep </span><br><span class="line"></span><br><span class="line">pkill  -af sleep</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<blockquote>
-<ol>
-<li><p>如果您希望某个进程结束后再开始另外一个进程， 应该如何实现呢？在这个练习中，我们使用 <code>sleep 60 &amp;</code> 作为先执行的程序。一种方法是使用 <a href="http://man7.org/linux/man-pages/man1/wait.1p.html"><code>wait</code></a> 命令。尝试启动这个休眠命令，然后待其结束后再执行 <code>ls</code> 命令。</p>
-<p>但是，如果我们在不同的 bash 会话中进行操作，则上述方法就不起作用了。因为 <code>wait</code> 只能对子进程起作用。之前我们没有提过的一个特性是，<code>kill</code> 命令成功退出时其状态码为 0 ，其他状态则是非0。<code>kill -0</code> 则不会发送信号，但是会在进程不存在时返回一个不为0的状态码。请编写一个 bash 函数 <code>pidwait</code> ，它接受一个 pid 作为输入参数，然后一直等待直到该进程结束。您需要使用 <code>sleep</code> 来避免浪费 CPU 性能。</p>
-</li>
-</ol>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/24/command%E6%95%99%E7%A8%8B/" data-id="cm1tjy5w800128cw7feiz3n42" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vim教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/10/22/vim%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2022-10-22T07:08:51.000Z" itemprop="datePublished">2022-10-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/10/22/vim%E6%95%99%E7%A8%8B/">vim教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="vim基础"><a href="#vim基础" class="headerlink" title="vim基础"></a>vim基础</h1><h2 id="1-模式区分"><a href="#1-模式区分" class="headerlink" title="1.模式区分"></a>1.模式区分</h2><p>分为normal还有iinsert</p>
-<p>norm是倒过来,insert是输入</p>
-<p>:这个是是command命令模式</p>
-<h2 id="2-缓冲区和窗口"><a href="#2-缓冲区和窗口" class="headerlink" title="2.缓冲区和窗口"></a>2.缓冲区和窗口</h2><p>vim也开开启多个tab</p>
-<p>使用:sp可以进行分区</p>
-<p>使用:tabnew创建一个行窗口,一个窗口多个buffer</p>
-<p>使用:qa进行全部关闭窗口</p>
-<h2 id="3-文本编辑"><a href="#3-文本编辑" class="headerlink" title="3.文本编辑"></a>3.文本编辑</h2><p>使用w是向后,b是向前,e是单词结尾,使用s开头,$是结尾</p>
-<p>浏览模式,使用u(向上),使用D(向下)</p>
-<p>查找模式使用f,后面加要查找的单词</p>
-<blockquote>
-<p>以上都是normal模式</p>
-</blockquote>
-<hr>
-<p>下面是insert模式</p>
-<p>使用d进行删除,使用u进行undo,删除到结尾就是de(delete end)</p>
-<p>dd删除一行,cc是删除后给一个空白的给你(d和c差不多)</p>
-<p>u是undo, ctrl+r是重做</p>
-<p>y是粘贴,p是赋值</p>
-<h2 id="4-visual模式"><a href="#4-visual模式" class="headerlink" title="4.visual模式"></a>4.visual模式</h2><p>这个就是进行多选使用的,按住v进入</p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16664246597541666424658817.png"></p>
-<p>然后使用y进行赋值,p紧张粘贴</p>
-<h2 id="5-计数模式"><a href="#5-计数模式" class="headerlink" title="5.计数模式"></a>5.计数模式</h2><p>就是使用4j,线下跳转4行,就是前面加上数字</p>
-<h2 id="6-修饰词"><a href="#6-修饰词" class="headerlink" title="6.修饰词"></a>6.修饰词</h2><p>i是inside ,a是all</p>
-<p>使用da(,会删除所有的值,在(,包括() </p>
-<p><img src="https://fastly.jsdelivr.net/gh/weijia99/blog_image@main/16664250417491666425041531.png"></p>
-<p>使用&#x2F;进行查找,n进行查找下一个符合的</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2022/10/22/vim%E6%95%99%E7%A8%8B/" data-id="cm1tjy5wq00378cw76h5ydkkm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MMPose/" rel="tag">MMPose</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/btc/" rel="tag">btc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cf/" rel="tag">cf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clash/" rel="tag">clash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash-course/" rel="tag">crash course</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs144/" rel="tag">cs144</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/detection/" rel="tag">detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/" rel="tag">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ic/" rel="tag">ic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/image-classification/" rel="tag">image classification</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mastercard/" rel="tag">mastercard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mmlab/" rel="tag">mmlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nemu/" rel="tag">nemu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/office/" rel="tag">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa/" rel="tag">pa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pat/" rel="tag">pat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" rel="tag">pa，一生一芯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag">pve，虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytorch/" rel="tag">pytorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/segmentation/" rel="tag">segmentation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/torch/" rel="tag">torch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/usdt/" rel="tag">usdt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/warp/" rel="tag">warp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/" rel="tag">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%BA/" rel="tag">人机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag">使用工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%87%91/" rel="tag">入金</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" rel="tag">公开课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BA%E8%A1%8C/" rel="tag">出行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%B2%BB/" rel="tag">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="tag">后序遍历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E6%BA%AF/" rel="tag">回溯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE/" rel="tag">图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" rel="tag">土耳其</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%96%E6%B1%87/" rel="tag">外汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" rel="tag">多萝西</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag">心理学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%BD%B1/" rel="tag">摄影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" rel="tag">数字逻辑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">旅游</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag">最短路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88/" rel="tag">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" rel="tag">栈的应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B0%B4%E9%A2%98/" rel="tag">水题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%87%E4%B8%B0/" rel="tag">汇丰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag">滑动窗口</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">王道数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BA%A4/" rel="tag">社交</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" rel="tag">社会学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" rel="tag">算法基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag">线性代数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%9B%98/" rel="tag">网盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E8%AF%BE/" rel="tag">网课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" rel="tag">计算机教程缺失的一课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" rel="tag">语音识别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" rel="tag">跨境交易</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%93%E5%85%A5/" rel="tag">输入</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" rel="tag">运筹学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" rel="tag">银行卡</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" rel="tag">面试经验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A6%99%E6%B8%AF/" rel="tag">香港</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/MMPose/" style="font-size: 10px;">MMPose</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/bilibili/" style="font-size: 10px;">bilibili</a> <a href="/tags/btc/" style="font-size: 10px;">btc</a> <a href="/tags/cf/" style="font-size: 10px;">cf</a> <a href="/tags/clash/" style="font-size: 10px;">clash</a> <a href="/tags/crash-course/" style="font-size: 10px;">crash course</a> <a href="/tags/cs144/" style="font-size: 10px;">cs144</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/detection/" style="font-size: 10px;">detection</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/ic/" style="font-size: 10px;">ic</a> <a href="/tags/image-classification/" style="font-size: 10px;">image classification</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/leetcode/" style="font-size: 11.43px;">leetcode</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked list</a> <a href="/tags/linux/" style="font-size: 12.86px;">linux</a> <a href="/tags/mastercard/" style="font-size: 10px;">mastercard</a> <a href="/tags/mmlab/" style="font-size: 12.86px;">mmlab</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nemu/" style="font-size: 10px;">nemu</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/office/" style="font-size: 10px;">office</a> <a href="/tags/pa/" style="font-size: 11.43px;">pa</a> <a href="/tags/pat/" style="font-size: 18.57px;">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 10px;">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/pytorch/" style="font-size: 14.29px;">pytorch</a> <a href="/tags/segmentation/" style="font-size: 10px;">segmentation</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/torch/" style="font-size: 10px;">torch</a> <a href="/tags/usdt/" style="font-size: 10px;">usdt</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/warp/" style="font-size: 10px;">warp</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/%E4%BA%BA%E6%9C%BA/" style="font-size: 10px;">人机</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">使用工具</a> <a href="/tags/%E5%85%A5%E9%87%91/" style="font-size: 10px;">入金</a> <a href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" style="font-size: 10px;">公开课</a> <a href="/tags/%E5%87%BA%E8%A1%8C/" style="font-size: 10px;">出行</a> <a href="/tags/%E5%88%86%E6%B2%BB/" style="font-size: 10px;">分治</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 11.43px;">动态规划</a> <a href="/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 10px;">后序遍历</a> <a href="/tags/%E5%9B%9E%E6%BA%AF/" style="font-size: 10px;">回溯</a> <a href="/tags/%E5%9B%BE/" style="font-size: 12.86px;">图</a> <a href="/tags/%E5%9C%9F%E8%80%B3%E5%85%B6/" style="font-size: 10px;">土耳其</a> <a href="/tags/%E5%A4%96%E6%B1%87/" style="font-size: 11.43px;">外汇</a> <a href="/tags/%E5%A4%9A%E8%90%9D%E8%A5%BF/" style="font-size: 10px;">多萝西</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">学习方法</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 15.71px;">排序</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" style="font-size: 10px;">数字逻辑</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 17.14px;">数据结构</a> <a href="/tags/%E6%95%B0%E8%AE%BA/" style="font-size: 10px;">数论</a> <a href="/tags/%E6%97%85%E6%B8%B8/" style="font-size: 10px;">旅游</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" style="font-size: 10px;">最短路径</a> <a href="/tags/%E6%A0%88/" style="font-size: 10px;">栈</a> <a href="/tags/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" style="font-size: 10px;">栈的应用</a> <a href="/tags/%E6%A0%91/" style="font-size: 14.29px;">树</a> <a href="/tags/%E6%B0%B4%E9%A2%98/" style="font-size: 15.71px;">水题</a> <a href="/tags/%E6%B1%87%E4%B8%B0/" style="font-size: 10px;">汇丰</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 11.43px;">深度学习</a> <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" style="font-size: 10px;">滑动窗口</a> <a href="/tags/%E7%8E%8B%E9%81%93%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14.29px;">王道数据结构</a> <a href="/tags/%E7%A4%BE%E4%BA%A4/" style="font-size: 10px;">社交</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/" style="font-size: 10px;">社会学</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">算法基础</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" style="font-size: 10px;">线性代数</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">网络</a> <a href="/tags/%E7%BD%91%E8%AF%BE/" style="font-size: 10px;">网课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E7%A8%8B%E7%BC%BA%E5%A4%B1%E7%9A%84%E4%B8%80%E8%AF%BE/" style="font-size: 10px;">计算机教程缺失的一课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" style="font-size: 10px;">语音识别</a> <a href="/tags/%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93/" style="font-size: 10px;">跨境交易</a> <a href="/tags/%E8%BE%93%E5%85%A5/" style="font-size: 10px;">输入</a> <a href="/tags/%E8%BF%90%E7%AD%B9%E5%AD%A6/" style="font-size: 10px;">运筹学</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 10px;">运维</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 11.43px;">递归</a> <a href="/tags/%E9%93%B6%E8%A1%8C%E5%8D%A1/" style="font-size: 10px;">银行卡</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 15.71px;">链表</a> <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 10px;">闲谈</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 10px;">面试</a> <a href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" style="font-size: 10px;">面试经验</a> <a href="/tags/%E9%A6%99%E6%B8%AF/" style="font-size: 10px;">香港</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/10/04/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/d/">d</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/nothing/">nothing</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/">第二周，GIN入门</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">第一周，go语言拾遗</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2024 weijia<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">98</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/11/pa1/" title="pa1">pa1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-11T03:40:00.000Z" title="Created 2022-11-11 11:40:00">2022-11-11</time></span></div><div class="content">1.1单步执行
+单步执行的功能十分简单, 而且框架代码中已经给出了模拟CPU执行方式的函数, 你只要使用相应的参数去调用它就可以了. 如果你仍然不知道要怎么做, RTFSC
+
+我们从源代码可以看到这个，通过查看c（继续执行发现）他条用了一个exec函数，我们的目的，就是通过求职，得到那个数字是多少，然后调用exec这个函数，如何得到数字，使用strtok进行得到，之后得到的是char，转换需要使用atoi来进行使用
+代码如下：
+1
+
+
+
+
+
+打印寄存器
+打印寄存器就更简单了. 不过既然寄存器的结构是ISA相关的, 我们希望能为简易调试器屏蔽ISA的差异. 框架代码已经为大家准备了如下的API:
+12// nemu/src/isa/$ISA/reg.cvoid isa_reg_display(void);
+
+执行info r之后, 就调用isa_reg_display(), 在里面直接通过printf()输出所有寄存器的值即可. 如果你从来没有使用过printf(), 请RTFM或者STFW. 如果你不知道要输出什么, 你可以参考GDB中的输出
+
+通过这个可以知道，我们需要使用打印寄存器 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/11/word%E6%8A%80%E5%B7%A7/" title="word技巧">word技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-11T02:18:29.000Z" title="Created 2022-11-11 10:18:29">2022-11-11</time></span></div><div class="content">word操作技巧3.1项目
+
+带圈字符在拼音那里
+然后段落可以设置行间距
+选择之后可以设置字体，字体又是可以分为大小，还有样式
+项目符号就是指那个三角形，编号是123，直接右击都是可以使用
+最后的是使用对齐方式，使用居中对齐
+还有一件事，可以使用格式刷，对已经设置好样式的文本进行复制粘贴。不需要自己手动设置格式
+
+3.2项目
+这个主要是学习表格的使用
+
+前面的格式样式设置就不提了
+然后是插入表格
+插入之后
+选择之后表单有对齐的功能，使用对齐
+还有合并单元格
+.进行设置行高还有列宽
+之后就是wps的功能，使用公式进行求和还有求级，product（left），还有sum
+之后设置格式，设置的格式有，人民币大写，还有一些其他
+设置表格变宽，使用全选进行设置，设置表格样式，选择线性颜色，还有粗细度
+
+3.3项目
+目前，难度比较大的一个。
+学习这个就是药了解到文本框的作用。使用普通的文本没有办法
+
+文本框进行插入，插入之后可以对他进行字体设置吗，还有字体效果，同事去除文本边框
+接下来就是进行图片插入，插入之后药把文字进行浮动与上方，不然不好移动图片
+之后就是手指下沉
+还有设置文字的行间距这些，就 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/11/08/%E6%A1%86%E6%9E%B6%E4%BB%A3%E7%A0%81/" title="框架代码">框架代码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-11-08T02:30:13.000Z" title="Created 2022-11-08 10:30:13">2022-11-08</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/26/github%E7%9A%84action/" title="github的action">github的action</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-26T09:58:55.000Z" title="Created 2022-10-26 17:58:55">2022-10-26</time></span></div><div class="content">action 操作1.workflow是什么
+假设你开发的java软件又bug,用户提交问题到issue,代码人员进行修复,修复完成,之后进行pull request,然后就进行合并,合并之后旧的进行测试才能发布,这就是一个流程
+
+2.名称解释event
+
+就是我触发的条件(pull request)
+workflow就是一系列自动化流程
+
+常用的cicd
+
+3.为什么使用action因为你 不想配置环境变量   
+3.demo3.1yaml教程
+使用tab就是一个对象,使用kv来记录纸
+使用过 list记录多个,那就需要-
+
+3.2demo简介
+
+
+name是可选
+on就是event,单位需要出发的事件
+
+jobs,就是执行的事件
+
+
+到这一步就是进行代码检查,使用github编译好的checkout
+每一个-,代表一个list,就代表一次操作
+
+
+uses,时使用别人的action,run是自己执行linux命令
+
+
+4.cicd在哪里执行在github的服务器上 
+jobs是并行的,如果publish需要build,那就要使用关键字,need
+5.总结首先 on 是触发条件(pu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/25/%E5%85%83%E7%BC%96%E7%A8%8B/" title="元编程">元编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-25T11:23:57.000Z" title="Created 2022-10-25 19:23:57">2022-10-25</time></span></div><div class="content">元编程1.概念解释就相当云java构建spring项目,进行build.使用规则来定义如何使用这些文件来的到,jar包
+cmake 比make跟smart,cmake查找本地的哭,make只会自己寻找文件
+使用make来进行build固件,make寻找makefile来进行make 
+
+上面是需按照那两个文件,然后接下来才是进行编译代码
+
+2.ci持续集成自动进行构建,每一个event出发一个action,自动调用
+例如本文的网站,当我写好一个markdwon文件,然后使用push操作,github就会进行ci,并且生成网页
+3.测速单元测试,值测试某一个功能
+集成测试,测试代码交互之间是不是又问题
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/25/git%E6%8E%A7%E5%88%B6/" title="git控制">git控制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-25T02:26:53.000Z" title="Created 2022-10-25 10:26:53">2022-10-25</time></span></div><div class="content">git操作1.模型
+模型树。对于文件夹，叫做tree，对于文件叫做blob，根目录是root
+git工作流
+使用分支branch，还有merge合并
+
+元数据：作者，message
+数据模型
+
+定义的文件为数组，tree是hash隐射，然后commit是要提交的stack
+一个obejcect是一个版本，维护，使用hash进行映射
+
+2git demo暂存区
+
+为什么add和commit分开
+
+因为add可能已经完成了一个新的feature，还有一些没有完成，只提交完成的就可以进行发布
+也可能不想上传日志文件
+git checkout 进行版本切换回退 
+git diff进行代码比较
+
+可以比较不同时期某个文件的的区别
+3.分支git branch cat，新建一个cat分支
+ 
+可以之间checkout -b创新建新分支，然后进去
+回到什么功能都没有的master分支，进行合并cat和dog分支
+
+首先git merge cat
+然后出现合并不兼容的情况（conflic）
+
+因为那个if判断不对
+最终结果
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/24/acw%E6%95%B0%E8%AE%BA/" title="acw数论">acw数论</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-24T13:31:35.000Z" title="Created 2022-10-24 21:31:35">2022-10-24</time></span></div><div class="content">4.数学知识4.1质数4.1.1基本算法1234567bool is_prime(int n)&#123;if(i&lt;2)return false;for(int i=2;i&lt;=n/;i++)&#123;if(n%i==0)return false;&#125;return true;&#125;
+
+
+
+4.1.2分解质因数从小到大尝试每一个因素
+123456789101112void divide(int n)&#123;	for(int i=2;i&lt;=n;i++)&#123;		if(n%i==0)&#123;		int s=0;		#求出i的次数		while(n%i==0)&#123;		n/=s;		i++;		&#125;		&#125;	&#125;&#125;
+
+
+
+
+
+优化版本
+n中至多质保函一个最多大于根号n的因子
+1234567891011121314void divide(int n)&#123;	for(int i=2;i&lt;=n/i;i++)&#123;		if(n%i==0)&#123;		int s=0;		#求出i的次数		whil ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/24/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/" title="bilibili视频下载">bilibili视频下载</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-24T13:02:31.000Z" title="Created 2022-10-24 21:02:31">2022-10-24</time></span></div><div class="content">1.哔哩哔哩下载发现一个好用的工具,直接输入连接,就可以批量下载哔哩哔哩视频
+推荐大家star
+leiurayer&#x2F;downkyi: 哔哩下载姬downkyi，B站视频下载工具，支持批量下载，支持8K、HDR、杜比视界，提供工具箱（音视频提取、去水印等）。 (github.com)
+</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/24/command%E6%95%99%E7%A8%8B/" title="command教程">command教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-24T09:39:20.000Z" title="Created 2022-10-24 17:39:20">2022-10-24</time></span></div><div class="content">命令行教程工作流，终端复用，dotfile配置，还有远程服务器
+2.工作流ctrl+c是打断程序
+ctrl+z是暂停
+ctrl+\是结束程序 
+使用&amp;表示程序后台执行
+使用jobs可以查看当前执行的进程状态，
+使用bg %1，回复倍暂停的jobs
+
+产生式挂起进程使用nohup
+2.tmux一般使用screen，不过也学习一下
+三大核心，session，windows，panel
+
+会话
+- 每个会话都是一个独立的工作区，其中包含一个或多个窗口
+
+tmux 开始一个新的会话
+tmux new -s NAME 以指定名称开始一个新的会话
+tmux ls 列出当前所有会话
+在 tmux 中输入 &lt;C-b&gt; d ，将当前会话分离
+tmux a 重新连接最后一个会话。您也可以通过 -t 来指定具体的会话
+
+
+
+windows&#x3D;&#x3D;tab（浏览器的窗口）
+
+会话
+- 每个会话都是一个独立的工作区，其中包含一个或多个窗口
+
+tmux 开始一个新的会话
+tmux new -s NAME 以指定名称开始一个新的会话
+tmux ls 列出当前所有会话
+在 tmux  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2022/10/22/vim%E6%95%99%E7%A8%8B/" title="vim教程">vim教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-10-22T07:08:51.000Z" title="Created 2022-10-22 15:08:51">2022-10-22</time></span></div><div class="content">vim基础1.模式区分分为normal还有iinsert
+norm是倒过来,insert是输入
+:这个是是command命令模式
+2.缓冲区和窗口vim也开开启多个tab
+使用:sp可以进行分区
+使用:tabnew创建一个行窗口,一个窗口多个buffer
+使用:qa进行全部关闭窗口
+3.文本编辑使用w是向后,b是向前,e是单词结尾,使用s开头,$是结尾
+浏览模式,使用u(向上),使用D(向下)
+查找模式使用f,后面加要查找的单词
+
+以上都是normal模式
+
+
+下面是insert模式
+使用d进行删除,使用u进行undo,删除到结尾就是de(delete end)
+dd删除一行,cc是删除后给一个空白的给你(d和c差不多)
+u是undo, ctrl+r是重做
+y是粘贴,p是赋值
+4.visual模式这个就是进行多选使用的,按住v进入
+
+然后使用y进行赋值,p紧张粘贴
+5.计数模式就是使用4j,线下跳转4行,就是前面加上数字
+6.修饰词i是inside ,a是all
+使用da(,会删除所有的值,在(,包括() 
+
+使用&#x2F;进行查找,n进行查找下一个符合的
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/7/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/#content-inner">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><a class="extend next" rel="next" href="/page/9/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">weijia</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">121</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">98</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/04/hello-world/" title="Hello World">Hello World</a><time datetime="2024-10-03T16:28:42.712Z" title="Created 2024-10-04 00:28:42">2024-10-04</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/03/d/" title="d">d</a><time datetime="2024-10-03T15:55:06.000Z" title="Created 2024-10-03 23:55:06">2024-10-03</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2024/10/03/nothing/" title="nothing">nothing</a><time datetime="2024-10-03T15:55:01.000Z" title="Created 2024-10-03 23:55:01">2024-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门"><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727960975879-69b8efa7-7210-44e9-aebc-9ba048065f69.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二周，GIN入门"/></a><div class="content"><a class="title" href="/2024/10/03/%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%8CGIN%E5%85%A5%E9%97%A8/" title="第二周，GIN入门">第二周，GIN入门</a><time datetime="2024-10-03T13:03:19.000Z" title="Created 2024-10-03 21:03:19">2024-10-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗"><img src="https://cdn.nlark.com/yuque/0/2024/png/26023389/1727956986927-b9d68bdf-c839-4ebc-abf1-e35003ecff6e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一周，go语言拾遗"/></a><div class="content"><a class="title" href="/2024/10/03/%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%8Cgo%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" title="第一周，go语言拾遗">第一周，go语言拾遗</a><time datetime="2024-10-03T11:56:17.000Z" title="Created 2024-10-03 19:56:17">2024-10-03</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/tags/DFS/" style="font-size: 1.1em; color: #999">DFS</a> <a href="/tags/MMPose/" style="font-size: 1.1em; color: #999">MMPose</a> <a href="/tags/action/" style="font-size: 1.1em; color: #999">action</a> <a href="/tags/bilibili/" style="font-size: 1.1em; color: #999">bilibili</a> <a href="/tags/btc/" style="font-size: 1.1em; color: #999">btc</a> <a href="/tags/cf/" style="font-size: 1.1em; color: #999">cf</a> <a href="/tags/clash/" style="font-size: 1.1em; color: #999">clash</a> <a href="/tags/crash-course/" style="font-size: 1.1em; color: #999">crash course</a> <a href="/tags/cs144/" style="font-size: 1.1em; color: #999">cs144</a> <a href="/tags/cv/" style="font-size: 1.1em; color: #999">cv</a> <a href="/tags/deep-learning/" style="font-size: 1.1em; color: #999">deep learning</a> <a href="/tags/detection/" style="font-size: 1.1em; color: #999">detection</a> <a href="/tags/docker/" style="font-size: 1.1em; color: #999">docker</a> <a href="/tags/excel/" style="font-size: 1.1em; color: #999">excel</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/ic/" style="font-size: 1.1em; color: #999">ic</a> <a href="/tags/image-classification/" style="font-size: 1.1em; color: #999">image classification</a> <a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/tags/jvm/" style="font-size: 1.1em; color: #999">jvm</a> <a href="/tags/leetcode/" style="font-size: 1.2em; color: #999da3">leetcode</a> <a href="/tags/linked-list/" style="font-size: 1.1em; color: #999">linked list</a> <a href="/tags/linux/" style="font-size: 1.3em; color: #99a1ac">linux</a> <a href="/tags/mastercard/" style="font-size: 1.1em; color: #999">mastercard</a> <a href="/tags/mmlab/" style="font-size: 1.3em; color: #99a1ac">mmlab</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/nemu/" style="font-size: 1.1em; color: #999">nemu</a> <a href="/tags/npm/" style="font-size: 1.1em; color: #999">npm</a> <a href="/tags/office/" style="font-size: 1.1em; color: #999">office</a> <a href="/tags/pa/" style="font-size: 1.2em; color: #999da3">pa</a> <a href="/tags/pat/" style="font-size: 1.5em; color: #99a9bf">pat</a> <a href="/tags/pa%EF%BC%8C%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/" style="font-size: 1.1em; color: #999">pa，一生一芯</a> <a href="/tags/pve%EF%BC%8C%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 1.1em; color: #999">pve，虚拟机</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/pytorch/" style="font-size: 1.4em; color: #99a5b6">pytorch</a> <a href="/tags/segmentation/" style="font-size: 1.1em; color: #999">segmentation</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/torch/" style="font-size: 1.1em; color: #999">torch</a> <a href="/tags/usdt/" style="font-size: 1.1em; color: #999">usdt</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">October 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">September 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">August 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">July 2024</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">August 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">121</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-03T17:27:25.967Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By weijia</div><div class="framework-info"><span>Framework </span><a href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
